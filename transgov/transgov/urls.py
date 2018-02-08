@@ -18,9 +18,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
 from search_app import views
 
 urlpatterns = [
     url(r'^$', views.index, name="index"),
+    url(r'^search_app/', include('search_app.urls')),
     url(r'^admin/', admin.site.urls),
 ]

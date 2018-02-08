@@ -4,4 +4,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Greetings from the Transgov Team")
+    my_dict = {'inseart_me':"from Tranparent Governance Team"}
+    return render(request, 'search_app/index.html', context=my_dict)
