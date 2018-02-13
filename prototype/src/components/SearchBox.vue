@@ -1,10 +1,12 @@
 <template>
   <div id="user-searches">
     <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box">
-    <button v-on:click="clearSearchBox" id="clear-btn">
+    <br/>
+    <button v-on:click="clearSearchBox" id="clear-btn" class="btn">
       Clear
     </button>
-    <button id="search-btn">
+    <!-- <button v-on:click="showList" id="search-btn" class="btn"> -->
+    <button v-on:click="toggleList" id="search-btn" class="btn">
       Search
     </button>
   </div>
@@ -13,16 +15,8 @@
 <script>
 export default {
   data: function () {
-    return { newSearchBoxText: '' }
+    return {newSearchBoxText: ''}
   },
-  // methods: {
-  //   createSearchResult () {
-  //     console.log(this.newSearchBoxText, 'created!')
-  //   },
-  //   clearSearchBox () {
-  //     console.log('search results cleared!')
-  //   }
-  // }
   methods: {
     createSearchResult () {
       this.$store.dispatch('addResult', {text: this.newSearchBoxText})
@@ -30,13 +24,20 @@ export default {
     },
     clearSearchBox () {
       this.$store.dispatch('clearResults')
+    },
+    toggleList () {
+      this.$emit('toggleList', 'somevalue')
     }
   }
 }
 </script>
 
 <style>
-#clear-btn #input-box{
-  display: block;
+#input-box{
+  width: 500px;
+}
+.btn{
+  height: 25px;
+  width: 200px;
 }
 </style>

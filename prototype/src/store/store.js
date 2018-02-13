@@ -6,8 +6,9 @@ Vue.use(Vuex) // only required if you're using modules.
 const store = new Vuex.Store({
   state: {
     searchresults: [
-      { text: 'Learn Vue.' },
-      { text: 'Do hard things.' }
+      { text: 'This.' },
+      { text: 'Fucking.' },
+      { text: 'Sucks.' }
     ]
   },
   mutations: {
@@ -15,7 +16,7 @@ const store = new Vuex.Store({
       state.searchresults.push(result)
     },
     'CLEAR_TODOS': function (state) {
-      const searchResults = state.searchResults
+      const searchResults = state.searchresults
       searchResults.splice(0, searchResults.length)
     }
   },

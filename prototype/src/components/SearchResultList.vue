@@ -1,13 +1,14 @@
 <template>
   <div id="search-result-list">
     <ul>
-      <!-- <li v-for="(searchresult, index) in searchresults" :key="index"> -->
       <SearchResult v-for="(searchresult, index) in searchresults" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
       </SearchResult>
-      <!-- </li> -->
     </ul>
   </div>
 </template>
+
+<!-- <template v-else>
+</template> -->
 
 <script>
 import SearchResult from './SearchResult.vue'

@@ -3,8 +3,8 @@
     <!-- <img src="./assets/logo.png"> -->
     <!-- <router-view/> -->
     <img src="./assets/transparentGovernance.png">
-    <search-box></search-box>
-    <search-result-list></search-result-list>
+    <search-box @toggleList="toggleList"></search-box>
+    <search-result-list v-if='isShown'></search-result-list>
   </div>
 </template>
 
@@ -15,6 +15,14 @@ export default {
   components: {
     SearchBox,
     SearchResultList
+  },
+  methods: {
+    toggleList () {
+      this.isShown = !this.isShown
+    }
+  },
+  data: function () {
+    return { isShown: false }
   }
 }
 // export default {
@@ -24,11 +32,7 @@ export default {
 
 <style>
 #app {
-  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;*/
   text-align: center;
-  /*color: #2c3e50;
-  margin-top: 60px;*/
+  margin-top: 150px;
 }
 </style>
