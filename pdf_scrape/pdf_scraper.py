@@ -33,7 +33,7 @@ def convert(fname, pages=None):
 	output.close
 	return text
 	
-output = convert('pdfs/Combined-agenda-and-documents.pdf', pages=[5])
+output = convert('pdfs/Combined-agenda-and-documents.pdf', pages=[0,1,2,3,4,5])
 
 fh = open("test.txt","w")
 fh.write(output)
