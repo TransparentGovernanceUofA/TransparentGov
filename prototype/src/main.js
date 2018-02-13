@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // import store from './store'
+import store from './store/store.js'
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
@@ -13,5 +14,6 @@ new Vue({
   router,
   // store,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store: store
 })

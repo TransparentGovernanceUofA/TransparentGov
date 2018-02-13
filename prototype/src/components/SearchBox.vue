@@ -15,12 +15,21 @@ export default {
   data: function () {
     return { newSearchBoxText: '' }
   },
+  // methods: {
+  //   createSearchResult () {
+  //     console.log(this.newSearchBoxText, 'created!')
+  //   },
+  //   clearSearchBox () {
+  //     console.log('search results cleared!')
+  //   }
+  // }
   methods: {
     createSearchResult () {
-      console.log(this.newSearchBoxText, 'created!')
+      this.$store.dispatch('addResult', {text: this.newSearchBoxText})
+      this.newSearchBoxText = ''
     },
     clearSearchBox () {
-      console.log('search results cleared!')
+      this.$store.dispatch('clearResults')
     }
   }
 }

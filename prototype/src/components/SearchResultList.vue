@@ -1,8 +1,8 @@
 <template>
   <div id="search-result-list">
-    <ul v-for="(searchresult, index) in searchresults" :key="index">
+    <ul>
       <!-- <li v-for="(searchresult, index) in searchresults" :key="index"> -->
-      <SearchResult v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
+      <SearchResult v-for="(searchresult, index) in searchresults" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
       </SearchResult>
       <!-- </li> -->
     </ul>
@@ -16,12 +16,17 @@ export default {
   components: {
     SearchResult
   },
-  data: function () {
-    return {
-      searchresults: [
-        { text: 'Learn Vue' },
-        { text: 'Do hard things' }
-      ]
+  // data: function () {
+  //   return {
+  //     searchresults: [
+  //       { text: 'Learn Vue' },
+  //       { text: 'Do hard things' }
+  //     ]
+  //   }
+  // }
+  computed: {
+    searchresults () {
+      return this.$store.state.searchresults
     }
   }
 }
