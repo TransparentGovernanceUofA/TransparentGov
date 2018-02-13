@@ -7,9 +7,6 @@
   </div>
 </template>
 
-<!-- <template v-else>
-</template> -->
-
 <script>
 import SearchResult from './SearchResult.vue'
 
