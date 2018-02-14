@@ -2,5 +2,7 @@ from .base import *
 
 INSTALLED_APPS += (
         'debug_toolbar',
-        'haystack'
+        'haystack',
+        'main_search',
+        'jquery',
     )
