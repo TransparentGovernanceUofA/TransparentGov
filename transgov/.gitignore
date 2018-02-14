@@ -6,7 +6,7 @@ include/
 pip-selfcheck.json
 
 # Django related
-src/searchapp/settings/local.py
+# src/searchapp/settings/local.py
 static-cdn/  # any collected static files
 
 
