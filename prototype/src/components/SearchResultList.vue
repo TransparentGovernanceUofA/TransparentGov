@@ -14,14 +14,6 @@ export default {
   components: {
     SearchResult
   },
-  // data: function () {
-  //   return {
-  //     searchresults: [
-  //       { text: 'Learn Vue' },
-  //       { text: 'Do hard things' }
-  //     ]
-  //   }
-  // }
   computed: {
     searchresults () {
       return this.$store.state.searchresults
