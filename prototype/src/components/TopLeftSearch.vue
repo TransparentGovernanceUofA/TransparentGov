@@ -7,6 +7,9 @@
     <div id = "results">
       <search-result-list id="result-view"></search-result-list>
     </div>
+    <div id='"elastic-result'>
+      {{ ElasticResult }}
+    </div>
   </div>
 </template>
 
@@ -33,9 +36,11 @@ export default{
   },
   methods: {
     fetchData () {
-      axios.get('http://162.246.156.217:9200/meeting_minutes')
+      axios.get('https://cors-anywhere.herokuapp.com/http://162.246.156.217:9200/_search')
         .then((resp) => {
-          this.ElasticResult = resp.data[0]
+          // this.ElasticResult = resp.data[0]
+          this.ElasticResult = resp.data
+          console.log(this.ElasticResult)
           console.log(resp)
         })
         .catch((err) => {
