@@ -13,7 +13,7 @@ class HomeView(TemplateView):
 
 
 class MeetingView(DetailView):
-    template_name = "meeting.html"
+    template_name = "result_item.html"
     model = Meeting
 
 

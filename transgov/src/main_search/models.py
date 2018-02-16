@@ -14,7 +14,6 @@ class Meeting(models.Model):
     description = models.TextField(db_index=True)
     committee = models.CharField(db_index=True, max_length=255)
     category = models.ForeignKey('Category', related_name='category')
-    image = models.ImageField(upload_to = 'meeting_images/', default = 'meeting_images/no-img.jpg')
     timestamp = models.DateTimeField(auto_now=True)
 
     def get_absolute_url(self):

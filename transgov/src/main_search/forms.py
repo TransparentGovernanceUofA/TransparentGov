@@ -27,6 +27,6 @@ class FacetedMeetingSearchForm(FacetedSearchForm):
                     query += u' OR '
                 else:
                     query = u''
-                query += u'"%s"' % sqs.query.clean(brand)
+                query += u'"%s"' % sqs.query.clean(committee)
             sqs = sqs.narrow(u'committee_exact:%s' % query)
         return sqs
