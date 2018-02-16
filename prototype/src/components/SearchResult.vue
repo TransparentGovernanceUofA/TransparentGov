@@ -1,5 +1,7 @@
 <template>
   <p>
+    {{ searchresult.id }}
+    <br>
     {{ searchresult.text }}
   </p>
 </template>
@@ -12,7 +14,7 @@ export default {
 
 <style>
 p{
-  font-size: 30px;
+  font-size: 20 px;
   border-bottom: 1px solid black;
 }
 </style>

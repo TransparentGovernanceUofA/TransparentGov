@@ -5,10 +5,7 @@
     </router-link>
     <input id="input-box">
     <div id = "results">
-      <search-result-list id="result-view"></search-result-list>
-    </div>
-    <div id='"elastic-result'>
-      {{ ElasticResult }}
+      <search-result-list :test = "ElasticResult"></search-result-list>
     </div>
   </div>
 </template>
@@ -38,9 +35,7 @@ export default{
     fetchData () {
       axios.get('https://cors-anywhere.herokuapp.com/http://162.246.156.217:9200/_search')
         .then((resp) => {
-          // this.ElasticResult = resp.data[0]
-          this.ElasticResult = resp.data
-          console.log(this.ElasticResult)
+          this.ElasticResult = resp.data.hits.hits
           console.log(resp)
         })
         .catch((err) => {
