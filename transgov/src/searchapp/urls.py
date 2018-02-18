@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from main_search.views import HomeView, MeetingView, FacetedSearchView, autocomplete
 from .settings import MEDIA_ROOT, MEDIA_URL
@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^meeting/(?P<slug>[\w-]+)/$', MeetingView.as_view(), name='meeting'),
     url(r'^search/autocomplete/$', autocomplete),
     url(r'^find/', FacetedSearchView.as_view(), name='haystack_search'),
+    url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')), 
 
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
