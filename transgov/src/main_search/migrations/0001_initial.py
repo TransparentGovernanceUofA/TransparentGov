@@ -29,7 +29,6 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(blank=True, max_length=255, null=True, unique=True)),
                 ('description', models.TextField(db_index=True)),
                 ('committee', models.CharField(db_index=True, max_length=255)),
-                ('image', models.ImageField(default='meeting_images/no-img.jpg', upload_to='meeting_images/')),
                 ('timestamp', models.DateTimeField(auto_now=True)),
                 ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='category', to='main_search.Category')),
             ],

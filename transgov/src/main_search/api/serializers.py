@@ -15,7 +15,3 @@ class MeetingSerializer(serializers.ModelSerializer):
             'timestamp',
         ]
         read_only_fields = ['pk']
-
-
-    def validate_title(self, value):
-        qs = Meeting.objects.filter(title__iexact=value)
