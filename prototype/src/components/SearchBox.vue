@@ -6,6 +6,9 @@
     <br/>
     <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box">
     <br/>
+    <router-link to="/advancedsearch">
+      <button id="search1" class = btn>Advanced Search</button>
+    </router-link>
     <router-link to="/result">
       <button id="search" class = btn>search!</button>
     </router-link>
@@ -22,12 +25,6 @@ export default {
       this.$store.dispatch('addResult', {text: this.newSearchBoxText})
       this.newSearchBoxText = ''
     }
-    // clearSearchBox () {
-    //   this.$store.dispatch('clearResults')
-    // },
-    // toggleList () {
-    //   this.$emit('toggleList', 'somevalue')
-    // }
   }
 }
 </script>
