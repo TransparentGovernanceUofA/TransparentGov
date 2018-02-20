@@ -158,6 +158,4 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
-}
-
-ALLOWED_HOSTS = ['199.116.235.49']
+ALLOWED_HOSTS += '199.116.235.49'
