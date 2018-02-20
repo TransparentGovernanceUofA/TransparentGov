@@ -3,6 +3,15 @@ import App from './App'
 import router from './router'
 import store from './store/store.js'
 
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+
+Vue.use(VueMaterial)
+
+// import { MdButton } from 'vue-material/dist/components'
+// import 'vue-material/dist/vue-material.min.css'
+
+// Vue.use(MdButton)
 // Vue.config.productionTip = false
 
 /* eslint-disable no-new */
