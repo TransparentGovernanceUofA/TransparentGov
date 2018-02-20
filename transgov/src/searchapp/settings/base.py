@@ -88,8 +88,12 @@ WSGI_APPLICATION = 'searchapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'transgov_prod',
+	'USER': 'transgov',
+	'PASSWORD': 'transgov401',
+	'HOST': 'localhost',
+	'PORT': '',
     }
 }
 
@@ -155,3 +159,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ),
 }
+
+ALLOWED_HOSTS = get_env_var("ALLOWED_HOSTS")
