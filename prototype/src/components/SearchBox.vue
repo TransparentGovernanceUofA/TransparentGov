@@ -7,10 +7,10 @@
     <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box">
     <br/>
     <router-link to="/advancedsearch">
-      <button id="search1" class = btn>Advanced Search</button>
+      <md-button id="search1" class = "md-raised" :md-ripple="false">Advanced Search</md-button>
     </router-link>
     <router-link to="/result">
-      <button id="search" class = btn>search!</button>
+      <md-button id="search" class = "md-raised" :md-ripple="false">search!</md-button>
     </router-link>
   </div>
 </template>
@@ -32,8 +32,9 @@ export default {
 <style>
 #input-box{
   width: 500px;
+  border-radius: 3px;
 }
-.btn{
+.md-raised{
   height: 25px;
   width: 200px;
 }

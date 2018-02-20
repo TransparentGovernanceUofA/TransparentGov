@@ -13,6 +13,7 @@
 <style>
 #input-box{
   width: 300px;
+  border-radius: 3px;
 }
 
 #result-view{
