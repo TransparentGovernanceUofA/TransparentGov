@@ -1,6 +1,7 @@
 from django.db.models import Q
 from rest_framework import generics, mixins
 from .serializers import MeetingSerializer
+from .permissions import IsOwnerOrReadOnly
 from main_search.models import Meeting
 
 class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # DetailView
@@ -31,8 +32,9 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # Detail
         return self.update(request, *args, **kwargs)
 
 class MeetingRUDView(generics.RetrieveUpdateDestroyAPIView):    # DetailView
-    lookup_field = 'pk'
-    serializer_class = MeetingSerializer
+    lookup_field        = 'pk'
+    serializer_class    = MeetingSerializer
+    permission_classes  = [IsOwnerOrReadOnly]
 
     def get_queryset(self):
         return Meeting.objects.all()
