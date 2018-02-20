@@ -19,9 +19,6 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # Detail
                     ).distinct()
         return qs
 
-    def perform_create(self, serializer):
-        pass
-
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 

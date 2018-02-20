@@ -1,8 +1,8 @@
 <template>
   <div id = "title" class = "result">
-    Title: {{ searchresult.id }}
+    Title: {{ searchresult.title }}
     <div id = "text" class = "result">
-      Text: {{ searchresult.text }}
+      Text: {{ searchresult.committee }}
     </div>
   </div>
 </template>
