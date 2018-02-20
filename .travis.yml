@@ -1,0 +1,6 @@
+language: python
+rvm:
+ - 3.6
+install:
+ - pip install -r transgov/src/requirements.txt
+script: ./test.sh
