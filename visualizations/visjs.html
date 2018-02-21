@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Timeline | Basic demo</title>
+
+  <style type="text/css">
+    body, html {
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="visualization"></div>
+
+<script type="text/javascript">
+  // DOM element where the Timeline will be attached
+  var container = document.getElementById('visualization');
+
+  // Create a DataSet (allows two way data-binding)
+  var items = new vis.DataSet([
+    {id: 1, content: 'GFC meeting item 3', start: '2017-02-20', title:'The various committees adjourn for bicycles'},
+    {id: 2, content: 'Branding committee meeting item 7', start: '2016-01-04', title:'When the bicycles were allowed for retreat'},
+    {id: 3, content: 'Meeting notes 7', start: '2008-08-02', title:'How were bicycles allowed on the streets?'},
+    {id: 4, content: 'Incident report', start: '1889-01-01', title:'new invention, \'Bicycle\', allowed for use at UofA'},
+    {id: 5, content: 'Title 2', start: '2009-07-03', title:'Statement about bicycles'},
+    {id: 6, content: 'What another title', start: '2018-04-02', title:'and another statement about bikes'},
+    {id: 7, content: 'The guardian issue 5', start: '2013-08-12', title:'how could you use the bicycle so irresponsibly'},
+    {id: 8, content: 'Meeting minutes 2018', start: '2003-03-23', title:'another bicycle quote'},
+    {id: 9, content: 'Why would I write another statement on bikes?', start: '2014-12-24', title:'because bikes'},
+    {id: 10, content: 'Because not bikes', start: '2012-12-12', title:'bikes'},
+    {id: 11, content: 'Eleven makes a good bike', start: '2011-10-10', title:'bikes are better for 10'}
+  ]);
+
+  // Configuration for the Timeline
+  var options = {
+    tooltip: {
+      followMouse: true,
+      overflowMethod: 'cap'
+    }
+  };
+
+  // Create a Timeline
+  var timeline = new vis.Timeline(container, items, options);
+</script>
+
+<p>
+index	title	snippet	date
+0	GFC meeting item 3	The various committees adjourn for bicycles	20/02/2017
+1	Branding committee meeting item 7	When the bicycles were allowed for retreat	04/01/2016
+2	Meeting notes 7	How were bicycles allowed on the streets?	02/08/2008
+3	Incident report	new invention, "Bicycle", allowed for use at UofA	01/01/1889
+4	Title 2	Statement about bicycles	03/07/2009
+5	What another title	and another statement about bikes	02/04/2018
+6	The guardian issue 5	how could you use the bicycle so irresponsibly	12/08/2013
+7	Meeting minutes 2018	another bicycle quote	23/03/2003
+8	Why would I	write another statement on bikes?	because bikes	24/12/2014
+9	Because not bikes	bikes	12/12/2012
+10	Eleven makes a good bike	bikes are better for 10	10/10/2011
+</p>
+</body>
+</html>
+
