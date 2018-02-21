@@ -30,7 +30,7 @@ export default{
   },
   methods: {
     fetchData () {
-      axios.get('http://199.116.235.49/api/meetings/')
+      axios.get('https://cors-anywhere.herokuapp.com/http://199.116.235.49/api/meetings/')
         .then((resp) => {
           console.log(resp)
           this.ElasticResult = resp.data

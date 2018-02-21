@@ -50,8 +50,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -66,7 +67,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
+            'prototype/dist',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -92,7 +93,7 @@ DATABASES = {
         'NAME': 'transgov_prod',
 	'USER': 'transgov',
 	'PASSWORD': 'transgov401',
-	'HOST': 'localhost',
+	'HOST': '199.116.235.49',
 	'PORT': '',
     }
 }
@@ -145,7 +146,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'static'), )
+STATICFILES_DIRS = ( os.path.join(BASE_DIR, "prototype/dist/static"), )
 MEDIA_ROOT = BASE_DIR
 MEDIA_URL = '/media/'
 
@@ -161,3 +162,6 @@ REST_FRAMEWORK = {
 }
 
 ALLOWED_HOSTS = get_env_var("ALLOWED_HOSTS")
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True

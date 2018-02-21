@@ -15,16 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from main_search.views import HomeView, MeetingView, FacetedSearchView, autocomplete
+from main_search.views import TemplateView
 from .settings import MEDIA_ROOT, MEDIA_URL
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', HomeView.as_view()),
+    #url(r'^$', HomeView.as_view()),
     url(r'^admin/', admin.site.urls),
-    url(r'^meeting/(?P<slug>[\w-]+)/$', MeetingView.as_view(), name='meeting'),
-    url(r'^search/autocomplete/$', autocomplete),
-    url(r'^find/', FacetedSearchView.as_view(), name='haystack_search'),
-    url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')), 
+    #url(r'^meeting/(?P<slug>[\w-]+)/$', MeetingView.as_view(), name='meeting'),
+    #url(r'^search/autocomplete/$', autocomplete),
+    #url(r'^find/', FacetedSearchView.as_view(), name='haystack_search'),
+    #url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')),
+    url(r'^$', TemplateView.as_view(template_name="index.html")),
 
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)

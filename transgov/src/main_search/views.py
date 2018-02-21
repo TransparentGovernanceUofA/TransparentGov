@@ -8,8 +8,8 @@ from .models import Meeting
 from .forms import FacetedMeetingSearchForm
 
 
-class HomeView(TemplateView):
-    template_name = "home.html"
+class TemplateView(TemplateView):
+    template_name = "index.html"
 
 
 class MeetingView(DetailView):
