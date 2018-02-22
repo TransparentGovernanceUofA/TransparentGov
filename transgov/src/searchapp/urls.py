@@ -25,7 +25,7 @@ urlpatterns = [
     #url(r'^meeting/(?P<slug>[\w-]+)/$', MeetingView.as_view(), name='meeting'),
     #url(r'^search/autocomplete/$', autocomplete),
     #url(r'^find/', FacetedSearchView.as_view(), name='haystack_search'),
-    #url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')),
+    url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
 
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
