@@ -22,6 +22,11 @@ export default new Router({
       path: '/advancedsearch',
       name: 'Advanced Search',
       component: AdvancedSearch
+    },
+    {
+      path: '/timeline',
+      name: 'Timeline',
+      component: AdvancedSearch
     }
   ]
 })
