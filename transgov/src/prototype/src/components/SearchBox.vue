@@ -4,7 +4,7 @@
       <img src="./../assets/transparentGovernance.png" id = "logo">
     </router-link>
     <br/>
-    <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box">
+    <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box1">
     <br/>
     <router-link to="/advancedsearch">
       <md-button id="search1" class = "md-raised" :md-ripple="false">Advanced Search</md-button>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style>
-#input-box{
+#input-box1{
   width: 500px;
   border-radius: 3px;
 }

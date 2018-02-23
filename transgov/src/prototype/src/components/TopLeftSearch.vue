@@ -12,13 +12,9 @@
 
 <style>
 #input-box{
-  width: 300px;
+  position:absolute;
+  width: 400px;
   border-radius: 3px;
-}
-
-#result-view{
-  position: absolute;
-  top: 10%;
-  left: 15%;
+  top: 44.5px;
 }
 </style>
