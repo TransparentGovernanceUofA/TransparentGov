@@ -27,7 +27,7 @@ export default new VueRouter({
     {
       path: '/timeline',
       name: 'Timeline',
-      component: AdvancedSearch
+      component: Timeline
     }
   ],
   mode: 'history'
