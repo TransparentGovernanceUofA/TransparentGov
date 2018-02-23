@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Result from '@/components/Result'
 import SearchBox from '@/components/SearchBox'
 import AdvancedSearch from '@/components/AdvancedSearch'
+import Timeline from '@/components/Timeline'
 
 Vue.use(VueRouter)
 
