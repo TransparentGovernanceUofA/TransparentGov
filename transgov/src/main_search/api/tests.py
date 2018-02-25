@@ -91,6 +91,26 @@ class MeetingAPITestCase(APITestCase):
         response = self.client.put(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
+    def test_user_ownership(self):
+        owner = User.objects.create(username='testuser2')
+        meeting = Meeting.objects.create(
+                title="Test Case Title2",
+                slug="Test Case slug2",
+                description="Test Case Description2",
+                committee="APC",
+                category=Category.objects.get(name=1)
+                )
+
+        user_obj            = User.objects.first()
+        self.assertNotEqual(user_obj.username, owner.username)
+        payload             = payload_handler(user_obj)
+        token_rsp           = encode_handler(payload)
+        self.client.credentials(HTTP_AUTHORIZATION='JWT ' + token_rsp)
+        url = meeting.get_api_url()
+        data = {"title": "Some rando title", "content": "some more content"}
+        response = self.client.put(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+
     def test_user_login_and_update(self):
         data = {
             'username': 'testuser',
@@ -99,4 +119,3 @@ class MeetingAPITestCase(APITestCase):
         url = api_reverse("api-login")
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-    
