@@ -3,5 +3,6 @@ python:
  - "3.6"
 install:
  - ./test.sh
+ - ./transgov/src/prototype/setup.sh
 script:
  - python3 dummy_test.py
