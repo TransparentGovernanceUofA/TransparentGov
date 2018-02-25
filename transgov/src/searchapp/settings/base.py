@@ -18,26 +18,6 @@ from django.core.exceptions import ImproperlyConfigured
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-with open(os.environ.get('TRANSGOV_CONFIG')) as f:
-    configs = json.loads(f.read())
-def get_env_var(setting, configs=configs):
-    try:
-        val = configs[setting]
-        if val == 'True':
-            val = True
-        elif val == 'False':
-            val = False
-
-        return val
-    except KeyError:
-        error_msg = "ImproperlyConfigured: Set {0} environment variable".format(setting)
-        raise ImproperlyConfigured(error_msg)
-
-#get secret key
-SECRET_KEY = get_env_var("SECRET_KEY")
-DEBUG = get_env_var("DEBUG")
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -63,43 +43,98 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'searchapp.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'prototype/dist', 'templates',
-        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+
+if os.environ.get('TRAVIS'):
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    DEBUG = False
+    TEMPLATE_DEBUG = True
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ.get('DATABASE_NAME'),
+            'USER': os.environ.get('DATABASE_USER'),
+            'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+            'HOST': '127.0.0.1',
+        }
+    }
+
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [
+                'transgov/src/prototype/dist', 'transgov/srctemplates',
             ],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
         },
-    },
-]
+    ]
+
+else:
+    with open(os.environ.get('TRANSGOV_CONFIG')) as f:
+        configs = json.loads(f.read())
+    def get_env_var(setting, configs=configs):
+        try:
+            val = configs[setting]
+            if val == 'True':
+                val = True
+            elif val == 'False':
+                val = False
+
+            return val
+        except KeyError:
+            error_msg = "ImproperlyConfigured: Set {0} environment variable".format(setting)
+            raise ImproperlyConfigured(error_msg)
+
+    #get secret key
+    SECRET_KEY = get_env_var("SECRET_KEY")
+    DEBUG = get_env_var("DEBUG")
+
+    # Database
+    # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': get_env_var("DATABASE_NAME"),
+        	'USER': get_env_var("DATABASE_USER"),
+        	'PASSWORD': get_env_var("DATABASE_PASSWORD"),
+        	'HOST': '199.116.235.49',
+        	'PORT': '',
+        'TEST': {
+            'NAME': 'test_transgov_prod',
+        },
+        },
+    }
+
+    ALLOWED_HOSTS = get_env_var("ALLOWED_HOSTS")
+
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [
+                'prototype/dist', 'templates',
+            ],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
+        },
+    ]
 
 WSGI_APPLICATION = 'searchapp.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': get_env_var("DATABASE_NAME"),
-    	'USER': get_env_var("DATABASE_USER"),
-    	'PASSWORD': get_env_var("DATABASE_PASSWORD"),
-    	'HOST': '199.116.235.49',
-    	'PORT': '',
-    'TEST': {
-        'NAME': 'test_transgov_prod',
-    },
-    },
-}
 
 
 # Password validation
@@ -163,8 +198,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ),
 }
-
-ALLOWED_HOSTS = get_env_var("ALLOWED_HOSTS")
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True

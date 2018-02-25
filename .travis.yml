@@ -1,7 +1,6 @@
 language: python
 
 python:
-  - 2.7
   - 3.6
 
 services: postgresql
@@ -20,4 +19,4 @@ before_script:
 
 script:
   - ./test.sh
-  - python transgov/src/manage.py test
+  - python transgov/src/manage.py test transgov/src
