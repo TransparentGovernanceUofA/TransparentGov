@@ -1,3 +1,7 @@
 language: python
+python:
+ - "3.6"
 install: true
-script: ./test.sh
+script:
+ - python3 dummy_test.py
+ - 
