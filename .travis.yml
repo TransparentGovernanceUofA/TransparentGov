@@ -8,7 +8,7 @@ services: postgresql
 
 env:
   global:
-    - DJANGO_SETTINGS_MODULE="transgov.src.settings.base"
+    - DJANGO_SETTINGS_MODULE="transgov.src.searchapp.settings"
     - PYTHONPATH="/home/travis/build/TransparentGovernanceUofA/TransparentGov"
     - PIP_USE_MIRRORS=true
 
