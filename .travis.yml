@@ -20,4 +20,4 @@ before_script:
 
 script:
   - ./test.sh
-  - python manage.py test
+  - python transgov/src/manage.py test
