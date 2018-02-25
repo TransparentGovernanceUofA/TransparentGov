@@ -67,7 +67,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'prototype/dist',
+            'prototype/dist', 'templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -95,7 +95,10 @@ DATABASES = {
 	'PASSWORD': 'transgov401',
 	'HOST': '199.116.235.49',
 	'PORT': '',
-    }
+    'TEST': {
+        'NAME': 'test_transgov_prod',
+    },
+    },
 }
 
 
