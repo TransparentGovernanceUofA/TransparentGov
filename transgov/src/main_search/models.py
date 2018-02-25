@@ -1,5 +1,7 @@
+from django.conf import settings
 from django.db import models
 from django.urls.base import reverse
+from rest_framework.reverse import reverse as api_reverse
 
 class Category(models.Model):
     name = models.CharField(max_length=255, db_index=True, unique=True)
@@ -16,10 +18,12 @@ class Meeting(models.Model):
     category = models.ForeignKey('Category', related_name='category')
     timestamp = models.DateTimeField(auto_now=True)
 
-    def get_absolute_url(self):
-        return reverse('meeting',
-                       kwargs={'slug': self.slug})
-
+    # def get_absolute_url(self):
+    #     return reverse('meeting',
+    #                    kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.title
+
+    def get_api_url(self, request=None):
+        return api_reverse("meetings:meeting-rud", kwargs={'pk': self.pk}, request=request)

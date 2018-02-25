@@ -18,6 +18,7 @@ from django.contrib import admin
 from main_search.views import TemplateView
 from .settings import MEDIA_ROOT, MEDIA_URL
 from django.conf.urls.static import static
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     #url(r'^$', HomeView.as_view()),
@@ -27,5 +28,6 @@ urlpatterns = [
     #url(r'^find/', FacetedSearchView.as_view(), name='haystack_search'),
     url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^api/auth/login', obtain_jwt_token, name='api-login'),
 
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
