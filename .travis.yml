@@ -1,3 +1,21 @@
 language: python
-install: true
+
+python:
+  - 2.7
+  - 3.6
+
+services: postgresql
+
+env:
+  global:
+    - DJANGO_SETTINGS_MODULE="transgov.src.settings.base"
+    - PYTHONPATH="/home/travis/build/TransparentGovernanceUofA/TransparentGov"
+    - PIP_USE_MIRRORS=true
+
+install:
+  - pip install -r transgov/src/requirements.txt
+
+before_script:
+  - psql -c "CREATE DATABASE travisdb;" -U postgres
+
 script: ./test.sh
