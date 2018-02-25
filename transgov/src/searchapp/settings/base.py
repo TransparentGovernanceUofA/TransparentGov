@@ -90,11 +90,11 @@ WSGI_APPLICATION = 'searchapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'transgov_prod',
-	'USER': 'transgov',
-	'PASSWORD': 'transgov401',
-	'HOST': '199.116.235.49',
-	'PORT': '',
+        'NAME': get_env_var("DATABASE_NAME"),
+    	'USER': get_env_var("DATABASE_USER"),
+    	'PASSWORD': get_env_var("DATABASE_PASSWORD"),
+    	'HOST': '199.116.235.49',
+    	'PORT': '',
     'TEST': {
         'NAME': 'test_transgov_prod',
     },
