@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block head_injections %}
+        {{ block.super }}
+<style>
+.w65{
+width: 65px;
+}
+.top10{
+margin-top:10px;
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+
+
+    <div >
+        <h1 class="product-title orange">{{object.title}}</h1>
+        <small class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </small>
+        <div class="product-information"><!--/product-information-->
+                {{ object.description|safe }}
+
+       </div>
+    </div>
+
+</div>
+{% endblock %}
+
+
+
+{% block extrascripts %}
+{% endblock %}
