@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
 import time
 
 def failed():
@@ -13,7 +15,9 @@ def failed():
 
 # opens the browser to the local host
 # requires the frontend running on the localhost
-browser = webdriver.Chrome()
+options = Options()
+options.set_headless()
+browser = webdriver.Chrome(chrome_options=options)
 browser.get('http://localhost:8080')
 
 # trys to find the search button and click it to get the result page
