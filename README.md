@@ -4,6 +4,8 @@ Work with the University of Alberta to enable more transparent governance. The U
 # Development
 [![Build Status](https://travis-ci.org/TransparentGovernanceUofA/TransparentGov.svg?branch=dev)](https://travis-ci.org/TransparentGovernanceUofA/TransparentGov)
 
+[![codecov](https://codecov.io/gh/TransparentGovernanceUofA/TransparentGov/branch/django_dev/graph/badge.svg)](https://codecov.io/gh/TransparentGovernanceUofA/TransparentGov)
+
 ## Branches
 This project uses a branching pattern as follows:
 * Branches are created to work on features, issues, or optimizations
