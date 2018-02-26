@@ -18,6 +18,9 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # Detail
                     ).distinct()
         return qs
 
+    def get_serializer_context(self, *args, **kwargs):
+        return {"request": self.request}
+
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 
@@ -34,6 +37,9 @@ class MeetingRUDView(generics.RetrieveUpdateDestroyAPIView):    # DetailView
 
     def get_queryset(self):
         return Meeting.objects.all()
+
+    def get_serializer_context(self, *args, **kwargs):
+        return {"request": self.request}
 
     # def get_object(self):
     #     pk = self.kwargs.get("pk")
