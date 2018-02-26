@@ -13,8 +13,9 @@
 <style>
 #input-box{
   position:absolute;
-  width: 400px;
+  width: 500px;
   border-radius: 3px;
-  top: 44.5px;
+  top: 30px;
+  height: 35px;
 }
 </style>

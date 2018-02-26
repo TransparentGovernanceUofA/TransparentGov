@@ -13,6 +13,9 @@
     <router-link :to="{name: 'Result', params: { inputField }}">
       <md-button id="search" class = "md-raised" :md-ripple="false">search!</md-button>
     </router-link>
+    <router-link to="/timeline">
+      <md-button id="search2" class = "md-raised" :md-ripple="false">Timeline Test</md-button>
+    </router-link>
   </div>
 </template>
 
@@ -40,6 +43,7 @@ export default {
 #input-box1{
   width: 500px;
   border-radius: 3px;
+  height: 40px;
 }
 .md-raised{
   height: 25px;
@@ -50,4 +54,9 @@ export default {
   text-align: center;
   margin-top: 150px;
 }
+
+input::-webkit-input-placeholder {
+    font-size: 18px;
+}
+
 </style>
