@@ -2,9 +2,7 @@
 Work with the University of Alberta to enable more transparent governance. The University's governing bodies meet in GFC Commitiees (see project glossary) who debate on issues affecting topics such as tuition and program availability. The minutes of these meetings are available to the public, but there is no available way to search and categorize them for research or study. This project seeks to provide a search and visualizations tool for the public to use.
 
 # Development
-[![Build Status](https://travis-ci.org/TransparentGovernanceUofA/TransparentGov.svg?branch=dev)](https://travis-ci.org/TransparentGovernanceUofA/TransparentGov)
-
-[![codecov](https://codecov.io/gh/TransparentGovernanceUofA/TransparentGov/branch/django_dev/graph/badge.svg)](https://codecov.io/gh/TransparentGovernanceUofA/TransparentGov)
+[![Build Status](https://travis-ci.org/TransparentGovernanceUofA/TransparentGov.svg?branch=dev)](https://travis-ci.org/TransparentGovernanceUofA/TransparentGov) [![codecov](https://codecov.io/gh/TransparentGovernanceUofA/TransparentGov/branch/django_dev/graph/badge.svg)](https://codecov.io/gh/TransparentGovernanceUofA/TransparentGov)
 
 ## Branches
 This project uses a branching pattern as follows:
