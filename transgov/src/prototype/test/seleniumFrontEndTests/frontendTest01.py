@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 def failed():
-	print "Testing Failed"
+	print ("Testing Failed")
 	browser.quit()
 	quit()
 
@@ -24,9 +24,9 @@ browser.get('http://localhost:8080')
 try:
 	searchElement = browser.find_element_by_id("search")
 	searchElement.click()
-	print "Successfully clicked the search button"
+	print ("Successfully clicked the search button")
 except Exception as e:
-	print "Failed to find the search button"
+	print ("Failed to find the search button")
 	failed()
 
 # waits for the page to load
@@ -35,10 +35,10 @@ time.sleep(5)
 # trys to find a search result
 try:
 	result = browser.find_element_by_class_name("title")
-	print "Successfully found result"
+	print ("Successfully found result")
 except Exception as e:
-	print "Failed to find Result"
-	print e
+	print ("Failed to find Result")
+	print (e)
 	failed()
 else:
 	pass
@@ -47,9 +47,9 @@ else:
 try:
 	home = browser.find_element_by_id("logo")
 	home.click()
-	print "Successfully went Home"
+	print ("Successfully went Home")
 except Exception as e:
-	print "Failed to go Home"
+	print ("Failed to go Home")
 	failed()
 
 # trys to find and click the advanced search button
@@ -59,14 +59,14 @@ try:
 
 	advancedSearchResult = browser.find_element_by_id("AdvancedSearch")
 
-	print "Successfully found AdvancedSearch result"
+	print ("Successfully found AdvancedSearch result")
 except Exception as e:
-	print "Failed to load AdvancedSearch"
-	print e
+	print ("Failed to load AdvancedSearch")
+	print (e)
 	failed()
 
 
-print "Front end testing Successfull"
+print ("Front end testing Successfull")
 
 browser.quit()
 
