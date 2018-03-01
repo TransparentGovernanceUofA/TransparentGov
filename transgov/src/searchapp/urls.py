@@ -27,7 +27,9 @@ urlpatterns = [
     #url(r'^search/autocomplete/$', autocomplete),
     #url(r'^find/', FacetedSearchView.as_view(), name='haystack_search'),
     url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')),
+    url(r'^api/search/.*', include('main_search.api.urls', namespace='meetings')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^api/auth/login', obtain_jwt_token, name='api-login'),
+    #url(r'^result', TemplateView.as_view(template_name=".html")),
 
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
