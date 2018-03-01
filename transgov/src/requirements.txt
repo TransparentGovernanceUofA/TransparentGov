@@ -1,3 +1,5 @@
+codecov==2.0.15
+coverage==4.5.1
 dj-database-url==0.4.2
 Django==1.11.8
 django-crispy-forms==1.7.0
@@ -8,7 +10,8 @@ django-haystack==2.5.1
 django-jquery==3.1.0
 djangorestframework==3.7.7
 djangorestframework-jwt==1.11.0
-elasticsearch==5.0.1
+elasticsearch==6.1.1
+elasticsearch-dsl==6.1.0
 gunicorn==19.7.1
 olefile==0.44
 Pillow==5.0.0
