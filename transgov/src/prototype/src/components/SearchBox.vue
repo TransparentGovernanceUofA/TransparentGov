@@ -5,13 +5,13 @@
     </router-link>
     <br/>
     <!-- <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box1"> -->
-    <input @change="newInput()" v-model="newSearchBoxText" id="input-box1">
+    <input @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()">
     <br/>
     <router-link to="/advancedsearch">
       <md-button id="search1" class = "md-raised" :md-ripple="false">Advanced Search</md-button>
     </router-link>
     <router-link :to="{name: 'Result', params: { inputField }}">
-      <md-button id="search" class = "md-raised" :md-ripple="false">search!</md-button>
+      <md-button id="search" class = "md-raised" :md-ripple="false">search</md-button>
     </router-link>
     <router-link to="/timeline">
       <md-button id="search2" class = "md-raised" :md-ripple="false">Timeline test</md-button>
@@ -34,6 +34,13 @@ export default {
     newInput () {
       // console.log(this.newSearchBoxText)
       this.inputField.search = this.newSearchBoxText
+    },
+
+    goToResults () {
+      console.log("-----goToResults function called------")
+      // with params: { inputField } it cant find variable inputField and dosent go to the Result page
+      // but the router.push does work without the params
+      this.$router.push({ name: 'Result' })
     }
   }
 }
