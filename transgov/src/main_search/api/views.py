@@ -1,8 +1,9 @@
 from django.db.models import Q
-from rest_framework import generics, mixins
-from .serializers import MeetingSerializer
+from rest_framework import generics, mixins, viewsets
+from .serializers import MeetingSerializer, MeetingSearchSerializer
 from .permissions import IsOwnerOrReadOnly
 from main_search.models import Meeting
+from haystack.query import SearchQuerySet, EmptySearchQuerySet
 
 class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # DetailView
     lookup_field           = 'pk'
@@ -29,6 +30,23 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # Detail
 
     def patch(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
+
+
+# for haystack
+class MeetingSearchViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    serializer_class = MeetingSearchSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+
+    def get_queryset(self):
+        request = self.request
+        queryset = EmptySearchQuerySet()
+
+        if request.GET.get('q', ''):
+            query = request.GET.get('q', '')
+            queryset = SearchQuerySet().filter(content=query)
+        return queryset
+
+
 
 class MeetingRUDView(generics.RetrieveUpdateDestroyAPIView):    # DetailView
     lookup_field        = 'pk'

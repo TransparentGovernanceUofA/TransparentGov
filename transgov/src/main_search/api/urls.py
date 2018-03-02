@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import MeetingRUDView, MeetingAPIView
+from .views import MeetingRUDView, MeetingAPIView, MeetingSearchViewSet
 
 urlpatterns = [
     url(r'^$', MeetingAPIView.as_view(), name='meeting-listcreate'),

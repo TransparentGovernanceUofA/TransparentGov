@@ -39,7 +39,11 @@ export default{
   methods: {
     fetchData () {
       console.log('http://199.116.235.49/api/meetings/' + this.inputField.search)
-      axios.get('http://199.116.235.49/api/meetings/')
+      axios.get('http://199.116.235.49/api/meetings/', {
+        params: {
+          q: this.inputField.search
+        }
+      })
         .then((resp) => {
           console.log(resp)
           this.ElasticResult = resp.data

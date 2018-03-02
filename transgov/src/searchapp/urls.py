@@ -19,6 +19,12 @@ from main_search.views import TemplateView
 from .settings import MEDIA_ROOT, MEDIA_URL
 from django.conf.urls.static import static
 from rest_framework_jwt.views import obtain_jwt_token
+from rest_framework import routers
+from main_search.api.views import MeetingSearchViewSet
+
+# for haystack
+router = routers.SimpleRouter()
+router.register(r'searchquery', MeetingSearchViewSet, base_name='searchquery')
 
 urlpatterns = [
     #url(r'^$', HomeView.as_view()),
@@ -27,6 +33,7 @@ urlpatterns = [
     #url(r'^search/autocomplete/$', autocomplete),
     #url(r'^find/', FacetedSearchView.as_view(), name='haystack_search'),
     url(r'^api/meetings/', include('main_search.api.urls', namespace='meetings')),
+    # url(r'^api/', include(router.urls, namespace='api')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^api/auth/login', obtain_jwt_token, name='api-login'),
 
