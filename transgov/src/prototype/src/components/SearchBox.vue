@@ -37,10 +37,11 @@ export default {
     },
 
     goToResults () {
-      console.log("-----goToResults function called------")
-      // with params: { inputField } it cant find variable inputField and dosent go to the Result page
-      // but the router.push does work without the params
-      this.$router.push({ name: 'Result' })
+      // console.log("-----goToResults function called------")
+      // console.log(this.inputField)
+
+      let inputField = this.inputField
+      this.$router.push({ name: 'Result' , params: { inputField }})
     }
   }
 }
