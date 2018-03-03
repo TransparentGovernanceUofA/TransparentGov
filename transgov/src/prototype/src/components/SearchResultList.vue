@@ -5,8 +5,15 @@
       </SearchResult> -->
       <md-list-item v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id">
         <div class="md-list-item-text">
-          <span class="title"> {{ searchresult.title }}</span>
-          <span class="desc"> {{ searchresult.description }}</span>
+          <b-card header-tag="header" footer-tag="footer">
+            <h6 slot="header"
+                class="mb-0"><span class="title"> {{ searchresult.title }}</span></h6>
+            <p class="card-text">
+              <span class="desc"> {{ searchresult.description }}</span>
+            </p>
+          </b-card>
+          
+          
         </div>
       </md-list-item>
     </md-list>

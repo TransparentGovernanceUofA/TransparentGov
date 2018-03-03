@@ -1,6 +1,11 @@
 <template>
   <div class="results">
     <top-left-search></top-left-search>
+    <b-btn v-b-toggle.collapse1 variant="primary">Toggle Timeline</b-btn>
+  <b-collapse id="collapse1" class="mt-2">
+    <timeline></timeline>
+  </b-collapse>
+    
     <search-result-list :test = "ElasticResult"></search-result-list>
     <!-- {{ inputField.search }} -->
   </div>
@@ -8,6 +13,7 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
+import Timeline from './Timeline.vue'
 import SearchResultList from './SearchResultList.vue'
 import axios from 'axios'
 
@@ -20,7 +26,8 @@ export default{
   },
   components: {
     SearchResultList,
-    TopLeftSearch
+    TopLeftSearch,
+    Timeline
   },
   name: 'ElasticResults',
   data () {
@@ -53,4 +60,5 @@ export default{
 </script>
 
 <style>
+  @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 </style>
