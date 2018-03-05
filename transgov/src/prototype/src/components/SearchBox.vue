@@ -3,22 +3,38 @@
     <b-row id="content-row" align-v="center" align-h="center">
       <b-col cols=8>
         <div id="user-searches" class="md-elevation-8">
-          <router-link to="/">
-            <img src="./../assets/logoClearGov-M.png" id="logo">
-          </router-link>
-          <br/>
-          <!-- <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box1"> -->
-          <input @change="newInput()" v-model="newSearchBoxText" id="input-box1">
-          <br/>
-          <router-link to="/advancedsearch">
-            <md-button id="search1" class = "md-raised" :md-ripple="false">Advanced Search</md-button>
-          </router-link>
-          <router-link :to="{name: 'Result', params: { inputField }}">
-            <md-button id="search" class = "md-raised" :md-ripple="false">search!</md-button>
-          </router-link>
-          <router-link to="/timeline">
-            <md-button id="search2" class = "md-raised" :md-ripple="false">Timeline test</md-button>
-          </router-link>
+          <b-row>
+            <b-col>
+              <router-link to="/">
+                <img src="./../assets/logoClearGov-M.png" id="logo">
+              </router-link>
+            </b-col>
+          </b-row>
+          
+          <b-row align-h="center">
+            <b-col cols=8>
+              <!-- <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box1"> -->
+              <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1"></b-form-input>
+            </b-col>
+          </b-row>
+          
+          <b-row class="mt-4">
+            <b-col>
+              <router-link to="/advancedsearch">
+                <b-button :variant="outline-success" id="search1">Guide</b-button>
+              </router-link>
+            </b-col>
+            <b-col>
+              <router-link :to="{name: 'Result', params: { inputField }}">
+                <b-button id="search">Search</b-button>
+              </router-link>
+            </b-col>
+            <b-col>
+              <router-link to="/timeline">
+                <b-button id="search2">Timeline test</b-button>
+              </router-link>
+            </b-col>
+          </b-row> 
         </div>
       </b-col>
     </b-row>
@@ -48,13 +64,8 @@ export default {
 
 <style>
 #input-box1{
-  width: 500px;
-  border-radius: 3px;
-  height: 40px;
-}
-.md-raised{
-  height: 25px;
-  width: 200px;
+  width: 100%;
+  /*border-radius: 3px;*/
 }
 #search-container{
   min-height: 100vh;
