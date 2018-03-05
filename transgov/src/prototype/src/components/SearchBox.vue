@@ -18,23 +18,26 @@
             </b-col>
           </b-row>
           
-          <b-row class="mt-4">
-            <b-col>
+          <b-row class="mt-2" align-h="center">
+            <b-col cols=4>
               <router-link to="/advancedsearch">
-                <b-button :variant="outline-success" id="search1">Guide</b-button>
+                <b-button variant="outline-primary" size="lg" class="search">Guide</b-button>
               </router-link>
             </b-col>
-            <b-col>
+            <b-col cols=4>
               <router-link :to="{name: 'Result', params: { inputField }}">
-                <b-button id="search">Search</b-button>
+                <b-button variant="outline-primary" size="lg" class="search">Search</b-button>
               </router-link>
             </b-col>
+          </b-row>
+          <b-row>
             <b-col>
               <router-link to="/timeline">
                 <b-button id="search2">Timeline test</b-button>
               </router-link>
             </b-col>
-          </b-row> 
+          </b-row>
+            
         </div>
       </b-col>
     </b-row>
@@ -80,5 +83,8 @@ export default {
 }
 #content-row{
   height: 80vh;
+}
+.search{
+  width: 100%;
 }
 </style>
