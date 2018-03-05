@@ -3,11 +3,23 @@
     <router-link to="/">
       <img src="./../assets/transparentGovernance2.png" id = "logo">
     </router-link>
-    <input id="input-box">
+    <input id="input-box" v-model="searchBoxText">
   </div>
 </template>
 
 <script>
+export default {
+  data: function () {
+    return {
+      searchBoxText: ''
+    }
+  },
+
+  created () {
+    this.searchBoxText = this.$parent.inputField.search
+  }
+}
+
 </script>
 
 <style>
