@@ -1,10 +1,17 @@
 <template>
   <div class="results">
     <top-left-search></top-left-search>
-    <b-btn v-b-toggle.collapse1 variant="primary">Toggle Timeline</b-btn>
-  <b-collapse id="collapse1" class="mt-2">
-    <timeline></timeline>
-  </b-collapse>
+    
+    <b-container fluid>
+      <b-row>
+        <b-col cols=12>
+          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Toggle Timeline</b-btn>
+          <b-collapse id="collapse1" class="mt-2">
+            <timeline></timeline>
+          </b-collapse>
+        </b-col>
+      </b-row>
+    </b-container>
     
     <search-result-list :test = "ElasticResult"></search-result-list>
     <!-- {{ inputField.search }} -->
