@@ -13,7 +13,7 @@
     <router-link :to="{name: 'Result', params: { inputField }}">
       <md-button id="search" class = "md-raised" :md-ripple="false">search</md-button>
     </router-link>
-    <router-link to="/timeline">
+    <router-link :to="{name: 'Timeline'}">
       <md-button id="search2" class = "md-raised" :md-ripple="false">Timeline test</md-button>
     </router-link>
   </div>
@@ -37,11 +37,11 @@ export default {
     },
 
     goToResults () {
-      // console.log("-----goToResults function called------")
+      // console.log('-----goToResults function called------')
       // console.log(this.inputField)
 
       let inputField = this.inputField
-      this.$router.push({ name: 'Result' , params: { inputField }})
+      this.$router.push({name: 'Result', params: { inputField }})
     }
   }
 }
