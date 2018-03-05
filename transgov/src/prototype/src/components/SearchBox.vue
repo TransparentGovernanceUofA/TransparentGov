@@ -56,7 +56,8 @@ export default {
   height: 25px;
   width: 200px;
 }
-body{
+#search-container{
+  min-height: 100vh;
   background-image: url("https://i.imgur.com/qZxEk6z.jpg");
   background-size: cover;
 }
