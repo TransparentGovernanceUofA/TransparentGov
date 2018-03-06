@@ -16,7 +16,11 @@
           <!-- {{ inputField.search }} -->
         </b-col>
         <b-col cols=4>
-          <vis-network></vis-network>
+          <b-card class="mt-4 md-elevation-3" header="Exploration Graph"
+                header-tag="header">
+            <vis-network></vis-network>
+          </b-card>
+          
         </b-col>
       </b-row>
     </b-container>
