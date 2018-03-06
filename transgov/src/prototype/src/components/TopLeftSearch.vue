@@ -1,7 +1,7 @@
 <template>
   <div class="top-left">
     <router-link to="/">
-      <img src="./../assets/transparentGovernance2.png" id = "logo">
+      <img src="./../assets/logoClearGov-XS.png" id="logo">
     </router-link>
     <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()">
   </div>
@@ -42,10 +42,10 @@ export default {
 
 <style>
 #input-box{
-  position:absolute;
+  /*position:absolute;*/
   width: 500px;
-  border-radius: 3px;
-  top: 30px;
+  /*border-radius: 3px;
+  top: 30px;*/
   height: 35px;
 }
 </style>
