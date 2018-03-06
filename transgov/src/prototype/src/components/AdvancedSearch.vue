@@ -5,50 +5,56 @@
         <!-- <center>
             ADVANCED COMPONENT STUFF HERE
         </center> -->
-        <div id="topics" class="searchItem">
-          <div class="title">
-            <p>Topics</p>
-          </div>
-          <div class="select">
-            <b-form-select v-model="selected" :options="topicOptions" class="mb-3" />
-          </div>
-        </div>
 
-        <div id="committee" class="searchItem">
-          <div class="title">
-            <p>Committee</p>
-          </div>
-          <div class="select">
-            <b-form-select v-model="selected" :options="committeeOptions" class="mb-3" />
-          </div>
-        </div>
+        <b-form-group id="topics"
+                    label="Topics"
+                    label-for="exampleInput1">
+          <b-form-select id="exampleInput1"
+                      :options="topicOptions"
+                      required
+                      v-model="form.topic">
+          </b-form-select>
+        </b-form-group>
 
-        <div id="date" class="searchItem">
-          <div class="title">
-            <p>Date</p>
-          </div>
-          <div class="select">
-            <b-form-select v-model="selected" :options="dateOptions" class="mb-3" />
-          </div>
-        </div>
+        <b-form-group id="committee"
+                    label="Committee"
+                    label-for="exampleInput2">
+          <b-form-select id="exampleInput2"
+                      :options="committeeOptions"
+                      required
+                      v-model="form.committee">
+          </b-form-select>
+        </b-form-group>
 
-        <div id="text" class="searchItem">
-          <div class="title">
-            <p>Text</p>
-          </div>
-          <div class="select">
-            <b-form-select v-model="selected" :options="textOptions" class="mb-3" />
-          </div>
-        </div>
+        <b-form-group id="date"
+                    label="Date"
+                    label-for="exampleInput3">
+          <b-form-select id="exampleInput3"
+                      :options="dateOptions"
+                      required
+                      v-model="form.date">
+          </b-form-select>
+        </b-form-group>
 
-        <div id="people" class="searchItem">
-          <div class="title">
-            <p>People</p>
-          </div>
-          <div class="select">
-            <b-form-select v-model="selected" :options="peopleOptions" class="mb-3" />
-          </div>
-        </div>
+        <b-form-group id="text"
+                    label="Text"
+                    label-for="exampleInput4">
+          <b-form-select id="exampleInput4"
+                      :options="textOptions"
+                      required
+                      v-model="form.text">
+          </b-form-select>
+        </b-form-group>
+
+        <b-form-group id="people"
+                    label="People"
+                    label-for="exampleInput5">
+          <b-form-select id="exampleInput5"
+                      :options="peopleOptions"
+                      required
+                      v-model="form.people">
+          </b-form-select>
+        </b-form-group>
 
       </div>
   </div>
@@ -69,7 +75,13 @@ export default {
 
   data () {
     return {
-      selected: null,
+      form: {
+        topic: null,
+        committee: null,
+        date: null,
+        text: null,
+        people: null
+      },
       topicOptions: [
         { value: null, text: '' },
         { value: 'a', text: 'USRI' },
