@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from main_search.views import TemplateView
+from main_search.views import TemplateView, index
 from .settings import MEDIA_ROOT, MEDIA_URL
 from django.conf.urls.static import static
 from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework import routers
 from main_search.api.views import MeetingSearchViewSet, MeetingSearchView
+
 
 
 # for haystack
@@ -42,5 +43,8 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^api/auth/login', obtain_jwt_token, name='api-login'),
     url(r'^api/v1/', include(router.urls, namespace='api-search')),
+    # catch-all pattern for compatibility with the Vue routes. This must be last in the list.
+    url(r'^(?P<path>.*)/$', index),
+    url(r'^$', index),
 
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
