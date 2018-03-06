@@ -62,7 +62,6 @@ export default {
 
     goToResults () {
       // console.log('-----goToResults function called------')
-      // console.log('fuck')
       // console.log(this.inputField.search)
       let inputField = this.inputField
       this.$router.push({name: 'Result', params: { inputField }})
