@@ -30,15 +30,15 @@
               </router-link>
             </b-col>
           </b-row>
-          <!--
+          
           <b-row>
             <b-col>
               <router-link to="/timeline">
-                <b-button id="search2">Timeline test</b-button>
+                <b-button id="search2">Vis tests</b-button>
               </router-link>
             </b-col>
           </b-row>
-          -->
+          
             
         </div>
       </b-col>

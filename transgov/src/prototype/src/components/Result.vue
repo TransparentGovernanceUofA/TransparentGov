@@ -1,7 +1,6 @@
 <template>
   <div class="results">
     <top-left-search></top-left-search>
-    
     <b-container fluid>
       <b-row>
         <b-col cols=12>
@@ -11,10 +10,18 @@
           </b-collapse>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col cols=8>
+          <search-result-list :test = "ElasticResult"></search-result-list>
+          <!-- {{ inputField.search }} -->
+        </b-col>
+        <b-col cols=4>
+          <vis-network></vis-network>
+        </b-col>
+      </b-row>
     </b-container>
     
-    <search-result-list :test = "ElasticResult"></search-result-list>
-    <!-- {{ inputField.search }} -->
+    
   </div>
 </template>
 
@@ -22,6 +29,7 @@
 import TopLeftSearch from './TopLeftSearch.vue'
 import Timeline from './Timeline.vue'
 import SearchResultList from './SearchResultList.vue'
+import VisNetwork from './VisNetwork.vue'
 import axios from 'axios'
 
 export default{
@@ -34,7 +42,8 @@ export default{
   components: {
     SearchResultList,
     TopLeftSearch,
-    Timeline
+    Timeline,
+    VisNetwork
   },
   name: 'ElasticResults',
   data () {

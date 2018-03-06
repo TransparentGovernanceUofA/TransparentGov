@@ -4,7 +4,6 @@
 </template>
 
 <script>
-import TopLeftSearch from './TopLeftSearch.vue'
 import vis from 'vis'
 var container = {}
 var items = {}
