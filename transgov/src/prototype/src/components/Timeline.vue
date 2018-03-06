@@ -1,12 +1,5 @@
 <template>
-  <div class="advancedSearch">
-    <top-left-search></top-left-search>
-    <div id="AdvancedSearch">
-      <center>
-          TIMELINE COMPONENT STUFF HERE
-      </center>
-      <div id="visualization"></div>
-    </div>
+  <div id="visualization">
   </div>
 </template>
 
@@ -51,7 +44,6 @@ export default {
     timeline = new vis.Timeline(container, items, options)
   },
   components: {
-    TopLeftSearch
   }
 }
 </script>
