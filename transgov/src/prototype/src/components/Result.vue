@@ -38,15 +38,15 @@ export default{
 
   methods: {
     fetchData () {
-      console.log('http://199.116.235.49/api/meetings/' + this.inputField.search)
-      axios.get('http://199.116.235.49/api/meetings/', {
+      console.log('http://162.246.156.217:8080/' + this.inputField.search)
+      axios.get('http://162.246.156.217:8080/?q=', {
         params: {
           q: this.inputField.search
         }
       })
         .then((resp) => {
           console.log(resp)
-          this.ElasticResult = resp.data
+          this.ElasticResult = resp.data.hits.hits
         })
         .catch((err) => {
           console.log(err)

@@ -9,7 +9,7 @@ from .models import Meeting
 class MeetingIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.EdgeNgramField(
         document=True, use_template=True,
-        template_name='C:/Users/Julienne/Projects/TransparentGov/transgov/src/templates/search/indexes/Meeting_text.txt')
+        template_name='/Users/ceciliaxiang/TransparentGov/transgov/src/templates/search/indexes/Meeting_text.txt')
     title = indexes.EdgeNgramField(model_attr='title')
     description = indexes.EdgeNgramField(model_attr="description", null=True)
 
@@ -22,6 +22,12 @@ class MeetingIndex(indexes.SearchIndex, indexes.Indexable):
 
     # Spelling suggestions
     suggestions = indexes.FacetCharField()
+
+    @staticmethod
+    def prepare_autocomplete(obj):
+        return " ".join((
+            obj.title, obj.description, obj.category, obj.committee
+        ))
 
     def get_model(self):
         return Meeting
