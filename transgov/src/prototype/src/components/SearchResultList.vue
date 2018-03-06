@@ -9,7 +9,7 @@
             </SearchResult> -->
             <b-card header-tag="header" footer-tag="footer" class="md-elevation-3">
               <h6 slot="header" class="mb-0"><span class="title">{{ searchresult.title }}</span></h6>
-              <p class="card-text">
+              <p class="card-text clamp-3">
                 <span class="desc">{{ searchresult.description }}</span>
               </p>
             </b-card>
@@ -63,5 +63,8 @@ export default {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
+.clamp-3{
+  max-height: 4.5em;
+  overflow: hidden;
+}
 </style>
