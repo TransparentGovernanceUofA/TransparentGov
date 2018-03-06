@@ -10,14 +10,13 @@
               </router-link>
             </b-col>
           </b-row>
-          
           <b-row align-h="center">
             <b-col cols=8>
-              <!-- <input v-model="newSearchBoxText" v-on:keyup.enter="createSearchResult" id="input-box1"> -->
-              <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1"></b-form-input>
+              <!-- b-form-input breaks the listening for key up of enter -->
+              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" >
+              <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
             </b-col>
           </b-row>
-          
           <b-row class="mt-2" align-h="center">
             <b-col cols=4>
               <router-link to="/advancedsearch">
@@ -33,13 +32,11 @@
           <!--
           <b-row>
             <b-col>
-              <router-link to="/timeline">
+              <router-link :to="{name: 'Timeline'}">
                 <b-button id="search2">Timeline test</b-button>
               </router-link>
             </b-col>
           </b-row>
-          -->
-            
         </div>
       </b-col>
     </b-row>
@@ -65,8 +62,7 @@ export default {
 
     goToResults () {
       // console.log('-----goToResults function called------')
-      // console.log(this.inputField)
-
+      // console.log(this.inputField.search)
       let inputField = this.inputField
       this.$router.push({name: 'Result', params: { inputField }})
     }
