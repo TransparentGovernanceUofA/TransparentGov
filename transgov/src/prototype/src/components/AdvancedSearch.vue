@@ -14,7 +14,6 @@
           </div>
         </div>
 
-
         <div id="committee" class="searchItem">
           <div class="title">
             <p>Committee</p>
@@ -24,7 +23,6 @@
           </div>
         </div>
 
-
         <div id="date" class="searchItem">
           <div class="title">
             <p>Date</p>
@@ -33,7 +31,6 @@
             <b-form-select v-model="selected" :options="dateOptions" class="mb-3" />
           </div>
         </div>
-
 
         <div id="text" class="searchItem">
           <div class="title">
@@ -60,6 +57,12 @@
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
 export default {
+  props: {
+    inputField: {
+      type: Object,
+      default: () => ({})
+    }
+  },
   components: {
     TopLeftSearch
   },
@@ -71,31 +74,31 @@ export default {
         { value: null, text: '' },
         { value: 'a', text: 'USRI' },
         { value: 'b', text: 'Stoof' },
-        { value: {'C': '3PO'}, text: 'Even more stoof' },
+        { value: {'C': '3PO'}, text: 'Even more stoof' }
       ],
       committeeOptions: [
         { value: null, text: '' },
         { value: 'a', text: '1 committee' },
         { value: 'b', text: '2 committee' },
-        { value: {'C': '3PO'}, text: '3 comimttee' },
+        { value: {'C': '3PO'}, text: '3 comimttee' }
       ],
       dateOptions: [
         { value: null, text: '' },
         { value: 'a', text: '1 idk' },
         { value: 'b', text: '2 what' },
-        { value: {'C': '3PO'}, text: '3 we want for this' },
+        { value: {'C': '3PO'}, text: '3 we want for this' }
       ],
       textOptions: [
         { value: null, text: '' },
         { value: 'a', text: 'some' },
         { value: 'b', text: 'texts' },
-        { value: {'C': '3PO'}, text: 'here' },
+        { value: {'C': '3PO'}, text: 'here' }
       ],
       peopleOptions: [
         { value: null, text: '' },
         { value: 'a', text: 'Eleni' },
         { value: 'b', text: 'Barbosa' },
-        { value: {'C': '3PO'}, text: 'Diego' },
+        { value: {'C': '3PO'}, text: 'Diego' }
       ]
     }
   }

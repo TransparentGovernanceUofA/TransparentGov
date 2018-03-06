@@ -1,7 +1,6 @@
 <template>
   <div class="results">
     <top-left-search></top-left-search>
-    
     <b-container fluid>
       <b-row>
         <b-col cols=12>
@@ -12,7 +11,6 @@
         </b-col>
       </b-row>
     </b-container>
-    
     <search-result-list :test = "ElasticResult"></search-result-list>
     <!-- {{ inputField.search }} -->
   </div>
