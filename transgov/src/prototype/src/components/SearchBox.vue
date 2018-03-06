@@ -44,7 +44,6 @@
       </b-col>
     </b-row>
   </b-container>
-  
 </template>
 
 <script>
@@ -62,6 +61,14 @@ export default {
     newInput () {
       // console.log(this.newSearchBoxText)
       this.inputField.search = this.newSearchBoxText
+    },
+
+    goToResults () {
+      // console.log('-----goToResults function called------')
+      // console.log(this.inputField)
+
+      let inputField = this.inputField
+      this.$router.push({name: 'Result', params: { inputField }})
     }
   }
 }

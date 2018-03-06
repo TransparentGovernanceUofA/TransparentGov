@@ -50,10 +50,11 @@ export default {
 }
 */
 .desc{
-  white-space: initial;
+  /*white-space: initial;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;*/
+  /*max-length*/
 }
 .title{
   /*width: 400px;*/
