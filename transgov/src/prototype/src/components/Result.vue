@@ -20,12 +20,12 @@
                 header-tag="header">
             <vis-network></vis-network>
           </b-card>
-          
+
         </b-col>
       </b-row>
     </b-container>
-    
-    
+
+
   </div>
 </template>
 
@@ -35,6 +35,15 @@ import Timeline from './Timeline.vue'
 import SearchResultList from './SearchResultList.vue'
 import VisNetwork from './VisNetwork.vue'
 import axios from 'axios'
+
+const query = {
+  query: {
+    match: {
+      //"title" : SearchBox.inputField.search
+      //
+    }
+  }
+};
 
 export default{
   props: {
@@ -62,14 +71,24 @@ export default{
   watch: {
     '$route': 'fetchData'
   },
+//   query :{
+//     query: {
+//       match: {
+//         //"title" : this.inputField
+//         "title": "testing"
+//       }
+//     }
+// },
+
 
   methods: {
     fetchData () {
-      console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
-      axios.get('http://162.246.156.217:8080/_search?q=', {
-        params: {
-          q: this.inputField.search
-        }
+      //console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
+      axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
+          params: {
+            source: JSON.stringify(query),
+            source_content_type: 'application/json'
+          }
       })
         .then((resp) => {
           console.log(resp)
@@ -80,7 +99,10 @@ export default{
         })
     }
   }
+
 }
+
+
 </script>
 
 <style>
