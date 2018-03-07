@@ -10,9 +10,22 @@
           </b-collapse>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col cols=8>
+          <search-result-list :test = "ElasticResult"></search-result-list>
+          <!-- {{ inputField.search }} -->
+        </b-col>
+        <b-col cols=4>
+          <b-card class="mt-4 md-elevation-3" header="Exploration Graph"
+                header-tag="header">
+            <vis-network></vis-network>
+          </b-card>
+          
+        </b-col>
+      </b-row>
     </b-container>
-    <search-result-list :test = "ElasticResult"></search-result-list>
-    <!-- {{ inputField.search }} -->
+    
+    
   </div>
 </template>
 
@@ -20,6 +33,7 @@
 import TopLeftSearch from './TopLeftSearch.vue'
 import Timeline from './Timeline.vue'
 import SearchResultList from './SearchResultList.vue'
+import VisNetwork from './VisNetwork.vue'
 import axios from 'axios'
 
 export default{
@@ -32,7 +46,8 @@ export default{
   components: {
     SearchResultList,
     TopLeftSearch,
-    Timeline
+    Timeline,
+    VisNetwork
   },
   name: 'ElasticResults',
   data () {

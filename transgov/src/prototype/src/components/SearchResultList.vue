@@ -1,6 +1,7 @@
 <template>
   <div id="search-result-list">
     <b-container fluid>
+<<<<<<< HEAD
     <b-row>
       <b-col cols=8>
         <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id" class="mt-4">
@@ -24,6 +25,21 @@
       </b-col>
     </b-row>
 
+=======
+      <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id" class="mt-4">
+        <b-col>
+          <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
+          </SearchResult> -->
+          <b-card header-tag="header" footer-tag="footer" class="md-elevation-3">
+            <h6 slot="header" class="mb-0"><span class="title">{{ searchresult.title }}</span></h6>
+            <p class="card-text clamp-3">
+              <span class="desc">{{ searchresult.description }}</span>
+            </p>
+          </b-card>
+        </b-col>
+      </b-row>
+    
+>>>>>>> ebce43e419f5357f4d3c7e9c64bd992e575f7eae
     </b-container>
   </div>
 </template>

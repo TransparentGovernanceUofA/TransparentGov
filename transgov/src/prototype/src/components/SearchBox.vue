@@ -10,6 +10,7 @@
               </router-link>
             </b-col>
           </b-row>
+          
           <b-row align-h="center">
             <b-col cols=8>
               <!-- b-form-input breaks the listening for key up of enter -->
@@ -17,6 +18,7 @@
               <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
             </b-col>
           </b-row>
+          
           <b-row class="mt-2" align-h="center">
             <b-col cols=4>
               <router-link to="/advancedsearch">
@@ -38,6 +40,10 @@
             </b-col>
           </b-row>
           -->
+<<<<<<< HEAD
+=======
+            
+>>>>>>> ebce43e419f5357f4d3c7e9c64bd992e575f7eae
         </div>
       </b-col>
     </b-row>
@@ -63,7 +69,8 @@ export default {
 
     goToResults () {
       // console.log('-----goToResults function called------')
-      // console.log(this.inputField.search)
+      // console.log(this.inputField)
+
       let inputField = this.inputField
       this.$router.push({name: 'Result', params: { inputField }})
     }
