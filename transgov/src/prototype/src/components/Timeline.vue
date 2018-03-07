@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p v-for="(searchresult, index) in test" :key="index" :id="searchresult.id">{{searchresult.title}}</p>
     <div id="visualization">
     </div>
   </div>
@@ -22,10 +21,8 @@ export default {
 
     // Create a DataSet (allows two way data-binding)
     items = new vis.DataSet([
-      {id: 1, content: 'GFC meeting item 3', start: '2017-02-20', title: 'The various committees adjourn for bicycles'}
+      {id: 1, content: 'Placeholder', start: '2018-03-07', title: '@TODO figure out how to handle missing data?'}
     ])
-    
-    items.add([{content: 'Eleven makes good bikes', start: '2011-10-10', title: 'bikes are better for 10'}])
 
     // Configuration for the Timeline
     options = {
@@ -43,9 +40,9 @@ export default {
   props: ['test'],
   watch: {
     test: function() {
-       console.log(this.test[0].title)
-       console.log("LOGGED!")
-       items.add({content: this.test[0].title, start: '2000-10-10', title: 'testing'})
+      this.test.forEach(function(item, index) {
+        items.add({content: item.title, start: '2000-10-10', title: item.description})
+      })
     }
   }
 }
