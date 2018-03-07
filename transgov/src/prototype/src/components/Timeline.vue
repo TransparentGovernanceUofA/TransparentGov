@@ -41,7 +41,7 @@ export default {
   watch: {
     test: function() {
       this.test.forEach(function(item, index) {
-        items.add({content: item.title, start: '2000-10-10', title: item.description})
+        items.add({content: item.title, start: item.timestamp, title: item.description})
       })
     }
   }
