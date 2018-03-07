@@ -17,23 +17,29 @@ export default {
       }
     }
   },
-
+  // the searchBox component will pass this prop for the search term
+  props: ['previousInputField'],
   created () {
-    this.searchBoxText = this.$parent.inputField.search
+    // console.log('created')
+    // check if the prop has been passed
+    if (this.previousInputField != null) {
+      // console.log('not null')
+      // use the passed prop to set the default input box text
+      this.inputField = this.previousInputField
+      this.searchBoxText = this.inputField.search
+    }
+    
+    // this.searchBoxText = this.$parent.inputField.search
   },
   methods: {
     goToResults () {
       // console.log('TESTING')
-      // this.inputField.search = this.searchBoxText
-      // let inputField = this.inputField
+      this.inputField.search = this.searchBoxText
+      let inputField = this.inputField
       // console.log(inputField)
 
-      // router.push to a different path works but pushing to the same path wont work for some reason, i know it has some thing to do with how it reuses the components and that it wont reload them
-      // this.$router.push({name: 'SearchBox'})
-      // this.$router.push({name: 'Result', params: { inputField }})
-
-      this.$parent.inputField.search = this.searchBoxText
-      this.$parent.fetchData()
+      // router push wont reload if the path is the same, but the param will change, so Result has to watch for changes on inputField
+      this.$router.push({name: 'Result', params: { inputField }})
     }
   }
 }

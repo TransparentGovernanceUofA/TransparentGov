@@ -1,6 +1,6 @@
 <template>
   <div class="results">
-    <top-left-search></top-left-search>
+    <top-left-search :previousInputField="inputField"></top-left-search>
     <b-container fluid>
       <b-row>
         <b-col cols=12>
@@ -60,7 +60,11 @@ export default{
   },
 
   watch: {
-    '$route': 'fetchData'
+    '$route': 'fetchData',
+    inputField: {
+      handler: 'fetchData',
+      deep: true
+    }
   },
 
   methods: {
