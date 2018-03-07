@@ -50,8 +50,8 @@ export default{
 
   methods: {
     fetchData () {
-      console.log('http://162.246.156.217:8080/' + this.inputField.search)
-      axios.get('http://162.246.156.217:8080/?q=', {
+      console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
+      axios.get('http://162.246.156.217:8080/_search?q=', {
         params: {
           q: this.inputField.search
         }
