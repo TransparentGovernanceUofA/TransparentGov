@@ -1,17 +1,9 @@
 <template>
-  <div class="advancedSearch">
-    <top-left-search></top-left-search>
-    <div id="AdvancedSearch">
-      <center>
-          TIMELINE COMPONENT STUFF HERE
-      </center>
-      <div id="visualization"></div>
-    </div>
+  <div id="visualization">
   </div>
 </template>
 
 <script>
-import TopLeftSearch from './TopLeftSearch.vue'
 import vis from 'vis'
 var container = {}
 var items = {}
@@ -51,7 +43,6 @@ export default {
     timeline = new vis.Timeline(container, items, options)
   },
   components: {
-    TopLeftSearch
   }
 }
 </script>
