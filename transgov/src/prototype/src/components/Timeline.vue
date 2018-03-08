@@ -11,7 +11,6 @@ var container = {}
 var items = {}
 var options = {}
 var timeline = {}
-var test = {}
 
 export default {
   name: 'app',
