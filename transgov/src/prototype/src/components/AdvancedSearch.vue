@@ -2,60 +2,82 @@
   <div class="advancedSearch">
     <top-left-search></top-left-search>
     <div id="AdvancedSearch">
-      <!-- <center>
-          ADVANCED COMPONENT STUFF HERE
-      </center> -->
+      <b-container fluid >
+        <b-row>
+          <b-col cols=4>
+            <!-- The inputs and options -->
+            <b-card header="Search Options" class="mt-4 md-elevation-3">
+              <b-form-group id="topics"
+                          label="Topics"
+                          label-for="exampleInput1">
+                <b-form-select id="exampleInput1"
+                            :options="topicOptions"
+                            required
+                            v-model="form.topic">
+                </b-form-select>
+              </b-form-group>
 
-      <b-form-group id="topics"
-                  label="Topics"
-                  label-for="exampleInput1">
-        <b-form-select id="exampleInput1"
-                    :options="topicOptions"
-                    required
-                    v-model="form.topic">
-        </b-form-select>
-      </b-form-group>
+              <b-form-group id="committee"
+                          label="Committee"
+                          label-for="exampleInput2">
+                <b-form-select id="exampleInput2"
+                            :options="committeeOptions"
+                            required
+                            v-model="form.committee">
+                </b-form-select>
+              </b-form-group>
 
-      <b-form-group id="committee"
-                  label="Committee"
-                  label-for="exampleInput2">
-        <b-form-select id="exampleInput2"
-                    :options="committeeOptions"
-                    required
-                    v-model="form.committee">
-        </b-form-select>
-      </b-form-group>
+              <b-form-group id="date"
+                          label="Date"
+                          label-for="exampleInput3">
+                <b-form-select id="exampleInput3"
+                            :options="dateOptions"
+                            required
+                            v-model="form.date">
+                </b-form-select>
+              </b-form-group>
 
-      <b-form-group id="date"
-                  label="Date"
-                  label-for="exampleInput3">
-        <b-form-select id="exampleInput3"
-                    :options="dateOptions"
-                    required
-                    v-model="form.date">
-        </b-form-select>
-      </b-form-group>
+              <b-form-group id="text"
+                          label="Text"
+                          label-for="exampleInput4">
+                <b-form-select id="exampleInput4"
+                            :options="textOptions"
+                            required
+                            v-model="form.text">
+                </b-form-select>
+              </b-form-group>
 
-      <b-form-group id="text"
-                  label="Text"
-                  label-for="exampleInput4">
-        <b-form-select id="exampleInput4"
-                    :options="textOptions"
-                    required
-                    v-model="form.text">
-        </b-form-select>
-      </b-form-group>
+              <b-form-group id="people"
+                          label="People"
+                          label-for="exampleInput5">
+                <b-form-select id="exampleInput5"
+                            :options="peopleOptions"
+                            required
+                            v-model="form.people">
+                </b-form-select>
+              </b-form-group>
+            </b-card>
+          </b-col>
+          <b-col cols=8>
+            <b-row>
+              <!-- The output search string -->
+              <b-col>
+                <b-card header="Search Query" class="mt-4 md-elevation-3">
 
-      <b-form-group id="people"
-                  label="People"
-                  label-for="exampleInput5">
-        <b-form-select id="exampleInput5"
-                    :options="peopleOptions"
-                    required
-                    v-model="form.people">
-        </b-form-select>
-      </b-form-group>
+                </b-card>
+              </b-col>
+            </b-row>
 
+            <b-row>
+              <!-- The explanation box -->
+              <b-col>
+                <b-card header="Guide" class="mt-4 md-elevation-3" >
+                </b-card>
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
   </div>
 </template>
