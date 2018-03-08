@@ -20,9 +20,7 @@ export default {
     container = document.getElementById('visualization')
 
     // Create a DataSet (allows two way data-binding)
-    items = new vis.DataSet([
-      {id: 1, content: 'Placeholder', start: '2018-03-07', title: '@TODO figure out how to handle missing data?'}
-    ])
+    items = new vis.DataSet()
 
     // Configuration for the Timeline
     options = {
