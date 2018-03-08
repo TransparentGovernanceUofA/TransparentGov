@@ -63,7 +63,8 @@
               <!-- The output search string -->
               <b-col>
                 <b-card header="Search Query" class="mt-4 md-elevation-3">
-
+                  <b-form-input disabled></b-form-input>
+                  <p class="card-text">Please use the options to the left to create your search.</p>
                 </b-card>
               </b-col>
             </b-row>
@@ -72,6 +73,7 @@
               <!-- The explanation box -->
               <b-col>
                 <b-card header="Guide" class="mt-4 md-elevation-3" >
+                  <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Search Query" box will update to include the query that will be needed to search for those specific items.</p>
                 </b-card>
               </b-col>
             </b-row>
