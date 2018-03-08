@@ -36,14 +36,14 @@ import SearchResultList from './SearchResultList.vue'
 import VisNetwork from './VisNetwork.vue'
 import axios from 'axios'
 
-const query = {
-  query: {
-    match: {
-      //"title" : SearchBox.inputField.search
-      //
-    }
-  }
-};
+// const query = {
+//   query: {
+//     match: {
+//       //"title" : SearchBox.inputField.search
+//       //
+//     }
+//   }
+// };
 
 export default{
   props: {
@@ -83,6 +83,17 @@ export default{
 
   methods: {
     fetchData () {
+      // basic query for es; for now searching 'exact term' over all fields
+      const query = {
+        query: {
+          match: {
+            "_all" : this.inputField.search
+            //
+          }
+        }
+      };
+
+      // using axios, get es results
       //console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
       axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
           params: {

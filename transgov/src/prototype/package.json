@@ -23,14 +23,8 @@
     "bootstrap-vue": "^2.0.0-rc.1",
     "bulma": "^0.6.2",
     "localforage": "^1.5.6",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "npm": "^5.7.1",
     "v-autocomplete": "^1.8.2",
-=======
->>>>>>> 0b4a7025999156a5204bb2289567e1859161323e
-=======
->>>>>>> ee852a0062a6aa0e5535c7c0a5dd1ea0c21fe846
     "vis": "^4.21.0",
     "vue": "^2.5.2",
     "vue-material": "^1.0.0-beta-7",

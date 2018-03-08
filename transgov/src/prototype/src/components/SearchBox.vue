@@ -70,7 +70,7 @@ export default {
 
       let inputField = this.inputField
       //this.$router.push({name:'Result', params: { search: inputField.search }})
-      this.$router.push({name:'Result', params: { inputField }})
+      this.$router.push({name: 'Result', params: { inputField }})
     }
   }
 }
