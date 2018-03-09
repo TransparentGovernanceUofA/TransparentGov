@@ -22,7 +22,7 @@
           <b-row class="mt-2" align-h="center">
             <b-col cols=4>
               <router-link to="/advancedsearch">
-                <b-button variant="outline-primary" size="lg" class="search">Guide</b-button>
+                <b-button variant="outline-primary" size="lg" class="search">Advanced Guide</b-button>
               </router-link>
             </b-col>
             <b-col cols=4>
