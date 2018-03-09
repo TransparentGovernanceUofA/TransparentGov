@@ -13,15 +13,15 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # Detail
     lookup_field           = 'pk'
     serializer_class       = MeetingSerializer
 
-    # def get_queryset(self):
-    #     qs = Meeting.objects.all()
-    #     query = self.request.GET.get("q")
-    #     if query is not None:
-    #         qs = qs.filter(
-    #                 Q(title__icontains=query)|
-    #                 Q(description__icontains=query)
-    #                 ).distinct()
-    #     return qs
+    def get_queryset(self):
+        qs = Meeting.objects.all()
+        query = self.request.GET.get("q")
+        if query is not None:
+            qs = qs.filter(
+                    Q(title__icontains=query)|
+                    Q(description__icontains=query)
+                    ).distinct()
+        return qs
 
     def get_serializer_context(self, *args, **kwargs):
         return {"request": self.request}
@@ -40,15 +40,15 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):    # Detail
 class MeetingSearchViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     serializer_class = MeetingSearchSerializer
     permission_classes = [IsOwnerOrReadOnly]
-    
-    def get_queryset(self):
-        request = self.request
-        queryset = EmptySearchQuerySet()
 
-        if request.GET.get('q', ''):
-            query = request.GET.get('q', '')
-            queryset = SearchQuerySet().filter(content=query)
-        return queryset
+    # def get_queryset(self):
+    #     request = self.request
+    #     queryset = EmptySearchQuerySet()
+    #
+    #     if request.GET.get('q', ''):
+    #         query = request.GET.get('q', '')
+    #         queryset = SearchQuerySet().filter(content=query)
+    #     return queryset
 
 
 class MeetingRUDView(generics.RetrieveUpdateDestroyAPIView):    # DetailView
