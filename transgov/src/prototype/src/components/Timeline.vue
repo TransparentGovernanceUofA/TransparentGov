@@ -20,6 +20,7 @@ export default {
 
     // Create a DataSet (allows two way data-binding)
     items = new vis.DataSet()
+    items.add({content: "wght", start: "2015-01-01", title: "dssadsa"})
 
     // Configuration for the Timeline
     options = {
@@ -38,10 +39,6 @@ export default {
   watch: {
     results: {
       handler: function() {
-        items.clear() // Prevents duplication of results - potential bottleneck if dynamically adding data to a large result set
-        this.results.forEach(function(item, index) {
-          items.add({content: item.title, start: item.timestamp, title: item.description})
-        })
       },
       deep: true
     }
