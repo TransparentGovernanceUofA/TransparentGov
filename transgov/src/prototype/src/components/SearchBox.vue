@@ -6,7 +6,7 @@
           <b-row>
             <b-col>
               <router-link to="/">
-                <img src="./../assets/logoClearGov-M.png" id="logo">
+                <img src="./../assets/logoClearGov-M.png" id="logo"/>
               </router-link>
             </b-col>
           </b-row>
@@ -14,7 +14,7 @@
           <b-row align-h="center">
             <b-col cols=8>
               <!-- b-form-input breaks the listening for key up of enter -->
-              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" >
+              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" />
               <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
             </b-col>
           </b-row>

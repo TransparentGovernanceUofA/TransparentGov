@@ -1,9 +1,9 @@
 <template>
   <div class="top-left">
     <router-link to="/">
-      <img src="./../assets/logoClearGov-XS.png" id="logo">
+      <img src="./../assets/logoClearGov-XS.png" id="logo"/>
     </router-link>
-    <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()">
+    <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
   </div>
 </template>
 

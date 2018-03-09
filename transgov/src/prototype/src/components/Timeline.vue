@@ -1,5 +1,7 @@
 <template>
-  <div id="visualization">
+  <div>
+    <div id="visualization">
+    </div>
   </div>
 </template>
 
@@ -17,19 +19,7 @@ export default {
     container = document.getElementById('visualization')
 
     // Create a DataSet (allows two way data-binding)
-    items = new vis.DataSet([
-      {id: 1, content: 'GFC meeting item 3', start: '2017-02-20', title: 'The various committees adjourn for bicycles'},
-      {id: 2, content: 'Branding committee meeting item 7', start: '2016-01-04', title: 'When the bicycles were allowed for retreat'},
-      {id: 3, content: 'Meeting notes 7', start: '2008-08-02', title: 'How were bicycles allowed on the streets?'},
-      {id: 4, content: 'Incident report', start: '1889-01-01', title: 'new invention, \'Bicycle\', allowed for use at UofA'},
-      {id: 5, content: 'Title 2', start: '2009-07-03', title: 'Statement about bicycles'},
-      {id: 6, content: 'What another title', start: '2018-04-02', title: 'and another statement about bikes'},
-      {id: 7, content: 'The guardian issue 5', start: '2013-08-12', title: 'how could you use the bicycle so irresponsibly'},
-      {id: 8, content: 'Meeting minutes 2018', start: '2003-03-23', title: 'another bicycle quote'},
-      {id: 9, content: 'Why would I write another statement on bikes?', start: '2014-12-24', title: 'because bikes'},
-      {id: 10, content: 'Because not bikes', start: '2012-12-12', title: 'bikes'},
-      {id: 11, content: 'Eleven makes a good bike', start: '2011-10-10', title: 'bikes are better for 10'}
-    ])
+    items = new vis.DataSet()
 
     // Configuration for the Timeline
     options = {
@@ -43,6 +33,18 @@ export default {
     timeline = new vis.Timeline(container, items, options)
   },
   components: {
+  },
+  props: ['results'],
+  watch: {
+    results: {
+      handler: function() {
+        items.clear() // Prevents duplication of results - potential bottleneck if dynamically adding data to a large result set
+        this.results.forEach(function(item, index) {
+          items.add({content: item.title, start: item.timestamp, title: item.description})
+        })
+      },
+      deep: true
+    }
   }
 }
 </script>
