@@ -12,6 +12,12 @@ var items = {}
 var options = {}
 var timeline = {}
 
+// Temporarily using this function for demo purposes
+// Credit to: https://stackoverflow.com/questions/9035627/elegant-method-to-generate-array-of-random-dates-within-two-dates
+function randomDate(start, end) {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
 export default {
   name: 'app',
   mounted: function () {
@@ -20,6 +26,7 @@ export default {
 
     // Create a DataSet (allows two way data-binding)
     items = new vis.DataSet()
+    items.add({content: "wght", start: "2015-01-01", title: "dssadsa"})
 
     // Configuration for the Timeline
     options = {
@@ -40,7 +47,12 @@ export default {
       handler: function() {
         items.clear() // Prevents duplication of results - potential bottleneck if dynamically adding data to a large result set
         this.results.forEach(function(item, index) {
-          items.add({content: item.title, start: item.timestamp, title: item.description})
+          try{
+            items.add({content: item._source.title, start: randomDate(new Date(2012, 0, 1), new Date()), title: item._source.description})
+          }
+          catch(e){
+            console.log("There was an error adding an item")
+          }
         })
       },
       deep: true
