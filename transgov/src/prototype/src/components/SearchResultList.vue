@@ -1,15 +1,17 @@
 <template>
   <div id="search-result-list">
-    <md-list>
-      <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
-      </SearchResult> -->
-      <md-list-item v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id">
-        <div class="md-list-item-text">
-          <span class="title"> {{ searchresult.title }}</span>
-          <span class="desc"> {{ searchresult.description }}</span>
-        </div>
-      </md-list-item>
-    </md-list>
+    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id" class="mt-4">
+      <b-col>
+        <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
+        </SearchResult> -->
+        <b-card header-tag="header" footer-tag="footer" class="md-elevation-3">
+          <h6 slot="header" class="mb-0"><span class="title">{{ searchresult._source.title }}</span></h6>
+          <p class="card-text clamp-3">
+            <span class="desc">{{ searchresult._source.description }}</span>
+          </p>
+        </b-card>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -25,6 +27,7 @@ export default {
 </script>
 
 <style>
+/*
 .md-list-item{
   left: 13%;
   width: 600px;
@@ -32,11 +35,13 @@ export default {
 .md-list-item-text{
   padding-bottom: 15px;
 }
+*/
 .desc{
-  white-space: initial;
+  /*white-space: initial;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;*/
+  /*max-length*/
 }
 .title{
   /*width: 400px;*/
@@ -46,5 +51,8 @@ export default {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
+.clamp-3{
+  max-height: 4.5em;
+  overflow: hidden;
+}
 </style>

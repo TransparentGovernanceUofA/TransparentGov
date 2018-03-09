@@ -159,7 +159,7 @@ AUTH_PASSWORD_VALIDATORS = [
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-        'URL': 'http://162.246.156.217:9200',
+        'URL': 'http://162.246.156.217:8080/',
         'INDEX_NAME': 'meeting_minutes',
     },
 }
