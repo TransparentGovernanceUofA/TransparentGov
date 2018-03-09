@@ -34,12 +34,16 @@ export default {
   },
   components: {
   },
-  props: ['test'],
+  props: ['results'],
   watch: {
-    test: function() {
-      this.test.forEach(function(item, index) {
-        items.add({content: item.title, start: item.timestamp, title: item.description})
-      })
+    results: {
+      handler: function() {
+        items.clear() // Prevents duplication of results - potential bottleneck if dynamically adding data to a large result set
+        this.results.forEach(function(item, index) {
+          items.add({content: item.title, start: item.timestamp, title: item.description})
+        })
+      },
+      deep: true
     }
   }
 }
