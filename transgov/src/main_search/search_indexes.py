@@ -23,6 +23,12 @@ class MeetingIndex(indexes.SearchIndex, indexes.Indexable):
     # Spelling suggestions
     suggestions = indexes.FacetCharField()
 
+    @staticmethod
+    def prepare_autocomplete(obj):
+        return " ".join((
+            obj.title, obj.description, obj.category, obj.committee
+        ))
+
     def get_model(self):
         return Meeting
 
