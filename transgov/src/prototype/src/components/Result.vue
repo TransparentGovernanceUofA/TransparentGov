@@ -89,13 +89,23 @@ export default{
     fetchData () {
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
-        query: {
-          match: {
-            "_all" : this.inputField.search
-            //
-          }
-        }
-      };
+              query: {
+                match: {
+                  "_all" : {
+                    "query" : this.inputField.search,
+                    "fuzziness" : "2",
+                    "operator" : "and"
+                  }
+                  // this.inputField.search
+                }
+            },
+              "highlight" : {
+                  "fields" : {
+                      "title" : {},
+                      "description": {}
+                  }
+    }
+            };
 
       // using axios, get es results
       //console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
