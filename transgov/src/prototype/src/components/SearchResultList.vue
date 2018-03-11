@@ -5,10 +5,18 @@
         <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
         </SearchResult> -->
         <b-card header-tag="header" footer-tag="footer" class="md-elevation-3">
-          <h6 slot="header" class="mb-0"><span class="title">{{ searchresult._source.title }}</span></h6>
+          <!-- <h6 slot="header" class="mb-0"><span class="title">{{ searchresult._source.title }}</span></h6>
           <p class="card-text clamp-3">
             <span class="desc">{{ searchresult._source.description }}</span>
+          </p> -->
+
+          <h6 v-if= searchresult slot="header" class="mb-0" v-for="title in searchresult.highlight.title">
+            <span class="title" v-html="title"></span>
+          </h6>
+          <p class="card-text clamp-3" v-for="desc in searchresult.highlight.description">
+            <span class="desc" v-html="desc"></span>
           </p>
+
         </b-card>
       </b-col>
     </b-row>
@@ -27,32 +35,12 @@ export default {
 </script>
 
 <style>
-/*
-.md-list-item{
-  left: 13%;
-  width: 600px;
-}
-.md-list-item-text{
-  padding-bottom: 15px;
-}
-*/
-.desc{
-  /*white-space: initial;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;*/
-  /*max-length*/
-}
-.title{
-  /*width: 400px;*/
-  font-weight: bold;
-  white-space: initial;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
 .clamp-3{
   max-height: 4.5em;
   overflow: hidden;
+}
+
+em{
+  background-color: #ffffcc;
 }
 </style>
