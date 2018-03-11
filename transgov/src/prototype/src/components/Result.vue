@@ -24,8 +24,6 @@
         </b-col>
       </b-row>
     </b-container>
-
-
   </div>
 </template>
 
@@ -35,15 +33,6 @@ import Timeline from './Timeline.vue'
 import SearchResultList from './SearchResultList.vue'
 import VisNetwork from './VisNetwork.vue'
 import axios from 'axios'
-
-// const query = {
-//   query: {
-//     match: {
-//       //"title" : SearchBox.inputField.search
-//       //
-//     }
-//   }
-// };
 
 export default{
   props: {
@@ -75,45 +64,40 @@ export default{
       deep: true
     }
   },
-//   query :{
-//     query: {
-//       match: {
-//         //"title" : this.inputField
-//         "title": "testing"
-//       }
-//     }
-// },
-
 
   methods: {
     fetchData () {
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
-              query: {
-                match: {
-                  "_all" : {
-                    "query" : this.inputField.search,
-                    "fuzziness" : "2",
-                    "operator" : "and"
-                  }
-                  // this.inputField.search
-                }
+        query: {
+          match: {
+            '_all': {
+              'query': this.inputField.search,
+              'fuzziness': '2',
+              'operator': 'and'
+            }
+            // this.inputField.search
+          }
+        },
+        'highlight': {
+          'fields': {
+            'title': {
+              'number_of_fragments': 0
             },
-              "highlight" : {
-                  "fields" : {
-                      "title" : {},
-                      "description": {}
-                  }
-    }
-            };
+            'description': {
+              'number_of_fragments': 0
+            }
+          }
+        }
+      }
 
       // using axios, get es results
-      //console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
+      // console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
       axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
-          params: {
-            source: JSON.stringify(query),
-            source_content_type: 'application/json'
-          }
+        params: {
+          source: JSON.stringify(query),
+          source_content_type: 'application/json'
+        }
       })
         .then((resp) => {
           console.log(resp)
@@ -124,9 +108,7 @@ export default{
         })
     }
   }
-
 }
-
 
 </script>
 
