@@ -82,9 +82,11 @@ export default{
         'highlight': {
           'fields': {
             'title': {
+              'no_match_size': 300,
               'number_of_fragments': 0
             },
             'description': {
+              'no_match_size': 500,
               'number_of_fragments': 0
             }
           }
