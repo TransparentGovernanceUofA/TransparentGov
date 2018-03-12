@@ -13,7 +13,7 @@ export default {
     return {
       searchBoxText: '',
       inputField: {
-        search: ''
+        search: 'search:'
       }
     }
   },
@@ -34,12 +34,9 @@ export default {
   methods: {
     goToResults () {
       // console.log('TESTING')
-      this.inputField.search = this.searchBoxText
-      let inputField = this.inputField
-      // console.log(inputField)
-
-      // router push wont reload if the path is the same, but the param will change, so Result has to watch for changes on inputField
-      this.$router.push({name: 'Result', params: { inputField }})
+      this.inputField.search = 'search:' + this.searchBoxText
+      let search = this.inputField.search
+      this.$router.push({name: 'Result', params: { query: search }})
     }
   }
 }
