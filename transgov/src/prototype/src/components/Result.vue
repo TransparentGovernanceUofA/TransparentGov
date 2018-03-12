@@ -70,11 +70,12 @@ export default{
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
         query: {
-          match: {
+          match_phrase: {
             '_all': {
               'query': this.inputField.search,
+              'prefix_length': '3',
               'fuzziness': '2',
-              'operator': 'and'
+              'operator': 'and',
             }
             // this.inputField.search
           }
@@ -87,7 +88,7 @@ export default{
             },
             'description': {
               'no_match_size': 500,
-              'number_of_fragments': 0
+              'number_of_fragments': 5
             }
           }
         }
