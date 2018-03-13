@@ -87,6 +87,7 @@ export default{
               'number_of_fragments': 0
             },
             'description': {
+              'fragment_size': 300,
               'no_match_size': 500,
               'number_of_fragments': 5
             }

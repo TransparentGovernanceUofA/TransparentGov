@@ -41,6 +41,8 @@ export default {
 }
 
 em{
-  background-color: #ffffcc;
+  font-style:normal;
+  font-weight: bold;
+  background-color: #FFFFCC;
 }
 </style>
