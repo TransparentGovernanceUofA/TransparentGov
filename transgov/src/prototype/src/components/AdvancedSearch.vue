@@ -71,7 +71,6 @@
                   <b-form inline>
                     <b-button disabled class="mr-2">Search Query</b-button>
                     <!-- <b-form-input disabled></b-form-input> -->
-                    <!-- <b-form-input v-model="SearchBoxText"></b-form-input> -->
                     <div v-for="(pill, index) in pills" :key="index">
                       <Pill v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
                       </Pill>
@@ -87,13 +86,6 @@
               <b-col>
                 <b-card header="Guide" class="mt-4 md-elevation-3" >
                   <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
-
-                  <!-- <div id="app" class="container"><br>
-                    <h1>
-                      <Pill v-for="(pill, index) in pills" :key="index" v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable"></Pill>
-                      </h1>
-                    <input type="text" v-model="name"><button v-on:click="addPills">Add Pills</button>
-                  </div> -->
                 </b-card>
               </b-col>
             </b-row>
@@ -121,6 +113,7 @@ export default {
     Pill
   },
   methods: {
+    //this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
@@ -144,6 +137,7 @@ export default {
       this.pills.splice(id,1)
     },
     addPills:function(type, element){
+      // if pill is changed to null, remove the cooresponding pill
       if(element == null){
         for( var i=0; i < this.pills.length; i++){
           if(this.pills[i].type == type){
@@ -153,10 +147,12 @@ export default {
       }
       else{
         for( var i=0; i < this.pills.length; i++){
+          // remove respective pill if its value is changed but type remained the same
           if(this.pills[i].type == type && this.pills[i].name != element){
             this.removePills(i)
           }
         }
+        //add pills
         this.pills.push({
           id:this.pills.length,
           name:element,
@@ -170,8 +166,6 @@ export default {
   data () {
     return {
       pills: [],
-      SearchBoxText: "",
-      newTopic: "",
       form: {
         topic: null,
         committee: null,
@@ -209,19 +203,6 @@ export default {
         { value: 'Barbosa', text: 'Barbosa' },
         { value: 'Diego', text: 'Diego' }
       ]
-      // methods: {
-      //   removePills: function(id) {
-      //     this.pills.splice(id,1)
-      //   },
-      //   addPills:function(){
-      //     this.pills.push({
-      //       id:this.pills.length,
-      //       name:this.name,
-      //       style:'primary'
-      //     });
-      //     this.name='';
-      //   }
-      // }
     }
   }
 }
