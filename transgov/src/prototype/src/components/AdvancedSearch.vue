@@ -7,7 +7,10 @@
           <b-col cols=4>
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
-              <b-form-select id="exampleInput1"
+              <b-form-group id="topic"
+                          label="Topic"
+                          label-for="exampleInput1">
+                <b-form-select id="exampleInput1"
                             :options="topicOptions"
                             required
                             v-model="form.topic"
@@ -125,46 +128,67 @@ export default {
         console.log(this.form.topic)
         console.log("topic changed")
         this.SearchBoxText += this.form.topic + " "
+        this.addPills("topic", this.form.topic)
     }, 10),
     changedCommitteeInput: _.debounce(function(){
         console.log(this.form.committee)
         console.log("committee changed")
         this.SearchBoxText += this.form.committee + " "
+        this.addPills("committee", this.form.committee)
     }, 10),
     changedDateInput: _.debounce(function(){
         console.log(this.form.date)
         console.log("Data changed")
         this.SearchBoxText += this.form.date + " "
+        this.addPills("date", this.form.date)
     }, 10),
     changedTextInput: _.debounce(function(){
         console.log(this.form.text)
         console.log("Text changed")
         this.SearchBoxText += this.form.text + " "
+        this.addPills("text", this.form.text)
     }, 10),
     changedPeopleInput: _.debounce(function(){
         console.log(this.form.people)
         console.log("People changed")
         this.SearchBoxText += this.form.people + " "
+        this.addPills("people", this.form.people)
     }, 10),
 
     removePills: function(id) {
-          this.pills.splice(id,1)
+      console.log(id)
+      this.pills.splice(id,1)
     },
-    addPills:function(){
-      this.pills.push({
-        id:this.pills.length,
-        name:this.name,
-        style:'primary'
-      });
-      this.name='';
+    addPills:function(type, element){
+      console.log("type", type)
+      if(element == null){
+        console.log(this.pills.length)
+        for( var i=0; i < this.pills.length; i++){
+          if(this.pills[i].type == type){
+            console.log("removed")
+            this.removePills(i)
+          }
+        }
+      }
+      else{
+        this.pills.push({
+          id:this.pills.length,
+          // name:this.form.topic,
+          name:element,
+          type: type,
+          style:'primary',
+          pillable:"true"
+        });
+        // this.name='';
+      }
     }
   },
   data () {
     return {
-      name:'',
+      // name:'',
       pills: [
-        {id: 1, name: "JavaScript", style:'primary', pillable:"true"},
-        {id: 2, name: "NodeJS", style:'danger',pillable:"true"},
+        // {id: 1, name: "JavaScript", style:'primary', pillable:"true"},
+        // {id: 2, name: "NodeJS", style:'danger',pillable:"true"},
       ],
       SearchBoxText: "",
       newTopic: "",

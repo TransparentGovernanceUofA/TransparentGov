@@ -7,7 +7,7 @@
 
 <script>
 export default {
-	props: ["text", "pillStyle", "pillable"],
+	props: ["text", "type", "pillStyle", "pillable"],
 	computed: {
 		computedStyle: function() {
 			return 'badge-' + this.pillStyle
