@@ -80,6 +80,13 @@
               <b-col>
                 <b-card header="Guide" class="mt-4 md-elevation-3" >
                   <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
+
+                  <div id="app" class="container"><br>
+                    <h1>
+                      <Pill v-for="(pill, index) in pills" :key="index" v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable"></Pill>
+                      </h1>
+                    <input type="text" v-model="name"><button v-on:click="addPills">Add Pills</button>
+                  </div>
                 </b-card>
               </b-col>
             </b-row>
@@ -92,6 +99,9 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
+import _ from 'lodash'
+import Pill from './Pill.vue'
+
 export default {
   props: {
     inputField: {
@@ -100,7 +110,8 @@ export default {
     }
   },
   components: {
-    TopLeftSearch
+    TopLeftSearch,
+    Pill
   },
   methods: {
     // changedTopicInput () {
@@ -130,10 +141,27 @@ export default {
         console.log(this.form.topic)
         console.log("topic changed")
         this.SearchBoxText += this.form.people + " "
-    }, 10)
+    }, 10),
+
+    removePills: function(id) {
+          this.pills.splice(id,1)
+    },
+    addPills:function(){
+      this.pills.push({
+        id:this.pills.length,
+        name:this.name,
+        style:'primary'
+      });
+      this.name='';
+    }
   },
   data () {
     return {
+      name:'',
+      pills: [
+        {id: 1, name: "JavaScript", style:'primary', pillable:"true"},
+        {id: 2, name: "NodeJS", style:'danger',pillable:"true"},
+      ],
       SearchBoxText: "",
       newTopic: "",
       form: {
@@ -173,6 +201,19 @@ export default {
         { value: 'Barbosa', text: 'Barbosa' },
         { value: 'Diego', text: 'Diego' }
       ]
+      // methods: {
+      //   removePills: function(id) {
+      //     this.pills.splice(id,1)
+      //   },
+      //   addPills:function(){
+      //     this.pills.push({
+      //       id:this.pills.length,
+      //       name:this.name,
+      //       style:'primary'
+      //     });
+      //     this.name='';
+      //   }
+      // }
     }
   }
 }
