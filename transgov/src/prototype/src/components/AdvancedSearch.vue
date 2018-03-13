@@ -68,7 +68,11 @@
                   <b-form inline>
                     <b-button disabled class="mr-2">Search Query</b-button>
                     <!-- <b-form-input disabled></b-form-input> -->
-                    <b-form-input v-model="SearchBoxText"></b-form-input>
+                    <!-- <b-form-input v-model="SearchBoxText"></b-form-input> -->
+                    <div v-for="(pill, index) in pills" :key="index">
+                      <Pill v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
+                      </Pill>
+                    </div>
                   </b-form>
                   <p class="card-text">Please use the options to the left to create your search. <br/>Note: This feature is not yet operational</p>
                 </b-card>
@@ -81,12 +85,12 @@
                 <b-card header="Guide" class="mt-4 md-elevation-3" >
                   <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
 
-                  <div id="app" class="container"><br>
+                  <!-- <div id="app" class="container"><br>
                     <h1>
                       <Pill v-for="(pill, index) in pills" :key="index" v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable"></Pill>
                       </h1>
                     <input type="text" v-model="name"><button v-on:click="addPills">Add Pills</button>
-                  </div>
+                  </div> -->
                 </b-card>
               </b-col>
             </b-row>
@@ -123,23 +127,23 @@ export default {
         this.SearchBoxText += this.form.topic + " "
     }, 10),
     changedCommitteeInput: _.debounce(function(){
-        console.log(this.form.topic)
-        console.log("topic changed")
+        console.log(this.form.committee)
+        console.log("committee changed")
         this.SearchBoxText += this.form.committee + " "
     }, 10),
     changedDateInput: _.debounce(function(){
-        console.log(this.form.topic)
-        console.log("topic changed")
+        console.log(this.form.date)
+        console.log("Data changed")
         this.SearchBoxText += this.form.date + " "
     }, 10),
     changedTextInput: _.debounce(function(){
-        console.log(this.form.topic)
-        console.log("topic changed")
+        console.log(this.form.text)
+        console.log("Text changed")
         this.SearchBoxText += this.form.text + " "
     }, 10),
     changedPeopleInput: _.debounce(function(){
-        console.log(this.form.topic)
-        console.log("topic changed")
+        console.log(this.form.people)
+        console.log("People changed")
         this.SearchBoxText += this.form.people + " "
     }, 10),
 
