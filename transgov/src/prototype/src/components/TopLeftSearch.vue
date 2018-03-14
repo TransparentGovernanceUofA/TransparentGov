@@ -3,9 +3,10 @@
     <router-link to="/">
       <img src="./../assets/logoClearGov-XS.png" id="logo"/>
     </router-link>
-    <input id="input-box" v-if = "truthy" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+    <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+    <!-- <input id="input-box" v-if = "truthy" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
     <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
-    <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+    <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
   </div>
   </div>
 </template>
