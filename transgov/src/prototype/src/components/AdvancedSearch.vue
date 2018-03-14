@@ -1,6 +1,6 @@
 <template>
   <div class="advancedSearch">
-    <top-left-search :previousInputField="advancedInputField"></top-left-search>
+    <top-left-search :advancedInputField="pills"></top-left-search>
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -135,7 +135,6 @@ export default {
 
     removePills: function(id) {
       this.pills.splice(id,1)
-      this.updateSearchBox()
     },
     addPills:function(type, element){
       // if pill is changed to null, remove the cooresponding pill
@@ -162,19 +161,6 @@ export default {
           pillable:"true"
         });
       }
-      this.updateSearchBox()
-    },
-    updateSearchBox: function () {
-      this.newSearchBoxText = ""
-      this.advancedInputField.search = ""
-      for(var i=0; i < this.pills.length; i++){
-        if (this.pills[i].name){
-          this.newSearchBoxText += this.pills[i].name + " "
-          this.advancedInputField.search += this.pills[i].name + " "
-        }
-      }
-      // console.log(this.advancedInputField.search)
-      // console.log(this.newSearchBoxText)
     }
   },
   data () {
@@ -194,7 +180,7 @@ export default {
       topicOptions: [
         { value: null, text: '' },
         { value: 'USRI', text: 'USRI' },
-        { value: 'Stoof', text: 'Stoof' },
+        { value: 'Budget', text: 'Budget' },
         { value: 'Even more stoof', text: 'Even more stoof' }
       ],
       committeeOptions: [
@@ -211,7 +197,7 @@ export default {
       ],
       textOptions: [
         { value: null, text: '' },
-        { value: 'some', text: 'some' },
+        { value: 'the', text: 'the' },
         { value: 'texts', text: 'texts' },
         { value: 'here', text: 'here' }
       ],

@@ -4,9 +4,6 @@
       <img src="./../assets/logoClearGov-XS.png" id="logo"/>
     </router-link>
     <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
-    <!-- <input id="input-box" v-model="inputField.search" v-on:keyup.enter="goToResults()"/> -->
-    {{ previousInputField }}
-    {{ inputField.search }}
   </div>
 </template>
 
@@ -21,8 +18,8 @@ export default {
     }
   },
   // the searchBox component will pass this prop for the search term
-  // props: ['previousInputField', 'advancedInputField'],
-  props: ['previousInputField'],
+  props: ['previousInputField', 'advancedInputField'],
+  // props: ['previousInputField'],
   created () {
     // console.log('created')
     // check if the prop has been passed
@@ -46,17 +43,13 @@ export default {
       this.$router.push({name: 'Result', params: { inputField }})
     }
   },
-  //does not recognize change
-  // watch: {
-  //   previousInputField(){
-  //     console.log("shiiii")
-  //     // this.inputField = this.previousInputField
-  //     // this.searchBoxText = this.inputField.search
-  //   }
-  // }
+  //recognize when change occurs in advancedInput and update the text box
   watch: {
-    inputField: function(newSearch){
-      console.log("shiiii")
+    advancedInputField(){
+      this.searchBoxText = ''
+      for(var i=0; i < this.advancedInputField.length; i++){
+        this.searchBoxText += this.advancedInputField[i].name + " "
+      }
     }
   }
 }
