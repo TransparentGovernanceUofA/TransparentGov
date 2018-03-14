@@ -173,10 +173,8 @@ export default {
           this.advancedInputField.search += this.pills[i].name + " "
         }
       }
-      console.log(this.advancedInputField.search)
-      console.log(this.newSearchBoxText)
-      // let advancedInputField = this.advancedInputField
-      // this.$router.push({name: 'TopLeftSearch', params: { advancedInputField }})
+      // console.log(this.advancedInputField.search)
+      // console.log(this.newSearchBoxText)
     }
   },
   data () {

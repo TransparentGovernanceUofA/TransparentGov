@@ -4,7 +4,9 @@
       <img src="./../assets/logoClearGov-XS.png" id="logo"/>
     </router-link>
     <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+    <!-- <input id="input-box" v-model="inputField.search" v-on:keyup.enter="goToResults()"/> -->
     {{ previousInputField }}
+    {{ inputField.search }}
   </div>
 </template>
 
@@ -43,10 +45,20 @@ export default {
       // router push wont reload if the path is the same, but the param will change, so Result has to watch for changes on inputField
       this.$router.push({name: 'Result', params: { inputField }})
     }
-  }
+  },
+  //does not recognize change
   // watch: {
-  //    { now val will differ from oldval }
+  //   previousInputField(){
+  //     console.log("shiiii")
+  //     // this.inputField = this.previousInputField
+  //     // this.searchBoxText = this.inputField.search
+  //   }
   // }
+  watch: {
+    inputField: function(newSearch){
+      console.log("shiiii")
+    }
+  }
 }
 
 </script>
