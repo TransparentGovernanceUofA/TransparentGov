@@ -13,11 +13,13 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):
     '''
     Used for read-only endpoints to represent a collection of meeting model instances.
     Used mixins.create(request, *args, **kwargs) to implement creating and saving a new model instance.
-    On top of the default 'GET' method handler, added:
-    POST, PUT and PATCH method handlers.
+    On top of the default 'GET' method handler, added 3 method handlers:
+    POST: returns created object),
+    PUT: returns updated object)
+    and PATCH: returns (partial) updated object
 
     get_queryset:
-    getting the query from the GET method
+    getting the query from the GET method, returns the queryset
     '''
 
     lookup_field           = 'pk'
@@ -72,6 +74,9 @@ class MeetingRUDView(generics.RetrieveUpdateDestroyAPIView):
     permission checks for authentication,
     only allows Admin to POST, PUT, DELETE;
     non-admin user can only use GET.
+
+    get_serializer_context:
+    returns the request to be sent to the serializer method
     '''
 
     lookup_field        = 'pk'

@@ -7,6 +7,9 @@ from .models import Meeting
 
 
 class MeetingIndex(indexes.SearchIndex, indexes.Indexable):
+    '''
+    make a search_indexes for Django haystack to index the search items.
+    '''
     text = indexes.EdgeNgramField(
         document=True, use_template=True,
         template_name='/Users/ceciliaxiang/TransparentGov/transgov/src/templates/search/indexes/Meeting_text.txt')
@@ -33,5 +36,7 @@ class MeetingIndex(indexes.SearchIndex, indexes.Indexable):
         return Meeting
 
     def index_queryset(self, using=None):
-        """Used when the entire index for model is updated."""
+        """
+        Used when the entire index for model is updated.
+        """
         return self.get_model().objects.filter(timestamp__lte=timezone.now())

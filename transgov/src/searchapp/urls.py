@@ -22,18 +22,13 @@ from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework import routers
 from main_search.api.views import MeetingSearchViewSet, MeetingSearchView
 
-
-
-# for haystack
-# router = routers.SimpleRouter()
-# router.register(r'searchquery', MeetingSearchViewSet, base_name='searchquery')
-
 router = routers.DefaultRouter()
 router.register("meeting/search", MeetingSearchView, base_name="meeting-search")
 router.register("search/query", MeetingSearchViewSet, base_name='search-query')
 
 urlpatterns = [
     #url(r'^$', HomeView.as_view()),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', admin.site.urls),
     #url(r'^meeting/(?P<slug>[\w-]+)/$', MeetingView.as_view(), name='meeting'),
     #url(r'^search/autocomplete/$', autocomplete),
