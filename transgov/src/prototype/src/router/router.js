@@ -29,7 +29,7 @@ export default new VueRouter({
       path: '/timeline',
       name: 'Timeline',
       component: Timeline
-    }
+    },
   ],
   mode: 'history'
 })

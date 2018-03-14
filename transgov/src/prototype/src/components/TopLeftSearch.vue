@@ -4,6 +4,7 @@
       <img src="./../assets/logoClearGov-XS.png" id="logo"/>
     </router-link>
     <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+    {{ previousInputField }}
   </div>
 </template>
 
@@ -18,6 +19,7 @@ export default {
     }
   },
   // the searchBox component will pass this prop for the search term
+  // props: ['previousInputField', 'advancedInputField'],
   props: ['previousInputField'],
   created () {
     // console.log('created')
@@ -42,6 +44,9 @@ export default {
       this.$router.push({name: 'Result', params: { inputField }})
     }
   }
+  // watch: {
+  //    { now val will differ from oldval }
+  // }
 }
 
 </script>

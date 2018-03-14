@@ -1,6 +1,6 @@
 <template>
   <div class="advancedSearch">
-    <top-left-search></top-left-search>
+    <top-left-search :previousInputField="advancedInputField"></top-left-search>
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -135,6 +135,7 @@ export default {
 
     removePills: function(id) {
       this.pills.splice(id,1)
+      this.updateSearchBox()
     },
     addPills:function(type, element){
       // if pill is changed to null, remove the cooresponding pill
@@ -152,7 +153,7 @@ export default {
             this.removePills(i)
           }
         }
-        //add pills
+        // add pills
         this.pills.push({
           id:this.pills.length,
           name:element,
@@ -161,10 +162,29 @@ export default {
           pillable:"true"
         });
       }
+      this.updateSearchBox()
+    },
+    updateSearchBox: function () {
+      this.newSearchBoxText = ""
+      this.advancedInputField.search = ""
+      for(var i=0; i < this.pills.length; i++){
+        if (this.pills[i].name){
+          this.newSearchBoxText += this.pills[i].name + " "
+          this.advancedInputField.search += this.pills[i].name + " "
+        }
+      }
+      console.log(this.advancedInputField.search)
+      console.log(this.newSearchBoxText)
+      // let advancedInputField = this.advancedInputField
+      // this.$router.push({name: 'TopLeftSearch', params: { advancedInputField }})
     }
   },
   data () {
     return {
+      newSearchBoxText: '',
+      advancedInputField: {
+        search: ''
+      },
       pills: [],
       form: {
         topic: null,
