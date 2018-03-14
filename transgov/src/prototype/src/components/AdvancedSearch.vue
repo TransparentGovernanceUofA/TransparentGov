@@ -1,19 +1,20 @@
 <template>
   <div class="advancedSearch">
-    <top-left-search></top-left-search>
+    <top-left-search :advancedInputField="pills"></top-left-search>
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
           <b-col cols=4>
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
-              <b-form-group id="topics"
-                          label="Topics"
+              <b-form-group id="topic"
+                          label="Topic"
                           label-for="exampleInput1">
                 <b-form-select id="exampleInput1"
                             :options="topicOptions"
                             required
-                            v-model="form.topic">
+                            v-model="form.topic"
+                            @change=changedTopicInput()>
                 </b-form-select>
               </b-form-group>
 
@@ -23,7 +24,8 @@
                 <b-form-select id="exampleInput2"
                             :options="committeeOptions"
                             required
-                            v-model="form.committee">
+                            v-model="form.committee"
+                            @change=changedCommitteeInput()>
                 </b-form-select>
               </b-form-group>
 
@@ -33,7 +35,8 @@
                 <b-form-select id="exampleInput3"
                             :options="dateOptions"
                             required
-                            v-model="form.date">
+                            v-model="form.date"
+                            @change=changedDateInput()>
                 </b-form-select>
               </b-form-group>
 
@@ -43,7 +46,8 @@
                 <b-form-select id="exampleInput4"
                             :options="textOptions"
                             required
-                            v-model="form.text">
+                            v-model="form.text"
+                            @change=changedTextInput()>
                 </b-form-select>
               </b-form-group>
 
@@ -53,7 +57,8 @@
                 <b-form-select id="exampleInput5"
                             :options="peopleOptions"
                             required
-                            v-model="form.people">
+                            v-model="form.people"
+                            @change=changedPeopleInput()>
                 </b-form-select>
               </b-form-group>
             </b-card>
@@ -65,7 +70,11 @@
                 <b-card header="Query" class="mt-4 md-elevation-3">
                   <b-form inline>
                     <b-button disabled class="mr-2">Search Query</b-button>
-                    <b-form-input disabled></b-form-input>
+                    <!-- <b-form-input disabled></b-form-input> -->
+                    <div v-for="(pill, index) in pills" :key="index">
+                      <Pill v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
+                      </Pill>
+                    </div>
                   </b-form>
                   <p class="card-text">Please use the options to the left to create your search. <br/>Note: This feature is not yet operational</p>
                 </b-card>
@@ -89,6 +98,9 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
+import _ from 'lodash'
+import Pill from './Pill.vue'
+
 export default {
   props: {
     inputField: {
@@ -97,11 +109,67 @@ export default {
     }
   },
   components: {
-    TopLeftSearch
+    TopLeftSearch,
+    Pill
   },
+  methods: {
+    //this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
+    // changedTopicInput () {
+    //   console.log(this.form.topic)
+    // }
+    changedTopicInput: _.debounce(function(){
+        this.addPills("topic", this.form.topic)
+    }, 10),
+    changedCommitteeInput: _.debounce(function(){
+        this.addPills("committee", this.form.committee)
+    }, 10),
+    changedDateInput: _.debounce(function(){
+        this.addPills("date", this.form.date)
+    }, 10),
+    changedTextInput: _.debounce(function(){
+        this.addPills("text", this.form.text)
+    }, 10),
+    changedPeopleInput: _.debounce(function(){
+        this.addPills("people", this.form.people)
+    }, 10),
 
+    removePills: function(id) {
+      this.pills.splice(id,1)
+    },
+    addPills:function(type, element){
+      // if pill is changed to null, remove the cooresponding pill
+      if(element == null){
+        for( var i=0; i < this.pills.length; i++){
+          if(this.pills[i].type == type){
+            this.removePills(i)
+          }
+        }
+      }
+      else{
+        for( var i=0; i < this.pills.length; i++){
+          // remove respective pill if its value is changed but type remained the same
+          if(this.pills[i].type == type && this.pills[i].name != element){
+            this.removePills(i)
+          }
+        }
+        // add pills
+        this.pills.push({
+          id:this.pills.length,
+          name:element,
+          type: type,
+          style:'primary',
+          pillable:"true"
+        });
+      }
+    }
+  },
   data () {
     return {
+      newSearchBoxText: '',
+      advancedInputField: {
+        search: ''
+      },
+      pills: [],
       form: {
         topic: null,
         committee: null,
@@ -111,33 +179,33 @@ export default {
       },
       topicOptions: [
         { value: null, text: '' },
-        { value: 'a', text: 'USRI' },
-        { value: 'b', text: 'Stoof' },
-        { value: {'C': '3PO'}, text: 'Even more stoof' }
+        { value: 'USRI', text: 'USRI' },
+        { value: 'Budget', text: 'Budget' },
+        { value: 'Even more stoof', text: 'Even more stoof' }
       ],
       committeeOptions: [
         { value: null, text: '' },
-        { value: 'a', text: '1 committee' },
-        { value: 'b', text: '2 committee' },
-        { value: {'C': '3PO'}, text: '3 comimttee' }
+        { value: '1 committee', text: '1 committee' },
+        { value: '2 committee', text: '2 committee' },
+        { value: '3 comimttee', text: '3 comimttee' }
       ],
       dateOptions: [
         { value: null, text: '' },
-        { value: 'a', text: '1 idk' },
-        { value: 'b', text: '2 what' },
-        { value: {'C': '3PO'}, text: '3 we want for this' }
+        { value: '1 idk', text: '1 idk' },
+        { value: '2 what', text: '2 what' },
+        { value: '3 we want for this', text: '3 we want for this' }
       ],
       textOptions: [
         { value: null, text: '' },
-        { value: 'a', text: 'some' },
-        { value: 'b', text: 'texts' },
-        { value: {'C': '3PO'}, text: 'here' }
+        { value: 'the', text: 'the' },
+        { value: 'texts', text: 'texts' },
+        { value: 'here', text: 'here' }
       ],
       peopleOptions: [
         { value: null, text: '' },
-        { value: 'a', text: 'Eleni' },
-        { value: 'b', text: 'Barbosa' },
-        { value: {'C': '3PO'}, text: 'Diego' }
+        { value: 'Eleni', text: 'Eleni' },
+        { value: 'Barbosa', text: 'Barbosa' },
+        { value: 'Diego', text: 'Diego' }
       ]
     }
   }
