@@ -38,23 +38,23 @@ class MeetingAPITestCase(APITestCase):
                 )
 
     def test_single_user(self):
-    '''
-    test case for single user
-    '''
+        '''
+        test case for single user
+        '''
         user_count = User.objects.count()
         self.assertEqual(user_count, 1)
 
     def test_single_meeting(self):
-    '''
-    test case for the single meeting
-    '''
+        '''
+        test case for the single meeting
+        '''
         meeting_count = Meeting.objects.count()
         self.assertEqual(meeting_count, 1)
 
     def test_get_list(self):
-    '''
-    test case for getting the meeting list without Admin being authenticated(read-only)
-    '''
+        '''
+        test case for getting the meeting list without Admin being authenticated(read-only)
+        '''
         data = {}
         url = api_reverse("meetings:meeting-listcreate")
         response = self.client.get(url, data, format='json')
@@ -62,9 +62,9 @@ class MeetingAPITestCase(APITestCase):
 
 
     def test_post_item(self):
-    '''
-    test the API POST method handler
-    '''
+        '''
+        test the API POST method handler
+        '''
         data = {"title":"Some Test Title",
                 "slug":"Some Test Case slug",
                 "description":"Some Test Case Description",
@@ -75,9 +75,9 @@ class MeetingAPITestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_get_item(self):
-    '''
-    test case for API GET method handler without Admin being authenticated(read-only)
-    '''
+        '''
+        test case for API GET method handler without Admin being authenticated(read-only)
+        '''
         meeting = Meeting.objects.first()
         data = {}
         url = meeting.get_api_url()
@@ -85,10 +85,10 @@ class MeetingAPITestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_update_item(self):
-    '''
-    test case for API UPDATE method handler test case
-    without Admin being authenticated(HTTP_401_UNAUTHORIZED)
-    '''
+        '''
+        test case for API UPDATE method handler test case
+        without Admin being authenticated(HTTP_401_UNAUTHORIZED)
+        '''
         meeting = Meeting.objects.first()
         url = meeting.get_api_url()
         data = {"title":"Some Test Title",
@@ -102,9 +102,9 @@ class MeetingAPITestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_update_item_with_user(self):
-    '''
-    test case for API UPDATE method handler with user
-    '''
+        '''
+        test case for API UPDATE method handler with user
+        '''
         meeting = Meeting.objects.first()
         url = meeting.get_api_url()
         data = {"title":"Some Test Title",
@@ -120,9 +120,9 @@ class MeetingAPITestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
     def test_user_ownership(self):
-    '''
-    test case for API UPDATE method handler with ownership
-    '''
+        '''
+        test case for API UPDATE method handler with ownership
+        '''
         owner = User.objects.create(username='testuser2')
         meeting = Meeting.objects.create(
                 title="Test Case Title2",
@@ -143,9 +143,9 @@ class MeetingAPITestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
     def test_user_login_and_update(self):
-    '''
-    test case for API login
-    '''
+        '''
+        test case for API login
+        '''
         data = {
             'username': 'testuser',
             'password': 'testpassward'

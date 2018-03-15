@@ -32,9 +32,9 @@ class CategoryModelTest(TestCase):
 
 
 class MeetingModelTest(TestCase):
-        '''
-        Set up Meeting object to be used for testing
-        '''
+    '''
+    Set up Meeting object to be used for testing
+    '''
     def setUp(self):
         category = Category.objects.create(
             name='meeting'

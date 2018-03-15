@@ -18,7 +18,7 @@ class MeetingSerializer(serializers.ModelSerializer):
             'url',
             'pk',
             'title',
-            'slug'
+            'slug',
             'description',
             'committee',
             'category',

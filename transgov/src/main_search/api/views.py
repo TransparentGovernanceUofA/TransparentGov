@@ -24,7 +24,7 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):
 
     lookup_field           = 'pk'
     serializer_class       = MeetingSerializer
-
+    
     def get_queryset(self):
         qs = Meeting.objects.all()
         query = self.request.GET.get("q")
