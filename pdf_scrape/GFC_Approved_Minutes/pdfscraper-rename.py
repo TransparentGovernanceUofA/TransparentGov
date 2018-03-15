@@ -65,8 +65,7 @@ for filename in os.listdir("."):
 	fh.close()
 	
 	
-	
-'''
+
 # Define deliniators 
 keywords = []
 filePointers = []
@@ -96,4 +95,3 @@ for file in filePointers:
 	file.close()
 print()	
 print(fileName + " is finished being processed")
-'''
