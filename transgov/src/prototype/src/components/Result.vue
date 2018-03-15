@@ -39,6 +39,10 @@ export default{
     inputField: {
       type: Object,
       default: () => ({})
+    }, 
+    //query is accessing whats appended to the URL, ie /result/query
+    query: {
+      type: String
     }
   },
   components: {
@@ -54,14 +58,17 @@ export default{
     }
   },
   created () {
+    // console.log('Created----' + this.query)
+    this.parseQuery()
     this.fetchData()
   },
 
   watch: {
-    '$route': 'fetchData',
-    inputField: {
-      handler: 'fetchData',
-      deep: true
+    //query is accessing whats appended to the URL, ie /result/query
+    query: function () {
+      // console.log('watch')
+      this.parseQuery()
+      this.fetchData()
     }
   },
 
@@ -110,6 +117,12 @@ export default{
         .catch((err) => {
           console.log(err)
         })
+    },
+
+    parseQuery() {
+      var queryArray = this.query.split(':')
+      this.inputField.search = queryArray[1]
+      // console.log(this.inputField.search)
     }
   }
 }

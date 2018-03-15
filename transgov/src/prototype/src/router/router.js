@@ -15,7 +15,7 @@ export default new VueRouter({
       component: SearchBox
     },
     {
-      path: '/result',
+      path: '/result/:query',
       name: 'Result',
       component: Result,
       props: true
@@ -29,7 +29,7 @@ export default new VueRouter({
       path: '/timeline',
       name: 'Timeline',
       component: Timeline
-    }
+    },
   ],
   mode: 'history'
 })
