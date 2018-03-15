@@ -4,6 +4,10 @@
       <img src="./../assets/logoClearGov-XS.png" id="logo"/>
     </router-link>
     <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+    <!-- <input id="input-box" v-if = "truthy" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+    <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+    <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+  </div>
   </div>
 </template>
 
@@ -11,14 +15,16 @@
 export default {
   data: function () {
     return {
+      truthy: true,
       searchBoxText: '',
       inputField: {
-        search: ''
+        search: 'search:'
       }
     }
   },
   // the searchBox component will pass this prop for the search term
-  props: ['previousInputField'],
+  props: ['previousInputField', 'advancedInputField'],
+  // props: ['previousInputField'],
   created () {
     // console.log('created')
     // check if the prop has been passed
@@ -34,12 +40,19 @@ export default {
   methods: {
     goToResults () {
       // console.log('TESTING')
-      this.inputField.search = this.searchBoxText
-      let inputField = this.inputField
-      // console.log(inputField)
-
-      // router push wont reload if the path is the same, but the param will change, so Result has to watch for changes on inputField
-      this.$router.push({name: 'Result', params: { inputField }})
+      this.inputField.search = 'search:' + this.searchBoxText
+      let search = this.inputField.search
+      this.$router.push({name: 'Result', params: { query: search }})
+    }
+  },
+  //recognize when change occurs in advancedInput and update the text box
+  watch: {
+    advancedInputField(){
+      this.truthy = false
+      this.searchBoxText = ''
+      for(var i=0; i < this.advancedInputField.length; i++){
+        this.searchBoxText += this.advancedInputField[i].name + " "
+      }
     }
   }
 }

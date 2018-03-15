@@ -22,12 +22,12 @@
           <b-row class="mt-2" align-h="center">
             <b-col cols=4>
               <router-link to="/advancedsearch">
-                <b-button variant="outline-primary" size="lg" class="search">Advanced Guide</b-button>
+                <b-button variant="outline-primary" size="lg" class="search" id="advancedSearchButton">Advanced Guide</b-button>
               </router-link>
             </b-col>
             <b-col cols=4>
-              <router-link :to="{name: 'Result', params: { inputField }}">
-                <b-button variant="outline-primary" size="lg" class="search">Search</b-button>
+              <router-link :to="{name: 'Result', params: {  query:'search:' + newSearchBoxText }}">
+                <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
             </b-col>
           </b-row>
@@ -53,7 +53,7 @@ export default {
     return {
       newSearchBoxText: '',
       inputField: {
-        search: ''
+        search: 'search:'
       }
     }
   },
@@ -61,16 +61,17 @@ export default {
     // whenever action occurs like clicking search or enter, stores that input value into prop that will be sent
     newInput () {
       // console.log(this.newSearchBoxText)
-      this.inputField.search = this.newSearchBoxText
+      console.log(this.$route.params)
+      // the string 'search:' is appended to both mark what comes next as the search term and to make sure that whats being appended to the URL is not empty
+      this.inputField.search = 'search:' + this.newSearchBoxText
     },
 
     goToResults () {
       // console.log('-----goToResults function called------')
       // console.log(this.inputField)
 
-      let inputField = this.inputField
-      //this.$router.push({name:'Result', params: { search: inputField.search }})
-      this.$router.push({name: 'Result', params: { inputField }})
+      let search = this.inputField.search
+      this.$router.push({name: 'Result', params: { query: search }})
     }
   }
 }

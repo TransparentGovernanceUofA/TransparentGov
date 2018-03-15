@@ -24,8 +24,6 @@
         </b-col>
       </b-row>
     </b-container>
-
-
   </div>
 </template>
 
@@ -36,20 +34,15 @@ import SearchResultList from './SearchResultList.vue'
 import VisNetwork from './VisNetwork.vue'
 import axios from 'axios'
 
-// const query = {
-//   query: {
-//     match: {
-//       //"title" : SearchBox.inputField.search
-//       //
-//     }
-//   }
-// };
-
 export default{
   props: {
     inputField: {
       type: Object,
       default: () => ({})
+    }, 
+    //query is accessing whats appended to the URL, ie /result/query
+    query: {
+      type: String
     }
   },
   components: {
@@ -65,55 +58,57 @@ export default{
     }
   },
   created () {
+    // console.log('Created----' + this.query)
+    this.parseQuery()
     this.fetchData()
   },
 
   watch: {
-    '$route': 'fetchData',
-    inputField: {
-      handler: 'fetchData',
-      deep: true
+    //query is accessing whats appended to the URL, ie /result/query
+    query: function () {
+      // console.log('watch')
+      this.parseQuery()
+      this.fetchData()
     }
   },
-//   query :{
-//     query: {
-//       match: {
-//         //"title" : this.inputField
-//         "title": "testing"
-//       }
-//     }
-// },
-
 
   methods: {
     fetchData () {
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
-              query: {
-                match: {
-                  "_all" : {
-                    "query" : this.inputField.search,
-                    "fuzziness" : "2",
-                    "operator" : "and"
-                  }
-                  // this.inputField.search
-                }
+        query: {
+          match_phrase: {
+            '_all': {
+              'query': this.inputField.search,
+              'prefix_length': '3',
+              'fuzziness': '2',
+              'operator': 'and',
+            }
+            // this.inputField.search
+          }
+        },
+        'highlight': {
+          'fields': {
+            'title': {
+              'no_match_size': 300,
+              'number_of_fragments': 0
             },
-              "highlight" : {
-                  "fields" : {
-                      "title" : {},
-                      "description": {}
-                  }
-    }
-            };
+            'description': {
+              'fragment_size': 300,
+              'no_match_size': 500,
+              'number_of_fragments': 5
+            }
+          }
+        }
+      }
 
       // using axios, get es results
-      //console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
+      // console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
       axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
-          params: {
-            source: JSON.stringify(query),
-            source_content_type: 'application/json'
-          }
+        params: {
+          source: JSON.stringify(query),
+          source_content_type: 'application/json'
+        }
       })
         .then((resp) => {
           console.log(resp)
@@ -122,11 +117,15 @@ export default{
         .catch((err) => {
           console.log(err)
         })
+    },
+
+    parseQuery() {
+      var queryArray = this.query.split(':')
+      this.inputField.search = queryArray[1]
+      // console.log(this.inputField.search)
     }
   }
-
 }
-
 
 </script>
 
