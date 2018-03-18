@@ -16,7 +16,7 @@ export default new VueRouter({
     },
     {
       //the result page use dynamic route matching to store the query as part of the URL
-      path: '/result/:query',
+      path: '/result/:query/:advanced',
       name: 'Result',
       component: Result,
       props: true

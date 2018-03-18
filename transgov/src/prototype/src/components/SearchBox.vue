@@ -26,7 +26,7 @@
               </router-link>
             </b-col>
             <b-col cols=4>
-              <router-link :to="{name: 'Result', params: {  query:'search:' + newSearchBoxText }}">
+              <router-link :to="{name: 'Result', params: {  query:'search:' + newSearchBoxText, advanced: 'advanced:' }}">
                 <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
             </b-col>
@@ -71,7 +71,7 @@ export default {
       // console.log(this.inputField)
 
       let search = this.inputField.search
-      this.$router.push({name: 'Result', params: { query: search }})
+      this.$router.push({name: 'Result', params: { query: search, advanced: 'advanced:' }})
     }
   }
 }

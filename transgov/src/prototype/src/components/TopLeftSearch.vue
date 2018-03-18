@@ -42,7 +42,7 @@ export default {
       // console.log('TESTING')
       this.inputField.search = 'search:' + this.searchBoxText
       let search = this.inputField.search
-      this.$router.push({name: 'Result', params: { query: search }})
+      this.$router.push({name: 'Result', params: { query: search, advanced: 'advanced:' }})
     }
   },
   //recognize when change occurs in advancedInput and update the text box
