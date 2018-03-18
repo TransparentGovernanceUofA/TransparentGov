@@ -1,6 +1,6 @@
 <template>
   <div class="advancedSearch">
-    <top-left-search :advancedInputField="pills"></top-left-search>
+    <top-left-search :advancedForm="form"></top-left-search>
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -13,8 +13,7 @@
                 <b-form-select id="exampleInput1"
                             :options="topicOptions"
                             required
-                            v-model="form.topic"
-                            @change=changedTopicInput()>
+                            v-model="form.topic">
                 </b-form-select>
               </b-form-group>
 
@@ -24,8 +23,7 @@
                 <b-form-select id="exampleInput2"
                             :options="committeeOptions"
                             required
-                            v-model="form.committee"
-                            @change=changedCommitteeInput()>
+                            v-model="form.committee">
                 </b-form-select>
               </b-form-group>
 
@@ -35,8 +33,7 @@
                 <b-form-select id="exampleInput3"
                             :options="dateOptions"
                             required
-                            v-model="form.date"
-                            @change=changedDateInput()>
+                            v-model="form.date">
                 </b-form-select>
               </b-form-group>
 
@@ -46,8 +43,7 @@
                 <b-form-select id="exampleInput4"
                             :options="textOptions"
                             required
-                            v-model="form.text"
-                            @change=changedTextInput()>
+                            v-model="form.text">
                 </b-form-select>
               </b-form-group>
 
@@ -57,8 +53,7 @@
                 <b-form-select id="exampleInput5"
                             :options="peopleOptions"
                             required
-                            v-model="form.people"
-                            @change=changedPeopleInput()>
+                            v-model="form.people">
                 </b-form-select>
               </b-form-group>
             </b-card>
@@ -71,10 +66,10 @@
                   <b-form inline>
                     <b-button disabled class="mr-2">Search Query</b-button>
                     <!-- <b-form-input disabled></b-form-input> -->
-                    <div v-for="(pill, index) in pills" :key="index">
+                    <!-- <div v-for="(pill, index) in pills" :key="index">
                       <Pill v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
                       </Pill>
-                    </div>
+                    </div> -->
                   </b-form>
                   <p class="card-text">Please use the options to the left to create your search. <br/>Note: This feature is not yet operational</p>
                 </b-card>
@@ -99,7 +94,6 @@
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
 import _ from 'lodash'
-import Pill from './Pill.vue'
 
 export default {
   props: {
@@ -109,59 +103,14 @@ export default {
     }
   },
   components: {
-    TopLeftSearch,
-    Pill
+    TopLeftSearch
   },
   methods: {
     //this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
-    changedTopicInput: _.debounce(function(){
-        this.addPills("topic", this.form.topic)
-    }, 10),
-    changedCommitteeInput: _.debounce(function(){
-        this.addPills("committee", this.form.committee)
-    }, 10),
-    changedDateInput: _.debounce(function(){
-        this.addPills("date", this.form.date)
-    }, 10),
-    changedTextInput: _.debounce(function(){
-        this.addPills("text", this.form.text)
-    }, 10),
-    changedPeopleInput: _.debounce(function(){
-        this.addPills("people", this.form.people)
-    }, 10),
-
-    removePills: function(id) {
-      this.pills.splice(id,1)
-    },
-    addPills:function(type, element){
-      // if pill is changed to null, remove the cooresponding pill
-      if(element == null){
-        for( var i=0; i < this.pills.length; i++){
-          if(this.pills[i].type == type){
-            this.removePills(i)
-          }
-        }
-      }
-      else{
-        for( var i=0; i < this.pills.length; i++){
-          // remove respective pill if its value is changed but type remained the same
-          if(this.pills[i].type == type && this.pills[i].name != element){
-            this.removePills(i)
-          }
-        }
-        // add pills
-        this.pills.push({
-          id:this.pills.length,
-          name:element,
-          type: type,
-          style:'primary',
-          pillable:"true"
-        });
-      }
-    }
+    
   },
   data () {
     return {
@@ -169,7 +118,6 @@ export default {
       advancedInputField: {
         search: ''
       },
-      pills: [],
       form: {
         topic: null,
         committee: null,
