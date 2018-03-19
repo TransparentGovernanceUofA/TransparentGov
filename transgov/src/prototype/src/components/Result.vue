@@ -39,8 +39,8 @@ export default{
     inputField: {
       type: Object,
       default: () => ({})
-    }, 
-    //query is accessing whats appended to the URL, ie /result/query
+    },
+    // query is accessing whats appended to the URL, ie /result/query
     query: {
       type: String
     },
@@ -74,7 +74,7 @@ export default{
   },
 
   watch: {
-    //query is accessing whats appended to the URL, ie /result/query
+    // query is accessing whats appended to the URL, ie /result/query
     query: function () {
       console.log('query Changed')
       this.parseQuery()
@@ -97,7 +97,7 @@ export default{
               'query': this.inputField.search,
               'prefix_length': '3',
               'fuzziness': '2',
-              'operator': 'and',
+              'operator': 'and'
             }
             // this.inputField.search
           }
@@ -134,7 +134,7 @@ export default{
         })
     },
 
-    parseQuery() {
+    parseQuery () {
       var queryArray = this.query.split(':')
       this.inputField.search = queryArray[1]
 

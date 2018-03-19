@@ -176,7 +176,7 @@ export default {
       return this.advancedForm.people
     }
   },
-  //recognize when change occurs in advancedInput and update the text box
+  // recognize when change occurs in advancedInput and update the text box
   watch: {
     // advancedInputField(){
     //   this.truthy = false
