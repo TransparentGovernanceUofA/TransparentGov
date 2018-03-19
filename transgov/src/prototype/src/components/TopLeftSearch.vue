@@ -8,7 +8,6 @@
     <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
     <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
   </div>
-  </div>
 </template>
 
 <script>
@@ -34,7 +33,6 @@ export default {
       this.inputField = this.previousInputField
       this.searchBoxText = this.inputField.search
     }
-    
     // this.searchBoxText = this.$parent.inputField.search
   },
   methods: {
@@ -45,13 +43,13 @@ export default {
       this.$router.push({name: 'Result', params: { query: search }})
     }
   },
-  //recognize when change occurs in advancedInput and update the text box
+  // recognize when change occurs in advancedInput and update the text box
   watch: {
-    advancedInputField(){
+    advancedInputField () {
       this.truthy = false
       this.searchBoxText = ''
-      for(var i=0; i < this.advancedInputField.length; i++){
-        this.searchBoxText += this.advancedInputField[i].name + " "
+      for (var i = 0; i < this.advancedInputField.length; i++) {
+        this.searchBoxText += this.advancedInputField[i].name + ' '
       }
     }
   }

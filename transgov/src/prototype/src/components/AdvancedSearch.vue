@@ -113,53 +113,52 @@ export default {
     Pill
   },
   methods: {
-    //this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
+    // this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
-    changedTopicInput: _.debounce(function(){
-        this.addPills("topic", this.form.topic)
+    changedTopicInput: _.debounce(function () {
+      this.addPills('topic', this.form.topic)
     }, 10),
-    changedCommitteeInput: _.debounce(function(){
-        this.addPills("committee", this.form.committee)
+    changedCommitteeInput: _.debounce(function () {
+      this.addPills('committee', this.form.committee)
     }, 10),
-    changedDateInput: _.debounce(function(){
-        this.addPills("date", this.form.date)
+    changedDateInput: _.debounce(function () {
+      this.addPills('date', this.form.date)
     }, 10),
-    changedTextInput: _.debounce(function(){
-        this.addPills("text", this.form.text)
+    changedTextInput: _.debounce(function () {
+      this.addPills('text', this.form.text)
     }, 10),
-    changedPeopleInput: _.debounce(function(){
-        this.addPills("people", this.form.people)
+    changedPeopleInput: _.debounce(function () {
+      this.addPills('people', this.form.people)
     }, 10),
 
-    removePills: function(id) {
-      this.pills.splice(id,1)
+    removePills: function (id) {
+      this.pills.splice(id, 1)
     },
-    addPills:function(type, element){
+    addPills: function (type, element) {
       // if pill is changed to null, remove the cooresponding pill
-      if(element == null){
-        for( var i=0; i < this.pills.length; i++){
-          if(this.pills[i].type == type){
+      if (element == null) {
+        for (var i = 0; i < this.pills.length; i++) {
+          if (this.pills[i].type === type) {
             this.removePills(i)
           }
         }
-      }
-      else{
-        for( var i=0; i < this.pills.length; i++){
+      } else {
+        for (var i = 0; i < this.pills.length; i++) {
           // remove respective pill if its value is changed but type remained the same
-          if(this.pills[i].type == type && this.pills[i].name != element){
+          if (this.pills[i].type === type && this.pills[i].name !== element) {
             this.removePills(i)
           }
         }
         // add pills
         this.pills.push({
-          id:this.pills.length,
-          name:element,
+          id: this.pills.length,
+          name: element,
           type: type,
-          style:'primary',
-          pillable:"true"
-        });
+          style: 'primary',
+          pillable: 'true'
+        })
       }
     }
   },
