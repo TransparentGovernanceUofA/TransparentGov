@@ -1,16 +1,16 @@
 <template>
-  <div class="top-left">
+  <div class='top-left'>
 
-    <router-link to="/">
-      <img src="./../assets/logoClearGov-XS.png" id="logo"/>
+    <router-link to='/'>
+      <img src='./../assets/logoClearGov-XS.png' id='logo'/>
     </router-link>
-      <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
-      <!-- <input id="input-box" v-if = "truthy" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
-      <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
-      <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+      <input id='input-box' v-model='searchBoxText' v-on:keyup.enter='goToResults()'/>
+      <!-- <input id='input-box' v-if = 'truthy' v-model='searchBoxText' v-on:keyup.enter='goToResults()'/> -->
+      <!-- <input id='input-box' disabled v-model='searchBoxText' v-on:keyup.enter='goToResults()'/> -->
+      <!-- <input id='input-box' v-else disabled v-model='searchBoxText' v-on:keyup.enter='goToResults()'/> -->
     <b-form inline>
-    <div v-for="(pill, index) in pills" :key="index">
-      <Pill v-on:pill_clicked="pillClicked(pill)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
+    <div v-for='(pill, index) in pills' :key='index'>
+      <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
       </Pill>
     </div>
   </b-form>
@@ -60,7 +60,7 @@ export default {
       let isAdvancedSearch = false
 
       let topicStr = 'topic::'
-      if(this.topic != null) {
+      if (this.topic != null) {
         isAdvancedSearch = true
         topicStr = 'topic:' + this.topic + ':'
       }
@@ -70,19 +70,19 @@ export default {
         isAdvancedSearch = true
         committeeStr = 'committee:' + this.committee + ':'
       }
-      
+
       let dateStr = 'date::'
       if (this.date != null) {
         isAdvancedSearch = true
         dateStr = 'date:' + this.date + ':'
       }
-      
+
       let textStr = 'text::'
       if (this.text != null) {
         isAdvancedSearch = true
         textStr = 'text:' + this.text + ':'
       }
-      
+
       let peopleStr = 'people::'
       if (this.people != null) {
         isAdvancedSearch = true
@@ -93,65 +93,60 @@ export default {
       if (isAdvancedSearch) {
         advancedStr = 'advanced:' + topicStr + committeeStr + dateStr + textStr + peopleStr
       }
-      
 
       this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
     },
-    pillClicked: function(pill) {
+    pillClicked: function (pill) {
       // console.log('Pill clicked')
 
-      if(this.$route.name == 'Advanced Search') {
-        if(pill.type == 'topic') {
+      if (this.$route.name === 'Advanced Search') {
+        if (pill.type === 'topic') {
           this.advancedForm.topic = null
-        } else if(pill.type == 'committee') {
+        } else if (pill.type === 'committee') {
           this.advancedForm.committee = null
-        } else if(pill.type == 'date') {
+        } else if (pill.type === 'date') {
           this.advancedForm.date = null
-        } else if(pill.type == 'text') {
+        } else if (pill.type === 'text') {
           this.advancedForm.text = null
         } else {
           this.advancedForm.people = null
         }
-      } else if(this.$route.name == "Result") {
+      } else if (this.$route.name === 'Result') {
         // console.log('Pill clicked from the results page')
         let query = this.$route.params.query
         let advanced = this.$route.params.advanced
 
         this.$router.push({name: 'Advanced Search', params: { query: query, advanced: advanced }})
-
       }
-
-      
     },
-    removePills: function(id) {
-      this.pills.splice(id,1)
+    removePills: function (id) {
+      this.pills.splice(id, 1)
     },
 
-    addPills:function(type, element){
-      // console.log("add Pills")
+    addPills: function (type, element) {
+      // console.log('add Pills')
       // if pill is changed to null, remove the cooresponding pill
-      if(element == null){
-        for( var i=0; i < this.pills.length; i++){
-          if(this.pills[i].type == type){
+      if (element == null) {
+        for (let i = 0; i < this.pills.length; i++) {
+          if (this.pills[i].type === type) {
             this.removePills(i)
           }
         }
-      }
-      else{
-        for( var i=0; i < this.pills.length; i++){
+      } else {
+        for (let i = 0; i < this.pills.length; i++) {
           // remove respective pill if its value is changed but type remained the same
-          if(this.pills[i].type == type && this.pills[i].name != element){
+          if (this.pills[i].type === type && this.pills[i].name !== element) {
             this.removePills(i)
           }
         }
         // add pills
         this.pills.push({
-          id:this.pills.length,
-          name:element,
+          id: this.pills.length,
+          name: element,
           type: type,
-          style:'primary',
-          pillable:"true"
-        });
+          style: 'primary',
+          pillable: 'true'
+        })
       }
     },
     loadPills: function () {
@@ -161,23 +156,21 @@ export default {
       this.addPills('text', this.text)
       this.addPills('people', this.people)
     }
-
-
   },
   computed: {
-    topic() {
+    topic () {
       return this.advancedForm.topic
     },
-    committee() {
+    committee () {
       return this.advancedForm.committee
     },
-    date() {
+    date () {
       return this.advancedForm.date
     },
-    text() {
+    text () {
       return this.advancedForm.text
     },
-    people() {
+    people () {
       return this.advancedForm.people
     }
   },
@@ -187,25 +180,25 @@ export default {
     //   this.truthy = false
     //   this.searchBoxText = ''
     //   for(var i=0; i < this.advancedInputField.length; i++){
-    //     this.searchBoxText += this.advancedInputField[i].name + " "
+    //     this.searchBoxText += this.advancedInputField[i].name + ' '
     //   }
     // }
 
-    topic() {
+    topic () {
       // console.log('topic changed')
-      this.addPills("topic", this.topic)
+      this.addPills('topic', this.topic)
     },
-    committee() {
-      this.addPills("committee", this.committee)
+    committee () {
+      this.addPills('committee', this.committee)
     },
-    date() {
-      this.addPills("date", this.date)
+    date () {
+      this.addPills('date', this.date)
     },
-    text() {
-      this.addPills("text", this.text)
+    text () {
+      this.addPills('text', this.text)
     },
-    people() {
-      this.addPills("people", this.people)
+    people () {
+      this.addPills('people', this.people)
     }
   }
 }

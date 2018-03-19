@@ -123,35 +123,35 @@ export default {
       this.inputField.search = queryArray[1]
 
       var advancedArray = this.advanced.split(':')
-      if(advancedArray[1] != 'false') {
+      if (advancedArray[1] !== 'false') {
         this.form.topic = advancedArray[2]
-        if (this.form.topic == '') {
+        if (this.form.topic === '') {
           this.form.topic = null
         }
 
         this.form.committee = advancedArray[4]
-        if (this.form.committee == '') {
+        if (this.form.committee === '') {
           this.form.committee = null
         }
 
         this.form.date = advancedArray[6]
-        if (this.form.date == '') {
+        if (this.form.date === '') {
           this.form.date = null
         }
 
         this.form.text = advancedArray[8]
-        if (this.form.text == '') {
+        if (this.form.text === '') {
           this.form.text = null
         }
 
         this.form.people = advancedArray[10]
-        if (this.form.people == '') {
+        if (this.form.people === '') {
           this.form.people = null
         }
       }
       // console.log(this.form)
       // console.log(this.inputField.search)
-  }
+    }
   },
   data () {
     return {

@@ -79,7 +79,7 @@ export default{
       // console.log('query Changed')
       this.parseQuery()
       this.fetchData()
-    }, 
+    },
     advanced: function () {
       // console.log('advanced Changed')
       this.parseQuery()
@@ -139,29 +139,29 @@ export default{
       this.inputField.search = queryArray[1]
 
       var advancedArray = this.advanced.split(':')
-      if(advancedArray[1] != 'false') {
+      if (advancedArray[1] !== 'false') {
         this.advancedFilters.topic = advancedArray[2]
-        if (this.advancedFilters.topic == '') {
+        if (this.advancedFilters.topic === '') {
           this.advancedFilters.topic = null
         }
 
         this.advancedFilters.committee = advancedArray[4]
-        if (this.advancedFilters.committee == '') {
+        if (this.advancedFilters.committee === '') {
           this.advancedFilters.committee = null
         }
 
         this.advancedFilters.date = advancedArray[6]
-        if (this.advancedFilters.date == '') {
+        if (this.advancedFilters.date === '') {
           this.advancedFilters.date = null
         }
 
         this.advancedFilters.text = advancedArray[8]
-        if (this.advancedFilters.text == '') {
+        if (this.advancedFilters.text === '') {
           this.advancedFilters.text = null
         }
 
         this.advancedFilters.people = advancedArray[10]
-        if (this.advancedFilters.people == '') {
+        if (this.advancedFilters.people === '') {
           this.advancedFilters.people = null
         }
       }
