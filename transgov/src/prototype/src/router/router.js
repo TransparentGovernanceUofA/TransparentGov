@@ -22,9 +22,10 @@ export default new VueRouter({
       props: true
     },
     {
-      path: '/advancedsearch',
+      path: '/advancedsearch/:query/:advanced',
       name: 'Advanced Search',
-      component: AdvancedSearch
+      component: AdvancedSearch,
+      props: true
     },
     {
       path: '/timeline',

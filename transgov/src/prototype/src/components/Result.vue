@@ -68,7 +68,7 @@ export default{
     }
   },
   created () {
-    console.log('Created----' + this.query)
+    // console.log('Created----' + this.query)
     this.parseQuery()
     this.fetchData()
   },
@@ -76,12 +76,12 @@ export default{
   watch: {
     // query is accessing whats appended to the URL, ie /result/query
     query: function () {
-      console.log('query Changed')
+      // console.log('query Changed')
       this.parseQuery()
       this.fetchData()
     }, 
     advanced: function () {
-      console.log('advanced Changed')
+      // console.log('advanced Changed')
       this.parseQuery()
       this.fetchData()
     }
@@ -165,7 +165,7 @@ export default{
           this.advancedFilters.people = null
         }
       }
-      console.log(this.advancedFilters)
+      // console.log(this.advancedFilters)
       // console.log(this.inputField.search)
     }
   }

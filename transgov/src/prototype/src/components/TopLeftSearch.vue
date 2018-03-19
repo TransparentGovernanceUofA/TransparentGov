@@ -36,7 +36,7 @@ export default {
   props: ['previousInputField', 'advancedForm'],
   // props: ['previousInputField'],
   created () {
-    console.log('created')
+    // console.log('created')
     // check if the prop has been passed
     if (this.previousInputField != null) {
       // console.log('not null')
@@ -50,12 +50,12 @@ export default {
   },
   methods: {
     goToResults () {
-      console.log('goToResults')
-      console.log(this.pills)
+      // console.log('goToResults')
+      // console.log(this.pills)
 
       this.inputField.search = 'search:' + this.searchBoxText
       let search = this.inputField.search
-      console.log(search)
+      // console.log(search)
 
       let isAdvancedSearch = false
 
@@ -98,7 +98,7 @@ export default {
       this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
     },
     pillClicked: function(pill) {
-      console.log('Pill clicked')
+      // console.log('Pill clicked')
 
       if(this.$route.name == 'Advanced Search') {
         if(pill.type == 'topic') {
@@ -113,7 +113,12 @@ export default {
           this.advancedForm.people = null
         }
       } else if(this.$route.name == "Result") {
-        console.log('Pill clicked from the results page')
+        // console.log('Pill clicked from the results page')
+        let query = this.$route.params.query
+        let advanced = this.$route.params.advanced
+
+        this.$router.push({name: 'Advanced Search', params: { query: query, advanced: advanced }})
+
       }
 
       
@@ -123,7 +128,7 @@ export default {
     },
 
     addPills:function(type, element){
-      console.log("add Pills")
+      // console.log("add Pills")
       // if pill is changed to null, remove the cooresponding pill
       if(element == null){
         for( var i=0; i < this.pills.length; i++){
@@ -187,7 +192,7 @@ export default {
     // }
 
     topic() {
-      console.log('topic changed')
+      // console.log('topic changed')
       this.addPills("topic", this.topic)
     },
     committee() {
