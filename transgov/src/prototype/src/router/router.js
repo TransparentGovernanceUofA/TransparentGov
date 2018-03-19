@@ -15,7 +15,7 @@ export default new VueRouter({
       component: SearchBox
     },
     {
-      //the result page use dynamic route matching to store the query as part of the URL
+      // the result page use dynamic route matching to store the query as part of the URL
       path: '/result/:query/:advanced',
       name: 'Result',
       component: Result,
@@ -30,7 +30,7 @@ export default new VueRouter({
       path: '/timeline',
       name: 'Timeline',
       component: Timeline
-    },
+    }
   ],
   mode: 'history'
 })

@@ -93,7 +93,6 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
-import _ from 'lodash'
 
 export default {
   props: {
@@ -106,11 +105,10 @@ export default {
     TopLeftSearch
   },
   methods: {
-    //this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
+    // this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
-    
   },
   data () {
     return {

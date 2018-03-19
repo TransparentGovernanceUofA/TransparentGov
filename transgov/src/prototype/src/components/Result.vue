@@ -1,6 +1,6 @@
 <template>
   <div class="results">
-    <top-left-search :previousInputField="inputField"></top-left-search>
+    <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
     <b-container fluid>
       <b-row>
         <b-col cols=12>
@@ -43,6 +43,9 @@ export default{
     //query is accessing whats appended to the URL, ie /result/query
     query: {
       type: String
+    },
+    advanced: {
+      type: String
     }
   },
   components: {
@@ -54,11 +57,18 @@ export default{
   name: 'ElasticResults',
   data () {
     return {
-      ElasticResult: {}
+      ElasticResult: {},
+      advancedFilters: {
+        topic: null,
+        committee: null,
+        date: null,
+        text: null,
+        people: null
+      }
     }
   },
   created () {
-    // console.log('Created----' + this.query)
+    console.log('Created----' + this.query)
     this.parseQuery()
     this.fetchData()
   },
@@ -66,7 +76,12 @@ export default{
   watch: {
     //query is accessing whats appended to the URL, ie /result/query
     query: function () {
-      // console.log('watch')
+      console.log('query Changed')
+      this.parseQuery()
+      this.fetchData()
+    }, 
+    advanced: function () {
+      console.log('advanced Changed')
       this.parseQuery()
       this.fetchData()
     }
@@ -122,6 +137,35 @@ export default{
     parseQuery() {
       var queryArray = this.query.split(':')
       this.inputField.search = queryArray[1]
+
+      var advancedArray = this.advanced.split(':')
+      if(advancedArray[1] != 'false') {
+        this.advancedFilters.topic = advancedArray[2]
+        if (this.advancedFilters.topic == '') {
+          this.advancedFilters.topic = null
+        }
+
+        this.advancedFilters.committee = advancedArray[4]
+        if (this.advancedFilters.committee == '') {
+          this.advancedFilters.committee = null
+        }
+
+        this.advancedFilters.date = advancedArray[6]
+        if (this.advancedFilters.date == '') {
+          this.advancedFilters.date = null
+        }
+
+        this.advancedFilters.text = advancedArray[8]
+        if (this.advancedFilters.text == '') {
+          this.advancedFilters.text = null
+        }
+
+        this.advancedFilters.people = advancedArray[10]
+        if (this.advancedFilters.people == '') {
+          this.advancedFilters.people = null
+        }
+      }
+      console.log(this.advancedFilters)
       // console.log(this.inputField.search)
     }
   }
