@@ -1,18 +1,18 @@
 <template>
   <b-container fluid id="search-container">
     <b-row id="content-row" align-v="center" align-h="center">
-      <b-col cols=8>
+      <b-col md=8>
         <div id="user-searches" class="md-elevation-8">
           <b-row>
             <b-col>
               <router-link to="/">
-                <img src="./../assets/logoClearGov-M.png" id="logo"/>
+                <img src="./../assets/logoClearGov.svg" id="logo"/>
               </router-link>
             </b-col>
           </b-row>
 
-          <b-row align-h="center">
-            <b-col cols=8>
+          <b-row class="mt-2" align-h="center">
+            <b-col md=8>
               <!-- b-form-input breaks the listening for key up of enter -->
               <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" />
               <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
@@ -20,12 +20,12 @@
           </b-row>
 
           <b-row class="mt-2" align-h="center">
-            <b-col cols=4>
+            <b-col class="mt-2 mt-lg-0" lg=4 order="2" order-lg="1">
               <router-link to="/advancedsearch">
                 <b-button variant="outline-primary" size="lg" class="search" id="advancedSearchButton">Advanced Guide</b-button>
               </router-link>
             </b-col>
-            <b-col cols=4>
+            <b-col lg=4 order="1" order-lg="2">
               <router-link :to="{name: 'Result', params: {  query:'search:' + newSearchBoxText }}">
                 <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
