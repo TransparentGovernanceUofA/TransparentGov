@@ -1,6 +1,7 @@
 <template>
   <div id="search-result-list">
-    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id" class="mt-4">
+    <!-- This is a sub-component, the parent should declare a container for it -->
+    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id" class="mt-4" no-gutters>
       <b-col>
         <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
         </SearchResult> -->

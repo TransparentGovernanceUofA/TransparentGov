@@ -1,20 +1,21 @@
 <template>
   <div class="results">
-    <top-left-search :previousInputField="inputField"></top-left-search>
+    <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
     <b-container fluid>
       <b-row>
         <b-col cols=12>
-          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Toggle Timeline</b-btn>
+          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
           <b-collapse id="collapse1" class="mt-2">
             <timeline :results="ElasticResult"></timeline>
           </b-collapse>
         </b-col>
       </b-row>
       <b-row>
-        <b-col cols=8>
+        <b-col>
           <search-result-list :test = "ElasticResult"></search-result-list>
           <!-- {{ inputField.search }} -->
         </b-col>
+        <!--
         <b-col cols=4>
           <b-card class="mt-4 md-elevation-3" header="Exploration Graph"
                 header-tag="header">
@@ -22,6 +23,7 @@
           </b-card>
 
         </b-col>
+        -->
       </b-row>
     </b-container>
   </div>
@@ -43,6 +45,9 @@ export default{
     // query is accessing whats appended to the URL, ie /result/query
     query: {
       type: String
+    },
+    advanced: {
+      type: String
     }
   },
   components: {
@@ -54,7 +59,14 @@ export default{
   name: 'ElasticResults',
   data () {
     return {
-      ElasticResult: {}
+      ElasticResult: {},
+      advancedFilters: {
+        topic: null,
+        committee: null,
+        date: null,
+        text: null,
+        people: null
+      }
     }
   },
   created () {
@@ -66,7 +78,12 @@ export default{
   watch: {
     // query is accessing whats appended to the URL, ie /result/query
     query: function () {
-      // console.log('watch')
+      // console.log('query Changed')
+      this.parseQuery()
+      this.fetchData()
+    },
+    advanced: function () {
+      // console.log('advanced Changed')
       this.parseQuery()
       this.fetchData()
     }
@@ -120,8 +137,38 @@ export default{
     },
 
     parseQuery () {
-      var queryArray = this.query.split(':')
-      this.inputField.search = queryArray[1]
+      
+      let queryArray = this.query.replace('search:', '')
+      this.inputField.search = queryArray
+
+      var advancedArray = this.advanced.split(':')
+      if (advancedArray[1] !== 'false') {
+        this.advancedFilters.topic = advancedArray[2]
+        if (this.advancedFilters.topic === '') {
+          this.advancedFilters.topic = null
+        }
+
+        this.advancedFilters.committee = advancedArray[4]
+        if (this.advancedFilters.committee === '') {
+          this.advancedFilters.committee = null
+        }
+
+        this.advancedFilters.date = advancedArray[6]
+        if (this.advancedFilters.date === '') {
+          this.advancedFilters.date = null
+        }
+
+        this.advancedFilters.text = advancedArray[8]
+        if (this.advancedFilters.text === '') {
+          this.advancedFilters.text = null
+        }
+
+        this.advancedFilters.people = advancedArray[10]
+        if (this.advancedFilters.people === '') {
+          this.advancedFilters.people = null
+        }
+      }
+      // console.log(this.advancedFilters)
       // console.log(this.inputField.search)
     }
   }
@@ -130,5 +177,4 @@ export default{
 </script>
 
 <style>
-  @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 </style>
