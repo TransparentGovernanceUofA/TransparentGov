@@ -11,10 +11,11 @@
         </b-col>
       </b-row>
       <b-row>
-        <b-col cols=8>
+        <b-col>
           <search-result-list :test = "ElasticResult"></search-result-list>
           <!-- {{ inputField.search }} -->
         </b-col>
+        <!--
         <b-col cols=4>
           <b-card class="mt-4 md-elevation-3" header="Exploration Graph"
                 header-tag="header">
@@ -22,6 +23,7 @@
           </b-card>
 
         </b-col>
+        -->
       </b-row>
     </b-container>
   </div>
