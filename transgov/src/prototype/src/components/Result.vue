@@ -135,8 +135,9 @@ export default{
     },
 
     parseQuery () {
-      var queryArray = this.query.split(':')
-      this.inputField.search = queryArray[1]
+      
+      let queryArray = this.query.replace('search:', '')
+      this.inputField.search = queryArray
 
       var advancedArray = this.advanced.split(':')
       if (advancedArray[1] !== 'false') {
