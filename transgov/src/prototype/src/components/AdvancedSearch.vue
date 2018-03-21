@@ -4,15 +4,7 @@
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
-          <!-- The explanation box -->
-          <b-col>
-            <b-card header="Guide" class="mt-4 md-elevation-3" >
-              <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
-            </b-card>
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col md=4>
+          <b-col md=4 order="2" order-md="1">
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
               <b-form-group id="topic"
@@ -66,25 +58,11 @@
               </b-form-group>
             </b-card>
           </b-col>
-          <b-col md=8>
-            <b-row>
-              <!-- The output search string -->
-              <b-col>
-                <b-card header="Query" class="mt-4 md-elevation-3">
-                  <b-form inline>
-                    <b-button disabled class="mr-2">Search Query</b-button>
-                    <!-- <b-form-input disabled></b-form-input> -->
-                    <!-- <div v-for="(pill, index) in pills" :key="index">
-                      <Pill v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
-                      </Pill>
-                    </div> -->
-                  </b-form>
-                  <p class="card-text">Please use the options in the Search Query box to create your search. <br/>Note: This feature is not yet operational</p>
-                </b-card>
-              </b-col>
-            </b-row>
-
-            
+          <b-col md=8 order="1" order-md="2">
+          <!-- The explanation box -->
+            <b-card header="Guide" class="mt-4 md-elevation-3" >
+              <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
+            </b-card>
           </b-col>
         </b-row>
       </b-container>
