@@ -4,7 +4,7 @@
     <b-container fluid>
       <b-row>
         <b-col cols=12>
-          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Toggle Timeline</b-btn>
+          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
           <b-collapse id="collapse1" class="mt-2">
             <timeline :results="ElasticResult"></timeline>
           </b-collapse>
