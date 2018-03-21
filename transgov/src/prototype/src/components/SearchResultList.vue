@@ -9,9 +9,11 @@
           <p class="card-text clamp-3">
             <span class="desc">{{ searchresult._source.description }}</span>
           </p> -->
-
+          
           <h6 v-if= searchresult slot="header" class="mb-0" v-for="title in searchresult.highlight.title">
+            <a href="www.google.ca">
             <span class="title" v-html="title"></span>
+            </a>
           </h6>
           <p class="card-text clamp-3" v-for="desc in searchresult.highlight.description">
             <span class="desc" v-html="desc"></span>

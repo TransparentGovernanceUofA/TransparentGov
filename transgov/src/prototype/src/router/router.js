@@ -22,6 +22,13 @@ export default new VueRouter({
       props: true
     },
     {
+      // the PDF results page uses dynamic route matching to make stable links to pdf files
+      path: '/file/:file_id',
+      name: 'ViewPDF',
+      component: ViewPDF,
+      props: true
+    },
+    {
       path: '/advancedsearch',
       name: 'Advanced Search',
       component: AdvancedSearch
