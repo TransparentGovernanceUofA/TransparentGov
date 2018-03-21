@@ -21,7 +21,7 @@
 
           <b-row class="mt-2" align-h="center">
             <b-col class="mt-2 mt-lg-0" lg=4 order="2" order-lg="1">
-              <router-link to="{name: 'Advanced Search', params: { query:'search:', advanced: 'advanced:false'}}">
+              <router-link :to="{name: 'Advanced Search', params: { query:'search:', advanced: 'advanced:false'}}">
                 <b-button variant="outline-primary" size="lg" class="search" id="advancedSearchButton">Advanced Guide</b-button>
               </router-link>
             </b-col>
