@@ -4,17 +4,18 @@
     <b-container fluid>
       <b-row>
         <b-col cols=12>
-          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Toggle Timeline</b-btn>
+          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
           <b-collapse id="collapse1" class="mt-2">
             <timeline :results="ElasticResult"></timeline>
           </b-collapse>
         </b-col>
       </b-row>
       <b-row>
-        <b-col cols=8>
+        <b-col>
           <search-result-list :test = "ElasticResult"></search-result-list>
           <!-- {{ inputField.search }} -->
         </b-col>
+        <!--
         <b-col cols=4>
           <b-card class="mt-4 md-elevation-3" header="Exploration Graph"
                 header-tag="header">
@@ -22,6 +23,7 @@
           </b-card>
 
         </b-col>
+        -->
       </b-row>
     </b-container>
   </div>

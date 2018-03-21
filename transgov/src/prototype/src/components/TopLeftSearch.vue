@@ -1,19 +1,27 @@
 <template>
-  <div class='top-left'>
-
-    <router-link to='/'>
-      <img src='./../assets/logoClearGov-XS.png' id='logo'/>
-    </router-link>
-      <input id='input-box' v-model='searchBoxText' v-on:keyup.enter='goToResults()'/>
-      <!-- <input id='input-box' v-if = 'truthy' v-model='searchBoxText' v-on:keyup.enter='goToResults()'/> -->
-      <!-- <input id='input-box' disabled v-model='searchBoxText' v-on:keyup.enter='goToResults()'/> -->
-      <!-- <input id='input-box' v-else disabled v-model='searchBoxText' v-on:keyup.enter='goToResults()'/> -->
-    <b-form inline>
-    <div v-for='(pill, index) in pills' :key='index'>
-      <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
-      </Pill>
-    </div>
-  </b-form>
+  <div class="top-left">
+    <b-container fluid>
+      <b-row align-v="center" align-h="center">
+        <b-col cols="auto">
+          <router-link to="/">
+            <img src="./../assets/logoClearGov-XS.png" id="logo"/>
+          </router-link>
+          
+        </b-col>
+        <b-col>
+          <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+          <!-- <input id="input-box" v-if = "truthy" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+          <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+          <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+        </b-col>
+        <b-col>
+          <div v-for='(pill, index) in pills' :key='index'>
+            <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
+            </Pill>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -207,10 +215,12 @@ export default {
 
 <style>
 #input-box{
-  /*position:absolute;*/
-  width: 500px;
-  /*border-radius: 3px;
-  top: 30px;*/
+  width: 100%;
+  
+  /* These stop the input box from getting too large or small on different displays */
+  max-width: 500px; 
+  min-width: 200px;
+  
   height: 35px;
 }
 </style>
