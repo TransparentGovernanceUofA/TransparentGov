@@ -14,11 +14,11 @@
           <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
           <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
         </b-col>
-        <b-col>
-          <div v-for='(pill, index) in pills' :key='index'>
-            <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
-            </Pill>
-          </div>
+      </b-row>
+      <b-row>
+        <b-col v-for='(pill, index) in pills' :key='index' cols="auto">
+          <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
+          </Pill>
         </b-col>
       </b-row>
     </b-container>
