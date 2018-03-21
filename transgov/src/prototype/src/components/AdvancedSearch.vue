@@ -4,7 +4,15 @@
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
-          <b-col cols=4>
+          <!-- The explanation box -->
+          <b-col>
+            <b-card header="Guide" class="mt-4 md-elevation-3" >
+              <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
+            </b-card>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col md=4>
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
               <b-form-group id="topic"
@@ -58,7 +66,7 @@
               </b-form-group>
             </b-card>
           </b-col>
-          <b-col cols=8>
+          <b-col md=8>
             <b-row>
               <!-- The output search string -->
               <b-col>
@@ -71,19 +79,12 @@
                       </Pill>
                     </div> -->
                   </b-form>
-                  <p class="card-text">Please use the options to the left to create your search. <br/>Note: This feature is not yet operational</p>
+                  <p class="card-text">Please use the options in the Search Query box to create your search. <br/>Note: This feature is not yet operational</p>
                 </b-card>
               </b-col>
             </b-row>
 
-            <b-row>
-              <!-- The explanation box -->
-              <b-col>
-                <b-card header="Guide" class="mt-4 md-elevation-3" >
-                  <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
-                </b-card>
-              </b-col>
-            </b-row>
+            
           </b-col>
         </b-row>
       </b-container>
