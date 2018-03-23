@@ -12,7 +12,7 @@
           </p> -->
           
           <h6 v-if= searchresult slot="header" class="mb-0" v-for="title in searchresult.highlight.title">
-            <router-link to="/file/file_id:">
+            <router-link :to="{name: 'View PDF', params: { file_id:'file_id:' + 'PUT THE FILE ID VARIABLE HERE @TODO'}}">
             <span class="title" v-html="title"></span>
             </router-link>
           </h6>
