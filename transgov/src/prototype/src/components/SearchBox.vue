@@ -1,7 +1,7 @@
 <template>
   <b-container fluid id="search-container">
     <b-row id="content-row" align-v="center" align-h="center">
-      <b-col cols=8>
+      <b-col md=8>
         <div id="user-searches" class="md-elevation-8">
           <b-row>
             <b-col>
@@ -11,8 +11,8 @@
             </b-col>
           </b-row>
 
-          <b-row align-h="center">
-            <b-col cols=8>
+          <b-row class="mt-2" align-h="center">
+            <b-col lg=8>
               <!-- b-form-input breaks the listening for key up of enter -->
               <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" />
               <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
@@ -20,14 +20,14 @@
           </b-row>
 
           <b-row class="mt-2" align-h="center">
-            <b-col cols=4>
-              <router-link to="/advancedsearch">
-                <b-button variant="outline-primary" size="lg" class="search">Advanced Guide</b-button>
+            <b-col class="mt-2 mt-lg-0" lg=4 order="2" order-lg="1">
+              <router-link :to="{name: 'Advanced Search', params: { query:'search:', advanced: 'advanced:false'}}">
+                <b-button variant="outline-primary" size="lg" class="search" id="advancedSearchButton">Advanced Guide</b-button>
               </router-link>
             </b-col>
-            <b-col cols=4>
-              <router-link :to="{name: 'Result', params: {  query:'search:' + newSearchBoxText }}">
-                <b-button variant="outline-primary" size="lg" class="search">Search</b-button>
+            <b-col lg=4 order="1" order-lg="2">
+              <router-link :to="{name: 'Result', params: { query:'search:' + newSearchBoxText, advanced: 'advanced:false' }}">
+                <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
             </b-col>
           </b-row>
@@ -61,7 +61,7 @@ export default {
     // whenever action occurs like clicking search or enter, stores that input value into prop that will be sent
     newInput () {
       // console.log(this.newSearchBoxText)
-      console.log(this.$route.params)
+      // console.log(this.$route.params)
       // the string 'search:' is appended to both mark what comes next as the search term and to make sure that whats being appended to the URL is not empty
       this.inputField.search = 'search:' + this.newSearchBoxText
     },
@@ -69,9 +69,8 @@ export default {
     goToResults () {
       // console.log('-----goToResults function called------')
       // console.log(this.inputField)
-
       let search = this.inputField.search
-      this.$router.push({name: 'Result', params: { query: search }})
+      this.$router.push({name: 'Result', params: { query: search, advanced: 'advanced:false' }})
     }
   }
 }
