@@ -1,1 +1,0 @@
-{"Meeting": {"title": null, "date": null, "subsection": [{"Items": [{"pages_start": null, "index_in_pdf": null, "text": null, "discussion": null, "title": null, "purpose": null, "pages_end": null, "keywords": [null, null], "presenters": [{"name": null}], "separate_index": null}], "Title": null}], "attendees": [], "location": null, "committee": null, "time": null}}
