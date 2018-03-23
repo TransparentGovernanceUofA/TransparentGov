@@ -94,15 +94,14 @@ export default{
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
         query: {
-          match_phrase: {
-            '_all': {
-              'query': this.inputField.search,
-              'prefix_length': '3',
-              'fuzziness': '2',
-              'operator': 'and'
+          multi_match: {
+            'query': this.inputField.search,
+            'type': 'cross_fields',
+            'fields' : [ '_all' ],
+            'fuzziness': '2',
+            'operator': 'and',
             }
             // this.inputField.search
-          }
         },
         'highlight': {
           'fields': {
@@ -137,7 +136,7 @@ export default{
     },
 
     parseQuery () {
-      
+
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
