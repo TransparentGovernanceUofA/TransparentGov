@@ -3,12 +3,9 @@
     <top-left-search :previousInputField="inputField"></top-left-search>
     <b-container fluid>
       <b-row>
+        <!--
         <b-col cols="6">
           <b-card header-tag="header" footer-tag="footer" class="md-elevation-3">
-            <!-- <h6 slot="header" class="mb-0"><span class="title">{{ searchresult._source.title }}</span></h6>
-            <p class="card-text clamp-3">
-              <span class="desc">{{ searchresult._source.description }}</span>
-            </p> -->
 
             <h6 v-if= searchresult slot="header" class="mb-0" v-for="title in searchresult.highlight.title">
               <span class="title" v-html="title"></span>
@@ -21,6 +18,7 @@
         </b-col>
         <b-col cols="6">
         </b-col>
+        -->
       </b-row>
     </b-container>
   </div>
@@ -28,9 +26,6 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
-import Timeline from './Timeline.vue'
-import SearchResultList from './SearchResultList.vue'
-import VisNetwork from './VisNetwork.vue'
 import axios from 'axios'
 
 export default{
@@ -45,10 +40,7 @@ export default{
     }
   },
   components: {
-    SearchResultList,
-    TopLeftSearch,
-    Timeline,
-    VisNetwork
+    TopLeftSearch
   },
   name: 'ElasticResults',
   data () {
@@ -73,6 +65,7 @@ export default{
 
   methods: {
     fetchData () {
+      /*
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
         query: {
@@ -116,6 +109,7 @@ export default{
         .catch((err) => {
           console.log(err)
         })
+        */
     },
 
     parseQuery () {

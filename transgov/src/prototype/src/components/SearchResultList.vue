@@ -12,9 +12,9 @@
           </p> -->
           
           <h6 v-if= searchresult slot="header" class="mb-0" v-for="title in searchresult.highlight.title">
-            <a href="www.google.ca">
+            <router-link to="/file/file_id:">
             <span class="title" v-html="title"></span>
-            </a>
+            </router-link>
           </h6>
           <p class="card-text clamp-3" v-for="desc in searchresult.highlight.description">
             <span class="desc" v-html="desc"></span>
