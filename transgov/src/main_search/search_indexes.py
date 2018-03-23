@@ -13,13 +13,18 @@ class MeetingIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.EdgeNgramField(
         document=True, use_template=True,
         template_name='/Users/ceciliaxiang/TransparentGov/transgov/src/templates/search/indexes/Meeting_text.txt')
+    filename = indexes.CharField(model_attr='filename')
     title = indexes.EdgeNgramField(model_attr='title')
-    description = indexes.EdgeNgramField(model_attr="description", null=True)
+    date = indexes.CharField(model_attr='date')
+    #description = indexes.EdgeNgramField(model_attr="description", null=True)
 
-    category = indexes.CharField(model_attr='category', faceted=True)
+    #category = indexes.CharField(model_attr='category', faceted=True)
 
     committee = indexes.CharField(model_attr='committee', faceted=True)
-
+    time = indexes.CharField(model_attr='time')
+    location = indexes.CharField(model_attr='location')
+    attendees = indexes.CharField(model_attr='attendees')
+    subsection = indexes.CharField(model_attr='subsection')
     # for auto complete
     content_auto = indexes.EdgeNgramField(model_attr='title')
 

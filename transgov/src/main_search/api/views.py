@@ -1,12 +1,12 @@
 from django.db.models import Q
 from rest_framework import generics, mixins, viewsets
-from .serializers import MeetingSerializer, MeetingSearchSerializer
+from .serializers import MeetingSerializer
 from .permissions import IsOwnerOrReadOnly
 from main_search.models import Meeting
 from haystack.query import SearchQuerySet, EmptySearchQuerySet
 
-from drf_haystack.serializers import HaystackSerializer
-from drf_haystack.viewsets import HaystackViewSet
+# from drf_haystack.serializers import HaystackSerializer
+# from drf_haystack.viewsets import HaystackViewSet
 from main_search.search_indexes import MeetingIndex
 
 class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):
@@ -24,7 +24,7 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):
 
     lookup_field           = 'pk'
     serializer_class       = MeetingSerializer
-    
+
     def get_queryset(self):
         qs = Meeting.objects.all()
         query = self.request.GET.get("q")
@@ -47,14 +47,14 @@ class MeetingAPIView(mixins.CreateModelMixin, generics.ListAPIView):
     def patch(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
 
-
-class MeetingSearchViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
-    """
-    Used mixins.list method to implement a list of queryset.
-    """
-
-    serializer_class = MeetingSearchSerializer
-    permission_classes = [IsOwnerOrReadOnly]
+#
+# class MeetingSearchViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+#     """
+#     Used mixins.list method to implement a list of queryset.
+#     """
+#
+#     serializer_class = MeetingSearchSerializer
+#     permission_classes = [IsOwnerOrReadOnly]
 
     # def get_queryset(self):
     #     request = self.request
@@ -89,28 +89,28 @@ class MeetingRUDView(generics.RetrieveUpdateDestroyAPIView):
     def get_serializer_context(self, *args, **kwargs):
         return {"request": self.request}
 
-class MeetingSerializer(HaystackSerializer):
-    '''
-    The `index_classes` attribute is a list of which search indexes
-    we want to include in the search.
-
-    # The `fields` contains all the fields we want to include.
-    '''
-
-    class Meta:
-        index_classes = [MeetingIndex]
-        fields = [
-            "title", "desciption", "catogory", "committee",
-            "content_auto", "suggestions"
-        ]
-
-
-class MeetingSearchView(HaystackViewSet):
-    '''
-    # `index_models` is a list of which models you would like to include
-    in the search result.
-    # (Translates to `SearchQuerySet().models(*index_models)` behind the scenes.
-    '''
-
-    index_models = [Meeting]
-    serializer_class = MeetingSerializer
+# class MeetingSerializer(HaystackSerializer):
+#     '''
+#     The `index_classes` attribute is a list of which search indexes
+#     we want to include in the search.
+#
+#     # The `fields` contains all the fields we want to include.
+#     '''
+#
+#     class Meta:
+#         index_classes = [MeetingIndex]
+#         fields = [
+#             "title", "desciption", "catogory", "committee",
+#             "content_auto", "suggestions"
+#         ]
+#
+#
+# class MeetingSearchView(HaystackViewSet):
+#     '''
+#     # `index_models` is a list of which models you would like to include
+#     in the search result.
+#     # (Translates to `SearchQuerySet().models(*index_models)` behind the scenes.
+#     '''
+#
+#     index_models = [Meeting]
+#     serializer_class = MeetingSerializer

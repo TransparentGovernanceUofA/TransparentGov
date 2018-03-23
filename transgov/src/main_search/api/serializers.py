@@ -17,28 +17,17 @@ class MeetingSerializer(serializers.ModelSerializer):
         fields = [
             'url',
             'pk',
+            'filename',
             'title',
-            'slug',
-            'description',
+            'date',
             'committee',
-            'category',
-            'timestamp',
+            'time',
+            'location',
+            'attendees',
+            'subsection',
         ]
         read_only_fields = ['pk']
 
     def get_url(self, obj):
         request = self.context.get("request")
         return obj.get_api_url(request=request)
-
-
-
-class MeetingSearchSerializer(serializers.Serializer):
-    '''
-    A serializer that is for haystack so it can use to serialize and deserialize data
-    that corresponds to Meeting objects
-    '''
-    text = serializers.CharField()
-    title = serializers.CharField()
-    description = serializers.CharField()
-    category = serializers.CharField()
-    committee = serializers.CharField()

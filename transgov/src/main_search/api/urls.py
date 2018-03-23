@@ -4,7 +4,7 @@ searchapp API URL Configuration
 """
 
 from django.conf.urls import url
-from .views import MeetingRUDView, MeetingAPIView, MeetingSearchViewSet
+from .views import MeetingRUDView, MeetingAPIView
 
 urlpatterns = [
     url(r'^$', MeetingAPIView.as_view(), name='meeting-listcreate'),
