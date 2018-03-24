@@ -47,11 +47,11 @@ class Meeting(models.Model):
     committee = models.CharField(db_index=True, max_length=255, default='')
     time = models.CharField(max_length=255, db_index=True, default='')
     location = models.CharField(max_length=255, db_index=True, default='')
-    #attendees = models.CharField(max_length=255, db_index=True, default='')
+    attendees = models.CharField(max_length=255, db_index=True, default='')
 
-    attendees = ArrayField(
-            models.TextField(max_length=255, db_index=True)
-    )
+    # attendees = ArrayField(
+    #         models.TextField(max_length=255, db_index=True)
+    # )
 
     subsection = models.ManyToManyField(Subsection)
     #slug = models.SlugField(null=True, blank=True, unique=True, max_length=255)

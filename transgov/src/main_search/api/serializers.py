@@ -38,14 +38,15 @@ class ItemsSerializer(serializers.ModelSerializer):
             'purpose'
         )
     def create(self, validated_data):
-        presenter_data = validated_data.pop('name')
-        motion_data = validated_data.pop('motion')
+        presenter_data = validated_data.pop('presenters')
+        motion_data = validated_data.pop('motions')
         presenter = PresentersSerializer.create(PresentersSerializer(), validated_data=presenter_data)
         motion = MotionsSerializer.create(MotionsSerializer(), validated_data=motion_data)
-        p, created = Presenters.objects.update_or_create(name=name)
-        m, created = Motions.objects.update_or_create(motion=motion,
-                            carried=validated_data.pop('carried'))
-        return i
+        item, created = Items.objects.update_or_create(index_in_pdf=validated_data.pop('index_in_pdf'),
+        separate_index=validated_data.pop('separate_index'),title=validated_data.pop('title'),pages_start=validated_data.pop('pages_start'),pages_end=validated_data.pop('pages_end'),text=validated_data.pop('text'),presenters=presenter,motions=motion, keywords=validated_data.pop('keywords'),discussion=validated_data.pop('discussion'),purpose=validated_data.pop('purpose'))
+
+        return item
+
 
 
 class SubsectionSerializer(serializers.ModelSerializer):
@@ -56,11 +57,11 @@ class SubsectionSerializer(serializers.ModelSerializer):
             'Items',
         )
     def create(self, validated_data):
-        item_data = validated_data.pop('title')
+        item_data = validated_data.pop('Items')
         item = ItemsSerializer.create(ItemsSerializer(), validated_data=item_data)
-        i, created = Items.objects.update_or_create(title=title,
-                            presenters=validated_data.pop('presenters'))
-        return i
+        subsection, created = Subsection.objects.update_or_create(Title=validated_data.pop('Title'), Items=item
+                            )
+        return subsection
 
 class MeetingSerializer(serializers.ModelSerializer):
     '''
@@ -71,12 +72,10 @@ class MeetingSerializer(serializers.ModelSerializer):
     returns a full url for the meeting object. Request is passed from MeetingRUDView.
     '''
     subsection = SubsectionSerializer(many=True)
-    url = serializers.SerializerMethodField(read_only=True)
+    #url = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = Meeting
         fields = (
-            'url',
-            'pk',
             'filename',
             'title',
             'date',
@@ -86,15 +85,16 @@ class MeetingSerializer(serializers.ModelSerializer):
             'attendees',
             'subsection',
         )
-        read_only_fields = ['pk']
+        # read_only_fields = ['pk']
 
     def create(self, validated_data):
-        subsection_data = validated_data.pop('Title')
+        subsection_data = validated_data.pop('subsection')
         subsection = SubsectionSerializer.create(SubsectionSerializer(), validated_data=subsection_data)
-        sub, created = Subsection.objects.update_or_create(Title=Title,
-                            Items=validated_data.pop('Items'))
-        return sub
+        meeting, created = Meeting.objects.update_or_create(filename=validated_data.pop('filename'),
+        title=validated_data.pop('title'),date=validated_data.pop('date'),committee=validated_data.pop('committee'),time=validated_data.pop('time'),location=validated_data.pop('location'),attendees=validated_data.pop('attendees'),subsection=subsection)
 
-    def get_url(self, obj):
-        request = self.context.get("request")
-        return obj.get_api_url(request=request)
+        return meeting
+
+    # def get_url(self, obj):
+    #     request = self.context.get("request")
+    #     return obj.get_api_url(request=request)
