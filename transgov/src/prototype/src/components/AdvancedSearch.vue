@@ -7,14 +7,6 @@
           <b-col md=4 order="2" order-md="1">
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
-              <b-form-group id="topic"
-                          label="Topic"
-                          label-for="exampleInput1">
-                <b-form-select id="exampleInput1"
-                            :options="topicOptions"
-                            required
-                            v-model="form.topic">
-                </b-form-select>
               </b-form-group>
 
               <b-form-group id="committee"
@@ -34,16 +26,6 @@
                             :options="dateOptions"
                             required
                             v-model="form.date">
-                </b-form-select>
-              </b-form-group>
-
-              <b-form-group id="text"
-                          label="Text"
-                          label-for="exampleInput4">
-                <b-form-select id="exampleInput4"
-                            :options="textOptions"
-                            required
-                            v-model="form.text">
                 </b-form-select>
               </b-form-group>
 
@@ -103,27 +85,17 @@ export default {
 
       var advancedArray = this.advanced.split(':')
       if (advancedArray[1] !== 'false') {
-        this.form.topic = advancedArray[2]
-        if (this.form.topic === '') {
-          this.form.topic = null
-        }
-
-        this.form.committee = advancedArray[4]
+        this.form.committee = advancedArray[2]
         if (this.form.committee === '') {
           this.form.committee = null
         }
 
-        this.form.date = advancedArray[6]
+        this.form.date = advancedArray[4]
         if (this.form.date === '') {
           this.form.date = null
         }
 
-        this.form.text = advancedArray[8]
-        if (this.form.text === '') {
-          this.form.text = null
-        }
-
-        this.form.people = advancedArray[10]
+        this.form.people = advancedArray[6]
         if (this.form.people === '') {
           this.form.people = null
         }
@@ -139,18 +111,10 @@ export default {
         search: ''
       },
       form: {
-        topic: null,
         committee: null,
         date: null,
-        text: null,
         people: null
       },
-      topicOptions: [
-        { value: null, text: '' },
-        { value: 'USRI', text: 'USRI' },
-        { value: 'Budget', text: 'Budget' },
-        { value: 'Even more stoof', text: 'Even more stoof' }
-      ],
       committeeOptions: [
         { value: null, text: '' },
         { value: '1 committee', text: '1 committee' },
@@ -162,12 +126,6 @@ export default {
         { value: '1 idk', text: '1 idk' },
         { value: '2 what', text: '2 what' },
         { value: '3 we want for this', text: '3 we want for this' }
-      ],
-      textOptions: [
-        { value: null, text: '' },
-        { value: 'the', text: 'the' },
-        { value: 'texts', text: 'texts' },
-        { value: 'here', text: 'here' }
       ],
       peopleOptions: [
         { value: null, text: '' },

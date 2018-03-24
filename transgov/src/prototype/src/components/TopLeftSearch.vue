@@ -11,9 +11,7 @@
           <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
         </b-col>
         <b-col>
-          <label v-on:click="goToResults()">
-            <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
-          </label>
+            <b-button variant="outline-primary" size="lg" class="search" id="searchButton" v-on:click="goToResults()">Search</b-button>
         </b-col>
 
       </b-row>
@@ -69,12 +67,6 @@ export default {
 
       let isAdvancedSearch = false
 
-      let topicStr = 'topic::'
-      if (this.topic != null) {
-        isAdvancedSearch = true
-        topicStr = 'topic:' + this.topic + ':'
-      }
-
       let committeeStr = 'committee::'
       if (this.committee != null) {
         isAdvancedSearch = true
@@ -87,12 +79,6 @@ export default {
         dateStr = 'date:' + this.date + ':'
       }
 
-      let textStr = 'text::'
-      if (this.text != null) {
-        isAdvancedSearch = true
-        textStr = 'text:' + this.text + ':'
-      }
-
       let peopleStr = 'people::'
       if (this.people != null) {
         isAdvancedSearch = true
@@ -101,7 +87,7 @@ export default {
 
       let advancedStr = 'advanced:false'
       if (isAdvancedSearch) {
-        advancedStr = 'advanced:' + topicStr + committeeStr + dateStr + textStr + peopleStr
+        advancedStr = 'advanced:' + committeeStr + dateStr + peopleStr
       }
 
       this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
@@ -110,14 +96,10 @@ export default {
       // console.log('Pill clicked')
 
       if (this.$route.name === 'Advanced Search') {
-        if (pill.type === 'topic') {
-          this.advancedForm.topic = null
-        } else if (pill.type === 'committee') {
+        if (pill.type === 'committee') {
           this.advancedForm.committee = null
         } else if (pill.type === 'date') {
           this.advancedForm.date = null
-        } else if (pill.type === 'text') {
-          this.advancedForm.text = null
         } else {
           this.advancedForm.people = null
         }
@@ -160,25 +142,17 @@ export default {
       }
     },
     loadPills: function () {
-      this.addPills('topic', this.topic)
       this.addPills('committee', this.committee)
       this.addPills('date', this.date)
-      this.addPills('text', this.text)
       this.addPills('people', this.people)
     }
   },
   computed: {
-    topic () {
-      return this.advancedForm.topic
-    },
     committee () {
       return this.advancedForm.committee
     },
     date () {
       return this.advancedForm.date
-    },
-    text () {
-      return this.advancedForm.text
     },
     people () {
       return this.advancedForm.people
@@ -194,18 +168,11 @@ export default {
     //   }
     // }
 
-    topic () {
-      // console.log('topic changed')
-      this.addPills('topic', this.topic)
-    },
     committee () {
       this.addPills('committee', this.committee)
     },
     date () {
       this.addPills('date', this.date)
-    },
-    text () {
-      this.addPills('text', this.text)
     },
     people () {
       this.addPills('people', this.people)
