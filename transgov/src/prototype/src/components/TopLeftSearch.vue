@@ -6,14 +6,16 @@
           <router-link to="/">
             <img src="./../assets/logoClearGov-XS.png" id="logo"/>
           </router-link>
-          
         </b-col>
         <b-col>
           <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
-          <!-- <input id="input-box" v-if = "truthy" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
-          <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
-          <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
         </b-col>
+        <b-col>
+          <label v-on:click="goToResults()">
+            <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
+          </label>
+        </b-col>
+
       </b-row>
       <b-row>
         <b-col v-for='(pill, index) in pills' :key='index' cols="auto">
@@ -216,11 +218,12 @@ export default {
 <style>
 #input-box{
   width: 100%;
-  
   /* These stop the input box from getting too large or small on different displays */
-  max-width: 500px; 
+  max-width: 500px;
   min-width: 200px;
-  
   height: 35px;
+}
+.search{
+  width: 100%
 }
 </style>

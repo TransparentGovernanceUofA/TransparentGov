@@ -135,9 +135,7 @@ export default{
           console.log(err)
         })
     },
-
     parseQuery () {
-      
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
