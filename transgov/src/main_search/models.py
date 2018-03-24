@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.urls.base import reverse
 from rest_framework.reverse import reverse as api_reverse
+from django.contrib.postgres.fields import ArrayField
 
 class Motions(models.Model):
     motion = models.CharField(max_length=255, db_index=True, default='')
@@ -46,7 +47,12 @@ class Meeting(models.Model):
     committee = models.CharField(db_index=True, max_length=255, default='')
     time = models.CharField(max_length=255, db_index=True, default='')
     location = models.CharField(max_length=255, db_index=True, default='')
-    attendees = models.TextField(db_index=True)
+    #attendees = models.CharField(max_length=255, db_index=True, default='')
+
+    attendees = ArrayField(
+            models.TextField(max_length=255, db_index=True)
+    )
+
     subsection = models.ManyToManyField(Subsection)
     #slug = models.SlugField(null=True, blank=True, unique=True, max_length=255)
     #description = models.TextField(db_index=True)
