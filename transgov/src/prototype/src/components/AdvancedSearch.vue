@@ -1,94 +1,55 @@
 <template>
   <div class="advancedSearch">
-    <top-left-search :advancedInputField="pills"></top-left-search>
+    <top-left-search :previousInputField="inputField" :advancedForm="form"></top-left-search>
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
-          <b-col cols=4>
+          <b-col md=4 order="2" order-md="1">
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
-              <b-form-group id="topic"
-                          label="Topic"
-                          label-for="exampleInput1">
-                <b-form-select id="exampleInput1"
-                            :options="topicOptions"
-                            required
-                            v-model="form.topic"
-                            @change=changedTopicInput()>
-                </b-form-select>
-              </b-form-group>
-
+              <div class="help-tip">
+                <p>List of committees at the University of Alberta.</p>
+              </div>
               <b-form-group id="committee"
                           label="Committee"
                           label-for="exampleInput2">
                 <b-form-select id="exampleInput2"
                             :options="committeeOptions"
                             required
-                            v-model="form.committee"
-                            @change=changedCommitteeInput()>
+                            v-model="form.committee">
                 </b-form-select>
               </b-form-group>
-
+               <div class="help-tip">
+                <p>Date picker, allows searching in a range of dates.</p>
+              </div>
               <b-form-group id="date"
                           label="Date"
                           label-for="exampleInput3">
                 <b-form-select id="exampleInput3"
                             :options="dateOptions"
                             required
-                            v-model="form.date"
-                            @change=changedDateInput()>
+                            v-model="form.date">
                 </b-form-select>
               </b-form-group>
-
-              <b-form-group id="text"
-                          label="Text"
-                          label-for="exampleInput4">
-                <b-form-select id="exampleInput4"
-                            :options="textOptions"
-                            required
-                            v-model="form.text"
-                            @change=changedTextInput()>
-                </b-form-select>
-              </b-form-group>
-
+              <div class="help-tip">
+                <p>Various members that take part in Governance discussions.</p>
+              </div>
               <b-form-group id="people"
                           label="People"
                           label-for="exampleInput5">
                 <b-form-select id="exampleInput5"
                             :options="peopleOptions"
                             required
-                            v-model="form.people"
-                            @change=changedPeopleInput()>
+                            v-model="form.people">
                 </b-form-select>
               </b-form-group>
             </b-card>
           </b-col>
-          <b-col cols=8>
-            <b-row>
-              <!-- The output search string -->
-              <b-col>
-                <b-card header="Query" class="mt-4 md-elevation-3">
-                  <b-form inline>
-                    <b-button disabled class="mr-2">Search Query</b-button>
-                    <!-- <b-form-input disabled></b-form-input> -->
-                    <div v-for="(pill, index) in pills" :key="index">
-                      <Pill v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
-                      </Pill>
-                    </div>
-                  </b-form>
-                  <p class="card-text">Please use the options to the left to create your search. <br/>Note: This feature is not yet operational</p>
-                </b-card>
-              </b-col>
-            </b-row>
-
-            <b-row>
-              <!-- The explanation box -->
-              <b-col>
-                <b-card header="Guide" class="mt-4 md-elevation-3" >
-                  <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
-                </b-card>
-              </b-col>
-            </b-row>
+          <b-col md=8 order="1" order-md="2">
+          <!-- The explanation box -->
+            <b-card header="Guide" class="mt-4 md-elevation-3" >
+              <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
+            </b-card>
           </b-col>
         </b-row>
       </b-container>
@@ -98,69 +59,54 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
-import _ from 'lodash'
-import Pill from './Pill.vue'
 
 export default {
   props: {
     inputField: {
       type: Object,
       default: () => ({})
+    },
+    query: {
+      type: String
+    },
+    advanced: {
+      type: String
     }
   },
   components: {
-    TopLeftSearch,
-    Pill
+    TopLeftSearch
+  },
+  created () {
+    this.parseQuery()
   },
   methods: {
-    //this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
+    // this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
-    changedTopicInput: _.debounce(function(){
-        this.addPills("topic", this.form.topic)
-    }, 10),
-    changedCommitteeInput: _.debounce(function(){
-        this.addPills("committee", this.form.committee)
-    }, 10),
-    changedDateInput: _.debounce(function(){
-        this.addPills("date", this.form.date)
-    }, 10),
-    changedTextInput: _.debounce(function(){
-        this.addPills("text", this.form.text)
-    }, 10),
-    changedPeopleInput: _.debounce(function(){
-        this.addPills("people", this.form.people)
-    }, 10),
+    parseQuery () {
+      var queryArray = this.query.split(':')
+      this.inputField.search = queryArray[1]
 
-    removePills: function(id) {
-      this.pills.splice(id,1)
-    },
-    addPills:function(type, element){
-      // if pill is changed to null, remove the cooresponding pill
-      if(element == null){
-        for( var i=0; i < this.pills.length; i++){
-          if(this.pills[i].type == type){
-            this.removePills(i)
-          }
+      var advancedArray = this.advanced.split(':')
+      if (advancedArray[1] !== 'false') {
+        this.form.committee = advancedArray[2]
+        if (this.form.committee === '') {
+          this.form.committee = null
+        }
+
+        this.form.date = advancedArray[4]
+        if (this.form.date === '') {
+          this.form.date = null
+        }
+
+        this.form.people = advancedArray[6]
+        if (this.form.people === '') {
+          this.form.people = null
         }
       }
-      else{
-        for( var i=0; i < this.pills.length; i++){
-          // remove respective pill if its value is changed but type remained the same
-          if(this.pills[i].type == type && this.pills[i].name != element){
-            this.removePills(i)
-          }
-        }
-        // add pills
-        this.pills.push({
-          id:this.pills.length,
-          name:element,
-          type: type,
-          style:'primary',
-          pillable:"true"
-        });
-      }
+      // console.log(this.form)
+      // console.log(this.inputField.search)
     }
   },
   data () {
@@ -169,20 +115,11 @@ export default {
       advancedInputField: {
         search: ''
       },
-      pills: [],
       form: {
-        topic: null,
         committee: null,
         date: null,
-        text: null,
         people: null
       },
-      topicOptions: [
-        { value: null, text: '' },
-        { value: 'USRI', text: 'USRI' },
-        { value: 'Budget', text: 'Budget' },
-        { value: 'Even more stoof', text: 'Even more stoof' }
-      ],
       committeeOptions: [
         { value: null, text: '' },
         { value: '1 committee', text: '1 committee' },
@@ -194,12 +131,6 @@ export default {
         { value: '1 idk', text: '1 idk' },
         { value: '2 what', text: '2 what' },
         { value: '3 we want for this', text: '3 we want for this' }
-      ],
-      textOptions: [
-        { value: null, text: '' },
-        { value: 'the', text: 'the' },
-        { value: 'texts', text: 'texts' },
-        { value: 'here', text: 'here' }
       ],
       peopleOptions: [
         { value: null, text: '' },
@@ -213,5 +144,90 @@ export default {
 </script>
 
 <style>
+.help-tip{
+    position: absolute;
+    /*top: 18px;*/
+    /*right: 100px;*/
+    text-align: center;
+    background-color: #BCDBEA;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+    left: 92.5%;
+}
 
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 10px;
+    width: 300px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    /*right: -4px;*/
+    left: -4px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+    z-index: 1;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    /*right:10px;*/
+    left:10px;
+    top:-12px;
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% { 
+        opacity:0; 
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
 </style>

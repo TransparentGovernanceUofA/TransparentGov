@@ -6,7 +6,6 @@ import store from './store/store.js'
 import VueMaterial from 'vue-material'
 import BootstrapVue from 'bootstrap-vue'
 import 'vue-material/dist/vue-material.min.css'
-import _ from 'lodash';
 Vue.use(VueMaterial)
 
 Vue.use(BootstrapVue)
