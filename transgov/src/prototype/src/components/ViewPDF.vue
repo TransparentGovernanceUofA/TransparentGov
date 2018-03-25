@@ -19,6 +19,9 @@
         <b-col cols="6">
         </b-col>
         -->
+        <b-col>
+          <p>{{file_id.slice(8) }}</p>
+        </b-col>
       </b-row>
     </b-container>
   </div>
