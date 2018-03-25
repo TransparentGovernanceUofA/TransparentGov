@@ -9,9 +9,10 @@
         </b-col>
         <b-col>
           <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
+          <b-button variant="outline-primary" size="sm" class="topLeftSearch" id="searchButton" v-on:click="goToResults()"><b>Search</b></b-button>
         </b-col>
         <b-col>
-            <b-button variant="outline-primary" size="lg" class="search" id="searchButton" v-on:click="goToResults()">Search</b-button>
+            <!-- <b-button variant="outline-primary" size="lg" class="topLeftSearch" id="searchButton" v-on:click="goToResults()">Search</b-button> -->
         </b-col>
 
       </b-row>
@@ -190,7 +191,7 @@ export default {
   min-width: 200px;
   height: 35px;
 }
-.search{
-  width: 100%
+.topLeftSearch{
+  width: 150px;
 }
 </style>
