@@ -29,6 +29,7 @@ def breaking_items():
     li = list()
     prepared_list = list()
     item_list = list()
+    headers = list()
 
 
     with open("Tika_Material.txt") as infile, open("new_material.txt", 'w') as outfile:
@@ -38,6 +39,7 @@ def breaking_items():
 
     with open("new_material.txt") as f_material:
         content = f_material.readlines()
+
         for line in content:
             li.append(line)
 
@@ -132,7 +134,7 @@ def generate_item(the_list, prepared_list, new_item_list, content):
         file_no = matching[counter][0]
         file_no_list.append(file_no)
 
-        f_item = open("temp" + file_no + ".txt", 'w')
+        f_item = open(file_no + ".txt", 'w')
         for j in range(int(matching[counter][1][0]), int(matching[counter][1][1])):
             #
             # if "Item No. " in content[j]:
@@ -140,25 +142,39 @@ def generate_item(the_list, prepared_list, new_item_list, content):
 
             f_item.write(content[j])
 
+        f_item.close()
+
 
     for num in file_no_list:
         print(num)
         headers = list()
-        read_file = open("temp" + num + ".txt")
+        read_file = open(num + ".txt", 'r+')
         read_content = read_file.readlines()
+        read_file.seek(0)
         for co, l in enumerate(list(read_content)):
             if "Item No. " in l:
-                headers.append([co,co+2])
+                headers.append(co)
+                headers.append(co+1)
+                headers.append(co+2)
 
-        # with open(num + ".txt", 'w') as final_item_file:
-        #     for c, header in enumerate(headers):
-        #         print(header[1], headers[c+1][0])
+
+            if co not in headers:
+                read_file.write(content[co])
+
+
+        read_file.truncate()
+        read_file.close()
+
+        #     pg_num = [x for x in range(len(read_content)) if x not in headers]
+        #
+        #     for pg in pg_num:
+        #         final_item_file.write(read_content[pg])
         #
         #
-        # print(headers)
-
-
-
+        #
+        #
+        #
+        #
 
 tika_handles_scrap()
 the_list, prepared_list, new_item_list, content =  breaking_items()
