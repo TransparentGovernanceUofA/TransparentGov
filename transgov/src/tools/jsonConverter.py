@@ -74,7 +74,7 @@ def breaking_items():
         return the_list, prepared_list, new_item_list, content
 
 
-def build_JSON():
+def build_JSON(file_no_list):
     committee_dict = {"General Faculties Council":"GFC", "Academic Planning Committee":"APC", "Academic Standards Committee":"ASC", "Committee on the Learning Environment":"CLE", "Campus Law Review Committee":"CLRC",
     "Executive Committee":"EXEC", "Facilities Development Committee":"FDC", "Undergraduate Awards and Scholarship Committee":"UASC"}
     attendees_skip_words = ['ATTENDEES:', 'Statutory Members:', 'Ex-Officio:','Elected faculty:','Students:','Appointed Members:', 'REGRETS:','STAFF:']
@@ -97,15 +97,33 @@ def build_JSON():
         attendees_with_title = [content_minutes[i].rstrip() for i in range(5, end_num-2)]
         attendees_list = [attendees for attendees in attendees_with_title if attendees not in attendees_skip_words]
 
-        first_item_title = content_minutes[start_items_pg_num].rstrip()
-        dot_pos = first_item_title.find(".")
-        potential_number = first_item_title[:dot_pos]
-        #
-        if potential_number.isdigit():
-            item_dict["Item No."] = potential_number
-
         date = date_parser.parse(date).strftime('%Y-%m-%d')
         title = committee + ' ' + content_minutes[0].rstrip() + ' - ' + date
+        #title_flag = False
+        for num in file_no_list:
+            item_number = num
+            item_dict['Item No.'] = item_number
+            f_item = open(num + ".txt")
+            title_flag = False
+            item_content = f_item.readlines()
+            for x in item_content:
+                if 'Agenda Title: ' in x:
+                    title_flag = True
+                    p = x.find(':')
+                    agenda_title = x[p+2:].rstrip()
+
+            if not title_flag:
+                print(item_number)
+                agenda_title = "N/A"
+                #TODO: get the title from approved Minutes
+            item_dict['Agenda Title'] = agenda_title
+            print("LALALALALAL", item_dict)
+
+
+
+
+
+
         json_dict.update({'Committee':committee, 'Date':date, 'Title':title,
         'Location':location, 'Time':time, 'Attendees':attendees_list})
 
@@ -136,17 +154,12 @@ def generate_item(the_list, prepared_list, new_item_list, content):
 
         f_item = open(file_no + ".txt", 'w')
         for j in range(int(matching[counter][1][0]), int(matching[counter][1][1])):
-            #
-            # if "Item No. " in content[j]:
-            #     item_line_number.append([j,j+2])
-
             f_item.write(content[j])
 
         f_item.close()
 
 
     for num in file_no_list:
-        print(num)
         headers = list()
         read_file = open(num + ".txt", 'r+')
         read_content = read_file.readlines()
@@ -157,25 +170,16 @@ def generate_item(the_list, prepared_list, new_item_list, content):
                 headers.append(co+1)
                 headers.append(co+2)
 
-
             if co not in headers:
-                read_file.write(content[co])
-
+                read_file.write(read_content[co])
 
         read_file.truncate()
         read_file.close()
+    return file_no_list
 
-        #     pg_num = [x for x in range(len(read_content)) if x not in headers]
-        #
-        #     for pg in pg_num:
-        #         final_item_file.write(read_content[pg])
-        #
-        #
-        #
-        #
-        #
-        #
+
 
 tika_handles_scrap()
 the_list, prepared_list, new_item_list, content =  breaking_items()
-generate_item(the_list, prepared_list, new_item_list, content)
+file_no_list = generate_item(the_list, prepared_list, new_item_list, content)
+build_JSON(file_no_list)
