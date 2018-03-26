@@ -5,18 +5,18 @@ from main_search.models import Motions, Presenters, Items, Subsection, Meeting
 class MotionsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Motions
-        fields = (
+        fields = [
             'motion',
             'carried',
             'content',
-        )
+        ]
 
 class PresentersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Presenters
-        fields = (
+        fields = [
             'name',
-        )
+        ]
 
 class ItemsSerializer(serializers.ModelSerializer):
     presenters = PresentersSerializer(many=True)
@@ -24,7 +24,7 @@ class ItemsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Items
-        fields = (
+        fields = [
             'index_in_pdf',
             'separate_index',
             'title',
@@ -35,8 +35,8 @@ class ItemsSerializer(serializers.ModelSerializer):
             'motions',
             'keywords',
             'discussion',
-            'purpose'
-        )
+            'purpose',
+        ]
     def create(self, validated_data):
         presenter_data = validated_data.pop('presenters')
         motion_data = validated_data.pop('motions')
@@ -50,12 +50,13 @@ class ItemsSerializer(serializers.ModelSerializer):
 
 
 class SubsectionSerializer(serializers.ModelSerializer):
+    Items = ItemsSerializer(many=True)
     class Meta:
         model = Subsection
-        fields = (
+        fields = [
             'Title',
             'Items',
-        )
+        ]
     def create(self, validated_data):
         item_data = validated_data.pop('Items')
         item = ItemsSerializer.create(ItemsSerializer(), validated_data=item_data)
@@ -75,7 +76,7 @@ class MeetingSerializer(serializers.ModelSerializer):
     #url = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = Meeting
-        fields = (
+        fields = [
             'filename',
             'title',
             'date',
@@ -84,7 +85,7 @@ class MeetingSerializer(serializers.ModelSerializer):
             'location',
             'attendees',
             'subsection',
-        )
+        ]
         # read_only_fields = ['pk']
 
     def create(self, validated_data):
