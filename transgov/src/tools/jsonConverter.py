@@ -2,25 +2,40 @@ import tika, copy
 tika.initVM()
 from tika import parser
 from dateutil import parser as date_parser
-import os.path
+import os, glob
+import json
 
 def tika_handles_scrap():
-    parsed_material = parser.from_file('Past-Meeting-Material.pdf')
-    parsed_minutes = parser.from_file('Approved-Minutes.pdf')
+    path_to_pdfs = 'PDFs'
+    #list_of_paired_minutes = list()
 
-    f_material = open("Tika_Material.txt", "w")
-    f_minutes = open("Tika_Minutes.txt", "w")
+    for committee in glob.glob(os.path.join(path_to_pdfs, '*')):
+        for minute in glob.glob(os.path.join(committee, '*')):
+            paired_minutes_path = glob.glob(os.path.join(minute, '*'))
 
-    output_material = parsed_material["content"]
-    output_minutes = parsed_minutes["content"]
+            parsed_material = parser.from_file(paired_minutes_path[1])
+            parsed_minutes = parser.from_file(paired_minutes_path[0])
 
-    f_material.write(output_material)
-    f_minutes.write(output_minutes)
+            f_material = open("Tika_Material.txt", "w")
+            f_minutes = open("Tika_Minutes.txt", "w")
 
-    with open("Tika_Minutes.txt") as infile, open("new_approved_minutes.txt", 'w') as outfile:
-        for line in infile:
-            if not line.strip(): continue
-            outfile.write(line)
+            output_material = parsed_material["content"]
+            output_minutes = parsed_minutes["content"]
+
+            f_material.write(output_material)
+            f_minutes.write(output_minutes)
+
+            f_material.close()
+            f_minutes.close()
+
+            with open("Tika_Minutes.txt") as infile, open("new_approved_minutes.txt", 'w') as outfile:
+                for line in infile:
+                    if not line.strip(): continue
+                    outfile.write(line)
+
+            the_list, prepared_list, new_item_list, content =  breaking_items()
+            file_no_list = generate_item(the_list, prepared_list, new_item_list, content)
+            build_JSON(file_no_list)
 
 
 def breaking_items():
@@ -64,7 +79,10 @@ def breaking_items():
                 if thing <= skip:
                     continue
                 elif int(thing) < int(tracker):
-                    new_item_list.remove(thing)
+                    try:
+                        new_item_list.remove(thing)
+                    except ValueError:
+                        print("OPS!", thing)
                 else:
                     skip = thing
                     break
@@ -77,17 +95,33 @@ def breaking_items():
 def build_JSON(file_no_list):
     committee_dict = {"General Faculties Council":"GFC", "Academic Planning Committee":"APC", "Academic Standards Committee":"ASC", "Committee on the Learning Environment":"CLE", "Campus Law Review Committee":"CLRC",
     "Executive Committee":"EXEC", "Facilities Development Committee":"FDC", "Undergraduate Awards and Scholarship Committee":"UASC"}
-    attendees_skip_words = ['ATTENDEES:', 'Statutory Members:', 'Ex-Officio:','Elected faculty:','Students:','Appointed Members:', 'REGRETS:','STAFF:']
+    attendees_skip_words = [x.lower() for x in ['ATTENDEES:', 'Statutory Members:', 'Ex-Officio:','Elected faculty:','Students:','Appointed Members:', 'REGRETS:','STAFF:', 'Voting Members:', 'Non-Voting Members:', 'Presenter(s):', 'Academic staff-at-large', 'Alternate', 'Alumni', 'Appointed',
+    'Chair-at-large', 'Dean-at-large', 'Delegate', 'Academic Staff', 'For Information', 'Observer', 'Other', 'Regular', 'Member']]
+
+    check_point = "Open Session Minutes"
     json_dict = dict()
     item_dict = dict()
+    list_of_items = list()
+    new_item_dict = dict()
 
     with open("new_approved_minutes.txt") as f_minutes:
         content_minutes = f_minutes.readlines()
-        committee = committee_dict[content_minutes[0].rstrip()]
-        date = content_minutes[2]
-        location = content_minutes[3].rstrip()
-        time = content_minutes[4].rstrip()
-        starting = content_minutes[5].rstrip()
+        if check_point in content_minutes[1].rstrip():
+            print("if", content_minutes[2])
+            committee = committee_dict[content_minutes[0].rstrip()]
+            date = content_minutes[2]
+            location = content_minutes[3].rstrip()
+            time = content_minutes[4].rstrip()
+            starting = content_minutes[5].rstrip()
+        # elif check_point in content_minutes[2].rstrip():
+        else:
+            print("elif", content_minutes[3])
+            committee = committee_dict[content_minutes[1].rstrip().lstrip()]
+            date = content_minutes[3]
+            location = content_minutes[4].rstrip()
+            time = content_minutes[5].rstrip()
+            starting = content_minutes[6].rstrip()
+
         for line_num, line in enumerate(content_minutes):
             if 'OPENING SESSION' in line:
                 end_num = line_num
@@ -95,39 +129,110 @@ def build_JSON(file_no_list):
                 start_items_pg_num = line_num + 1
 
         attendees_with_title = [content_minutes[i].rstrip() for i in range(5, end_num-2)]
-        attendees_list = [attendees for attendees in attendees_with_title if attendees not in attendees_skip_words]
+        attendees_list = [attendees for attendees in attendees_with_title if attendees.lower() not in attendees_skip_words]
 
-        date = date_parser.parse(date).strftime('%Y-%m-%d')
-        title = committee + ' ' + content_minutes[0].rstrip() + ' - ' + date
+        formartted_date = date_parser.parse(date).strftime('%Y-%m-%d')
+        title = committee + ' ' + content_minutes[0].rstrip() + ' - ' + formartted_date
         #title_flag = False
         for num in file_no_list:
             item_number = num
             item_dict['Item No.'] = item_number
             f_item = open(num + ".txt")
             title_flag = False
+            motion_flag = False
+            proposed_by_flag = False
+            description_flag = True
+            approval_route_flag = False
+
             item_content = f_item.readlines()
-            for x in item_content:
-                if 'Agenda Title: ' in x:
+
+            for line_num, x in enumerate(item_content):
+                if x.startswith('Agenda Title'):
+
                     title_flag = True
-                    p = x.find(':')
-                    agenda_title = x[p+2:].rstrip()
+                    start = 'Agenda Title: '
+
+                if x.startswith('Motion'):
+                    motion_flag = True
+                    end = 'Motion'
+
+                if x.startswith('MOTION'):
+                    motion_flag = True
+                    end = 'MOTION'
+
+                if x.startswith('Proposed by'):
+                    proposed_by_flag = True
+                    proposed_by_start = "Proposed by "
+                    proposed_by_end = 'Presenter'
+                    presenter_end = "Details"
+                    proposed_by = block_of_lines(item_content, proposed_by_start, proposed_by_end)
+                    presenter = block_of_lines(item_content, proposed_by_end, presenter_end)
+
+                if x.startswith('Responsibility'):
+                    description_flag = False
+
+                if x.startswith('The Purpose'):
+                    description_flag = False
+
+                if x.startswith("Details"):
+                    detail_line_num = line_num
+
+                if x.startswith("Approval Route"):
+                    approval_route_flag = True
+                    approval_route_start = '(including meeting dates)'
+                    approval_route_end = 'Final Approver'
+                    router, approver = approval_route(item_content, approval_route_start, approval_route_end)
+
 
             if not title_flag:
-                print(item_number)
-                agenda_title = "N/A"
-                #TODO: get the title from approved Minutes
-            item_dict['Agenda Title'] = agenda_title
-            print("LALALALALAL", item_dict)
+                title_start = item_content[0].rstrip()
+                title_end = item_content[1].rstrip()
+                item_title = title_start + ' ' + title_end
+
+            if not motion_flag:
+                end = 'Item'
+            if not proposed_by_flag:
+                proposed_by ="N/A"
+                presenter = "N/A"
+            # if description_flag:
+            #     description = ''
+            #     for i in range(2, len(item_content)):
+            #         description += item_content[i].replace(' \n', ' ')
+            # if not description_flag:
+            #     description = ''
+            #     for j in range(detail_line_num, len(item_content)):
+            #         description += item_content[j].replace(' \n', ' ')
+
+            description = ''
+            if description_flag:
+                start_range = 2
+            elif not description_flag:
+                start_range = detail_line_num
+            for i in range(start_range, len(item_content)):
+                description += item_content[i].replace(' \n', ' ')
+
+            if not approval_route_flag:
+                router = 'N/A'
+                approver = 'N/A'
+
+            if title_flag:
+                item_title = block_of_lines(item_content, start, end)
 
 
-
-
-
+            item_dict.update({'Item No.':item_number, 'Agenda Title':item_title,
+            'Date':formartted_date,'Committee': committee, 'Proposed By':proposed_by, 'Presenter':presenter,
+            'Description':description, 'Approval Route':router, 'Final Approver':approver})
+            #print(item_dict)
+            new_item_dict = copy.deepcopy(item_dict)
+            list_of_items.append(new_item_dict)
 
         json_dict.update({'Committee':committee, 'Date':date, 'Title':title,
-        'Location':location, 'Time':time, 'Attendees':attendees_list})
+        'Location':location, 'Time':time, 'Attendees':attendees_list, "Items":list_of_items, "PDF url": '_'.join((committee, date, 'Material.pdf'))})
 
-        print(json_dict)
+        json_filename = "JSON/" + title + "_JSON.txt"
+        os.makedirs(os.path.dirname(json_filename), exist_ok=True)
+        with open(json_filename, "w") as o_file:
+            json.dump(json_dict, o_file, indent=4, ensure_ascii=False)
 
 
 def generate_item(the_list, prepared_list, new_item_list, content):
@@ -178,8 +283,54 @@ def generate_item(the_list, prepared_list, new_item_list, content):
     return file_no_list
 
 
+def block_of_lines(content, start, end):
+    block = ""
+    found = False
+
+    for line in content:
+        line = line.rstrip()
+        #print(line)
+        if found:
+
+            if line.startswith(end): break
+            else:
+                block += line + ' '
+            # print("DAH", block)
+        else:
+            if line.startswith(start):
+                found = True
+                block = line.replace(start, '') + ' '
+
+    return block
+
+
+def approval_route(content, start, end):
+    block = list()
+    approver = ''
+    found = False
+
+    for line in content:
+        line = line.rstrip()
+        #print(line)
+        if found:
+            if 'http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx' in line:
+                continue
+            if line.startswith(end):
+                approver += line.replace(end, '')
+                break
+            else:
+                block.append(line)
+            # print("DAH", block)
+        else:
+            if line.startswith(start):
+                found = True
+                continue
+                #block = line.replace(start, '')
+
+    return block, approver
+
 
 tika_handles_scrap()
-the_list, prepared_list, new_item_list, content =  breaking_items()
-file_no_list = generate_item(the_list, prepared_list, new_item_list, content)
-build_JSON(file_no_list)
+# the_list, prepared_list, new_item_list, content =  breaking_items()
+# file_no_list = generate_item(the_list, prepared_list, new_item_list, content)
+# build_JSON(file_no_list)

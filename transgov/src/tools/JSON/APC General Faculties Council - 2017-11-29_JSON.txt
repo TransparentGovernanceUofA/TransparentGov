@@ -1,0 +1,44 @@
+{
+    "Committee": "APC",
+    "Date": "Wednesday, November 29, 2017 \n",
+    "Title": "APC General Faculties Council - 2017-11-29",
+    "Location": "Room 2-31 SAB",
+    "Time": "2:00 PM - 4:00 PM",
+    "Attendees": [
+        "2:00 PM - 4:00 PM",
+        "Steven Dew, Chair",
+        "Roger Moore, Vice-Chair",
+        "Jason Acker",
+        "Shane Scott (Delegate)",
+        "Darcy Bemister",
+        "Shannon Erichsen",
+        "Philip Stack (Delegate)",
+        "Christopher Mackay",
+        "Jerine Pegg",
+        "Babak Soltannia",
+        "Sarah Stahlke",
+        "Eleni Stroulia",
+        "Non-voting:",
+        "Lisa Collins",
+        "Benjamin Angus",
+        "Katy Campbell",
+        "Florence Glanfield",
+        "Walter Dixon",
+        "Meg Brolley, Coordinator",
+        "Marion Haggarty-France,"
+    ],
+    "Items": [
+        {
+            "Item No.": "4",
+            "Agenda Title": "Quality Assurance Suite of Activities: Excerpted Reports from the Faculties of Extension, Rehabilitation Medicine, Law, Agricultural, Life & Environmental Sciences (ALES) and the School of Public Health ",
+            "Date": "2017-11-29",
+            "Committee": "APC",
+            "Proposed By": "Steven Dew, Provost and Vice-President (Academic) ",
+            "Presenter": " Wendy Rodgers, Deputy Provost; Tammy Hopper, Vice-Provost (Academic Programs) ",
+            "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the item is (please be specific) The Office of the Provost and Vice-President (Academic) reports to the GFC Academic Planning Committee (APC) and the Board Learning and Discovery Committee (BLDC) on completed reviews from the Quality Assurance Suite of Activities. Five faculties conducted reviews of their undergraduate and graduate programs as well as President’s Visiting Committees in 2017: Extension, Rehabilitation Medicine, Law, ALES and the School of Public Health. The excerpted reports from the Quality Assurance reviews distill the information from the self-study documents produced by the faculty, the report composed by the external review committee, and the response to the report from the Dean. Excerpted reports will be made public on the Office of the Provost and Vice-President (Academic) website. Timeline/Implementation Date N/A Supplementary Notes and context APC was consulted on the revisions to the Quality Assurance Process on September 28, 2016 Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) Those who are actively participating: ● The Office of the President and Vice-Chancellor, ● The Office of the Provost and Vice-President (Academic) ● The Vice-Provost and Dean of the Faculty of Graduate Studies and Research ● The Faculty of Extension,  ● The Faculty of Rehabilitation Medicine,  ● The Faculty of Law,  ● The Faculty of ALES, and  ● The School of Public Health. Alignment/Compliance Alignment with Guiding Documents GOAL: EXCEL as individuals, and together, sustain a culture that fosters and champions distinction and distinctiveness in teaching, learning, research, and service.  Objective 14: Inspire, model, and support excellence in teaching and learning.  Strategy v: Develop and implement programs and processes to assure http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicPlanningCommittee/%7E/media/Governance/Documents/GO05/ACP/16-17/SE-28/APC-SE-28-2016-Past-Meeting-Material.pdf\nhigh quality, collegial graduate student and post-doctoral fellow supervision and mentorship.  GOAL: SUSTAIN our people, our work, and the environment by attracting and stewarding the resources we need to deliver excellence to the benefit of all Albertans.  Objective 21: Encourage continuous improvement in administrative, governance, planning and stewardship systems, procedures, and policies that enable students, faculty, staff, and the institution as a whole to achieve shared strategic goals.,  Comprehensive Institutional Plan 2017 QUALITY The University of Alberta is committed to quality across our teaching, research, and administrative functions. Our global ranking reflects our reputation for excellence, and we remain committed to attracting world-class faculty and research to support the best and brightest students from Alberta, Canada, and the world. Our research enterprise in particular is a major driver of Alberta’s innovation and economic diversification for the future. Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) “26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university” 2.   Post-Secondary Learning Act (PSLA) Establishment of Campus Alberta Quality Council 108(1). The Minister may establish the Campus Alberta Quality Council to provide advice and recommendations to the Minister in accordance with section 109 and the regulations.  Powers and duties (4) The Campus Alberta Quality Council may exercise the powers and shall perform the duties and functions prescribed in the regulations.” 3. Programs of Study Regulation  Council’s duty to establish standards and conditions  (7) In order to carry out its functions under this Regulation, the Council shall establish the minimum standards and conditions referred to in section 5(1) for institutions and for degree programs.  Powers of Council to ensure compliance  (8) The Council may, on the referral to it of a matter by the Minister relating to an approved or proposed degree program,  (a) review and monitor a degree program to ensure compliance with the standards and conditions established under section 7,  (b) require a report from the governing body of an institution on any matter relating to an approved or proposed degree program that the institution offers or proposes to offer, and  (c) appoint persons to provide advice and recommendations relating to the review and evaluation by the Council of a degree program under clause (a) or section 5.  Recommendation of Council if standards or conditions not met  (9) If the Council determines that any of the standards or conditions established under section 7 are no longer being met with respect to an institution or a degree program offered by an institution, the Council  (a) may recommend to the Minister that the Minister cancel the approval of one or more degree programs offered by the institution, and  Minister’s cancellation of approved degree program  (10) The Minister may cancel the approval of a degree program  (a) on receiving a recommendation of the Council under section 9(a),  (b) if the Minister has reason to believe that an institution has discontinued the approved degree program, or  (c) if, in the opinion of the Minister, it is necessary to cancel the approval for any other reason.” 4. GFC Academic Planning Committee (APC) Terms of Reference: According to GFC APC’s Terms of Reference, “APC is responsible for making recommendations to GFC and/or to the Board of Governors concerning policy matters and action matters with respect to the following: […] To receive and discuss recommendations from the President or the appropriate Vice-President concerning reviews of campus units and to take appropriate action. […]” (3.2.c)  5. According to the Board Learning and Discovery Committee’s (BLDC’s) Terms of Reference (3. Mandate of the Committee): The Committee “shall monitor, evaluate, advise and make decisions on behalf of the Board with respect to matters concerning the educational affairs of the University, including proposals coming from the administration and from General Faculties Council (the “GFC”), and shall consider future educational expectations and challenges to be faced by the University.” Attachments (each to be numbered 1 - <>) 1.  Excerpted Report Faculty of ALES (pages 1 - 12) 2.  Excerpted Report Faculty of Extension (pages 1 - 7) 3.  Excerpted Report Faculty of Law (pages 1 - 10) 4.  Excerpted Report Faculty of Rehabilitation Science (pages 1 - 8) 5.  Excerpted Report School of Public Health (pages 1 - 7) ",
+            "Approval Route": "N/A",
+            "Final Approver": "N/A"
+        }
+    ],
+    "PDF url": "APC_Wednesday, November 29, 2017 \n_Material.pdf"
+}

@@ -1,0 +1,41 @@
+{
+    "Committee": "CLE",
+    "Date": "Wednesday, October 04, 2017 \n",
+    "Title": "CLE General Faculties Council - 2017-10-04",
+    "Location": "2-31 South Academic Building (SAB)",
+    "Time": "2:00 PM - 4:00 PM",
+    "Attendees": [
+        "2:00 PM - 4:00 PM",
+        "Sarah Forgie, Chair",
+        "Janice Causgrove Dunn",
+        "Robert Desjardins",
+        "Yuuki Ito",
+        "Firouz Khodayari",
+        "Eva Lemaire",
+        "Janice Miller-Young",
+        "Jeff Rawlings",
+        "Norma Rodenburg",
+        "Shane Scott",
+        "Andrews Tawiah",
+        "Jennifer Tupper",
+        "Mani Vaidyanathan",
+        "Stanley Varnhagen",
+        "Janet Wesselius",
+        "Samer Adeeb",
+        "Kathleen DeLong"
+    ],
+    "Items": [
+        {
+            "Item No.": "5",
+            "Agenda Title": "Faculty of Nursing Undergraduate Curriculum Renewal ",
+            "Date": "2017-10-04",
+            "Committee": "CLE",
+            "Proposed By": "Faculty of Nursing ",
+            "Presenter": " Sandra Davidson, Associate Dean (Undergraduate) Faculty of Nursing ",
+            "Description": "Details Responsibility General Faculties Council The Purpose of the item is (please be specific) To discuss the committee’s mandate in relation to learning, and the learning environment. To consider this mandate with respect to potential changes in the committee’s terms of reference related to: • Evaluation Procedures • Institutional marking and grading policies and/or procedures • Examinations and whether portions of the attached regulations fit within this mandate. Timeline/Implementation Date ongoing Supplementary Notes and context Currently, the terms of reference for the Academic Standards Committee (which has authority related to admissions, transfer, and academic standing), includes the following: • “B. ii. ASC… acts for GFC in approving all proposals for … c) change to the University Calendar Section on Missed Term Work (under the Section entitled Evaluation Procedures and Grading System.)” • “B. vi. ASC provides advice or recommends to the GFC Executive Committee on institutional marking and grading policies and/or procedures.” • “B. vii. ASC provides advice or recommends to the GFC Executive Committee on institutional work policies and/or procedures (with the exception of that noted in B.ii)” In addition, the GFC Executive Committee has authority to approve requests from Faculties which wish to schedule common examinations. The recommendations of the ad hoc committee proposed that this might fit better with the Academic Standing Committee which has the role of monitoring the implementation of the consolidated exam policy. Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) Those who are actively participating: • GFC Committee on the Learning Environment Alignment/Compliance Alignment with Guiding Documents For the Public Good Objective 21: Encourage continuous improvement in administrative, governance, planning, and stewardship systems, procedures, and policies that enable students, faculty, staff, and the institution as a whole to achieve shared strategic goals. Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1.  Post-Secondary Learning Act “26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university […] (3) A general faculties council may delegate any of its powers, duties and functions under this Act…as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” 2. GFC Academic Standards Committee - Terms of Reference  3. GFC Committee on the Learning Environment – Terms of Reference  The mandate of the Committee on the Learning Environment (CLE) is to promote an optimal teaching and learning environment.   Current terms of reference include: “c) To review and, as necessary, recommend to the GFC Academic Planning Committee or the GFC Executive Committee policies on teaching, learning, teaching evaluation, and recognition for teaching … d) To develop policies that promote ongoing assessment of teaching, learning, and learning services through all Faculties and units.” Attachments: 1. Attachment 1: Attendance - Academic Regulations, University of Alberta Calendar 2017-18 2. Attachment 2: Evaluation Procedures and Grading - Academic Regulations, University of Alberta Calendar 2017-18 3. Attachment 3: Examinations - Academic Regulations, University of Alberta Calendar 2017-18 Assessment and Grading Policy Consolidated Examinations Procedure Access to Evaluative Course Material Procedure Grading Procedure  ",
+            "Approval Route": "N/A",
+            "Final Approver": "N/A"
+        }
+    ],
+    "PDF url": "CLE_Wednesday, October 04, 2017 \n_Material.pdf"
+}

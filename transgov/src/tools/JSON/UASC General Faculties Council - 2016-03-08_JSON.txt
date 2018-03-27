@@ -1,0 +1,65 @@
+{
+    "Committee": "UASC",
+    "Date": "Tuesday, March 8, 2016 \n",
+    "Title": "UASC General Faculties Council - 2016-03-08",
+    "Location": "2-15 South Academic Building (SAB)",
+    "Time": "2:00 PM - 4:00 PM",
+    "Attendees": [
+        "2:00 PM - 4:00 PM",
+        "Amy Tse Chair, Academic Staff",
+        "Rebekah Adams Member, Undergraduate Student at-large",
+        "Clive Hickson Members, Cross-rep from GFC ASC",
+        "Marc de Montigny Member, Academic Staff",
+        "Lucie Moussu Member, Academic Staff",
+        "Petr Nikrityuk Member, Academic Staff",
+        "Ali Qadri Member, Undergraduate Student at-large",
+        "Fiona Halbert Member, Team Lead, Student Financial Services, Resource",
+        "Mien Jou",
+        "(Delegate)",
+        "Member, Senior Development Officer, Office of Development, Resource",
+        "Rob Washburn Member (Delegate), Dean of Students, Resource",
+        "Amy Tse Professor, Faculty of Medicine and Dentistry and Chair, GFC UASC",
+        "Rachel de Leon Development Specialist (Acting), Student Financial Support",
+        "Fiona Halbert Assistant Registrar, Student Financial Support"
+    ],
+    "Items": [
+        {
+            "Item No.": "4",
+            "Agenda Title": "New Undergraduate Awards and Bursaries for Approval (March 8, 2016) ",
+            "Date": "2016-03-08",
+            "Committee": "UASC",
+            "Proposed By": "Student Financial Support ",
+            "Presenter": " Rachel De Leon, Student Financial Support Subject Approval of a new undergraduate awards and bursaries. ",
+            "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve new undergraduate awards and bursaries. The Impact of the Proposal is To ensure compliance with section 26(1)(m) of the Post-Secondary Learning Act, under delegated authority of General Faculties Council (GFC), “to make rules and regulations respecting academic awards”. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost N/A Sources of Funding Donors, Faculties, Departments, Office of the Registrar and Student Financial Support Notes The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97).  Alignment/Compliance Alignment with Guiding Documents Dare to Discover- Talented People: “1. Attract outstanding students from Alberta, Canada, and the world[.]”  […] “4. Improve access for rural, Aboriginal, and non-traditional students through partnerships with colleges and by linkages with high schools across the province and improve affordability by enhancing bursaries and scholarships.” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to:       1. approve new undergraduate awards[.] […]” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) Consultation with donors, Faculties, departments, Office of the Registrar and Student Financial Support to develop new undergraduate bursaries.  Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, March 8, 2016 (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee Attachments: 1.  Attachment 1: Proposed New Undergraduate Student Awards and Bursaries for Approval ",
+            "Approval Route": "N/A",
+            "Final Approver": "N/A"
+        },
+        {
+            "Item No.": "5",
+            "Agenda Title": "Amendments to Existing Undergraduate Awards and Bursaries for Approval (March 8, 2016) ",
+            "Date": "2016-03-08",
+            "Committee": "UASC",
+            "Proposed By": "Student Financial Support ",
+            "Presenter": " Rachel De Leon, Student Financial Support Subject Approval of amendments to existing undergraduate awards and bursaries. ",
+            "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) The approval of amendments to existing undergraduate awards and bursaries. The Impact of the Proposal is To ensure compliance with section 26(1)(m) of the Post-Secondary Learning Act, under the delegated authority of General Faculties Council (GFC)  “to make rules and regulations respecting academic awards”. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval Estimated Cost N/A Sources of Funding Donors, Faculties, Departments, Office of the Registrar and Student Financial Support  Notes The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC April 8, 2002, Minute 97).  Alignment/Compliance Alignment with Guiding Documents Dare to Discover- Talented People “1. Attract outstanding students from Alberta, Canada, and the world[.]”  […] “4. Improve access for rural, Aboriginal, and non-traditional students through partnerships with colleges and by linkages with high schools across the province and improve affordability by enhancing bursaries and scholarships.” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The Post-Secondary Learning Act (PSLA) (Section 2(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (Mandate): [“GFC UASC has delegated authority from GFC to: 2. approve changes to any undergraduate student award already approved by GFC UASC] Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) Consultation with donors, Faculties, departments, Office of the Registrar and Student Financial Support to amend existing undergraduate bursaries. Approval Route (Governance) (including meeting dates) GFC UASC, March 8, 2016 Final Approver GFC Undergraduate Awards and Scholarship Committee Attachments:  1. Attachment 1:  Proposed Amendments to Existing Undergraduate Student Awards and Bursaries ",
+            "Approval Route": [
+                "GFC UASC, March 8, 2016"
+            ],
+            "Final Approver": " GFC Undergraduate Awards and Scholarship Committee"
+        },
+        {
+            "Item No.": "6",
+            "Agenda Title": "Discussion Paper:  Undergraduate Student Financial Support at the University of Alberta ",
+            "Date": "2016-03-08",
+            "Committee": "UASC",
+            "Proposed By": "Student Financial Support – Office of the Registrar ",
+            "Presenter": " Fiona Halbert, Assistant Registrar, Student Financial Support Subject Undergraduate Student Financial Support Strategy Discussion Paper ",
+            "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To provide GFC UASC with a copy of the Discussion Paper regarding Undergraduate Student Financial Support Strategy and gain feedback from members. The Impact of the Proposal is The document supports the University of Alberta’s goals of engaging the campus community on undergraduate financial support and guide conversations to support the establishment of goals and strategies for undergraduate student financial support (UFS) at the University of Alberta. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date N/A Estimated Cost N/A Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents Dare to Discover- Talented People: “1. Attract outstanding students from Alberta, Canada, and the world[.]”  […] “4. Improve access for rural, Aboriginal, and non-traditional students through partnerships with colleges and by linkages with high schools across the province and improve affordability by enhancing bursaries and scholarships.” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (6. Mandate):  “GFC UASC has delegated authority from GFC to:       1. recommend to the GFC Executive Committee on any new policy or revisions to existing policy governing awards for undergraduate students” Routing (Include meeting dates) Participation: The following committees and stakeholders have seen the document for discussion purposes:  Dr Steven Dew, Provost and Vice-President (Academic):  January 25, 2016 ISP Leads:  January 25, 2016  Senior Leadership, Office of the Registrar:  February 5, 2016  Vice Provosts’ Council:  February 8, 2016 Dr Wendy Rodgers, Deputy Provost:  February 23, 2016  Martin Coutts, Financial Services Heather McCaw, Vice-President (Advancement) and Kelly Spencer, Office of Advancement Heather Zwicker, Faculty of Graduate Studies and Research Edith Finczak, Office of the Provost and Vice-President (Academic) Robin Everall, Interim Dean of Students Advisory Committee on Enrolment Management (ACEM):  February 26, 2016 Recruitment Network:  February 26, 2016 Presentation of the Discussion Paper will continue through March 2016. Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments  1.  Attachment 1: Discussion Paper – Undergraduate Student Financial Support 2.  Attachment 2: Summary Document – Discussion Paper – Undergraduate Student Financial Support ",
+            "Approval Route": [
+                "N/A"
+            ],
+            "Final Approver": " N/A"
+        }
+    ],
+    "PDF url": "UASC_Tuesday, March 8, 2016 \n_Material.pdf"
+}
