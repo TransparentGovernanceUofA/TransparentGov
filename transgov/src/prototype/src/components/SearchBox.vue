@@ -19,7 +19,7 @@
           <b-row class="mt-2" align-h="center">
             <b-col lg=8>
               <!-- b-form-input breaks the listening for key up of enter -->
-              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" />
+              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" class="form-control"/>
               <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
             </b-col>
           </b-row>

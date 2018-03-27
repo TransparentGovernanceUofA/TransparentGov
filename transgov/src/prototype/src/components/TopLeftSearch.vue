@@ -8,8 +8,14 @@
           </router-link>
         </b-col>
         <b-col>
-          <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
-          <b-button variant="outline-primary" size="sm" class="topLeftSearch" id="searchButton" v-on:click="goToResults()"><b>Search</b></b-button>
+          <div id="input-group-keeper">
+            <b-input-group>
+              <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()" class="form-control"/>
+              <b-input-group-append>
+                <b-button variant="outline-primary" size="sm" class="topLeftSearch" id="searchButton" v-on:click="goToResults()"><b>Search</b></b-button>
+              </b-input-group-append>
+            </b-input-group>
+          </div>
         </b-col>
       </b-row>
       <b-row>
@@ -180,15 +186,17 @@ export default {
 </script>
 
 <style>
+#input-group-keeper{
+  /* This has a minimum width to prevent the search button from wrapping down below the search box on medium screens */
+  /* The first value is the minimum size of the search box, the second value is the size of the search button */
+  min-width: calc(200px + 65px);
+}
 #input-box{
-  width: 100%;
+  width: calc(100% - 100px);
   /* These stop the input box from getting too large or small on different displays */
   max-width: 500px;
   min-width: 200px;
   height: 35px;
-}
-.topLeftSearch{
-  width: 150px;
 }
 #logo{
     width: 200px;
