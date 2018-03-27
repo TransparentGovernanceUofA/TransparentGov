@@ -6,8 +6,13 @@
           <b-row>
             <b-col>
               <router-link to="/">
-                <img src="./../assets/logoClearGov-M.png" id="logo"/>
+                <img src="./../assets/logoClearGov.svg" id="logo" class="m-2"/>
               </router-link>
+            </b-col>
+          </b-row>
+          <b-row>
+            <b-col>
+              A University of Alberta Initiative for Transparent and Open Governance
             </b-col>
           </b-row>
 
