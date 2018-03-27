@@ -77,12 +77,13 @@
     animation-name: hideshow;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    animation-delay: 4s;
 }
 
 	</style>
   <circle cx="150" cy="150" r="150" fill="url(#grad2)" />
   <rect x="50" y="40" width="100" height="200" fill="#fff"/>
-  <rect id="rect1" x="149" y="40" width="100px" height="200" fill="#fff"/>
+  <rect id="rect1" x="148" y="40" width="101px" height="200" fill="#fff"/>
 	<g
      id="g4612"
      transform="translate(0,-212)">
