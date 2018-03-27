@@ -4,7 +4,7 @@
       <b-row align-v="center" align-h="center">
         <b-col cols="auto">
           <router-link to="/">
-            <img src="./../assets/logoClearGov-XS.png" id="logo"/>
+            <img src="./../assets/logoOpenGov2-3.svg" id="logo" class="m-2"/>
           </router-link>
           
         </b-col>
@@ -214,13 +214,16 @@ export default {
 </script>
 
 <style>
-#input-box{
-  width: 100%;
-  
-  /* These stop the input box from getting too large or small on different displays */
-  max-width: 500px; 
-  min-width: 200px;
-  
-  height: 35px;
-}
+  #input-box{
+    width: 100%;
+
+    /* These stop the input box from getting too large or small on different displays */
+    max-width: 500px; 
+    min-width: 200px;
+
+    height: 35px;
+  }
+  #logo{
+    width: 200px;
+  }
 </style>
