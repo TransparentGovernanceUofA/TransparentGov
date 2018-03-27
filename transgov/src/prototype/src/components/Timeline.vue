@@ -26,14 +26,16 @@ export default {
 
     // Create a DataSet (allows two way data-binding)
     items = new vis.DataSet()
-    items.add({content: 'wght', start: '2015-01-01', title: 'dssadsa'})
+    // items.add({content: 'wght', start: '2015-01-01', title: 'dssadsa'})
 
     // Configuration for the Timeline
     options = {
       tooltip: {
         followMouse: true,
         overflowMethod: 'cap'
-      }
+      },
+      minHeight: "200px",
+      maxHeight: "400px"
     }
 
     // Create a Timeline
