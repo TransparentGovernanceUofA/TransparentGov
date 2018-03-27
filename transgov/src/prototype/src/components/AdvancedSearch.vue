@@ -7,16 +7,9 @@
           <b-col md=4 order="2" order-md="1">
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
-              <b-form-group id="topic"
-                          label="Topic"
-                          label-for="exampleInput1">
-                <b-form-select id="exampleInput1"
-                            :options="topicOptions"
-                            required
-                            v-model="form.topic">
-                </b-form-select>
-              </b-form-group>
-
+              <div class="help-tip">
+                <p>List of committees at the University of Alberta.</p>
+              </div>
               <b-form-group id="committee"
                           label="Committee"
                           label-for="exampleInput2">
@@ -26,7 +19,9 @@
                             v-model="form.committee">
                 </b-form-select>
               </b-form-group>
-
+               <div class="help-tip">
+                <p>Date picker, allows searching in a range of dates.</p>
+              </div>
               <b-form-group id="date"
                           label="Date"
                           label-for="exampleInput3">
@@ -36,17 +31,9 @@
                             v-model="form.date">
                 </b-form-select>
               </b-form-group>
-
-              <b-form-group id="text"
-                          label="Text"
-                          label-for="exampleInput4">
-                <b-form-select id="exampleInput4"
-                            :options="textOptions"
-                            required
-                            v-model="form.text">
-                </b-form-select>
-              </b-form-group>
-
+              <div class="help-tip">
+                <p>Various members that take part in Governance discussions.</p>
+              </div>
               <b-form-group id="people"
                           label="People"
                           label-for="exampleInput5">
@@ -103,27 +90,17 @@ export default {
 
       var advancedArray = this.advanced.split(':')
       if (advancedArray[1] !== 'false') {
-        this.form.topic = advancedArray[2]
-        if (this.form.topic === '') {
-          this.form.topic = null
-        }
-
-        this.form.committee = advancedArray[4]
+        this.form.committee = advancedArray[2]
         if (this.form.committee === '') {
           this.form.committee = null
         }
 
-        this.form.date = advancedArray[6]
+        this.form.date = advancedArray[4]
         if (this.form.date === '') {
           this.form.date = null
         }
 
-        this.form.text = advancedArray[8]
-        if (this.form.text === '') {
-          this.form.text = null
-        }
-
-        this.form.people = advancedArray[10]
+        this.form.people = advancedArray[6]
         if (this.form.people === '') {
           this.form.people = null
         }
@@ -139,18 +116,10 @@ export default {
         search: ''
       },
       form: {
-        topic: null,
         committee: null,
         date: null,
-        text: null,
         people: null
       },
-      topicOptions: [
-        { value: null, text: '' },
-        { value: 'USRI', text: 'USRI' },
-        { value: 'Budget', text: 'Budget' },
-        { value: 'Even more stoof', text: 'Even more stoof' }
-      ],
       committeeOptions: [
         { value: null, text: '' },
         { value: '1 committee', text: '1 committee' },
@@ -162,12 +131,6 @@ export default {
         { value: '1 idk', text: '1 idk' },
         { value: '2 what', text: '2 what' },
         { value: '3 we want for this', text: '3 we want for this' }
-      ],
-      textOptions: [
-        { value: null, text: '' },
-        { value: 'the', text: 'the' },
-        { value: 'texts', text: 'texts' },
-        { value: 'here', text: 'here' }
       ],
       peopleOptions: [
         { value: null, text: '' },
@@ -181,5 +144,90 @@ export default {
 </script>
 
 <style>
+.help-tip{
+    position: absolute;
+    /*top: 18px;*/
+    /*right: 100px;*/
+    text-align: center;
+    background-color: #BCDBEA;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+    left: 92.5%;
+}
 
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 10px;
+    width: 300px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    /*right: -4px;*/
+    left: -4px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+    z-index: 1;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    /*right:10px;*/
+    left:10px;
+    top:-12px;
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% { 
+        opacity:0; 
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
 </style>

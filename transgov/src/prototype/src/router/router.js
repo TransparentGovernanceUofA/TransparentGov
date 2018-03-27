@@ -4,6 +4,7 @@ import Result from '@/components/Result'
 import SearchBox from '@/components/SearchBox'
 import AdvancedSearch from '@/components/AdvancedSearch'
 import Timeline from '@/components/Timeline'
+import ViewPDF from '@/components/ViewPDF'
 
 Vue.use(VueRouter)
 
@@ -19,6 +20,13 @@ export default new VueRouter({
       path: '/result/:query/:advanced',
       name: 'Result',
       component: Result,
+      props: true
+    },
+    {
+      // the PDF results page uses dynamic route matching to make stable links to pdf files
+      path: '/file/:file_id',
+      name: 'View PDF',
+      component: ViewPDF,
       props: true
     },
     {

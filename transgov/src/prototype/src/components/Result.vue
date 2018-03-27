@@ -61,10 +61,8 @@ export default{
     return {
       ElasticResult: {},
       advancedFilters: {
-        topic: null,
         committee: null,
         date: null,
-        text: null,
         people: null
       }
     }
@@ -135,35 +133,23 @@ export default{
           console.log(err)
         })
     },
-
     parseQuery () {
-      
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
       var advancedArray = this.advanced.split(':')
       if (advancedArray[1] !== 'false') {
-        this.advancedFilters.topic = advancedArray[2]
-        if (this.advancedFilters.topic === '') {
-          this.advancedFilters.topic = null
-        }
-
-        this.advancedFilters.committee = advancedArray[4]
+        this.advancedFilters.committee = advancedArray[2]
         if (this.advancedFilters.committee === '') {
           this.advancedFilters.committee = null
         }
 
-        this.advancedFilters.date = advancedArray[6]
+        this.advancedFilters.date = advancedArray[4]
         if (this.advancedFilters.date === '') {
           this.advancedFilters.date = null
         }
 
-        this.advancedFilters.text = advancedArray[8]
-        if (this.advancedFilters.text === '') {
-          this.advancedFilters.text = null
-        }
-
-        this.advancedFilters.people = advancedArray[10]
+        this.advancedFilters.people = advancedArray[6]
         if (this.advancedFilters.people === '') {
           this.advancedFilters.people = null
         }
