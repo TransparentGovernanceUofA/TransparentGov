@@ -10,9 +10,12 @@
           <p class="card-text clamp-3">
             <span class="desc">{{ searchresult._source.description }}</span>
           </p> -->
-
+          
           <h6 v-if= searchresult slot="header" class="mb-0" v-for="title in searchresult.highlight.title">
             <span class="title" v-html="title"></span>
+            <router-link :to="{name: 'View PDF', params: { file_id:'file_id:' + searchresult._source.django_id}}">
+            See more
+            </router-link>
           </h6>
           <p class="card-text clamp-3" v-for="desc in searchresult.highlight.description">
             <span class="desc" v-html="desc"></span>
