@@ -19,21 +19,18 @@
                             v-model="form.committee">
                 </b-form-select>
               </b-form-group>
-              <!-- <div class="help-tip">
-                <p>Date picker, allows searching in a range of dates.</p>
-              </div> -->
               <b-form-group id="date">
                 <b-row>
                   <b-col>
                     <p> Start: </p>
-                    <date-picker v-model="date" :config="config"></date-picker>
+                    <date-picker v-model="date_start" :config="config_date_start"></date-picker>
                   </b-col>
                   <b-col>
                     <div id="time-help" class="help-tip">
                       <p>Date picker, allows searching in a range of dates.</p>
                     </div>
                     <p> End: </p>
-                    <date-picker v-model="date" :config="config"></date-picker>
+                    <date-picker v-model="date_end" @change="change" :config="config_date_end"></date-picker>
                   </b-col>
                 </b-row>
               </b-form-group>
@@ -81,7 +78,6 @@ export default {
   },
   components: {
     TopLeftSearch,
-    // datePicker
   },
   created () {
     this.parseQuery()
@@ -114,6 +110,9 @@ export default {
       }
       // console.log(this.form)
       // console.log(this.inputField.search)
+    },
+    change () {
+      console.log("change")
     }
   },
   data () {
@@ -145,16 +144,30 @@ export default {
         { value: 'Barbosa', text: 'Barbosa' },
         { value: 'Diego', text: 'Diego' }
       ],
-      // date: new Date(),
-      date: null,
-      config: {
+      date_start: null,
+      config_date_start: {
         format: 'DD/MM/YYYY',
         useCurrent: false,
         showClear: true,
         showClose: true,
-      }       
+        maxDate: new Date()
+      },
+      date_end: new Date(),
+      config_date_end: {
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        showClear: true,
+        showClose: true,
+        maxDate: new Date()
+      }              
     }
-  }
+  },
+
+  // watch: {
+  //   date_end: function(val, oldval){
+  //     console.log(val)
+  //   }
+  // }
 }
 </script>
 
@@ -221,7 +234,7 @@ export default {
     color: #FFF;
     font-size: 13px;
     line-height: 1.4;
-    z-index: 999;
+    z-index: 1;
 }
 
 .help-tip p:before{ /* The pointer of the tooltip */
