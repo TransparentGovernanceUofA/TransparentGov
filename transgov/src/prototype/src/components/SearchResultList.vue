@@ -45,17 +45,18 @@
                   </ul>
                 </p>
             </b-tab>
-            <div id="TETETETSTSADUGAIDADBAOI">
+            <!-- CSS rules to handle the nested tabs rely on this being the 3rd tab, if you need to rearrange then change the rule -->
             <b-tab title="Items" no-body >
                 <b-tabs card>
                   <template v-for="item in searchresult._source.Items">
-                    <b-tab :title="'Item ' + item['Item No.']">
-                      Tab Contents 1
+                    <b-tab :title="'Item ' + item['Item No.']" no-body>
+                      <b-list-group flush>
+                        <b-list-group-item v-for="(val, attrib) in item"><strong>{{attrib}}</strong>: {{val}}</b-list-group-item>
+                      </b-list-group>
                     </b-tab>
                   </template>
                 </b-tabs>
             </b-tab>
-            </div>
           </b-tabs>
           
         </b-card>
