@@ -19,17 +19,23 @@
                             v-model="form.committee">
                 </b-form-select>
               </b-form-group>
-               <div class="help-tip">
+              <!-- <div class="help-tip">
                 <p>Date picker, allows searching in a range of dates.</p>
-              </div>
-              <b-form-group id="date"
-                          label="Date"
-                          label-for="exampleInput3">
-                <b-form-select id="exampleInput3"
-                            :options="dateOptions"
-                            required
-                            v-model="form.date">
-                </b-form-select>
+              </div> -->
+              <b-form-group id="date">
+                <b-row>
+                  <b-col>
+                    <p> Start: </p>
+                    <date-picker v-model="date" :config="config"></date-picker>
+                  </b-col>
+                  <b-col>
+                    <div id="time-help" class="help-tip">
+                      <p>Date picker, allows searching in a range of dates.</p>
+                    </div>
+                    <p> End: </p>
+                    <date-picker v-model="date" :config="config"></date-picker>
+                  </b-col>
+                </b-row>
               </b-form-group>
               <div class="help-tip">
                 <p>Various members that take part in Governance discussions.</p>
@@ -74,7 +80,8 @@ export default {
     }
   },
   components: {
-    TopLeftSearch
+    TopLeftSearch,
+    // datePicker
   },
   created () {
     this.parseQuery()
@@ -137,13 +144,24 @@ export default {
         { value: 'Eleni', text: 'Eleni' },
         { value: 'Barbosa', text: 'Barbosa' },
         { value: 'Diego', text: 'Diego' }
-      ]
+      ],
+      // date: new Date(),
+      date: null,
+      config: {
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        showClear: true,
+        showClose: true,
+      }       
     }
   }
 }
 </script>
 
 <style>
+#end{
+  z-index:-1;
+}
 .help-tip{
     position: absolute;
     /*top: 18px;*/
@@ -157,6 +175,21 @@ export default {
     line-height: 26px;
     cursor: default;
     left: 92.5%;
+}
+
+#time-help{
+    position: absolute;
+    /*top: 18px;*/
+    /*right: 100px;*/
+    text-align: center;
+    background-color: #BCDBEA;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+    left: 86.5%;
 }
 
 .help-tip:before{
@@ -188,7 +221,7 @@ export default {
     color: #FFF;
     font-size: 13px;
     line-height: 1.4;
-    z-index: 1;
+    z-index: 999;
 }
 
 .help-tip p:before{ /* The pointer of the tooltip */
