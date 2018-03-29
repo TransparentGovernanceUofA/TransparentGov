@@ -5,7 +5,10 @@
       <b-col>
         <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
         </SearchResult> -->
-        <b-card no-body header-tag="header" footer-tag="footer" class="md-elevation-3">
+        <b-card no-body header-tag="header" footer-tag="footer" class="md-elevation-3" 
+          border-variant="dark"
+          header-bg-variant="dark"
+          header-text-variant="white">
           
           <!-- We use a highlighted title if available, otherwise the regular title -->
           <h6 v-if="searchresult.highlight.Title" slot="header" class="mb-0">
@@ -21,15 +24,40 @@
             </router-link>
           </h6>
           
-          <!-- Match content, attempts to show all matches in a document -->
-          <p class="card-text clamp-3" v-for="(matches, category) in searchresult.highlight">
-            <ul>
-              <li>{{ category.slice(0,6) == "Items." ? category.slice(6) : category }}</li>
-              <ul>
-                <li v-for="match in matches"><span v-html="match"></span></li>
-              </ul>
-            </ul>
-          </p>
+          
+          <!-- Tabs allow the matches for a result to be shown, but then also the meta data if they want to drill down -->
+          <b-tabs card id="tabs-lvl-1">
+            <b-tab title="Highlights">
+                <!-- Match content, attempts to show all matches in a document, with highlights -->
+                <p class="card-text clamp-3" v-for="(matches, category) in searchresult.highlight">
+                  <ul>
+                    <li>{{ category.slice(0,6) == "Items." ? category.slice(6) : category }}</li>
+                    <ul>
+                      <li v-for="match in matches"><span v-html="match"></span></li>
+                    </ul>
+                  </ul>
+                </p>
+            </b-tab>
+            <b-tab title="Attendees">
+                <p class="card-text" >
+                  <ul>
+                    <li v-for="attendee in searchresult._source.Attendees">{{attendee}}</li>
+                  </ul>
+                </p>
+            </b-tab>
+            <div id="TETETETSTSADUGAIDADBAOI">
+            <b-tab title="Items" no-body >
+                <b-tabs card>
+                  <template v-for="item in searchresult._source.Items">
+                    <b-tab :title="'Item ' + item['Item No.']">
+                      Tab Contents 1
+                    </b-tab>
+                  </template>
+                </b-tabs>
+            </b-tab>
+            </div>
+          </b-tabs>
+          
         </b-card>
         <!-- Upgraded version in the works
         <b-card no-body header-tag="header" footer-tag="footer" class="md-elevation-3">
@@ -91,4 +119,14 @@ em{
   font-weight: bold;
   background-color: #FFFFCC;
 }
+#tabs-lvl-1>.card-header{
+  background-color: #e1e3e3;
+}
+.card-header em{
+  background-color: #686b00;
+}
+#tabs-lvl-1>.card-header>ul>li:nth-child(3)>a.active{
+  background-color: #f7f7f7;
+  border-bottom-color: #f7f7f7;
+  }
 </style>
