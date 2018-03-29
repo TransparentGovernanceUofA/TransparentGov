@@ -92,27 +92,20 @@ export default{
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
         query: {
-          match_phrase: {
-            '_all': {
-              'query': this.inputField.search,
-              'prefix_length': '3',
-              'fuzziness': '2',
-              'operator': 'and'
+          multi_match: {
+            'query': this.inputField.search,
+            'type': 'cross_fields',
+            'fields' : [ '_all' ],
+            'fuzziness': '2',
+            'operator': 'and',
             }
-            // this.inputField.search
-          }
+
         },
         'highlight': {
           'fields': {
-            'title': {
-              'no_match_size': 300,
-              'number_of_fragments': 0
+            '*': {
+
             },
-            'description': {
-              'fragment_size': 300,
-              'no_match_size': 500,
-              'number_of_fragments': 5
-            }
           }
         }
       }
