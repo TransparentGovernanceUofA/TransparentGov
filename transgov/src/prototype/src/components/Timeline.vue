@@ -22,11 +22,8 @@ function onSelect (properties) {
   if (properties.items.length == 0){
     return
   }
-  console.log('selected items: ' + properties.items);
-  console.log(items.get(properties.items[0]).id);
-  var element_to_scroll_to = document.getElementById(items.get(properties.items[0]).id);
-  console.log(element_to_scroll_to);
-  element_to_scroll_to.scrollIntoView();
+  var result_card = document.getElementById(items.get(properties.items[0]).id);
+  result_card.scrollIntoView();
 }
 
 export default {
