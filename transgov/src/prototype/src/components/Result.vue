@@ -91,31 +91,6 @@ export default{
     fetchData () {
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
-<<<<<<< HEAD
-              query: {
-                multi_match: {
-                  'query': this.inputField.search,
-                  'type': 'cross_fields',
-                  'fields' : [ '_all' ],
-                  'fuzziness': '2',
-                  'operator': 'and',
-                  }
-                  // this.inputField.search
-              },
-              'highlight': {
-                'fields': {
-                  '*': {
-
-                  },
-                  // 'description': {
-                  //   'fragment_size': 300,
-                  //   'no_match_size': 500,
-                  //   'number_of_fragments': 5
-                  // }
-                }
-              }
-            }
-=======
         query: {
           multi_match: {
             'query': this.inputField.search,
@@ -134,7 +109,6 @@ export default{
           }
         }
       }
->>>>>>> b7d77330d42f149b3201e87d352b74d66d43a18c
 
       // using axios, get es results
       // console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
@@ -153,10 +127,6 @@ export default{
         })
     },
     parseQuery () {
-<<<<<<< HEAD
-
-=======
->>>>>>> b7d77330d42f149b3201e87d352b74d66d43a18c
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
