@@ -17,11 +17,23 @@ var timeline = {}
 function randomDate (start, end) {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
 }
+  
+function onSelect (properties) {
+  if (properties.items.length == 0){
+    return
+  }
+  console.log('selected items: ' + properties.items);
+  console.log(items.get(properties.items[0]).id);
+  var element_to_scroll_to = document.getElementById(items.get(properties.items[0]).id);
+  console.log(element_to_scroll_to);
+  element_to_scroll_to.scrollIntoView();
+}
 
 export default {
   name: 'app',
   mounted: function () {
-  // DOM element where the Timeline will be attached
+    
+    // DOM element where the Timeline will be attached
     container = document.getElementById('visualization')
 
     // Create a DataSet (allows two way data-binding)
@@ -40,6 +52,9 @@ export default {
 
     // Create a Timeline
     timeline = new vis.Timeline(container, items, options)
+    
+    // add event listener
+    timeline.on('select', onSelect);
   },
   components: {
   },
@@ -50,7 +65,7 @@ export default {
         items.clear() // Prevents duplication of results - potential bottleneck if dynamically adding data to a large result set
         this.results.forEach(function (item, index) {
           try {
-            items.add({content: item._source.Title, start: item._source.Date, title: "test"})
+            items.add({id: item._id, content: item._source.Title, start: item._source.Date, title: "test"})
           } catch (e) {
             console.log('There was an error adding an item')
           }
