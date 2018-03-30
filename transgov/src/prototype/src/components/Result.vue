@@ -83,9 +83,9 @@ export default{
     advanced: function () {
       // console.log('advanced Changed')
       this.parseQuery()
-      this.fetchData()
+      //this.fetchData()
     }
-  },
+},
 
   methods: {
     fetchData () {
@@ -99,6 +99,16 @@ export default{
             'fuzziness': '2',
             'operator': 'and',
             }
+   //        "query": {
+   //            "more_like_this": {
+   //                "fields": [
+   //                    "_all"
+   //                ],
+   //                "like_text": "Transfer Credits",
+   //                "min_term_freq": 1,
+   //                //"percent_terms_to_match": 1,
+   //                "min_doc_freq": 1
+   // }
 
         },
         'highlight': {
@@ -107,7 +117,9 @@ export default{
 
             },
           }
-        }
+      }
+
+
       }
 
       // using axios, get es results
@@ -127,11 +139,13 @@ export default{
         })
     },
     parseQuery () {
+
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
       var advancedArray = this.advanced.split(':')
       if (advancedArray[1] !== 'false') {
+
         this.advancedFilters.committee = advancedArray[2]
         if (this.advancedFilters.committee === '') {
           this.advancedFilters.committee = null
@@ -147,6 +161,42 @@ export default{
           this.advancedFilters.people = null
         }
       }
+
+      const advanced_query = {
+          "query": {
+              "more_like_this": {
+                  "fields": [
+                      "_all"
+                  ],
+                  "like_text": this.advancedFilters.committee + this.advancedFilters.date + this.advancedFilters.people,
+                  "min_term_freq": 1,
+                  //"percent_terms_to_match": 1,
+                  "min_doc_freq": 1
+              }
+
+        },
+        'highlight': {
+          'fields': {
+            '*': {
+
+            },
+          }
+      }
+      }
+
+      axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
+        params: {
+          source: JSON.stringify(advanced_query),
+          source_content_type: 'application/json'
+        }
+      })
+      .then((resp) => {
+        console.log(resp)
+        this.ElasticResult = resp.data.hits.hits
+      })
+      .catch((err) => {
+        console.log(err)
+      })
       // console.log(this.advancedFilters)
       // console.log(this.inputField.search)
     }

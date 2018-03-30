@@ -59,6 +59,7 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
+import axios from 'axios'
 
 export default {
   props: {
@@ -78,12 +79,14 @@ export default {
   },
   created () {
     this.parseQuery()
+    //this.fetchData()
   },
   methods: {
     // this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
+
     parseQuery () {
       var queryArray = this.query.split(':')
       this.inputField.search = queryArray[1]
@@ -122,9 +125,9 @@ export default {
       },
       committeeOptions: [
         { value: null, text: '' },
-        { value: '1 committee', text: '1 committee' },
-        { value: '2 committee', text: '2 committee' },
-        { value: '3 comimttee', text: '3 comimttee' }
+        { value: 'ASC', text: 'ASC ' },
+        { value: 'APC', text: 'APC' },
+        { value: 'GFC', text: 'GFC' }
       ],
       dateOptions: [
         { value: null, text: '' },
@@ -134,9 +137,9 @@ export default {
       ],
       peopleOptions: [
         { value: null, text: '' },
-        { value: 'Eleni', text: 'Eleni' },
-        { value: 'Barbosa', text: 'Barbosa' },
-        { value: 'Diego', text: 'Diego' }
+        { value: 'Scott Jeffrey', text: 'Scott Jeffrey' },
+        { value: 'Eleni Stroulia', text: 'Eleni Stroulia' },
+        { value: 'Meg Brolley', text: 'Meg Brolley' }
       ]
     }
   }
@@ -215,8 +218,8 @@ export default {
 /* CSS animation */
 
 @-webkit-keyframes fadeIn {
-    0% { 
-        opacity:0; 
+    0% {
+        opacity:0;
         transform: scale(0.6);
     }
 
