@@ -19,17 +19,20 @@
                             v-model="form.committee">
                 </b-form-select>
               </b-form-group>
-               <div class="help-tip">
-                <p>Date picker, allows searching in a range of dates.</p>
-              </div>
-              <b-form-group id="date"
-                          label="Date"
-                          label-for="exampleInput3">
-                <b-form-select id="exampleInput3"
-                            :options="dateOptions"
-                            required
-                            v-model="form.date">
-                </b-form-select>
+              <b-form-group id="date">
+                <b-row>
+                  <b-col>
+                    <p> Start: </p>
+                    <date-picker v-model="date_start" :config="config_date_start"></date-picker>
+                  </b-col>
+                  <b-col>
+                    <div id="time-help" class="help-tip">
+                      <p>Date picker, allows searching in a range of dates.</p>
+                    </div>
+                    <p> End: </p>
+                    <date-picker v-model="date_end" @change="change" :config="config_date_end"></date-picker>
+                  </b-col>
+                </b-row>
               </b-form-group>
               <div class="help-tip">
                 <p>Various members that take part in Governance discussions.</p>
@@ -74,7 +77,7 @@ export default {
     }
   },
   components: {
-    TopLeftSearch
+    TopLeftSearch,
   },
   created () {
     this.parseQuery()
@@ -107,6 +110,9 @@ export default {
       }
       // console.log(this.form)
       // console.log(this.inputField.search)
+    },
+    change () {
+      console.log("change")
     }
   },
   data () {
@@ -137,11 +143,30 @@ export default {
         { value: 'Eleni', text: 'Eleni' },
         { value: 'Barbosa', text: 'Barbosa' },
         { value: 'Diego', text: 'Diego' }
-      ]
+      ],
+      date_start: null,
+      config_date_start: {
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        showClear: true,
+        showClose: true,
+        maxDate: new Date()
+      },
+      date_end: new Date(),
+      config_date_end: {
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        showClear: true,
+        showClose: true,
+        maxDate: new Date()
+      }              
     }
   }
 }
 </script>
 
 <style>
+#end{
+  z-index:-1;
+}
 </style>
