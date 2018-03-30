@@ -1,6 +1,6 @@
 {
     "Committee": "GFC",
-    "Date": "Monday, May 02, 2016 \n",
+    "Date": "2016-05-02",
     "Title": "GFC General Faculties Council - 2016-05-02",
     "Location": "Council Chamber, University Hall",
     "Time": "2:00 PM-4:00 PM",
@@ -100,48 +100,87 @@
     "Items": [
         {
             "Item No.": "4",
-            "Agenda Title": "Academic Governance and Delegated Authority: Report of Working Group and Discussion of GFC Terms of Reference Item Action Requested Approval Recommendation  Discussion/Advice Information Proposed by David  Turpin, President and Chair, GFC Executive Committee Presenter Duncan Elliott and Mirko van der Baan, Academic Governance Working Group Subject Academic Governance and Delegated Authority Details Responsibility David Turpin, President and Chair, General Faculties Council The Purpose of the Proposal is (please be specific) To provide General Faculties Council (GFC) with an update from the Academic Governance Working Group. To engage GFC in a discussion on the terms of reference of GFC with particular attention to “3. Mandate of the Committee”. GFC will be asked to consider: • Are we living up to the principles of the Mandate? • What is the desired level of clarity on delegated authority? • Is current practice matching the Mandate? • Are we striking a correct balance between full delegation and no delegation? • Are appropriate matters being referred to full GFC from standing committee? • Is this your vision of Academic Governance? The Impact of the Proposal is Following the discussion at the March 21 meeting, an additional meeting was scheduled for May 2 to accommodate further discussion of this issue. The discussion will provide the working group, and the GFC Executive Committee, with guidance to prepare a recommendation for GFC on standing committee delegations for the May 30, 2016 meeting. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Recommendation to GFC on standing committee delegations - May 30, 2016 Estimated Cost N/A Sources of Funding N/A Notes On January 25, 2016, General Faculties Council approved the following motions: ",
+            "Agenda Title": "Academic Governance and Delegated Authority: Report of Working Group and Discussion of GFC Terms of Reference ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-05-02",
             "Committee": "GFC",
             "Proposed By": "David  Turpin, President and Chair, GFC Executive Committee ",
             "Presenter": " Duncan Elliott and Mirko van der Baan, Academic Governance Working Group Subject Academic Governance and Delegated Authority ",
             "Description": "Details Responsibility David Turpin, President and Chair, General Faculties Council The Purpose of the Proposal is (please be specific) To provide General Faculties Council (GFC) with an update from the Academic Governance Working Group. To engage GFC in a discussion on the terms of reference of GFC with particular attention to “3. Mandate of the Committee”. GFC will be asked to consider: • Are we living up to the principles of the Mandate? • What is the desired level of clarity on delegated authority? • Is current practice matching the Mandate? • Are we striking a correct balance between full delegation and no delegation? • Are appropriate matters being referred to full GFC from standing committee? • Is this your vision of Academic Governance?  The Impact of the Proposal is Following the discussion at the March 21 meeting, an additional meeting was scheduled for May 2 to accommodate further discussion of this issue. The discussion will provide the working group, and the GFC Executive Committee, with guidance to prepare a recommendation for GFC on standing committee delegations for the May 30, 2016 meeting. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Recommendation to GFC on standing committee delegations - May 30, 2016 Estimated Cost N/A Sources of Funding N/A Notes On January 25, 2016, General Faculties Council approved the following motions: Motion I:  THAT General Faculties Council will review the delegation of its authorities to all of its current committee, and by 30 June 2016 vote on whether to renew or revise these delegated authorities. Motion II: THAT the review of the governance and operations of the General Faculties Council is to be informed by the June 2013 report “A  Reflection on the State of Academic Governance at the University of Alberta” Alignment/Compliance Alignment with Guiding Documents Institutional values (2015 Comprehensive Institutional Plan) “Our values: The U of A community of students, faculty, staff, and alumni rely on shared, deeply held values that guide behaviour and actions. These values are drawn from the principles on which the University of Alberta was founded in 1908 and reflect a dynamic, modern institution of higher learning, leading change nationally and internationally. Excellence: Excellence in teaching that promotes learning; outstanding research and creative activity that fuel discovery and advance knowledge; and enlightened service that builds citizenship. Student Experience: The centrality of our students and our responsibility to provide an intellectually superior educational environment.  Integrity and Academic Freedom: Integrity, fairness, and principles of ethical conduct built on the foundation of academic freedom, open inquiry, and the pursuit of truth. Diversity and Creativity: A diverse, yet inclusive, dynamic collegial community that welcomes change and seizes opportunity with passion and creativity. Pride: Pride in our history and traditions, including contributions from Aboriginal people and other groups, which enrich and distinguish the university.” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) “Powers of general faculties council 26(1)Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university and, without restricting the generality of the foregoing, has the authority to   (a) exercise any power of a faculty council that the general faculties council considers desirable to exercise;   (b) consider and make decisions on the reports of the faculty councils as to the programs of study in the faculties;   (c) determine all programs of study to which clause (b) does not apply that are to be offered by the university for credit toward the requirements for any degree or diploma;   (d) determine the timetables for examinations and for lectures and other instruction in each faculty;   (e) consider and make decisions on the reports of faculty councils as to the appointment of examiners and the conduct and results of examinations in the faculties;   (f) provide for the granting and conferring of degrees other than honorary degrees;   (g) provide for the preparation and publication of the university calendar;   (h) hear and determine appeals from the decisions of faculty  councils on applications, requests or petitions by students and others;   (i) consider all matters reported to it by any faculty council and  communicate its opinion or action on those matters to the faculty council concerned;   (j) determine the date for the beginning and end of lectures in the university and also the beginning and end of each university term; (k) make rules and regulations for the management and operation of libraries;   (l) recommend to the board the establishment of faculties, schools, departments, chairs and programs of study in the university in any subject that the general faculties council thinks fit;   (m) make rules and regulations respecting academic awards;   (n) determine standards and policies respecting the admission of persons to the university as students;   (o) make recommendations to the board with respect to affiliation with other institutions, academic planning, campus planning, a building program, the budget, the regulation of residences and dining halls, procedures in respect of appointments, promotions, salaries, tenure and dismissals, and any other matters considered by the general faculties council to be of interest to the university;   (p) authorize lecturing and teaching on the university premises by persons other than members of the staff of the university;   (q) authorize a school to have a school council of the same nature and with the same powers, duties and functions as a faculty council and, in its discretion, revoke any authority so given.  (2) Any recommendations from the general faculties council to the board must be transmitted to the board through the president. (3) A general faculties council may delegate any of its powers, duties and functions under this Act, including the powers referred to in section 31, as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” 2. General Faculties Council Terms of Reference / 3. Mandate “Powers Retained by General Faculties Council All powers and responsibilities under Section 26 of the PSLA not expressly delegated now or in the future shall be retained by General Faculties Council. (GFC 02 DEC 1966) The issues which remain with GFC or which would be referred by a Standing Committee to GFC would generally be in the nature of the following: • high level strategic and stewardship policy issues or matters of significant risk to the University; • alterations to the mandate, terms of reference, composition, or structure of a Standing Committee; • those things which a Standing Committee considers to be of major strategic significance to or long-term impact on the University; • those matters on which, in the opinion of a Standing Committee chair, there has been a strong division of opinion within the Standing Committee; and • issues in which there is a lack of clarity as to which Standing Committee is responsible. 3. GFC Executive Committee Terms of Reference/3. Mandate of the Committee:  “To act as the executive body of General Faculties  Council and, in general, carry out the functions delegated to it by General Faculties Council.”  […] “5. Agendas of General Faculties Council GFC has delegated to the Executive Committee the authority to decide which items are placed on a GFC Agenda, and the order in which those agenda items appear on each GFC agenda.  When ordering items, the GFC Executive Committee will be mindful of any matters that are of particular concern to students during March and April so that the student leaders who bring those items forward are able to address these items at GFC before their terms end. (EXEC 06 NOV 2006)  […] With respect to recommendations from other bodies and other GFC committees, however, the role of the Executive Committee shall be to examine and debate the substance of reports or recommendations and to decide if an item is ready to be forwarded to the full governing body. The Executive Committee may decide to refer a proposal back to the originating body, to refer the proposal to another body or individual for study or review, or to take other action in order to ready a proposal for consideration by General Faculties Council. When the GFC Executive Committee forwards a proposal to GFC, it shall make a recommendation that GFC endorse; endorse with suggested amendments; not endorse; or forward the proposal with no comment.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) GFC Executive Committee (for discussion) – December 7, 2015 and January 11, 2016 General Faculties Council (for discussion) – January 25, 2016 GFC Executive Committee (for discussion) – February 1 and March 7, 2016 GFC Executive Committee Working Group  on Academic Governance (for discussion)– February/March 2016 General Faculties Council (for discussion) – March 21, 2016 Academic Governance Working Group (for discussion) – April 2016 GFC Executive Committee (for discussion) – April 11, 2016 General Faculties Council – May 2, 2016 Approval Route (Governance) (including meeting dates) Final Approver  Attachments: Attachment 1 (pages 1-6): Excerpt from the Post-Secondary Learning Act, sections 26 and 31. Complete text available at: http://www.qp.alberta.ca/documents/Acts/p19p5.pdf  Attachment 2 (page 1-13): General Faculties Council Terms of Reference Attachment 3 (page 1-14): Approvals made by GFC Standing Committees with delegated authority over last year  Attachment 4: Presentation to GFC, May 2, 2016 Attachment 5: (page 1): Election to GFC Standing Committees Process ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "GFC Executive Committee (for discussion) – December 7, 2015 and ",
+                "January 11, 2016 ",
+                "General Faculties Council (for discussion) – January 25, 2016 ",
+                "GFC Executive Committee (for discussion) – February 1 and March 7, ",
+                "2016 ",
+                "GFC Executive Committee Working Group  on Academic Governance ",
+                "(for discussion)– February/March 2016 ",
+                "General Faculties Council (for discussion) – March 21, 2016 ",
+                "Academic Governance Working Group (for discussion) – April 2016 ",
+                "GFC Executive Committee (for discussion) – April 11, 2016 ",
+                "General Faculties Council – May 2, 2016 "
+            ],
             "Approval Route": [],
             "Final Approver": ""
         },
         {
             "Item No.": "7",
             "Agenda Title": "General Faculties Council Standing Committee Report Executive Committee",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-05-02",
             "Committee": "GFC",
             "Proposed By": "N/A",
             "Presenter": "N/A",
             "Description": "1. Since the last GFC meeting, the Executive Committee met once on April 11. 2. Actions Taken with Delegated Authority from GFC April 11, 2016 Approved addition to the List of Courses with Consolidated Exams: FRANC 116, FRANC 117, FRANC 216 and FRANC 226, Faculté Saint-Jean  Approved New Course Designation of AUIND (Augustana - Indigenous Studies), Augustana Faculty  Recommended to the Board Human Resources and Compensation Committee (BHRCC) changes to the UAPPOL Faculty Deans Selection Procedure and the UAPPOL Faculty Deans Review Procedure Detailed motion and final document summary: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/ExecutiveCommittee/ExecutiveMotionandFina\nlDocumentSummary.aspx 3. Items that the Committee Discussed or Advised on  April 11, 2016 New Scheduling Initiative for Augustana Faculty Graduate Enrolment Report Institutional Strategic Plan  Academic Governance at the University of Alberta  Delegated authority and Terms of Reference Terms of reference and records of meetings for this committee can be found at: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/ExecutiveCommittee.aspx ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         },
         {
             "Item No.": "8",
             "Agenda Title": "General Faculties Council Standing Committee Report Academic Planning Committee",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-05-02",
             "Committee": "GFC",
             "Proposed By": "N/A",
             "Presenter": "N/A",
             "Description": "1. Since the last GFC meeting, the Academic Planning Committee met twice: March 23, April 20.  2. Actions Taken with Delegated Authority from GFC March 23, 2016 Recommended to the Board of Governors - proposed new Supplemental Application Fee for the Doctor of Medicine Program  Recommended to General Faculties Council – the establishment of a Department of Critical Care Medicine and concurrent termination of the Division of Critical Care Medicine April 20, 2016 Approved Proposal for a Dual Degree Graduate Program (MSc and PhD), University of Alberta Faculty of Graduate Studies & Research and Faculty of Pharmacy & Pharmaceutical Sciences; and Universidade de Sao Paulo, Brazil (USP) Recommended to General Faculties Council – new Copyright regulations Detailed motion and final document summary: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicPlanningCommittee/APCMotion 3. Items that the Committee Discussed or Advised on  March 23, 2016   Institutional Strategic Plan – First   Review of Delegated Authority and Terms of Reference  April 20, 2016 Institutional Strategic Plan - Draft  University of Alberta Budget Principles Terms of reference and records of meeting for this committee can be found at: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicPlanningCommittee.aspx ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         },
         {
             "Item No.": "9",
             "Agenda Title": "General Faculties Council Standing Committee Report Academic Standing Committee",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-05-02",
             "Committee": "GFC",
             "Proposed By": "N/A",
             "Presenter": "N/A",
             "Description": "1. Since the last GFC meeting, the Academic Standing Committee met once on April 21.  2. Actions Taken with Delegated Authority from GFC March 17, 2016 Approved Faculty of Medicine and Dentistry: Proposed changes to existing Academic Standing and Graduation, DDS Advanced Placement Program Approved Augustana Faculty: Proposed changes to existing Academic Standing Regulations  Approved Office of the Registrar: Proposed Approval of Transfer Credit for March 2016 April 21, 2016 Approved  Proposed Changes to existing Academic Standing Requirements – Honors Philosophy, Faculty of Arts Approved Proposed Approval and Denial of Transfer Credit for April 2016, Office of the Registrar Approved Time Limit for Completion of Graduate Programs, Faculty of Graduate Studies & Research Approved Proposed Changes to Academic Standing (Re-examinations), Faculty of Arts Recommended to General Faculties Council – proposed Embedded Credit Certificate in Interdisciplinary Leadership Studies, Faculty of Business Detailed motion and final document summary: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicStandardsCommittee/ASCMotionandFinalDocume\nntSummary.aspx 3. Items that the Committee Discussed or Advised on  March 17, 2016 Dean’s Honour List course loads and Accommodation  Graduate Enrolment Report 2015/2016  New Scheduling Initiative for Augustana Faculty  Institutional Strategic Plan – First Draft April 21, 2016 Review of Terms of Reference and Delegated Authority  http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicStandardsCommittee/ASCMotionandFinalDocumentSummary.aspx\nhttp://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicStandardsCommittee/ASCMotionandFinalDocumentSummary.aspx\nTerms of reference and records of meeting for this committee can be found at: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicStandardsCommittee.aspx ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         }
     ],
-    "PDF url": "GFC_Monday, May 02, 2016 \n_Material.pdf"
+    "url": "/static/GFC/2016-05-02/Past-Meeting-Material.pdf"
 }

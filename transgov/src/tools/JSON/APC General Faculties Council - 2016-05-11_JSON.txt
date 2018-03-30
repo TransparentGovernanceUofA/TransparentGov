@@ -1,6 +1,6 @@
 {
     "Committee": "APC",
-    "Date": "Wednesday, May 11, 2016 \n",
+    "Date": "2016-05-11",
     "Title": "APC General Faculties Council - 2016-05-11",
     "Location": "2-31 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
@@ -24,11 +24,43 @@
         {
             "Item No.": "4",
             "Agenda Title": "Institutional Strategic Plan: For the Public Good ",
+            "Motion": " THAT the GFC Academic Planning Committee recommend to General Faculties Council the approval of the Institutional Strategic Plan: For the Public Good, as set forth in Attachment 1 to be effective upon approval, and empower administration to make any editorial changes to the plan, as needed, as long as the changes do not have the force of policy. ",
+            "Action Requested": "N/A",
             "Date": "2016-05-11",
             "Committee": "APC",
             "Proposed By": "David H. Turpin, President, and Steven Dew, Provost and Vice-President (Academic) ",
             "Presenter": " Steven Dew, Provost and Vice-President (Academic) Subject Institutional Strategic Plan: For the Public Good ",
             "Description": "Details Responsibility Finance and Administration The Purpose of the Proposal is (please be specific) To provide the Committee with a copy of the draft Annual Report for information and discussion. The Annual Report is a requirement of the Government of Alberta. It is prepared in accordance with provincial guidelines and reports on the university’s Comprehensive Institutional Plan and accomplishments during the period of April 1, 2015 to March 31, 2016. The provincial guidelines have been revised for this year, and the Annual Report format has been adjusted accordingly. The most significant guideline changes are: • new requirements for reporting on international program delivery • increased requirements for reporting on information technology • a new format for reporting on performance measures linked to institutional goals. The Impact of the Proposal is The Annual Report satisfies reporting requirements for Alberta Advanced Education. Replaces/Revises (eg, policies, resolutions) Timeline/Implementation Date Deadline for submission to government is September 30, 2016. Estimated Cost  Sources of Funding  Notes  Alignment/Compliance Alignment with Guiding Documents Comprehensive Institutional Plan Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) Annual report “79(1) Each year a board must prepare and submit to the Minister a report that includes  (a) the audited financial statements for the preceding fiscal year, and  (b) any other information the Minister requires.  (2) The annual report must be submitted to the Minister on or before the date specified by the Minister.”  2. GFC Academic Planning Committee Terms of Reference (3. Mandate of the Committee) “The Academic Planning Committee (APC) is GFC's senior committee dealing with academic, financial and planning issues. As such, it is not only responsible to GFC (or the Board) for the specific matters itemized below, but may also ask to consider or recommend to GFC on any academic issue, including 1) those issues under the purview of other GFC committees, 2) any academic issue related to restructuring, 3) any research-related issue, or 4) issues linked to academic service units where those issues have a significant academic impact. In like manner, the President, Provost and Vice-President (Academic) or other Vice-\nPresidents may refer any matter to APC for consideration or recommendation to GFC. APC is also responsible to GFC for promoting an optimal learning environment for students and excellence in teaching, research, and graduate studies.” 3. Board Audit Committee Terms of Reference, Section 3 (s): 3. MANDATE OF THE COMMITTEE Except as provided in Section 4 hereof and in the Board's General Committee Terms of Reference, the Committee shall monitor, evaluate and make decisions on behalf of the Board with respect to all auditing, financial reporting and internal control functions relating to the University.   Without limiting the generality of the foregoing the Committee shall: Other Compliance and Reporting Oversight (s) review any published documents containing financial information derived from the financial statements and consider whether the information contained in these documents is consistent with the information contained in the financial statements; 4. Board University Relations Committee Terms of Reference/Sections 3 and 4: “3. Mandate of the Committee: Except as provided in paragraph 4 and in the Board's General Committee Terms of Reference, the Committee shall monitor, evaluate, advise and make decisions on behalf of the Board with respect to and the Board delegates to the Committee responsibility and authority on matters concerning the relations of the University with the community and government. The Committee shall also consider any other matters delegated to the Committee by the Board. Without limiting the generality of the foregoing the Committee shall: (a) advise the President on strategic business plans and specific projects and initiatives for the University’s institutional communications, public relations, government relations, community relations, alumni relations and media relations, ensuring all efforts support the mission and strategic objectives of the University; 4. LIMITATION ON DELEGATION BY THE BOARD The general delegation of authority by the Board to the Committee shall be limited as set out in this paragraph.  Notwithstanding the general delegation to the Committee as set out in paragraph 3 the Board shall make all decisions with respect to: approval of strategies concerning government policies and community relations issues that may be of significant impact to the University and its operations.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating Content for sections pertaining to specific portfolios (e.g. Capital Plan, Information Technology, Community Engagement, Internationalization) was reviewed with portfolio staff. Staff in the Office of the Provost and Vice-President (Academic) reviewed an earlier draft of the proposal and provided input on April 6. The report was presented to PEAC for review on April 18, 2016. The report was presented to PEC-O for review and approval on April 28. The report was reviewed by the Office of the President, which provided approval on April 27. Approval Route (Governance) (including meeting dates) GFC Academic Planning Committee (May 11, 2016) – for discussion and information Board Audit Committee (May 30, 2016) – for discussion and information; approval of financial information Board University Relations Committee (June 2, 2016) – for recommendation to the Board Board of Governors (June 17, 2016) – for approval Final Approver Board of Governors Attachments (each to be numbered 1 - <>) 1.  Annual Report – Draft dated April 27, 2016  (51 pages) ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "Broad participation has been sought across the campus over an 8-month ",
+                "period. ",
+                "-A record of the consultation process and the community feedback can ",
+                "be found online:  https://uofa.ualberta.ca/strategic-plan ",
+                "-Two rounds of consultation have been completed in the 2015-16 ",
+                "academic year: ",
+                "- Discussion paper consultation (September to February): 33 ",
+                "consultations with 860 participants ",
+                "- Draft plan consultation (February to April): 36 consultations, ",
+                "1010 participants ",
+                "- Consultations included: Campus Forums, Roundtable ",
+                "Discussions, General Faculties Council, GFC Academic Planning ",
+                "Committee, GFC Academic Standards Committee, GFC ",
+                "Committee on the Learning Environment, Board Learning and ",
+                "Discovery Committee, Board University Relations Committee, ",
+                "Deans’ Council, Chairs’ Council, University Research Policy ",
+                "Committee, Students’ Union and Council of Faculty Associations, ",
+                "Graduate Students’ Association Executive and Board, Alumni ",
+                "Council, Senate and Faculty Councils "
+            ],
             "Approval Route": [
                 "GFC Academic Planning Committee (May 11, 2016)",
                 "General Faculties Council (May 30, 2016)",
@@ -38,5 +70,5 @@
             "Final Approver": " Board of Governors"
         }
     ],
-    "PDF url": "APC_Wednesday, May 11, 2016 \n_Material.pdf"
+    "url": "/static/APC/2016-05-11/Past-Meeting-Material.pdf"
 }

@@ -1,6 +1,6 @@
 {
     "Committee": "APC",
-    "Date": "Wednesday, March 23, 2016 \n",
+    "Date": "2016-03-23",
     "Title": "APC General Faculties Council - 2016-03-23",
     "Location": "2-31 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
@@ -36,11 +36,16 @@
         {
             "Item No.": "4",
             "Agenda Title": "Motion:  THAT the GFC Academic Planning Committee recommend, with delegated authority from General Faculties Council,  that the Board of Governors approve the proposed Supplemental Application Fee for the",
+            "Motion": " THAT the GFC Academic Planning Committee recommend, with delegated authority from General Faculties Council,  that the Board of Governors approve the proposed Supplemental Application Fee for the Doctor of Medicine Program, as set forth in Attachment 1, to take effect July 1, 2016. ",
+            "Action Requested": "N/A",
             "Date": "2016-03-23",
             "Committee": "APC",
             "Proposed By": "Vice-Provost & University Registrar on behalf of the Faculty of Medicine and Dentistry ",
             "Presenter": " Lisa Collins, Vice-Provost & University Registrar; Diane Baker, UME Team Lead, Admissions and Marc Moreau, Assistant Dean, Admissions, Faculty of Medicine and Dentistry Subject Faculty of Medicine Supplemental Application Fee ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To establish a Supplemental Application Fee for the Doctor of Medicine program in the amount of $55 to cover costs of the application process within the Faculty of Medicine and Dentistry. The Supplemental Application Fee of $55 will be collected from all applicants to the MD program, in addition to the University of Alberta undergraduate application fee (currently set at $125 for new applicants and $75 for current or former UAlberta students). The Impact of the Proposal is In addition to the University of Alberta undergraduate application for admission process, MD applicants must also complete a secondary application that is specific to the MD program. MD applicants are also subject to a specific set of additional requirements, including the CGPA, MCAT, personal activities and letters of reference.  There are about 1600 applicants each year and 480 are selected for interview (Multiple Mini Interview) after reviewing the previously noted requirements. Costs for the secondary medicine application including the MMI are incurred by the Faculty of Medicine & Dentistry. A supplemental application fee will allow the Faculty to recover a portion of its costs and sustain the current secondary application process.  Should this fee not be approved, the Faculty would be unable to cover these costs and the applicant experience could suffer as a result. Replaces/Revises (eg, policies, resolutions) Creates a new supplemental application fee for the Doctor of Medicine program. Timeline/Implementation Date Collected from students applying to the MD program on or after July 1, 2016 Estimated Cost N/A Sources of Funding N/A Notes Representatives of the proposing unit will also be in attendance at the meeting of GFC APC to respond to questions. GFC Academic Planning Committee For the Meeting of March 23, 2016 Documents University of Alberta Calendar; UAPPOL (University of Alberta Policies and Procedures On Line) Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA gives GFC responsibility, subject to the authority of the Board of Governors, over academic affairs (Section 26(1)). Section 26(1)(o) provides that GFC may make recommendations to the Board of Governors on a number of matters including the budget and academic planning. GFC has thus established an Academic Planning Committee (GFC APC).  2. GFC Academic Planning Committee (3. Mandate of the Committee) “APC is responsible for making recommendations to GFC and/or to the Board of Governors concerning policy matters and action matters with respect to the following: […] 4.c. To seek the recommendation of GFC regarding any new fee that will be levied upon a substantial group of students, prior to the recommendation by APC of any such fees to the Board of Governors. (A substantial group of students is defined as any one (or all) of the following three classes of students: (a) undergraduate students, (b) doctoral level students, and/or (c) graduate students pursuing studies other than those at doctoral level.” 3.  Board of Governors General Terms of Reference, Section 1 (b): “The Board has delegated to each Committee responsibility and authority to make decisions on behalf of the Board in the Committee's defined area of responsibility except to the extent that such authority has been specifically limited by the Board in the Terms of Reference for the Committee.” 4.  Board Finance and Property (BFPC) Terms of Reference, Section 3(d): “3. Without limiting the generality of the foregoing, the Committee shall:  [. . .] d) review and recommend to the Board tuition and other like fees[.]” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) Registrar’s Advisory Committee on Fees (RACF), at which each proposal was discussed with the Committee members and the representatives from the Faculty of Medicine and Dentistry.  At APC on February 10, 2016 the proposal was reviewed and recommended to come back with changes to the budget. The Faculty of Medicine and Dentistry has reviewed and made changes to budget and amount of the proposed fee. Approval Route (Governance) (including meeting dates) GFC Academic Planning Committee – March 23, 2016 (for recommendation); Board Finance and Property Committee – April 26, 2016 (for recommendation);  Board of Governors – May 13, 2016 (for final approval) Final Approver Board of Governors  GFC Academic Planning Committee For the Meeting of March 23, 2016 ",
+            "Participation": [
+                "N/A"
+            ],
             "Approval Route": [
                 "GFC Academic Planning Committee – March 23, 2016 (for",
                 "recommendation);",
@@ -53,11 +58,28 @@
         {
             "Item No.": "<     >",
             "Agenda Title": "Proposal to Establish a Department of Critical Care Medicine and the Concurrent Termination of the Division of Critical Care Medicine, Faculty of Medicine and Dentistry ",
+            "Motion": " THAT the GFC Academic Planning Committee recommend to General Faculties Council the establishment of a Department of Critical Care Medicine, as submitted by the Faculty of Medicine and Dentistry,  and as set forth in Attachment 1, and the concurrent termination of the Division of Critical Care Medicine, to take effect July 1, 2016. ",
+            "Action Requested": "N/A",
             "Date": "2016-03-23",
             "Committee": "APC",
             "Proposed By": "Richard Fedorak, Interim Dean, Faculty of Medicine and Dentistry ",
             "Presenter": " David Zygun, Division Director Critical Care; Richard Fedorak, Interim Dean or Dennis Kunimoto Vice Dean Faculty Affairs, Faculty of Medicine and Dentistry Subject Proposed Establishment of a Department of Critical Care Medicine ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To transform the existing free standing Division of Critical Care Medicine into a Department of Critical Care Medicine. The Division currently operates much like a Department, with a director who sits on the Faculty Evaluation Committee (for evaluation of its own members) and on the Faculty’s Chairs Committee. The Division has the responsibility for managing its own budget and teaching plan. We also recommend the current division director become chair of the department. The Impact of the Proposal is A resource-neutral move that both formalizes the status quo and allows the unit to respond to scholarly developments in the academic field. It will also enhance recruitment and retention to compete against other Departments of Critical Care in the country. It will also create effective governance structures without requiring additional costs. Replaces/Revises (eg, policies, resolutions) The department will replace the free standing Division of Critical Care Medicine. Timeline/Implementation Date July 1, 2016 Estimated Cost Cost neutral Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents <Dare to Discover, Dare to Deliver, Comprehensive Institutional Plan, Institutional values, Other> Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1.   Post-Secondary Learning Act (PSLA): The PSLA gives GFC responsibility, subject to the authority of the Board of Governors, over academic affairs (Section 26(1)).  Section 26(1)(o) provides that GFC may make recommendations to the Board of Governors on a number of matters including the budget and academic planning; Section 26(1)(l) provides that GFC may make recommendations to the Board of Governors on the establishment of Faculties, Schools, Departments, Chairs, and programs of study in the University in any subject that GFC 2 Attachment 7 – Page 2 of 2 thinks fits.   2.  GFC Academic Planning Committee (APC) Terms of Reference/3. Mandate of the Committee: “APC is responsible for making recommendations to GFC and/or to the Board of Governors concerning policy matters and action matters with respect to the following: […] 2. Units  a. Subject to Article 32 of the Faculty Agreement, to recommend to GFC on the establishment and termination of Faculties, Departments, Schools and divisions, and on mergers involving Faculties, Departments or Schools. (Divisions are defined as academic units with authority over student programs. They may be budgetary units and may or may not be part of an existing Department.)” 3.  Board Learning and Discovery Committee (BLDC) Terms of Reference:  “3. MANDATE OF THE COMMITTEE  Except as provided in paragraph 4 hereof and in the Board’s General Committee Terms of Reference, the Committee shall, in accordance with the Committee’s responsibilities with powers granted under the Post-Secondary Learning Act, monitor, evaluate, advise and make decisions on behalf of the Board with respect to matters concerning the teaching and research affairs of the University, including proposals coming from the administration and from General Faculties Council (the “GFC”), and shall consider future educational expectations and challenges to be faced by the University. The Committee shall also include any other matter delegated to the Committee by the Board.  Without limiting the generality of the foregoing the Committee shall: […] l. review proposals and recommendations of GFC concerning the establishment, continuation and re-organization of faculties, schools, departments and make recommendations to the Board in respect thereof[.] […] 4. LIMITATIONS ON DELEGATION BY THE BOARD  This general delegation of authority by the Board to the Committee shall be limited as set out in this paragraph. Notwithstanding the general delegation of authority to the Committee as set out in paragraph 3, the Board shall make all decisions with respect to:  a. the establishment, continuation, reorganization or abolition of faculties, schools and departments” Routing (Include meeting dates) Participation: Chairs Committee, Faculty of Medicine and Dentistry, October 14, 2015 GFC ACADEMIC PLANNING COMMITTEE For the Meeting of March 23, 2016 (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating (For Consultation) Brygeda Renke , AASUA , January 25, 2016 (For Consultation) Approval Route (Governance) (including meeting dates) Faculty Council Medicine and Dentistry - November 17, 2015 GFC Academic Planning Committee  - March 23, 2016 GFC Executive Committee – April 11, 2016 General Faculties Council  - May 30, 2016 Board Learning and Discovery Committee  - June 2, 2016 Board of Governors – June 17, 2016 Final Approver Board of Governors Attachments (each to be numbered 1 - <>) 1.  Attachment 1 (pages 1 – 29)– Briefing Note Academic Department of Critical Care  2.  Attachment 2 (pages 1 – 4) – Chairs Presentation Critical Care Medicine (slides 1 – 21) 3.  Attachment 3 (pages 1 – 3) – Recommendation of the Interim Dean, Dr. Richard Fedorak 3.  Attachment 4 (pages 1 – 2) - DCCM Transition Brief Executive Summary  4.  Attachment 5 (page 1) – Letter of Support from Dr. Shelley Duggan  5.  Attachment 6 (page 1) – Letter of Support from Dr. Jonathan Davidow  6.  Attachment 7 (pages 1-2) – Letter of Support from Dr. Michael Murphy  ",
+            "Participation": [
+                " Chairs Committee, Faculty of Medicine and Dentistry, October 14, 2015 ",
+                "GFC ACADEMIC PLANNING COMMITTEE ",
+                "For the Meeting of March 23, 2016 ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "(For Consultation) ",
+                "Brygeda Renke , AASUA , January 25, 2016 (For Consultation) "
+            ],
             "Approval Route": [
                 "Faculty Council Medicine and Dentistry - November 17, 2015",
                 "GFC Academic Planning Committee  - March 23, 2016",
@@ -71,16 +93,47 @@
         {
             "Item No.": "6",
             "Agenda Title": "First Draft: Institutional Strategic Plan ",
+            "Motion": " N/A ",
+            "Action Requested": "N/A",
             "Date": "2016-03-23",
             "Committee": "APC",
             "Proposed By": "David H. Turpin, President, and Steven Dew, Provost and Vice-President (Academic) ",
             "Presenter": " David H. Turpin, President, and Steven Dew, Provost and Vice-President (Academic) Subject Draft Institutional Strategic Plan ",
             "Description": "Details Responsibility General Faculties Council The Purpose of the Proposal is (please be specific) To review the GFC Academic Planning Committee’s current delegated authority from General Faculties Council to ensure that it remains current and appropriate. To provide recommendations to General Faculties Council by way of the GFC Executive Committee on the renewal of, or revisions to, the delegated authority. The Impact of the Proposal is TBD Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date May 1, 2016 Estimated Cost N/A Sources of Funding N/A Notes At the January 25, 2016 meeting, General Faculties Council approved a motion to review the delegation of its authorities to all of its current committees, and by June 30, 2016 vote on whether to renew or revise these delegated authorities.  GFC additionally approved a motion to be guided in the review of the governance and operations of GFC by the June 2013 report “A Reflection on the State of Academic Governance at the University of Alberta”. In addition, principles of good governance include the regular review of governance processes. The current GFC delegations to standing committees have undergone incremental changes over time and have not been reviewed as a package in many years. The Terms of Reference reflect APC’s delegated authority to approve items on behalf of GFC and also to recommend, on behalf of GFC, directly to the Board of Governors.  Alignment/Compliance Alignment with Guiding Documents Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act  “Powers of general faculties council 26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university […] (3) A general faculties council may delegate any of its powers, duties and functions under this Act […] as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating GFC Academic Planning Committee – March 23, 2016 Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments (each to be numbered 1 - <>) 1. Attachment 1 (page 1 - 5) GFC Academic Planning Committee Terms of Reference  2. Attachment 2 (pages 1 – 2) Overview of approvals and recommendations by GFC Academic Planning Committee, March 2015 – March 2016 3. Attachment 3 (pages 1 – 9) Overview of GFC Standing Committees ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "For discussion and input: ",
+                "-Online feedback:  https://uofa.ualberta.ca/strategic-plan ",
+                "-Campus Forums  (March to April 2016) ",
+                "-Roundtable Discussions (March to April 2016) ",
+                "-General Faculties Council (March 21, 2016) ",
+                "-GFC Academic Planning Committee (March 23 and April 20, 2016) ",
+                "-GFC Academic Standards Committee (March 17, 2016) ",
+                "-GFC Committee on the Learning Environment (April 6, 2016) ",
+                "-Board Learning and Discovery Committee (April 25, 2016) ",
+                "-Board University Relations Committee (April 25, 2016) ",
+                "-Deans’ Council (March 16, 2016) ",
+                "-Chairs’ Council (March 15, 2016) ",
+                "-University Research Policy Committee (April 4, 2016) ",
+                "-Students’ Union (March 22, 2016) and Council of Faculty Associations ",
+                "-Graduate Students’ Association Executive and Board (March 16 and 21, ",
+                "2016) ",
+                "-Alumni Council (March 19, 2016) ",
+                "-Faculty Councils "
+            ],
             "Approval Route": [
                 "N/A"
             ],
             "Final Approver": " N/A"
         }
     ],
-    "PDF url": "APC_Wednesday, March 23, 2016 \n_Material.pdf"
+    "url": "/static/APC/2016-03-23/Past-Meeting-Material.pdf"
 }

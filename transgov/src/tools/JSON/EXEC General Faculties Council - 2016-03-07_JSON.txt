@@ -1,6 +1,6 @@
 {
     "Committee": "EXEC",
-    "Date": "Monday, March 07, 2016 \n",
+    "Date": "2016-03-07",
     "Title": "EXEC General Faculties Council - 2016-03-07",
     "Location": "2-31 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
@@ -30,11 +30,32 @@
         {
             "Item No.": "4",
             "Agenda Title": "Proposed Changes to the Code of Student Behaviour and the Code of Applicant Behaviour to reflect the name change of the Office of Student Judicial Affairs to Student Conduct and Accountability ",
+            "Motion": "",
+            "Action Requested": "N/A",
             "Date": "2016-03-07",
             "Committee": "EXEC",
             "Proposed By": "Steven Dew, Provost and Vice-President (Academic) ",
             "Presenter": " Steven Dew, Provost and Vice-President (Academic) Subject Proposed Changes to the Code of Student Behaviour and the Code of Applicant Behaviour to reflect the name change of the Office of Student Judicial Affairs to Student Conduct and Accountability ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To reflect that the name of the Office of Student Judicial Affairs has been changed to Student Conduct and Accountability The Impact of the Proposal is N/A Replaces/Revises (eg, policies, resolutions) Updates the current Code of Student Behaviour and the Code of Applicant Behaviour Timeline/Implementation Date Effective date March 11, 2016 Estimated Cost None Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents Dare to Discover; Dare to Deliver Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The Post-Secondary Learning Act (PSLA) gives GFC responsibility, subject to the authority of the Board of Governors, over academic affairs (Section 26(1)) and over academic affairs (Section 31), including authority concerning student discipline.  2. GFC Campus Law Review Committee (CLRC) Terms of Reference (Mandate of the Committee) A. Code of Student Behaviour “2. On delegated authority from GFC, to approve all editorial amendments to the Code of Student Behaviour except editorial amendments to section 30.6.”  B. Code of Applicant Behaviour “2. On delegated authority from GFC, to approve all editorial amendments to the Code of Applicant Behaviour except editorial amendments to section 11.8.9.” 3. Code of Student Behaviour section 30.7.2(3) “All amendments to Section 30.6 will be forwarded to the GFC Executive Committee for approval.” 4. Code of Applicant Behaviour section 11.8.10.2(3)  “All amendments to Section 11.8.9 will be forwarded to the GFC Executive Committee for approval.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating Dean of Students, DoS Directors’ Council (consulted), General Counsel (consulted). GFC Campus Law Review Committee – for information – Code of Student Behaviour (January 28, 2016) Chair, GFC Campus Law Review Committee – Code of Applicant Behaviour (February 2016) GFC Campus Law Review Committee – for information – Code of Applicant Behaviour (April 28, 2016) Approval Route (Governance) (including meeting dates) GFC Executive Committee – March 7, 2016 Final Approver GFC Executive Committee Attachments (each to be numbered 1 - <>) 1. Attachment 1 (page(s) 1 - 2):  Proposed Changes to Code of Student Behaviour 2. Attachment 2 (pages 1 - ): Proposed Changes to the Code of Applicant Behaviour ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "Dean of Students, DoS Directors’ Council (consulted), General Counsel ",
+                "(consulted). ",
+                "GFC Campus Law Review Committee – for information – Code of ",
+                "Student Behaviour (January 28, 2016) ",
+                "Chair, GFC Campus Law Review Committee – Code of Applicant ",
+                "Behaviour (February 2016) ",
+                "GFC Campus Law Review Committee – for information – Code of ",
+                "Applicant Behaviour (April 28, 2016) "
+            ],
             "Approval Route": [
                 "GFC Executive Committee – March 7, 2016"
             ],
@@ -43,11 +64,26 @@
         {
             "Item No.": "5",
             "Agenda Title": "Proposed Amendments to Composition of Dean Selection Committee for the Dean of the Faculty of Native Studies ",
+            "Motion": " THAT the GFC Executive Committee approve, under delegated authority from the Board of Governors and the General Faculties Council, proposed changes to the composition of the Dean Selection Committee for Dean of the Faculty of Native Studies as submitted by the Office of the Provost and Vice- President (Academic) and as set forth in Attachment 1, to take effect immediately. ",
+            "Action Requested": "N/A",
             "Date": "2016-03-07",
             "Committee": "EXEC",
             "Proposed By": "Steven Dew, Provost and Vice-President (Academic) ",
             "Presenter": " Steven Dew, Provost and Vice-President (Academic) Subject Composition of the Dean’s Selection Committee, Dean of the Faculty of Native Studies ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To amend the UAPPOL Faculty Deans Selection Procedure  Appendix A: Dean Selection Committees for Individual Faculties, Native Studies, as follows:  1) Reduce the number of members elected by GFC to two; indicate that two faculty members will be drawn directly from tenure track faculty (Category A1.1).  The total number of academic staff remains unchanged.   2) Addition of criteria for undergraduate student representatives; one of two must be Aboriginal. 3) Addition of one full-time graduate student representatives enrolled in a Faculty of Native Studies Graduate program. 4) Addition of the aspiration for an Indigenous majority on the Dean’s Selection Committee.  The Impact of the Proposal is To ensure clarity and more inclusive and better balanced committee representation. Replaces/Revises (eg, policies, resolutions) UAPPOL Faculty Deans Selection Procedure  Appendix A: Dean Selection Committees for Individual Faculties, Native Studies Timeline/Implementation Date Upon final approval Estimated Cost N/A Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents Dare to Discover, Dare to Deliver Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section 1.  Post-Secondary Learning Act (PSLA): The PSLA gives General Faculties Council (GFC) responsibility, subject to the authority of the Board of Governors, over academic affairs (section 26(1)).  The Act provides that [a] person shall not be appointed to, promoted to  numbers) or dismissed from any position on the academic staff at a university except on the recommendation of the president made in accordance with procedures approved by the general faculties council (section 22(2)). In addition, GFC may recommend to the Board of Governors on procedures in respect of appointments, promotions, salaries, tenure and dismissals of academic staff (section 26(1)(o)). 2.   Post-Secondary Learning Act (PSLA):  The Board of Governors has authority to employ officers, employees or other persons and academic staff members (sections 83 and 84 of the Act) and to appoint the President, Vice-Presidents, Deans and Registrar (sections 81, 82, 21(1) and 20(1) of the Act). The Board has delegated certain of these powers. 3. UAPPOL Policy: The Faculty Deans Selection and Review Procedures state: “With respect to the procedures for the selection [review] of Faculty Deans, the Board and GFC delegate their approval authority to the GFC Executive Committee for all matters of a routine editorial nature. For matters of a substantive nature, the GFC Executive Committee shall recommend to the Board Human Resources and Compensation Committee (BHRCC). The Provost and Vice-President (Academic) will determine what is of a routine/editorial or substantive nature.”  Note: The Provost and Vice-President (Academic) has determined these proposed amendments to be of a routine/editorial nature. Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating Provost and Vice-President (Academic) Native Studies Faculty Council (Meeting of October 23, 2015) Approval Route (Governance) (including meeting dates) GFC Executive (March 7, 2016) for final approval Final Approver GFC Executive Committee Attachments (1) 1.  Attachment 1: Comparative Table of Proposed Changes to the Composition of the Selection/Review Committee for the Dean of the Faculty of Native Studies (page 1 - 1) ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "Provost and Vice-President (Academic) ",
+                "Native Studies Faculty Council (Meeting of October 23, 2015) "
+            ],
             "Approval Route": [
                 "GFC Executive (March 7, 2016) for final approval"
             ],
@@ -56,11 +92,29 @@
         {
             "Item No.": "6",
             "Agenda Title": "University of Alberta Museums Annual Report to General Faculties Council (GFC)                        for the Period July 1, 2014 – December 31, 2015 ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-07",
             "Committee": "EXEC",
             "Proposed By": "Janine Andrews, Executive Director, Museums and Collections Services, and Jocelyn Hall, Chair, University of Alberta Museums Policy and Planning Committee (Associate Professor and Associate Chair [Undergraduate], Department of Biological Sciences) ",
             "Presenter": " Janine Andrews, Executive Director, Museums and Collections Services Subject The University of Alberta Museums Annual Report for July 1, 2014 to December 31, 2015; including the report of the U of A Museums Policy and Planning Committee ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To file an annual report, as requested, with General Faculties Council.   The Impact of the Proposal is N/A Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date N/A Estimated Cost N/A Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents N/A Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): GFC has responsibility, subject to the authority of the Board of Governors, over academic affairs. (Section 26(1))  GFC has thus established policies governing University Museums Collections, as set out in University of Alberta Policies and Procedures On-Line (UAPPOL).  2.  GFC Policy: The University of Alberta Museums Annual Report is one of several reports from non-GFC committees/entities requested to provide an annual report to GFC.  3. GFC Terms of Reference (GFC Procedures (GFC Agendas) (Reports)):  “Reports not requiring action by GFC will be discussed by the Executive Committee (with committee chairs in attendance) and placed on the GFC agenda for information. If a GFC member has a question about a report, or feels that the report should be discussed by GFC, the GFC member should notify the Secretary to GFC, in writing, two business days or more before GFC meets so that the committee chair can be invited to attend. Such reports will be discussed as the last of the standing items.” (Section 4.a.) Annual reports are made available to GFC online.  Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating University of Alberta Museums Policy and Planning Committee (for review and approval);  Vice-Provost (Learning Services) (for information); GFC Executive Committee – March 7, 2016 (for discussion); General Faculties Council – March 21, 2016 (for information) Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments (each to be numbered 1 - 19) 1.  Attachment 1 (page(s) 1 - 19): Museums University of Alberta Annual Report July 1, 2014 to December 31, 2015 ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "University of Alberta Museums Policy and Planning Committee (for ",
+                "review and approval); ",
+                "Vice-Provost (Learning Services) (for information); ",
+                "GFC Executive Committee – March 7, 2016 (for discussion); ",
+                "General Faculties Council – March 21, 2016 (for information) "
+            ],
             "Approval Route": [
                 "N/A"
             ],
@@ -69,16 +123,21 @@
         {
             "Item No.": "11",
             "Agenda Title": "Draft Agenda for the March 21, 2016 Meeting of General Faculties Council (GFC) ",
+            "Motion": " THAT the GFC Executive Committee approve, under delegated authority from General Faculties Council, the Agenda for the March 21, 2016 meeting of General Faculties Council (GFC), as set forth in Attachment 1. ",
+            "Action Requested": "N/A",
             "Date": "2016-03-07",
             "Committee": "EXEC",
             "Proposed By": "David Turpin, President and Vice-Chancellor and Chair, GFC Executive Committee ",
             "Presenter": " David Turpin, President and Vice-Chancellor and Chair, GFC Executive Committee Subject Approval of the Agenda for the meeting of General Faculties Council (GFC) to be held on Monday, March 21, 2016 ",
             "Description": "Details Responsibility Provost and Vice-President (Academic)/GFC Executive Committee The Purpose of the Proposal is (please be specific) To approve the Agenda for the GFC meeting to be held on Monday, March 21, 2016 The Impact of the Proposal is GFC is the legislative body at the University of Alberta dealing with academic matters and student affairs issues; its composition and powers are defined in the Post-Secondary Learning Act (PSLA).  GFC has delegated to the GFC Executive Committee, as a senior Standing Committee of GFC, the authority to decide which items are placed on a GFC Agenda and the order in which those agenda items appear on each GFC agenda.  Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date N/A Estimated Cost N/A Sources of Funding N/A Notes N/A Alignment/Compliance Alignment with Guiding Documents Dare to Discover and Dare to Deliver Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) Sections 26(1) and (3), state: “Powers of general faculties council 26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university[…] (3) A general faculties council may delegate any of its powers, duties and functions under this Act, including the powers referred to in section 31, as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” GFC  2. General Faculties Council Executive Committee Mandate (Section 3):  “To act as the executive body of General Faculties Council and, in general, carry out the functions delegated to it by General Faculties Council. (GFC 08 SEP 1966) (GFC 12 FEB 1996)” 3. GFC Executive Committee Terms of Reference, Section 3.5, states: “Agendas of General Faculties Council  GFC has delegated to the Executive Committee the authority to decide which items are placed on a GFC Agenda, and the order in which those agenda items appear on each GFC agenda.  When ordering items, the GFC Executive Committee will be mindful of any matters that are of particular concern to students during March and April so that the student leaders who bring those items forward are able to address these items at GFC before their terms end. (EXEC 06 NOV 2006)  When recommendations are forwarded to General Faculties Council from APC, the role of the Executive shall be to decide the order in which items should be considered by GFC. The Executive Committee is responsible for providing general advice to the Chair about proposals being forwarded from APC to GFC.  With respect to recommendations from other bodies and other GFC committees, however, the role of the Executive Committee shall be to examine and debate the substance of reports or recommendations and to decide if an item is ready to be forwarded to the full governing body. The Executive Committee may decide to refer a proposal back to the originating body, to refer the proposal to another body or individual for study or review, or to take other action in order to ready a proposal for consideration by General Faculties Council. When the GFC Executive Committee forwards a proposal to GFC, it shall make a recommendation that GFC endorse; endorse with suggested amendments; not endorse; or forward the proposal with no comment. (GFC 30 JUN 1992)” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) David Turpin, President and Vice-Chancellor and Chair, GFC Executive Committee; Office of the President; Office of the Provost and Vice-\nPresident (Academic); University Governance; GFC Executive Committee Approval Route (Governance) (including meeting dates) GFC Executive Committee – March 7, 2016 Final Approver GFC Executive Committee Attachments: 1. Attachment 1:  Draft Agenda for the General Faculties Council Meeting of March 21, 2016 ",
+            "Participation": [
+                "N/A"
+            ],
             "Approval Route": [
                 "GFC Executive Committee – March 7, 2016"
             ],
             "Final Approver": " GFC Executive Committee"
         }
     ],
-    "PDF url": "EXEC_Monday, March 07, 2016 \n_Material.pdf"
+    "url": "/static/EXEC/2016-03-07/Past-Meeting-Material.pdf"
 }

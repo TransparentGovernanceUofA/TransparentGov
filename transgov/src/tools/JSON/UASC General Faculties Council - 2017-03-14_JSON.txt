@@ -1,6 +1,6 @@
 {
     "Committee": "UASC",
-    "Date": "Tuesday, March 14, 2017 \n",
+    "Date": "2017-03-14",
     "Title": "UASC General Faculties Council - 2017-03-14",
     "Location": "2-15 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
@@ -19,11 +19,33 @@
         {
             "Item No.": "4",
             "Agenda Title": "New Undergraduate Awards and Bursaries for Approval March 14, 2017) ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, new Undergraduate Awards and Bursaries, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
             "Date": "2017-03-14",
             "Committee": "UASC",
             "Proposed By": "Student Financial Support ",
             "Presenter": " Danielle Lamb, Development Specialist ",
             "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve new undergraduate awards and bursaries. The Impact of the Proposal is To ensure compliance with section 26(1)(m) of the Post-Secondary Learning Act, under delegated authority of General Faculties Council (GFC), “to make rules and regulations respecting academic awards”. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost and funding source Next Steps (ie.: Communications Plan, Implementation plans) Public posting of Award or Bursary on U of A website, offer of Award or Bursary to students as soon as funds are available Supplementary Notes and context The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97). Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been informed: • Donors are informed of U of A policy for Award establishment • Office of Advancement is informed of new Awards in process Those who have been consulted: • Donors, the Office of the Registrar, Office of Advancement have been consulted in the establishment of new Award conditions  • Faculty or Departments have been consulted with new Award conditions, setup and awarding process of new Awards Those who are actively participating: • Undergraduate students, Graduate students, Faculty, Departments, Office of Advancement Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, (March 14, 2017) (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee Alignment/Compliance http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\n Alignment with Guiding Documents Institutional Strategic Plan – For the Public Good To begin, we will attract outstanding students… 1. OBJECTIVE: Build a diverse, inclusive community of exceptional undergraduate and graduate students from Edmonton, Alberta, Canada, and the world.  i. Strategy: Develop and implement an undergraduate and graduate recruitment strategy to attract top students from across the diverse communities in Alberta and Canada, leveraging our strengths as a comprehensive research-intensive, multi-campus university with options for francophone and rural liberal arts education. ii. Strategy: Develop and implement an undergraduate and graduate recruitment and retention strategy to attract top Indigenous students. iii. Strategy: Optimize our international recruiting strategies to attract well-qualified international students from regions of strategic importance, and enhance services and programs to ensure their academic success and integration into the activities of the university. iv. Strategy: Ensure that qualified undergraduate and graduate students can attend the university through the provision of robust student financial support.  Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to:       1. approve new undergraduate awards[.] […]” Attachments: 1.  Attachment 1: Proposed New Undergraduate Student Awards and Bursaries for Approval ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on the ",
+                "Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "Those who have been informed: ",
+                "• Donors are informed of U of A policy for Award establishment ",
+                "• Office of Advancement is informed of new Awards in process ",
+                "Those who have been consulted: ",
+                "• Donors, the Office of the Registrar, Office of Advancement have ",
+                "been consulted in the establishment of new Award conditions ",
+                "• Faculty or Departments have been consulted with new Award ",
+                "conditions, setup and awarding process of new Awards ",
+                "Those who are actively participating: ",
+                "• Undergraduate students, Graduate students, Faculty, ",
+                "Departments, Office of Advancement "
+            ],
             "Approval Route": [
                 "GFC Undergraduate Awards and Scholarship Committee, (March 14,",
                 "2017) (for final approval)"
@@ -33,11 +55,33 @@
         {
             "Item No.": "5",
             "Agenda Title": "Amendments to Existing Undergraduate Awards and Bursaries for Approval March 14, 2017) ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, amendments to existing Undergraduate Awards and Bursaries, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
             "Date": "2017-03-14",
             "Committee": "UASC",
             "Proposed By": "Student Financial Support ",
             "Presenter": " Danielle Lamb, Development Specialist ",
             "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve new undergraduate awards and bursaries. The Impact of the Proposal is To ensure compliance with section 26(1)(m) of the Post-Secondary Learning Act, under delegated authority of General Faculties Council (GFC), “to make rules and regulations respecting academic awards”. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost and funding source Next Steps (ie.: Communications Plan, Implementation plans) Public posting of Award or Bursary on U of A website, offer of Award or Bursary to students as soon as funds are available Supplementary Notes and context The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97). Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been informed: • Donors are informed of U of A policy for Award establishment • Office of Advancement is informed of new Awards in process Those who have been consulted: • Donors, the Office of the Registrar, Office of Advancement have been consulted in the establishment of new Award conditions  • Faculty or Departments have been consulted with new Award conditions, setup and awarding process of new Awards Those who are actively participating: • Undergraduate students, Graduate students, Faculty, Departments, Office of Advancement Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, (March 14, 2017) (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\n Alignment/Compliance Alignment with Guiding Documents Institutional Strategic Plan – For the Public Good To begin, we will attract outstanding students… 1. OBJECTIVE: Build a diverse, inclusive community of exceptional undergraduate and graduate students from Edmonton, Alberta, Canada, and the world.  i. Strategy: Develop and implement an undergraduate and graduate recruitment strategy to attract top students from across the diverse communities in Alberta and Canada, leveraging our strengths as a comprehensive research-intensive, multi-campus university with options for francophone and rural liberal arts education. ii. Strategy: Develop and implement an undergraduate and graduate recruitment and retention strategy to attract top Indigenous students. iii. Strategy: Optimize our international recruiting strategies to attract well-qualified international students from regions of strategic importance, and enhance services and programs to ensure their academic success and integration into the activities of the university. iv. Strategy: Ensure that qualified undergraduate and graduate students can attend the university through the provision of robust student financial support.  Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to:       1. approve new undergraduate awards[.] […]” Attachments: 1.  Attachment 1: Proposed New Undergraduate Student Awards and Bursaries for Approval ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on the ",
+                "Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "Those who have been informed: ",
+                "• Donors are informed of U of A policy for Award establishment ",
+                "• Office of Advancement is informed of new Awards in process ",
+                "Those who have been consulted: ",
+                "• Donors, the Office of the Registrar, Office of Advancement have ",
+                "been consulted in the establishment of new Award conditions ",
+                "• Faculty or Departments have been consulted with new Award ",
+                "conditions, setup and awarding process of new Awards ",
+                "Those who are actively participating: ",
+                "• Undergraduate students, Graduate students, Faculty, ",
+                "Departments, Office of Advancement "
+            ],
             "Approval Route": [
                 "GFC Undergraduate Awards and Scholarship Committee, (March 14,",
                 "2017) (for final approval)"
@@ -45,5 +89,5 @@
             "Final Approver": " GFC Undergraduate Awards and Scholarship Committee"
         }
     ],
-    "PDF url": "UASC_Tuesday, March 14, 2017 \n_Material.pdf"
+    "url": "/static/UASC/2017-03-14/Past-Meeting-Material.pdf"
 }

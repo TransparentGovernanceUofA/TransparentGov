@@ -1,6 +1,6 @@
 {
     "Committee": "EXEC",
-    "Date": "Tuesday, June 21, 2016 \n",
+    "Date": "2016-06-21",
     "Title": "EXEC General Faculties Council - 2016-06-21",
     "Location": "2-31 South Academic Building (SAB)",
     "Time": "2:00 PM - 3:00 PM",
@@ -23,11 +23,16 @@
         {
             "Item No.": "4",
             "Agenda Title": "Proposed wording for the Embedded Certificate Parchment for the Certificate in Interdisciplinary Studies, Faculty of Business ",
+            "Motion": " THAT the GFC Executive Committee approve, under delegated authority from General Faculties Council, the proposed parchment for the embedded Certificate in Interdisciplinary Leadership Studies as submitted by the Office of the Registrar and as set forth in Attachment 1, to be effective upon final approval. ",
+            "Action Requested": "N/A",
             "Date": "2016-06-21",
             "Committee": "EXEC",
             "Proposed By": "Lisa Collins, Vice-Provost & University Registrar ",
             "Presenter": " Corinne Callihoo, Assistant Registrar, Convocation and Ceremonies Subject Proposed Parchment for the embedded Certificate in Interdisciplinary Leadership Studies, Faculty of Business ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To provide a certificate parchment to students at graduation which recognizes the role of the Peter Lougheed Leadership College (PLLC) in the Certificate in Interdisciplinary Leadership Studies. The Impact of the Proposal is The certificate parchment will provide students with formal recognition of the leadership skills they have acquired through their coursework and through their experiences at the PLLC. Replaces/Revises (eg, policies, resolutions) The proposed parchment is based on the embedded certificate parchment template approved by the GFC Executive Committee on December 1, 2014.  Timeline/Implementation Date Spring Convocation, 2017 Estimated Cost Paper and Design Costs Sources of Funding Registrar’s Office Notes The embedded Certificate in Interdisciplinary Leadership Studies was approved by General Faculties Council on May 30, 2016. Alignment/Compliance Alignment with Guiding Documents For the Public Good “EXPERIENCE diverse and rewarding learning opportunities that inspire us, nurture our talents, expand our knowledge and skills, and enable our success.” 8. OBJECTIVE: Create and facilitate co-curricular and extracurricular learning experiences for undergraduate and graduate students that enable their self-discovery and give them the skills to use their talents, creativity, and curiosity to contribute as future citizens and leaders. iv. Strategy: Expand access to leadership development programs for undergraduate and graduate students, such as the Peter Lougheed Leadership College. Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) “26(1) Subject to the authority of the board, a general faculties council  is responsible for the academic affairs of the university” 2. GFC Executive Committee Terms of Reference (Mandate of the Committee) “To act as the executive body of General Faculties Council and, in general, carry out the functions delegated to it by General Faculties Council. […]  2. Routine Matters  Matters which are routine in carrying out the policies approved by General Faculties Council are delegated to the Executive Committee.” 3. UAPPOL Parchment Procedure  “2. WORDING AND LANGUAGE All changes in the wording on parchments will be approved by the Faculty Council and then submitted by the Faculty to the Vice-Provost and University Registrar, who will forward any substantive changes to the General Faculties Council (GFC) Executive Committee for approval.” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) Corinne Callihoo, Assistant Registrar, Convocation and Ceremonies GFC Academic Standards Committee – April 21, 2016 Approval Route (Governance) (including meeting dates) Faculty of Business Council – June 2, 2016 GFC Executive Committee -  June 21, 2016 Final Approver GFC Executive Committee Attachments (each to be numbered 1 - <>) 1.  Attachment 1 (page(s) 1) Proposed Parchment for the Certificate in Interdisciplinary Studies, Faculty of Business ",
+            "Participation": [
+                "N/A"
+            ],
             "Approval Route": [
                 "Faculty of Business Council – June 2, 2016",
                 "GFC Executive Committee -  June 21, 2016"
@@ -37,11 +42,16 @@
         {
             "Item No.": "5",
             "Agenda Title": "Committee (CLRC) Motion:  THAT the GFC Executive Committee, under delegated authority from General Faculties Council, re-",
+            "Motion": " THAT the GFC Executive Committee, under delegated authority from General Faculties Council, re- appoint Professor Steven Penney to the position of Chair of the GFC Campus Law Review Committee (CLRC) for a term beginning July 1, 2016 and ending June 30, 2018. ",
+            "Action Requested": "N/A",
             "Date": "2016-06-21",
             "Committee": "EXEC",
             "Proposed By": "Meg Brolley, Secretary to General Faculties Council (GFC) ",
             "Presenter": " Meg Brolley, Secretary to General Faculties Council (GFC) Subject Re-appointment of the Chair of the GFC Campus Law Review Committee (CLRC) ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To re-appoint the Chair of GFC CLRC. The Impact of the Proposal is See ‘Purpose’. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date July 1, 2016 Estimated Cost N/A Sources of Funding N/A Notes Professor Steven Penney (Faculty of Law) has served as Chair of GFC CLRC since 2011 and, previous to that, a two year term as an elected faculty member.  Professor Penney has agreed to continue to serve as Chair (if re-appointed) for the period July 1, 2016 to June 30, 2018; his experience in this role would provide strong continuity for the Committee. Alignment/Compliance Alignment with Guiding Documents For the Public Good – Values “The University of Alberta community of students, faculty, staff, and alumni rely on shared, deeply held values that guide behaviour and actions. These values are drawn from the principles on which the University of Alberta was founded in 1908 and reflect a dynamic, modern institution of higher learning, leading change nationally and internationally. […] Above all, we value intellectual integrity, freedom of inquiry and expression, and the equality and dignity of all persons as the foundation of ethical conduct in research, teaching, learning, and service. […] We value diversity, inclusivity, and equity across and among our people, campuses, and disciplines.” Compliance with Legislation, Policy and/or Procedure 1. Post-Secondary Learning Act (PSLA):  GFC has responsibility,\nsubject to the authority of the Board of Governors, over “academic GFC EXECUTIVE COMMITTEE For the Meeting of June 21, 2016 include identifying section numbers) affairs” (Section 26(1)) and “student affairs” (Section 31). 2. GFC Campus Law Review Committee (CLRC) Terms of Reference (Composition of the Committee)  “The GFC Executive Committee will appoint a faculty member to chair the CLRC, and the faculty member will be appointed for more than two years in order to provide continuity. The Chair may be appointed from among the elected faculty members of the CLRC or may be appointed at-large from categories A1.1 and A1.6 and their counterparts in A1.5 and A1.7.” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) University Governance; Provost and Vice-President (Academic); Professor Steven Penney Approval Route (Governance) (including meeting dates) GFC Executive Committee  - June 27, 2016 Final Approver GFC Executive Committee  Attachments (none) ",
+            "Participation": [
+                "N/A"
+            ],
             "Approval Route": [
                 "GFC Executive Committee  - June 27, 2016"
             ],
@@ -50,11 +60,26 @@
         {
             "Item No.": "6",
             "Agenda Title": "Proposed Amendments to Composition of Dean Selection Committee for the Faculty of Education ",
+            "Motion": " THAT the GFC Executive Committee approve, with delegated authority from the Board of Governors and General Faculties Council, proposed changes to the composition of the Dean Selection Committee for the Faculty of Education as submitted by the Provost and Vice-President (Academic) and as set forth in Attachment 1, to take effect immediately. ",
+            "Action Requested": "N/A",
             "Date": "2016-06-21",
             "Committee": "EXEC",
             "Proposed By": "Steven Dew, Provost and Vice-President (Academic) ",
             "Presenter": " Steven Dew, Provost and Vice-President (Academic) Subject Amendments to Composition of the Dean Selection Committee, Faculty of Education ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To amend the UAPPOL Faculty Deans Selection Procedure  Appendix A: Dean Selection Committees for Individual Faculties, Education, as follows:  1) The addition of two members from professional associations: the Library and Information Professional Community and the College of Alberta Psychologists 2) The addition of a member from the Indigenous Education Council (IEC) to be elected by the IEC.  The Impact of the Proposal is To ensure clarity and more inclusive and better balanced committee representation. Replaces/Revises (eg, policies, resolutions) UAPPOL Faculty Deans Selection Procedure  Appendix A: Dean Selection Committees for Individual Faculties, Education Timeline/Implementation Date Upon final approval Estimated Cost N/A Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents Institutional Strategic Plan: For the Public Good OBJECTIVE: Support ongoing recruitment and retention of a highly-\nskilled, diverse community of non-academic and administrative staff by enriching the University of Alberta’s working environment. Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1.  Post-Secondary Learning Act (PSLA) “26(1) Subject to the authority of the board, a general faculties council  is responsible for the academic affairs of the university and, without restricting the generality of the foregoing, has the authority to […] (o) make recommendations to the board with respect to […] procedures in respect of appointments, promotions, salaries, tenure and dismissals” ’22(2) A person shall not be appointed to, promoted to or dismissed from any position on the academic staff at a university except on the recommendation of the president made in accordance with procedures approved by the general faculties council.”  2.   Post-Secondary Learning Act (PSLA):  The Board of Governors has authority to employ officers, employees or other persons and academic staff members (sections 83 and 84 of the Act) and to appoint the President, Vice-Presidents, Deans and Registrar (sections 81, 82, 21(1) and 20(1) of the Act). The Board has delegated certain of these powers. 3. UAPPOL Policy: The Faculty Deans Selection and Review Procedures state: “With respect to the procedures for the selection [review] of Faculty Deans, the Board and GFC delegate their approval authority to the GFC Executive Committee for all matters of a routine editorial nature. For matters of a substantive nature, the GFC Executive Committee shall recommend to the Board Human Resources and Compensation Committee (BHRCC). The Provost and Vice-President (Academic) will determine what is of a routine/editorial or substantive nature.”  Note: The Provost and Vice-President (Academic) has determined these proposed amendments to be of a routine/editorial nature. Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating Provost and Vice-President (Academic) Education Faculty Council May 3, 2016. Approval Route (Governance) (including meeting dates) GFC Executive - June 27, 2016 Final Approver GFC Executive Committee Attachments (1) 1.  Attachment 1: Comparative Table of Proposed Changes to the Composition of the Selection/Review Committee for the Dean of the Faculty of Education (page 1 - 2) ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "Provost and Vice-President (Academic) ",
+                "Education Faculty Council May 3, 2016. "
+            ],
             "Approval Route": [
                 "GFC Executive - June 27, 2016"
             ],
@@ -63,16 +88,24 @@
         {
             "Item No.": "9",
             "Agenda Title": "Changes to the Academic Appeals Policy to reflect changes in the Alberta Human Rights Act ",
+            "Motion": " N/A ",
+            "Action Requested": "N/A",
             "Date": "2016-06-21",
             "Committee": "EXEC",
             "Proposed By": "Vice-President (Academic) and Provost ",
             "Presenter": " N/A Subject Changes to the Academic Appeals Policy to comply with Alberta Human Rights Act ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) In December 2015, the Alberta Human Rights Act was amended to include gender identity and gender expression as expressly prohibited grounds of discrimination. The attached changes ensure that the Academic Appeals Policy complies with these revisions. These changes are being circulated for information. The Impact of the Proposal is Ensures compliance with current Alberta Human Rights legislation. Replaces/Revises (eg, policies, resolutions) Updates the current Academic Appeals Policy Timeline/Implementation Date immediately Estimated Cost N/A Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Alberta Human Rights Act “3(1) No person shall publish, issue or display or cause to be published, issued or displayed before the public any statement, publication, notice, sign, symbol, emblem or other representation that (a) indicates discrimination or an intention to discriminate against a person or a class of persons, or (b) is likely to expose a person or a class of persons to hatred or contempt  because of the race, religious beliefs, colour, gender, gender identity, gender expression, physical disability, mental disability, age, ancestry, place of origin, marital status, source of income, family status or sexual orientation of that person or class of persons.” 2. Post-secondary Learning Act “26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university” 3.  Post-secondary Learning Act “Student Discipline 31(1) The general faculties council has general supervision of student affairs at a university and in particular, but without restricting the generality of the foregoing, the general faculties may (a) Subject to the right of appeal to the board, discipline students attending the university …” 4. GFC Executive Committee Terms of Reference (Mandate of the Committee) “To act as the executive body of General Faculties Council and, in general, carry out the functions delegated to it by General Faculties Council. […] 2. Routine Matters  Matters which are routine in carrying out the policies approved by General Faculties Council are delegated to the Executive Committee.” 5. Academic Appeals Policy “1.5.9 Amendment to the Academic Appeals Policy Changes to this policy proceed directly to the GFC Executive Committee for Approval.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) GFC Executive Committee (for information) – June  21, 2016 Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments (each to be numbered 1 - <>) 1.  Attachment 1 (page(s) 1) Changes to Academic Appeals Policy ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "GFC Executive Committee (for information) – June  21, 2016 "
+            ],
             "Approval Route": [
                 "N/A"
             ],
             "Final Approver": " N/A"
         }
     ],
-    "PDF url": "EXEC_Tuesday, June 21, 2016 \n_Material.pdf"
+    "url": "/static/EXEC/2016-06-21/Past-Meeting-Material.pdf"
 }

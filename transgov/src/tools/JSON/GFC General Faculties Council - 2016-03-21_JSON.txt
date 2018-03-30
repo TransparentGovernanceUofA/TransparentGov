@@ -1,6 +1,6 @@
 {
     "Committee": "GFC",
-    "Date": "Monday, March 21, 2016 \n",
+    "Date": "2016-03-21",
     "Title": "GFC General Faculties Council - 2016-03-21",
     "Location": "University of Alberta Council Chamber 2-100 University Hall",
     "Time": "2:00 PM - 5:00 PM",
@@ -94,12 +94,43 @@
     "Items": [
         {
             "Item No.": "3",
-            "Agenda Title": "First Draft: Institutional Strategic Plan ",
+            "Agenda Title": "First Draft: Institutional Strategic Plan Motion:  N/A ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "David H. Turpin, President, and Steven Dew, Provost and Vice-President (Academic) ",
             "Presenter": " David H. Turpin, President, and Steven Dew, Provost and Vice-President (Academic) Subject Draft Institutional Strategic Plan ",
             "Description": "Details Responsibility David Turpin, President and Chair, General Faculties Council The Purpose of the Proposal is (please be specific) To provide General Faculties Council (GFC) with additional information regarding the role of GFC and delegated authority to GFC standing committees. To engage GFC in a discussion on the merits of the current delegations and have GFC provide comment and suggestions for improvement. To ask members  to serve on the working group to provide recommendations for GFC’s consideration at the May 30, 2016 meeting. To provide information on how to access the available committee meeting materials.  To provide an update on operational items which have been implemented, or will be implemented in the short term to improve transparency and communication.  The Impact of the Proposal is Principles of good governance include the regular review of governance processes. The current GFC delegations to standing committees have undergone incremental changes over time and have not been reviewed as a package in many years. Recognizing that delegations should be reflective of the current environment, it is timely to review these delegations as a whole. A discussion at the March 21, 2016 GFC meeting will provide the working group, and the GFC Executive Committee, with guidance to prepare a recommendation for GFC on standing committee delegations for the May 30, 2016 meeting. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Recommendation to GFC on standing committee delegations - May 30, 2016 Estimated Cost N/A Sources of Funding N/A Notes On January 25, 2016, General Faculties Council approved the following motions: Motion I:  THAT General Faculties Council will review the delegation of its authorities to all of its current committee, and by 30 June 2016 vote on whether to renew or revise these delegated authorities. Motion II: THAT the review of the governance and operations of the General Faculties Council is to be informed by the June 2013 report “A Reflection on the State of Academic Governance at the University of Alberta” Alignment/Compliance Alignment with Guiding Documents Institutional values (2015 Comprehensive Institutional Plan) “Our values: The U of A community of students, faculty, staff, and alumni rely on shared, deeply held values that guide behaviour and actions. These values are drawn from the principles on which the University of Alberta was founded in 1908 and reflect a dynamic, modern institution of higher learning, leading change nationally and internationally. Excellence: Excellence in teaching that promotes learning; outstanding research and creative activity that fuel discovery and advance knowledge; and enlightened service that builds citizenship. Student Experience: The centrality of our students and our responsibility to provide an intellectually superior educational environment.  Integrity and Academic Freedom: Integrity, fairness, and principles of ethical conduct built on the foundation of academic freedom, open inquiry, and the pursuit of truth. Diversity and Creativity: A diverse, yet inclusive, dynamic collegial community that welcomes change and seizes opportunity with passion and creativity. Pride: Pride in our history and traditions, including contributions from Aboriginal people and other groups, which enrich and distinguish the university.” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) “Powers of general faculties council 26(1)Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university and, without restricting the generality of the foregoing, has the authority to   (a) exercise any power of a faculty council that the general faculties council considers desirable to exercise;   (b) consider and make decisions on the reports of the faculty councils as to the programs of study in the faculties;   (c) determine all programs of study to which clause (b) does not apply that are to be offered by the university for credit toward the requirements for any degree or diploma;   (d) determine the timetables for examinations and for lectures and other instruction in each faculty;   (e) consider and make decisions on the reports of faculty councils as to the appointment of examiners and the conduct and results of examinations in the faculties;   (f) provide for the granting and conferring of degrees other than honorary degrees;   (g) provide for the preparation and publication of the university calendar;   (h) hear and determine appeals from the decisions of faculty  councils on applications, requests or petitions by students and others;   (i) consider all matters reported to it by any faculty council and communicate its opinion or action on those matters to the faculty council concerned;   (j) determine the date for the beginning and end of lectures in the university and also the beginning and end of each university term; (k) make rules and regulations for the management and operation of libraries;   (l) recommend to the board the establishment of faculties, schools, departments, chairs and programs of study in the university in any subject that the general faculties council thinks fit;   (m) make rules and regulations respecting academic awards;   (n) determine standards and policies respecting the admission of persons to the university as students;   (o) make recommendations to the board with respect to affiliation with other institutions, academic planning, campus planning, a building program, the budget, the regulation of residences and dining halls, procedures in respect of appointments, promotions, salaries, tenure and dismissals, and any other matters considered by the general faculties council to be of interest to the university;   (p) authorize lecturing and teaching on the university premises by persons other than members of the staff of the university;   (q) authorize a school to have a school council of the same nature and with the same powers, duties and functions as a faculty council and, in its discretion, revoke any authority so given.  (2) Any recommendations from the general faculties council to the board must be transmitted to the board through the president. (3) A general faculties council may delegate any of its powers, duties and functions under this Act, including the powers referred to in section 31, as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” 2. General Faculties Council Terms of Reference / 3. Mandate “Powers Retained by General Faculties Council All powers and responsibilities under Section 26 of the PSLA not expressly delegated now or in the future shall be retained by General Faculties Council. (GFC 02 DEC 1966) The issues which remain with GFC or which would be referred by a Standing Committee to GFC would generally be in the nature of the following: • high level strategic and stewardship policy issues or matters of significant risk to the University; • alterations to the mandate, terms of reference, composition, or structure of a Standing Committee; • those things which a Standing Committee considers to be of major strategic significance to or long-term impact on the University; • those matters on which, in the opinion of a Standing Committee chair, there has been a strong division of opinion within the Standing Committee; and • issues in which there is a lack of clarity as to which Standing Committee is responsible. 3. GFC Executive Committee Terms of Reference/3. Mandate of the Committee:  “To act as the executive body of General Faculties Council and, in general, carry out the functions delegated to it by General Faculties Council.”  […] “5. Agendas of General Faculties Council GFC has delegated to the Executive Committee the authority to decide which items are placed on a GFC Agenda, and the order in which those agenda items appear on each GFC agenda.  When ordering items, the GFC Executive Committee will be mindful of any matters that are of particular concern to students during March and April so that the student leaders who bring those items forward are able to address these items at GFC before their terms end. (EXEC 06 NOV 2006)  […] With respect to recommendations from other bodies and other GFC committees, however, the role of the Executive Committee shall be to examine and debate the substance of reports or recommendations and to decide if an item is ready to be forwarded to the full governing body. The Executive Committee may decide to refer a proposal back to the originating body, to refer the proposal to another body or individual for study or review, or to take other action in order to ready a proposal for consideration by General Faculties Council. When the GFC Executive Committee forwards a proposal to GFC, it shall make a recommendation that GFC endorse; endorse with suggested amendments; not endorse; or forward the proposal with no comment.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) GFC Executive Committee (for discussion) – December 7, 2015 and January 11, 2016 General Faculties Council (for discussion) – January 25, 2016 GFC Executive Committee (for discussion) – February 1 and March 7, 2016 GFC Executive Committee Working Group  on Academic Governance (for discussion)– February/March 2016 General Faculties Council (for discussion) – March 21, 2016 Approval Route (Governance) (including meeting dates) Final Approver  Attachments: Attachment 1 (page 1-2): Report to GFC from GFC Executive Committee Attachment 2 (page 1-7): Presentation to GFC, March 21, 2016 Attachment 3 (page 1-9): Summary of GFC Standing Committees Attachment 4 (page 1-9): Approvals made by GFC Standing Committees with delegated authority over the last year  ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "For discussion and input: ",
+                "-Online feedback:  https://uofa.ualberta.ca/strategic-plan ",
+                "-Campus Forums  (March to April 2016) ",
+                "-Roundtable Discussions (March to April 2016) ",
+                "-General Faculties Council (March 21, 2016) ",
+                "-GFC Academic Planning Committee (March 23 and April 20, 2016) ",
+                "-GFC Academic Standards Committee (March 17, 2016) ",
+                "-GFC Committee on the Learning Environment (April 6, 2016) ",
+                "-Board Learning and Discovery Committee (April 25, 2016) ",
+                "-Board University Relations Committee (April 25, 2016) ",
+                "-Deans’ Council (March 16, 2016) ",
+                "-Chairs’ Council (March 15, 2016) ",
+                "-University Research Policy Committee (April 4, 2016) ",
+                "-Students’ Union (March 22, 2016) and Council of Faculty Associations ",
+                "-Graduate Students’ Association Executive and Board (March 16 and 21, ",
+                "2016) ",
+                "-Alumni Council (March 19, 2016) ",
+                "-Faculty Councils "
+            ],
             "Approval Route": [
                 "N/A"
             ],
@@ -108,55 +139,88 @@
         {
             "Item No.": "8",
             "Agenda Title": "General Faculty Council Standing Committee Report Executive Committee",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "N/A",
             "Presenter": "N/A",
             "Description": "1. Since the last GFC meeting, the Executive Committee met twice: February 1 and March 7, 2016 2. Actions Taken with Delegated Authority from GFC March 7, 2016 Approved Editorial Changes to the Code of Student Behaviour and Code of Applicant Behaviour regarding name change of the Office of Student Judicial Affairs to Student Conduct and Accountability  Approved Amendments to the Composition of the Selection/Review Committee for the Dean of the Faculty of Native Studies Detailed motion and final document summary: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/ExecutiveCommittee/ExecutiveMotionandFinalDocument\nSummary.aspx 3. Items that the Committee Discussed or Advised on  February 1, 2016 Office of Student Judicial Affairs (OSJA) 2014/2015 Annual Report and Statistics Annual Report of the Appeals and Compliance Officer 2014/2015 Institutional Strategic Plan  Academic Governance at the University of Alberta March 7, 2016 University of Alberta Museums Annual Report to General Faculties Council  Draft Institutional Strategic Plan   Academic Governance at the University of Alberta  Update on the Peter Lougheed Leadership College Terms of reference and records of meetings for this committee can be found at: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/ExecutiveCommittee.aspx ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         },
         {
             "Item No.": "9",
             "Agenda Title": "General Faculty Council Standing Committee Report Academic Planning Committee",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "N/A",
             "Presenter": "N/A",
             "Description": "1. Since the last GFC meeting, the Academic Planning Committee met three times: February 5, February 10, February 24, 2016 2. Actions Taken with Delegated Authority from GFC February 10, 2016 Approved new Bachelor of Science in Fashion Business Management, Faculty of Agricultural, Life & Environment Sciences Recommended  to the Board of Governors - proposed new Mandatory Student Instructional Support Fees and proposed Deletion of Mandatory Student Instructional Support Fee  Recommended to the Board of Governors – the University of Alberta's Comprehensive Institutional Plan (CIP) (2016) February 24, 2016 Approved Changes to Undergraduate Admission Requirements for High School Applicants from the American Education System Recommended to the Board of Governors - Proposed Rescission of four current Mandatory Non-Instructional Fees (CoSSS, Registration & Transcript fee, University Student Services Fee, University Health Services Fee) and Establishment of two Restructured Mandatory Non-Instructional Fees (Student Health & Wellness Fee, Student Academic Support Fee) Detailed motion and final document summary: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicPlanningCommittee/APCMotion 3. Items that the Committee Discussed or Advised on  February 5, 2016   Joint Board of Governors/APC Budget Briefing  February 24, 2016 Institutional Strategic Plan – Goals and Strategies   Annual Report on Undergraduate Enrolment 2015/2-16  Report on Graduate Enrolment 2015/2016 Terms of reference and records of meeting for this committee can be found at: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicPlanningCommittee.aspx ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         },
         {
             "Item No.": "10",
             "Agenda Title": "General Faculty Council Standing Committee Report Academic Standing Committee",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "N/A",
             "Presenter": "N/A",
             "Description": "1. Since the last GFC meeting, the Academic Standing Committee met twice: February 18 and March 17, 2016 2. Actions Taken with Delegated Authority from GFC January 21, 2016 Approved Faculty of Science: Proposed changes to Existing Academic Standing and Graduation Requirements, Honors and Specialization Biochemistry Approved Faculty of Science: Proposed changes to Existing Academic Standing and Graduation Requirements, Honors Pharmacology  Approved Faculty of Engineering: Proposed changes to Existing Admission and Academic Standing Requirements  Approved Office of the Registrar: Proposed Approval and Denial of Transfer Credit for January 2016 Recommended to GFC Academic Planning Committee Proposed Changes to Undergraduate Admission Requirements for High School Applicants from the American Education System Recommended to GFC Academic Planning Committee Proposal for a new Bachelor of Science in Fashion Business Management, Faculty of Agricultural, Life & Environmental Sciences and Faculty of Business February 18, 2016 Approved Faculty of Rehabilitation Medicine: Proposed changes to Existing Admission Deadlines, Communication Sciences and Disorder  Approved Faculty of Graduate Studies and Research: Proposed changes to Existing Admission Requirements, Library and Information Studies, the degree of Master of Library and Information Studies (MLIS)  Approved Faculty of Medicine & Dentistry: Proposed changes to Existing Academic Standing Requirements (attendance), DDS Advanced Placement Program  Approved Faculty of Graduate Studies & Research: Proposed changes to Existing Academic Standing Requirements, PhD Educational Psychology  Approved Faculty of Graduate Studies & Research: Proposed changes to Existing Admission and Academic Standing Requirements, Free-Standing Post-baccalaureate Certificates and Post-baccalaureate Certificate in Teaching and Learning in Higher Education (TLHE), Department of Educational Policy Studies  Approved Faculty of Medicine & Dentistry: Proposed changes to Existing Physical Testing (Immunization) Requirements, Dental Hygiene Program Approved Faculty of Medicine & Dentistry: Proposed changes to Existing Admission and Academic Standing Requirements (re-examination), BSc Radiation Therapy Approved Office of the Registrar: Proposed Approval and Denial of Transfer Credit for February 2016 Approved Faculty of Medicine and Dentistry: Proposed changes to existing academic standing regulations, MD program Approved Faculty of Rehabilitation Medicine: Proposed changes to existing admission / academic standing regulations (Professional Ethics) March 17, 2016 (Committee report will be included with the May 30, 2016 GFC agenda materials) Detailed motion and final document summary: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicStandardsCommittee/ASCMotionandFinalDocume\nntSummary.aspx 3. Items that the Committee Discussed or Advised on  January 21, 2016 Annual Report on Undergraduate Enrolment 2015/2016  Terms of reference and records of meeting for this committee can be found at: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/AcademicStandardsCommittee.aspx ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         },
         {
             "Item No.": "11",
             "Agenda Title": "GFC NOMINATING COMMITTEE 9-March-2016",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "N/A",
             "Presenter": "N/A",
             "Description": "[CIRCULATION BY EMAIL] The GFC Nominating Committee (NC) presents the following nominations for consideration by General Faculties Council. Upon receipt of this GFC NC Report, members of GFC may submit additional nominations to Ms Ann Hodgson, Coordinator to the GFC NC, University Governance, extension 2-1938 (ann.hodgson@ualberta.ca). Additional nominations must be received by Ms Hodgson by 12:00 PM on March 15, 2016. The nominees must be both eligible and willing to serve. A brief (approx.150 words) biographical sketch must accompany nominations. If no additional nominations are received by the deadline, the nominees noted below will be declared elected. “The Nominating Committee is charged with ensuring the best possible match between prospective members and the committees to which they are nominated. It is also the Nominating Committee’s responsibility to ensure the broadest possible base of representation given the available pool of nominees.” [GFC Nominating Committee Terms of Reference] The GFC NC is committed to a process that is rigorous in seeking talented individuals for committee service and devotes substantial time to consultation.   For the terms of reference and full membership composition of GFC Standing Committees, Appeal Boards and other committees to which GFC elects, please refer to the University Governance main website and navigate to the appropriate committee webpage.  Visit University Governance at:  www.governance.ualberta.ca.  __________________________________________________________________________________________ 2015-2016 STANDING COMMITTES OF GENERAL FACULTIES COUNCIL GFC ACADEMIC PLANNING COMMITTEE  Action Required by GFC:  To fill one (1) vacancy calling for an academic staff member (Staff Category A1.1 and A1.6 or their counterparts in A1.5 and A1.7) with concurrent General Faculties Council membership. Nominee Faculty/Unit Term Beginning  Term End Dr. Eleni Stroulia  (A1.1) Science Immediately upon approval June 30, 2018 [END] (UDG) Undergraduate Student    (G) Graduate Student mailto:ann.hodgson@ualberta.ca\nhttp://www.governance.ualberta.ca/\nhttp://www.governance.ualberta.ca/GeneralFacultiesCouncil.aspx\nGeneral Faculty Council Standing Committee Report GFC Facilities Development Committee  1. The GFC Facilities Development Committee has met twice during the current academic year:  November 26, 2015 and January 28, 2016. 2. Actions taken under delegated authority from GFC: November 26, 2015: Approved the proposed Research and Collections and Resource Facility (RCRF) – Schematic Design Report as the basis for further planning   January 28, 2016: Approved the proposed Research and Collections and Resource Facility (RCRF) – Design Development Report as the basis for further engineering and development of contract documents Detailed Motion and Final Document Summary: http://www.governance.ualberta.ca/GeneralFacultiesCouncil/FacilitiesDevelopmentCommittee/FDCMotionandFina\nlDocumentSummary.aspx 3. Items that the Committee Discussed or Advised On: November 26, 2015:  Sector 12 – Campus Planning and Design Guidelines for Implementation Terms of reference and records of meetings for this committee can be found at:  http://www.governance.ualberta.ca/GeneralFacultiesCouncil/FacilitiesDevelopmentCommittee.aspx ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         },
         {
             "Item No.": "15A",
             "Agenda Title": "Item Action Requested Approval Recommendation  Discussion/Advice Information",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "Deborah Eerkes, Director, Student Conduct and Accountability (formerly OSJA) ",
             "Presenter": " Deborah Eerkes, Director, SCA Subject Office of Student Judicial Affairs (OSJA) Annual Report 2014/15 ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To provide the GFC Campus Law Review Committee (CLRC), the GFC Executive Committee, the Board Learning and Discovery Committee (BLDC), and General Faculties Council (GFC) (for information) with the annual report and statistics of the OSJA for the 2014/15 academic year. The Impact of the Proposal is That the annual report provides information on activities of the OSJA. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date N/A Estimated Cost N/A Sources of Funding N/A Notes N/A Alignment/Compliance Alignment with Guiding Documents Dare to Discover; Dare to Deliver Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post Secondary Learning Act (PSLA): The Post-Secondary Learning Act (PSLA) gives GFC responsibility, subject to the authority of the Board of Governors, over academic affairs (Section 26(1)) and over academic affairs (Section 31), including authority concerning student discipline.  2. GFC Campus Law Review Committee (CLRC) Terms of Reference–Section 1 (Authority): “GFC has thus established a Campus Law Review Committee (GFC CLRC) […].” 3. GFC Campus Law Review Committee (CLRC) Terms of Reference:  Section 3 – Mandate of the Committee (A and B) states that GFC CLRC is “[t]o review, from time to time, the Code of Student Behaviour and student discipline procedures.”, and “[t]o review, from time to time, the Code of Applicant Behaviour.” 4. GFC Terms of Reference (GFC Procedures/GFC Agendas/ Reports):   “GFC Agendas a. Reports not requiring action by GFC will be discussed by the GENERAL FACULTIES COUNCIL For the Meeting of March 21, 2016 about a report, or feels that the report should be discussed by GFC, the GFC member should notify the Secretary to GFC, in writing, two business days or more before GFC meets so that the committee chair can be invited to attend. Such reports will be discussed as the last of the standing items.”  5. Board Learning and Discovery Committee (BLDC) Terms of Reference/Mandate of the Committee (Section 3): “Except as provided in paragraph 4 hereof and in the Board’s General Committee Terms of Reference, the Committee shall, in accordance with the Committee’s responsibilities with powers granted under the Post-\nSecondary Learning Act, monitor, evaluate, advise and make decisions on behalf of the Board with respect to matters concerning the teaching and research affairs of the University, including proposals coming from the administration and from General Faculties Council (the “GFC”), and shall consider future educational expectations and challenges to be faced by the University. The Committee shall also include any other matter delegated to the Committee by the Board.  Without limiting the generality of the foregoing the Committee shall: […]  e. review and approve the Code of Student Behaviour, the Code of Applicant Behaviour and the Practicum Intervention Policy;  […] g. undertake studies and review academic matters that pertain to the quality of the educational experience at the University;  h. monitor educational and research trends, community expectations and demands;  […]  j. ensure that the academic teaching and research activities at the University are administered and undertaken in a manner consistent with the vision and mission of the University;  k. consider future educational expectations and challenges to be faced by the University[.] […]” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) Office of the Dean of Students GFC Campus Law Review Committee (for discussion) – January 28, 2016 GFC Executive Committee (for discussion) – February 1, 2016 Board Learning and Discovery Committee (for discussion) – February 29, 2016 General Faculties Council (for information) – March 21, 2016 Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments (each to be numbered 1 - <>): GENERAL FACULTIES COUNCIL For the Meeting of March 21, 2016 ",
+            "Participation": [
+                "N/A"
+            ],
             "Approval Route": [
                 "N/A"
             ],
@@ -165,11 +229,16 @@
         {
             "Item No.": "15B",
             "Agenda Title": "Annual Report of the Appeals and Compliance Officer (2014-2015) ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "Michael Peterson, Appeals and Compliance Officer, University Governance ",
             "Presenter": " Michael Peterson, Appeals and Compliance Officer, University Governance Subject Reporting of Discipline and Appeal Statistics ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To provide the annual report of statistics, as required by GFC policy.  The Impact of the Proposal is N/A Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date N/A Estimated Cost N/A Sources of Funding N/A Notes N/A Alignment/Compliance Alignment with Guiding Documents Dare to Discover – Value 3:  “integrity, fairness, and principles of ethical conduct built on the foundation of academic freedom, open inquiry, and the pursuit of truth[.]” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA):  The Post-Secondary Learning Act (PSLA) gives GFC responsibility, subject to the authority of the Board of Governors, over academic affairs (Section 26(1)) and over student affairs (Section 31), including authority concerning student discipline. 2. GFC CLRC Terms of Reference (Mandate of the Committee: 5. Reporting Requirements) -  “Discipline Cases: University Governance has been asked by the GFC Executive to attempt to have all appeal Boards (UAB, GFC AAC and GFC PRB) report to GFC at the same meeting, through the GFC Campus Law Review Committee. The Appeals Coordinator on behalf of the Campus Law Review Committee will submit annually to GFC in the fall, statistical information on discipline cases dealt with by Faculties, the Discipline Officer, the Registrar, Unit Directors, the University Appeal Board and the GFC Practice Review Board. The discipline reports will include the year of the student, the offence with which they were charged and the outcome, but not any personally identifying information. When reporting statistics for applicants, the offence with which the applicant is charged and the outcome, but not any personally identifying information, will be provided. As far as is practical, comparative information from the most recent reporting period will be included.” 3. GFC Terms of Reference (GFC Procedures/GFC Agendas/ Reports):  “Reports not requiring action by GFC will be discussed by the Executive Committee (with committee chairs in attendance[, as appropriate,]) and placed on the GFC agenda for information. If a GFC member has a question about a report, or feels that the report should be discussed by GFC, the GFC member should notify the Secretary to GFC, in writing, two business days or more before GFC meets so that the committee chair can be invited to attend. Such reports will be discussed as the last of the standing items.” (Section 4.a.) 4. Board Learning and Discovery Committee (BLDC) Terms of Reference/Mandate of the Committee (Section 3): “Except as provided in paragraph 4 hereof and in the Board’s General Committee Terms of Reference, the Committee shall, in accordance with the Committee’s responsibilities with powers granted under the Post-\nSecondary Learning Act, monitor, evaluate, advise and make decisions on behalf of the Board with respect to matters concerning the teaching and research affairs of the University, including proposals coming from the administration and from General Faculties Council (the “GFC”), and shall consider future educational expectations and challenges to be faced by the University. The Committee shall also include any other matter delegated to the Committee by the Board.  Without limiting the generality of the foregoing the Committee shall: […]  e. review and approve the Code of Student Behaviour, the Code of Applicant Behaviour and the Practicum Intervention Policy;  […] g. undertake studies and review academic matters that pertain to the quality of the educational experience at the University;  h. monitor educational and research trends, community expectations and demands;  […]  j. ensure that the academic teaching and research activities at the University are administered and undertaken in a manner consistent with the vision and mission of the University;  k. consider future educational expectations and challenges to be faced by the University[.] […]” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) GFC Campus Law Review Committee, January 28, 2016 (for discussion);  GFC Executive Committee, February 1, 2016 (for discussion); General Faculties Council, March 21, 2016 (for information); Board Learning and Discovery Committee, February 29, 2016 (for discussion) Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments: Attachment 1:  Annual Report of the Appeals and Compliance Officer (2014-15) Attachment 2:  Index of Attachments ",
+            "Participation": [
+                "N/A"
+            ],
             "Approval Route": [
                 "N/A"
             ],
@@ -178,16 +247,34 @@
         {
             "Item No.": "15C",
             "Agenda Title": "University of Alberta Museums Annual Report to General Faculties Council (GFC)                        for the Period July 1, 2014 – December 31, 2015 ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2016-03-21",
             "Committee": "GFC",
             "Proposed By": "Janine Andrews, Executive Director, Museums and Collections Services, and Jocelyn Hall, Chair, University of Alberta Museums Policy and Planning Committee (Associate Professor and Associate Chair [Undergraduate], Department of Biological Sciences) ",
             "Presenter": " Janine Andrews, Executive Director, Museums and Collections Services Subject The University of Alberta Museums Annual Report for July 1, 2014 to December 31, 2015; including the report of the U of A Museums Policy and Planning Committee ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) To file an annual report, as requested, with General Faculties Council.   The Impact of the Proposal is N/A Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date N/A Estimated Cost N/A Sources of Funding N/A Notes  Alignment/Compliance Alignment with Guiding Documents N/A Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): GFC has responsibility, subject to the authority of the Board of Governors, over academic affairs. (Section 26(1))  GFC has thus established policies governing University Museums Collections, as set out in University of Alberta Policies and Procedures On-Line (UAPPOL).  2.  GFC Policy: The University of Alberta Museums Annual Report is one of several reports from non-GFC committees/entities requested to provide an annual report to GFC.  3. GFC Terms of Reference (GFC Procedures (GFC Agendas) (Reports)):  “Reports not requiring action by GFC will be discussed by the Executive Committee (with committee chairs in attendance) and placed on the GFC agenda for information. If a GFC member has a question about a report, or feels that the report should be discussed by GFC, the GFC member should notify the Secretary to GFC, in writing, two business days or more before GFC meets so that the committee chair can be invited to attend. Such reports will be discussed as the last of the standing items.” (Section 4.a.) Annual reports are made available to GFC online.  Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating University of Alberta Museums Policy and Planning Committee (for review and approval);  Vice-Provost (Learning Services) (for information); GFC Executive Committee – March 7, 2016 (for discussion); General Faculties Council – March 21, 2016 (for information) Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments (each to be numbered 1 - 19) 1.  Attachment 1 (page(s) 1 - 19): Museums University of Alberta Annual Report July 1, 2014 to December 31, 2015 ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "University of Alberta Museums Policy and Planning Committee (for ",
+                "review and approval); ",
+                "Vice-Provost (Learning Services) (for information); ",
+                "GFC Executive Committee – March 7, 2016 (for discussion); ",
+                "General Faculties Council – March 21, 2016 (for information) "
+            ],
             "Approval Route": [
                 "N/A"
             ],
             "Final Approver": " N/A"
         }
     ],
-    "PDF url": "GFC_Monday, March 21, 2016 \n_Material.pdf"
+    "url": "/static/GFC/2016-03-21/Past-Meeting-Material.pdf"
 }

@@ -1,12 +1,10 @@
 {
     "Committee": "UASC",
-    "Date": "Tuesday, November 21, 2017 \n",
+    "Date": "2017-11-21",
     "Title": "UASC General Faculties Council - 2017-11-21",
     "Location": "3-07 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
     "Attendees": [
-        "2:00 PM - 4:00 PM",
-        "Voting:",
         "Amy Tse, Chair REGRETS:",
         "Marc de Montigny Clive Hickson",
         "Isha Godara Wendy Doughty",
@@ -20,11 +18,36 @@
         {
             "Item No.": "5",
             "Agenda Title": "New Annually Funded Undergraduate Awards for Approval Centennial Food Service Award in Community Service Learning Estella Stelter Award in Dental Hygiene ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, new Undergraduate Awards, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
             "Date": "2017-11-21",
             "Committee": "UASC",
             "Proposed By": "Student Financial Support ",
             "Presenter": " Fiona Halbert, Assistant Registrar Student Financial Support ",
             "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve new and amended annually funded undergraduate awards and bursaries. The Impact of the Proposal is To offer new undergraduate student financial support at the University of Alberta in alignment with institutional priorities. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost and funding source Next Steps (ie.: Communications Plan, Implementation plans) Public posting of Award or Bursary on U of A website, offer of Award or Bursary to students as soon as funds are available Supplementary Notes and context The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97). Normally, to establish a named annually funded award or bursary, the minimum donation required currently is $1,000 per year for five years.  Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been informed: • Donors are informed of U of A policy for Award establishment • Office of Advancement is informed of new Awards in process Those who have been consulted: • Donors, the Office of the Registrar, Office of Advancement have been consulted in the establishment of new Award conditions  • Faculty or Departments have been consulted with new Award conditions, setup and awarding process of new and amended Awards http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nThose who are actively participating: • Undergraduate students, Graduate students, Faculty, Departments, Office of Advancement Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, (November 21, 2017) (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee Alignment/Compliance Alignment with Guiding Documents Institutional Strategic Plan – For the Public Good To begin, we will attract outstanding students… 1. OBJECTIVE: Build a diverse, inclusive community of exceptional undergraduate and graduate students from Edmonton, Alberta, Canada, and the world.  i. Strategy: Develop and implement an undergraduate and graduate recruitment strategy to attract top students from across the diverse communities in Alberta and Canada, leveraging our strengths as a comprehensive research-intensive, multi-campus university with options for francophone and rural liberal arts education. ii. Strategy: Develop and implement an undergraduate and graduate recruitment and retention strategy to attract top Indigenous students. iii. Strategy: Optimize our international recruiting strategies to attract well-qualified international students from regions of strategic importance, and enhance services and programs to ensure their academic success and integration into the activities of the university. iv. Strategy: Ensure that qualified undergraduate and graduate students can attend the university through the provision of robust student financial support.  Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to: 1. approve new undergraduate awards; 2. approve changes to any undergraduate student award already approved by GFC UASC[.] […]” Attachments: 1.  Attachment 1: Proposed New Annually Funded Undergraduate Student Awards and Bursaries for Approval ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on the ",
+                "Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "Those who have been informed: ",
+                "• Donors are informed of U of A policy for Award establishment ",
+                "• Office of Advancement is informed of new Awards in process ",
+                "Those who have been consulted: ",
+                "• Donors, the Office of the Registrar, Office of Advancement have ",
+                "been consulted in the establishment of new Award conditions ",
+                "• Faculty or Departments have been consulted with new Award ",
+                "conditions, setup and awarding process of new and amended ",
+                "Awards ",
+                "http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx ",
+                "http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx ",
+                "Those who are actively participating: ",
+                "• Undergraduate students, Graduate students, Faculty, ",
+                "Departments, Office of Advancement "
+            ],
             "Approval Route": [
                 "GFC Undergraduate Awards and Scholarship Committee, (November",
                 "21, 2017) (for final approval)"
@@ -34,11 +57,36 @@
         {
             "Item No.": "6",
             "Agenda Title": "New Endowed Undergraduate Award for Approval Dr Stanley and Gloria Olson Student Success Award ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, a new Undergraduate Award, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
             "Date": "2017-11-21",
             "Committee": "UASC",
             "Proposed By": "Student Financial Support ",
             "Presenter": " Fiona Halbert, Assistant Registrar Student Financial Support ",
             "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve a new undergraduate award. The Impact of the Proposal is To offer new undergraduate student financial support at the University of Alberta in alignment with institutional priorities. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost and funding source Next Steps (ie.: Communications Plan, Implementation plans) Public posting of Award or Bursary on U of A website, offer of Award or Bursary to students as soon as funds are available Supplementary Notes and context The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97). To establish a named endowment fund, the minimum donation required currently is $25,000. Annual earnings/spending allocation for endowed awards and bursaries is liable to fluctuations based on the University investment policies. Annual award and bursary values are set based on agreed upon guidelines with the Office of Advancement, which will be responsive to the fluctuations in the annual spending allocation.  Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been informed: • Donors are informed of U of A policy for Award establishment • Office of Advancement is informed of new Awards in process Those who have been consulted: • Donors, the Office of the Registrar, Office of Advancement have been consulted in the establishment of new Award conditions  • Faculty or Departments have been consulted with new Award conditions, setup and awarding process of new and amended Awards http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nThose who are actively participating: • Undergraduate students, Graduate students, Faculty, Departments, Office of Advancement Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, (November  21, 2017) (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee Alignment/Compliance Alignment with Guiding Documents Institutional Strategic Plan – For the Public Good To begin, we will attract outstanding students… 1. OBJECTIVE: Build a diverse, inclusive community of exceptional undergraduate and graduate students from Edmonton, Alberta, Canada, and the world.  i. Strategy: Develop and implement an undergraduate and graduate recruitment strategy to attract top students from across the diverse communities in Alberta and Canada, leveraging our strengths as a comprehensive research-intensive, multi-campus university with options for francophone and rural liberal arts education. ii. Strategy: Develop and implement an undergraduate and graduate recruitment and retention strategy to attract top Indigenous students. iii. Strategy: Optimize our international recruiting strategies to attract well-qualified international students from regions of strategic importance, and enhance services and programs to ensure their academic success and integration into the activities of the university. iv. Strategy: Ensure that qualified undergraduate and graduate students can attend the university through the provision of robust student financial support.  Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to: 1. approve new undergraduate awards; 2. approve changes to any undergraduate student award already approved by GFC UASC[.] […]” Attachments: 1.  Attachment 1: Proposed New Endowed Undergraduate Student Awards and Bursaries for Approval ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on the ",
+                "Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "Those who have been informed: ",
+                "• Donors are informed of U of A policy for Award establishment ",
+                "• Office of Advancement is informed of new Awards in process ",
+                "Those who have been consulted: ",
+                "• Donors, the Office of the Registrar, Office of Advancement have ",
+                "been consulted in the establishment of new Award conditions ",
+                "• Faculty or Departments have been consulted with new Award ",
+                "conditions, setup and awarding process of new and amended ",
+                "Awards ",
+                "http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx ",
+                "http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx ",
+                "Those who are actively participating: ",
+                "• Undergraduate students, Graduate students, Faculty, ",
+                "Departments, Office of Advancement "
+            ],
             "Approval Route": [
                 "GFC Undergraduate Awards and Scholarship Committee, (November",
                 "21, 2017) (for final approval)"
@@ -48,11 +96,34 @@
         {
             "Item No.": "7",
             "Agenda Title": "Amendments to Existing Undergraduate Awards and Bursaries for Approval Faculty of Law Annual Fund Bursary Colette Arnal Award for the Promotion of Canadian Values Edmonton Burns Club Award Scandinavian Studies Award Legends of Gold Athletic Scholarship BL Montgomery Scholarship in Engineering Evelyn and Gene Norville Memorial Scholarship Muriel Shortreed Scholarship in Human Ecology/Education Science, Technology and Society Scholarship Odishaw Family Prize in Dispute Resolution ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, new Undergraduate Awards and Bursaries, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
             "Date": "2017-11-21",
             "Committee": "UASC",
             "Proposed By": "Student Financial Support ",
             "Presenter": " Fiona Halbert, Assistant Registrar Student Financial Support ",
             "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve amended undergraduate awards and bursaries. The Impact of the Proposal is To offer undergraduate student financial support at the University of Alberta in alignment with institutional priorities. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost and funding source Next Steps (ie.: Communications Plan, Implementation plans) Public posting of Award or Bursary on U of A website, offer of Award or Bursary to students as soon as funds are available. Supplementary Notes and context The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97). Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Those who have been informed: • Donors are informed of U of A policy for Award establishment • Office of Advancement is informed of new Awards in process Those who have been consulted: • Donors, the Office of the Registrar, Office of Advancement have been consulted in the establishment of new Award conditions  • Faculty or Departments have been consulted with new and  Governance Toolkit section Student Participation Protocol> amended Award conditions, setup and awarding process of new and amended Awards Those who are actively participating: • Undergraduate students, Graduate students, Faculty, Departments, Office of Advancement Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, (November 21, 2017) (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee Alignment/Compliance Alignment with Guiding Documents Institutional Strategic Plan – For the Public Good To begin, we will attract outstanding students… 1. OBJECTIVE: Build a diverse, inclusive community of exceptional undergraduate and graduate students from Edmonton, Alberta, Canada, and the world.  i. Strategy: Develop and implement an undergraduate and graduate recruitment strategy to attract top students from across the diverse communities in Alberta and Canada, leveraging our strengths as a comprehensive research-intensive, multi-campus university with options for francophone and rural liberal arts education. ii. Strategy: Develop and implement an undergraduate and graduate recruitment and retention strategy to attract top Indigenous students. iii. Strategy: Optimize our international recruiting strategies to attract well-qualified international students from regions of strategic importance, and enhance services and programs to ensure their academic success and integration into the activities of the university. iv. Strategy: Ensure that qualified undergraduate and graduate students can attend the university through the provision of robust student financial support.  Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to: 1. approve new undergraduate awards; 2. approve changes to any undergraduate student award already approved by GFC UASC[.] […]” Attachments: 1.  Attachment 1: Proposed Amended Undergraduate Student Awards and Bursaries for Approval ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on the ",
+                "Those who have been informed: ",
+                "• Donors are informed of U of A policy for Award establishment ",
+                "• Office of Advancement is informed of new Awards in process ",
+                "Those who have been consulted: ",
+                "• Donors, the Office of the Registrar, Office of Advancement have ",
+                "been consulted in the establishment of new Award conditions ",
+                "• Faculty or Departments have been consulted with new and ",
+                " Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "amended Award conditions, setup and awarding process of new ",
+                "and amended Awards ",
+                "Those who are actively participating: ",
+                "• Undergraduate students, Graduate students, Faculty, ",
+                "Departments, Office of Advancement "
+            ],
             "Approval Route": [
                 "GFC Undergraduate Awards and Scholarship Committee, (November",
                 "21, 2017) (for final approval)"
@@ -60,5 +131,5 @@
             "Final Approver": " GFC Undergraduate Awards and Scholarship Committee"
         }
     ],
-    "PDF url": "UASC_Tuesday, November 21, 2017 \n_Material.pdf"
+    "url": "/static/UASC/2017-11-21/Past-Meeting-Material.pdf"
 }

@@ -1,6 +1,6 @@
 {
     "Committee": "EXEC",
-    "Date": "Monday, April 10, 2017 \n",
+    "Date": "2017-04-10",
     "Title": "EXEC General Faculties Council - 2017-04-10",
     "Location": "2-31 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
@@ -25,11 +25,34 @@
         {
             "Item No.": "4",
             "Agenda Title": "Negotiated (Proposed) Changes to the Contract Academic Staff: Teaching (CAS:T) Agreement ",
+            "Motion": " THAT the GFC Executive Committee recommend to General Faculties Council proposed changes to the appointment, promotion, salaries, tenure and dismissals elements of the Contract Academic Staff: Teaching Agreement, to be known henceforth as the Academic Teaching Staff Agreement, as ratified by AASUA membership and as set forth in Attachment 2, to take effect July 1, 2017. ",
+            "Action Requested": "N/A",
             "Date": "2017-04-10",
             "Committee": "EXEC",
             "Proposed By": "Steven Dew, Provost and Vice-President (Academic) ",
             "Presenter": " Steven Dew, Provost and Vice-President (Academic) Michelle Strong, Vice-Provost & Director, Faculty & Staff Relations Donna Herman, Special Advisor, Faculty & Staff Relations ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) An Agreement Review Committee comprised of members from Administration and the AASUA has been working together to review and revise the Contract Academic Staff: Teaching (CAS:T) Agreement.  The changes to the Agreement are presented in the attached side-by-side document.   The Impact of the Proposal is To aid in the recruitment and retention of Teaching Staff Replaces/Revises (eg, policies, resolutions) Amendments to the CAS:T Agreement and renaming to the Academic Teaching Staff Agreement Timeline/Implementation Date Amendments are effective July 1, 2017 Estimated Cost and funding source Cost neutral. Any related compensation matters would be dealt with at comprehensive bargaining. Next Steps (ie.: Communications Plan, Implementation plans) AASUA Town Hall Faculty and Staff Relations Information Sessions Supplementary Notes and context In April, 2014, the Board provided Administration with a mandate to develop an academic performance evaluation and career progression model which would demonstrate the University’s commitment to a teaching-intensive career path within the CAS:T Agreement. Furthermore, in order to address a key concern of the CAS:T constituency, the mandate provided the ability to establish greater position security, by adopting a “contingent” appointment option for CAS:T Agreement staff members, and a range of appointment options more in keeping with the work done and working conditions experienced by CAS:T staff. Administration ARC Members Donna Herman, Faculty & Staff Relations, Chair Charles Lucy, Professor in Chemistry Lise Warick, Human Resource Services Susan Buchsdruecker, Faculty & Staff Relations Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been informed: • Agreement Review Committee • General Counsel and Field LLP • Steven Dew, Provost • PEC-O (March 23, 2017) Those who have been consulted: • Agreement Review Committee • Administrators of Faculties and Departments • General Counsel and Field LLP • Steven Dew, Provost Those who are actively participating: • Agreement Review Committee Approval Route (Governance) (including meeting dates) PEC-O (March 23, 2017) Statutory Deans’ Council (April 5, 2017) PACC (April 18, 2017) GFC Executive Committee (April 10, 2017) GFC (April 21, 2017) BHRCC (May 30, 2017) Final Approver Board of Governors (June 23, 2017) Alignment/Compliance Alignment with Guiding Documents Institutional Strategic Plan – For the Public Good,  Comprehensive Institutional Plan, Institutional values Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) The Post-Secondary Learning Act gives General Faculties Council (GFC) responsibility, subject to the authority of the Board of Governors, over \"academic affairs\" (section 26(1)).  The Board has authority to employ officers, employees and academic staff (sections 83 and 84 of the Act)  84 (3) A board shall, subject to any existing agreement, (a) determine the remuneration of academic staff members, (b) prescribe the duties of academic staff members, and (c) prescribe the term of employment and the terms and conditions of employment of academic staff members.  GFC has authority to approve procedures relating to the appointment, promotion and dismissal of academic staff (section 22(2)). In addition, GFC may recommend to the Board of Governors on \"procedures in respect of appointments, promotions, salaries, tenure and dismissals\" of academic staff (section 26(1)(o)).  22(2) A person shall not be appointed to, promoted to or dismissed from any position on the academic staff at a university except on the recommendation of the president made in accordance with procedures approved by the general faculties council. 26(1) (o) make recommendations to the board with respect to affiliation with other institutions, academic planning, campus planning, a building program, the budget, the regulation of residences and dining halls, procedures in respect of appointments, promotions, salaries, tenure and dismissals, and any other matters considered by the general faculties council to be of interest to the http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\n university; BHRCC Terms of Reference, Section 3.a. states: Without limiting the generality of the foregoing the Committee shall: (a)  consider and propose changes in collective agreements and confirm the mandate for  negotiating committees with all bargaining units; 1.  Attachment 1: Issue Brief – New Academic Teaching Staff Agreement (pages 1 - 2) 2.  Attachment 2: Side-by-Side CAS:T Agreement Amended to ATS Agreement (pages 1 – 55) 3.  Attachment 3: Title Page, Table of Contents and Appendices (pages 1-19) ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on the ",
+                "Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "Those who have been informed: ",
+                "• Agreement Review Committee ",
+                "• General Counsel and Field LLP ",
+                "• Steven Dew, Provost ",
+                "• PEC-O (March 23, 2017) ",
+                "Those who have been consulted: ",
+                "• Agreement Review Committee ",
+                "• Administrators of Faculties and Departments ",
+                "• General Counsel and Field LLP ",
+                "• Steven Dew, Provost ",
+                "Those who are actively participating: ",
+                "• Agreement Review Committee "
+            ],
             "Approval Route": [
                 "PEC-O (March 23, 2017)",
                 "Statutory Deans’ Council (April 5, 2017)",
@@ -43,11 +66,30 @@
         {
             "Item No.": "5",
             "Agenda Title": "Proposed Parchment Wording for the Centre Collégial de l’Alberta Programs ",
+            "Motion": " THAT the GFC Executive Committee approve, under delegated authority from General Faculties Council, the proposed parchment wording to be used for all cohorts of students having successfully completed programs at the Centre collégial de l’Alberta and the proposed addition of the specialization whose program requirements have been completed on the parchment for the Techniques d’administration des affaires diploma program offered by the Centre collégial de l’Alberta, to be effective upon final approval. ",
+            "Action Requested": "N/A",
             "Date": "2017-04-10",
             "Committee": "EXEC",
             "Proposed By": "Office of the Registrar ",
             "Presenter": " Lisa Collins, Vice-Provost & University Registrar; Dolorèse Nolette, Assistant Dean, Centre collegial de l’Alberta ",
             "Description": "Details Responsibility Provost and Vice-President (Academic) The Purpose of the Proposal is (please be specific) - To update wording used on parchments issued for programs offered by the Centre collégial de l’Alberta to clarify that the recipient has been deemed eligible to receive a diploma or certificate  - To add the program specialization on parchments issued for the successful completion of the program requirements for specializations of the Techniques en administration des affaires diploma program offered by the Centre Collégial de l’Alberta .  The Impact of the Proposal is - The updated language is more appropriate for diploma and certificate parchments as the word grade is commonly used to confer degrees on French-language parchments.  Comparator institutions also refer to successful completion of program requirements. - The addition of the specialization to the parchment will provide Techniques en administration des affaires students with formal recognition of their knowledge gained in specialization areas during their diploma programs upon graduation.  Replaces/Revises (eg, policies, resolutions) This parchment will replace the one that was formally issued for the first time in Fall 2016. Timeline/Implementation Date Spring Convocation 2017 Estimated Cost and funding source Paper and Design Costs Next Steps (ie.: Communications Plan, Implementation plans) Parchments will be printed with the appropriate information for Spring Convocation 2017. Supplementary Notes and context Engagement and Routing (Include meeting dates) Participation: (parties who have seen the Those who have been informed: •  Students, Techniques d’administration des affaires program  proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been consulted: • Kate Peters, Office of the Provost and Vice President Academic Those who are actively participating: • Executive Committee, Centre collegial de l’Alberta, January 19, 2017 • Carolyn Kauffman, Convocation and Ceremonies Office Approval Route (Governance) (including meeting dates) GFC Executive Committee (April 10, 2017) Final Approver GFC Executive Committee Alignment/Compliance Alignment with Guiding Documents Institutional values We value learners at all stages of life and strive to provide an intellectually rewarding educational environment for all. OBJECTIVE: Build a diverse, inclusive community of exceptional undergraduate and graduate students from Edmonton, Alberta, Canada, and the world. OBJECTIVE: Enhance, support, and mobilize the unique experiences and cultures of all University of Alberta campuses to the benefit of the university as a whole. Strategy: Highlight and strengthen the role that Campus Saint-Jean plays in reflecting and reinforcing the linguistic duality of Canada as well as the worldwide multi-ethnic Francophonie, by positioning the university locally, nationally, and internationally as a destination of choice for francophone and bilingual students, and by progressively improving Faculté Saint-Jean students’ and applicants’ access to French-language services. Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1.  Post-Secondary Learning Act (PSLA) “26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university.” 2.  GFC Executive Committee Terms of Reference (Mandate of the Committee) “To act as the executive body of General Faculties Council and, in general, carry out the functions delegated to it by General Faculties Council. (…) 2. Routine Matters Matters which are routine in carrying out the policies approved by General Faculties Council are delegated to the Executive Committee.” 3. UAPPOL Parchment Procedure “2.  WORDING AND LANGUAGE  All changes in the wording on parchments will be approved by the Faculty Council and then submitted by the Faculty to the Vice-\nProvost and University Registrar, who will forward any substantive changes to the General Faculties Council (GFC) Executive Committee for approval.”    http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nAttachments: 1.  Attachment 1 (page 1) Proposed parchment example 2.  Attachment 2 (page 1) Current parchment example 3.  Attachment 3 (page 1) Comparator institution example ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "Those who have been informed: ",
+                "•  Students, Techniques d’administration des affaires program ",
+                " proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on the ",
+                "Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "Those who have been consulted: ",
+                "• Kate Peters, Office of the Provost and Vice President Academic ",
+                "Those who are actively participating: ",
+                "• Executive Committee, Centre collegial de l’Alberta, January 19, ",
+                "2017 ",
+                "• Carolyn Kauffman, Convocation and Ceremonies Office "
+            ],
             "Approval Route": [
                 "GFC Executive Committee (April 10, 2017)"
             ],
@@ -56,16 +98,27 @@
         {
             "Item No.": "8",
             "Agenda Title": "Draft Agenda for the April 21, 2017 Meeting of General Faculties Council (GFC) ",
+            "Motion": " THAT the GFC Executive Committee approve, under delegated authority from General Faculties Council, the Agenda for the April 21, 2017 meeting of General Faculties Council (GFC), as set forth in Attachment 1. ",
+            "Action Requested": "N/A",
             "Date": "2017-04-10",
             "Committee": "EXEC",
             "Proposed By": "David Turpin, President and Chair, GFC Executive Committee ",
             "Presenter": " David Turpin, President and Chair, GFC Executive Committee ",
             "Description": "Details Responsibility GFC Executive Committee The Purpose of the Proposal is (please be specific) To approve the Agenda for the GFC meeting to be held on Friday, April 21, 2017. The Impact of the Proposal is GFC is the legislative body at the University of Alberta dealing with academic matters and student affairs issues; its composition and powers are defined in the Post-Secondary Learning Act (PSLA).  Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date N/A Estimated Cost and funding source N/A Next Steps (ie.: Communications Plan, Implementation plans) N/A Supplementary Notes and context N/A Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) David Turpin, President and Vice-Chancellor and Chair, GFC Executive Committee; Office of the President; Office of the Provost and Vice-\nPresident (Academic); University Governance; GFC Executive Committee  Approval Route (Governance) (including meeting dates) GFC Executive Committee – April 10, 2017 Final Approver GFC Executive Committee  Alignment/Compliance Alignment with Guiding Documents For the Public Good,  Comprehensive Institutional Plan, Institutional values Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal 1. Post-Secondary Learning Act (PSLA) Sections 26(1) and (3), state: “Powers of general faculties council  (please quote legislation and include identifying section numbers) 26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university[…] (3) A general faculties council may delegate any of its powers, duties and functions under this Act, including the powers referred to in section 31, as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” 2. General Faculties Council Executive Committee Mandate (Section 3):  “To act as the executive body of General Faculties Council and, in general, carry out the functions delegated to it by General Faculties Council. (GFC 08 SEP 1966) (GFC 12 FEB 1996)” 3. GFC Executive Committee Terms of Reference, Section 3.5, states: “Agendas of General Faculties Council  GFC has delegated to the Executive Committee the authority to decide which items are placed on a GFC Agenda, and the order in which those agenda items appear on each GFC agenda.  When ordering items, the GFC Executive Committee will be mindful of any matters that are of particular concern to students during March and April so that the student leaders who bring those items forward are able to address these items at GFC before their terms end. (EXEC 06 NOV 2006)  When recommendations are forwarded to General Faculties Council from APC, the role of the Executive shall be to decide the order in which items should be considered by GFC. The Executive Committee is responsible for providing general advice to the Chair about proposals being forwarded from APC to GFC.  With respect to recommendations from other bodies and other GFC committees, however, the role of the Executive Committee shall be to examine and debate the substance of reports or recommendations and to decide if an item is ready to be forwarded to the full governing body.  The Executive Committee may decide to refer a proposal back to the originating body, to refer the proposal to another body or individual for study or review, or to take other action in order to ready a proposal for consideration by General Faculties Council. When the GFC Executive Committee forwards a proposal to GFC, it shall make a recommendation that GFC endorse; endorse with suggested amendments; not endorse; or forward the proposal with no comment. (GFC 30 JUN 1992)” Attachments: 1. Attachment 1:  Draft Agenda for the General Faculties Council Meeting of April 21, 2017 ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "David Turpin, President and Vice-Chancellor and Chair, GFC Executive ",
+                "Committee; Office of the President; Office of the Provost and Vice- ",
+                "President (Academic); University Governance; GFC Executive ",
+                "Committee "
+            ],
             "Approval Route": [
                 "GFC Executive Committee – April 10, 2017"
             ],
             "Final Approver": " GFC Executive Committee"
         }
     ],
-    "PDF url": "EXEC_Monday, April 10, 2017 \n_Material.pdf"
+    "url": "/static/EXEC/2017-04-10/Past-Meeting-Material.pdf"
 }

@@ -93,30 +93,29 @@ export default{
     fetchData () {
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
-        query: {
-          multi_match: {
-            'query': this.inputField.search,
-            'type': 'cross_fields',
-            'fields' : [ '_all' ],
-            'fuzziness': '2',
-            'operator': 'and',
+              query: {
+                multi_match: {
+                  'query': this.inputField.search,
+                  'type': 'cross_fields',
+                  'fields' : [ '_all' ],
+                  'fuzziness': '2',
+                  'operator': 'and',
+                  }
+                  // this.inputField.search
+              },
+              'highlight': {
+                'fields': {
+                  '*': {
+
+                  },
+                  // 'description': {
+                  //   'fragment_size': 300,
+                  //   'no_match_size': 500,
+                  //   'number_of_fragments': 5
+                  // }
+                }
+              }
             }
-            // this.inputField.search
-        },
-        'highlight': {
-          'fields': {
-            'title': {
-              'no_match_size': 300,
-              'number_of_fragments': 0
-            },
-            'description': {
-              'fragment_size': 300,
-              'no_match_size': 500,
-              'number_of_fragments': 5
-            }
-          }
-        }
-      }
 
       // using axios, get es results
       // console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)

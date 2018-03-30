@@ -1,55 +1,85 @@
 {
     "Committee": "UASC",
-    "Date": "Tuesday, February 14, 2017 \n",
+    "Date": "2017-02-14",
     "Title": "UASC General Faculties Council - 2017-02-14",
     "Location": "2-15 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
     "Attendees": [
-        "2:00 PM - 4:00 PM",
-        "Amy Tse Chair, Academic Staff",
-        "Clive Hickson Vice-Chair, Academic Staff, Cross-representative from Academic Standards",
-        "Committee (ASC)",
-        "Gurniwaz Bal Member, Undergraduate Student at-large",
-        "Marc de Montigny Member, Academic Staff",
-        "Paul Myers Member, Academic Staff",
-        "Petr Nikrityuk Member, Academic Staff",
-        "Sathya Rao Member, Academic Staff",
-        "Fiona Halbert Member, Assistant Registrar, Student Awards or Delegate, Resource",
-        "Mien Jou Member (Delegate), Senior Development Officer of Delegate, Resource",
-        "Joan Schiebelbein Member (Delegate), Dean of Students or Delegate, Resource",
-        "Amy Tse Professor, Faculty of Medicine and Dentistry and Chair, GFC UASC",
-        "Marc de Montigny Professor (Physics), Faculté Saint-Jean, and member, GFC Ad Hoc",
-        "Committee on Academic Governance Including Delegated Authority",
-        "Julie Naylor Assistant Dean, Faculty of Science, and member, GFC Ad Hoc Committee on",
-        "Academic Governance Including Delegated Authority",
-        "Danielle Lamb Development Specialist, Student Financial Support"
+        "Amy Tse, Chair, Academic Staff",
+        "Clive Hickson, Vice-Chair, Academic Staff, Cross-representative from Academic Standards Committee (ASC)",
+        "Gurniwaz Bal, Member, Undergraduate Student at-large",
+        "Marc de Montigny, Member, Academic Staff",
+        "Paul Myers, Member, Academic Staff",
+        "Petr Nikrityuk, Member, Academic Staff",
+        "Sathya Rao, Member, Academic Staff",
+        "Fiona Halbert, Member, Assistant Registrar, Student Awards or Delegate, Resource",
+        "Mien Jou, Member (Delegate), Senior Development Officer of Delegate, Resource",
+        "Joan Schiebelbein, Member (Delegate), Dean of Students or Delegate, Resource",
+        "Amy Tse, Professor, Faculty of Medicine and Dentistry and Chair, GFC UASC",
+        "Marc de Montigny, Professor (Physics), Faculté Saint-Jean, and member, GFC Ad Hoc Committee on Academic Governance Including Delegated Authority",
+        "Julie Naylor, Assistant Dean, Faculty of Science, and member, GFC Ad Hoc Committee on Academic Governance Including Delegated Authority",
+        "Danielle Lamb, Development Specialist, Student Financial Support"
     ],
     "Items": [
         {
             "Item No.": "4",
             "Agenda Title": "New Undergraduate Awards and Bursaries for Approval (February 14, 2017) ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, new Undergraduate Awards and Bursaries, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
             "Date": "2017-02-14",
             "Committee": "UASC",
             "Proposed By": "Student Financial Support ",
             "Presenter": " Danielle Lamb, Development Specialist ",
             "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve new undergraduate awards and bursaries. The Impact of the Proposal is To ensure compliance with section 26(1)(m) of the Post-Secondary Learning Act, under delegated authority of General Faculties Council (GFC), “to make rules and regulations respecting academic awards”. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost and funding source Next Steps (ie.: Communications Plan, Implementation plans) Public posting of Award or Bursary on U of A website, offer of Award or Bursary to students as soon as funds are available Supplementary Notes and context The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97). Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been informed: • Donors are informed of U of A policy for Award establishment • Office of Advancement is informed of new Awards in process Those who have been consulted: • Donors, the Office of the Registrar, Office of Advancement have been consulted in the establishment of new Award conditions  • Faculty or Departments have been consulted with new Award conditions, setup and awarding process of new Awards Those who are actively participating: • Undergraduate students, Graduate students, Faculty, Departments, Office of Advancement Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, (February 14, 2017) (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee Alignment/Compliance http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\n Alignment with Guiding Documents Institutional Strategic Plan – For the Public Good To begin, we will attract outstanding students… 1. OBJECTIVE: Build a diverse, inclusive community of exceptional undergraduate and graduate students from Edmonton, Alberta, Canada, and the world.  i. Strategy: Develop and implement an undergraduate and graduate recruitment strategy to attract top students from across the diverse communities in Alberta and Canada, leveraging our strengths as a comprehensive research-intensive, multi-campus university with options for francophone and rural liberal arts education. ii. Strategy: Develop and implement an undergraduate and graduate recruitment and retention strategy to attract top Indigenous students. iii. Strategy: Optimize our international recruiting strategies to attract well-qualified international students from regions of strategic importance, and enhance services and programs to ensure their academic success and integration into the activities of the university. iv. Strategy: Ensure that qualified undergraduate and graduate students can attend the university through the provision of robust student financial support.  Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to:       1. approve new undergraduate awards[.] […]” Attachments: 1.  Attachment 1: Proposed New Undergraduate Student Awards and Bursaries for Approval ",
+            "Participation": [
+                "Those who have been informed: ",
+                "• Donors are informed of U of A policy for Award establishment ",
+                "• Office of Advancement is informed of new Awards in process ",
+                "Those who have been consulted: ",
+                "• Donors, the Office of the Registrar, Office of Advancement have been consulted in the establishment of new Award conditions ",
+                "• Faculty or Departments have been consulted with new Award conditions, setup and awarding process of new Awards ",
+                "Those who are actively participating: ",
+                "• Undergraduate students, Graduate students, Faculty Departments, Office of Advancement "
+            ],
             "Approval Route": [
-                "GFC Undergraduate Awards and Scholarship Committee, (February 14,",
-                "2017) (for final approval)"
+                "GFC Undergraduate Awards and Scholarship Committee, (February 14, 2017) (for final approval)"
             ],
             "Final Approver": " GFC Undergraduate Awards and Scholarship Committee"
         },
         {
             "Item No.": "5",
             "Agenda Title": "Terms of Reference TOUR of GFC Standing Committees ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2017-02-14",
             "Committee": "UASC",
             "Proposed By": "Mark Loewen, Chair, Ad Hoc Committee on Academic Governance including Delegated Authority ",
             "Presenter": " Marc de Montigny, Julie Naylor ",
             "Description": "Details Responsibility General Faculties Council The Purpose of the item is (please be specific) Members of the ad hoc Committee are touring GFC Standing Committees to solicit input, perspectives, and innovative ideas on moving Academic Governance into the future. Your ideas and suggestions will contribute to further discussions and consultation and inform the final report and recommendations which come forward to GFC in April.  This is your opportunity to contribute to the transformation of academic governance at the University of Alberta.  As members of this committee, you are uniquely placed to provide input and ideas to the ad hoc committee – the chance to make a difference is now. If you have additional ideas after the meeting, it is not too late; contact any member of the ad hoc committee to share your ideas. But ideally you will share with your committee colleagues during the meeting and allow the synergy of the group to build upon ideas. The following questions are provided to start the conversation and Committee members are encouraged to reflect on these, and any other issues you think of, and come prepared for a discussion of whether and what changes you’d like to see. •   Are there reasons for clarifying or changing the mandate of your committee? •   Can improvements be made to the operations of your committee, including how issues come to your attention and how you interact with other GFC committees? •   Is the membership and composition of the Standing Committee appropriate? •   Is there clarity on your Committee’s relationship to full GFC in terms of when issues and decisions should go to GFC and how to report back to GFC? •   Upon reflection, have there been times when an item has been approved with delegated authority that should have gone to full GFC?  Timeline/Implementation Date Terms of Reference TOUR of GFC Standing Committees – February/March 2017 Endorsement of revised Terms of Reference – March/April 2017 Final Report and Recommendations - GFC on Friday, April 21, 2017 Supplementary Notes and context In September 2016, General Faculties Council established the Ad Hoc Committee on Academic Governance including Delegated Authority.  The Committee has worked since then to investigate the pressing issues within academic governance, to inform them of current practice, and to develop recommendations based upon what they have learned.   For more background information on previous work done as part of this academic governance review please contact the GFC Secretary at meg.brolley@ualberta.ca . Engagement and Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been informed: • General Faculties Council – November 21, 2016; January 30, 2017 Those who have been consulted: • Vice Provosts’ Council – January 16, 2017 • GFC Executive Committee – October 31, 2016, January 16, 2017 • Deans’ Council – January 18, 2017 • GFC Standing Committee Chairs – February 1, 2017 • Office of the President – ongoing  • Office of the Provost – ongoing  • Office of the Vice President (Research) – January 17, 2017 • University Research Policy Committee – January 27, 2017 • Office of the Registrar – January 26, 2017 • Office of the Dean of Students – ongoing  • Board of Governors Chair – February 3, 2017 Those who are actively participating: • Ad Hoc Committee on Academic Governance including Delegated Authority – ongoing  Alignment/Compliance Alignment with Guiding Documents For the Public Good Strategic Goals  Goal:  EXCEL as individuals, and together, sustain a culture that fosters and champions distinction and distinctiveness in teaching, learning, research, and service. Goal:  SUSTAIN our people, our work, and the environment by attracting and stewarding the resources we need to deliver excellence to the benefit of all Albertans. Objective 21:  Encourage continuous improvement in administrative, governance, planning and stewardship systems, procedures, and mailto:meg.brolley@ualberta.ca\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\n policies that enable students, faculty, staff, and the institutions as a whole to achieve shared strategic goals. Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) “Powers of general faculties council” 26(1)Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university […]  (3) A general faculties council may delegate any of its powers, duties and functions under this Act, including the powers referred to in section 31, as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” 2. GFC Ad Hoc Committee on Academic Governance including Delegated Authority Terms of Reference 1. To examine the terms of reference of all GFC standing committees paying particular attention to:  • Mandate (structured appropriately? Duplication? Gaps? Current practice) • Delegated authority  • Committee composition (appropriate size and membership)  • Current context  2. To identify the key elements in each GFC Standing Committee’s role as it relates to the responsibilities and efficacy of the overall academic governance of GFC.  3. To initiate discussion on any other matters the ad hoc committee considers relevant to its purpose and to provide recommendations on other matters related to academic governance that arise during the review.  4. To be informed by the GFC discussions in 2015-16 (March 21 materials and minutes; May 2 materials and minutes), including documents such as ‘A Reflection on the State of Academic Governance at the University of Alberta’ and other literature and best practices in the field.  5. To provide recommendations on revisions to the terms of reference including delegated authority for GFC and GFC standing committees.  6. Identify further steps (ie administrative delegations, faculty councils, UAPPOL).  7. Provide regular status reports to GFC. Attachments: 1. Terms of Reference (6 pages) 2. Guiding Principles of the Ad Hoc Committee on Academic Governance including Delegated Authority (2 pages)  ",
-            "Approval Route": "N/A",
+            "Participation": [
+                "Those who have been informed: ",
+                "• General Faculties Council – November 21, 2016; January 30, 2017 ",
+                "Those who have been consulted: ",
+                "• Vice Provosts’ Council – January 16, 2017 ",
+                "• GFC Executive Committee – October 31, 2016, January 16, 2017 ",
+                "• Deans’ Council – January 18, 2017 ",
+                "• GFC Standing Committee Chairs – February 1, 2017 ",
+                "• Office of the President – ongoing ",
+                "• Office of the Provost – ongoing ",
+                "• Office of the Vice President (Research) – January 17, 2017 ",
+                "• University Research Policy Committee – January 27, 2017 ",
+                "• Office of the Registrar – January 26, 2017 ",
+                "• Office of the Dean of Students – ongoing ",
+                "• Board of Governors Chair – February 3, 2017 ",
+                "Those who are actively participating: ",
+                "• Ad Hoc Committee on Academic Governance including ",
+                "Delegated Authority – ongoing ",
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
             "Final Approver": "N/A"
         }
     ],
-    "PDF url": "UASC_Tuesday, February 14, 2017 \n_Material.pdf"
+    "url": "/static/UASC/2017-02-14/Past-Meeting-Material.pdf"
 }

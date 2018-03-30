@@ -1,6 +1,6 @@
 {
     "Committee": "APC",
-    "Date": "Wednesday, May 10, 2017 \n",
+    "Date": "2017-05-10",
     "Title": "APC General Faculties Council - 2017-05-10",
     "Location": "2-31 South Academic Building (SAB)",
     "Time": "2:00 PM - 4:00 PM",
@@ -28,11 +28,44 @@
         {
             "Item No.": "4",
             "Agenda Title": "Draft University of Alberta 2016-2017Annual Report to Government of Alberta ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
             "Date": "2017-05-10",
             "Committee": "APC",
             "Proposed By": "Gitta Kulczycki (Vice-President, Finance and Administration) ",
             "Presenter": " Deborah Williams (Interim Associate Vice-President, Audit and Analysis) ",
             "Description": "Details Responsibility Finance and Administration The Purpose of the Proposal is (please be specific) To provide the Committee with a copy of the draft Annual Report for information and discussion. The Annual Report is a requirement of the Government of Alberta. It is prepared in accordance with provincial guidelines and reports on the university’s Comprehensive Institutional Plan and accomplishments during the period of April 1, 2016 to March 31, 2017. The Report is also intended to function as a report to the university community on progress against For the Public Good. Accordingly, the document reports thematically on the five goals articulated in For the Public Good, while also demonstrating how these contribute to advancing government’s adult learning system principles (accessibility, affordability, quality, coordination, accountability).    Financial components follow a separate approval route and are incorporated into the Annual Report following their approval by the Board Audit Committee. Note that minor updates to Performance Measures will be incorporated as current data becomes available. The Impact of the Proposal is Satisfies accountability requirements under the Post-Secondary Learning Act.  Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Deadline for submission to government is September 30, 2016. Estimated Cost and funding source N/A Next Steps (ie.: Communications Plan, Implementation plans) Following approval, the Report will be submitted to Alberta Advanced Education. Supplementary Notes and context Engagement and Routing (Include meeting dates) Participation: (parties who have seen the Those who have been informed: •  proposal and in what capacity) <For further information see the link posted on the Governance Toolkit section Student Participation Protocol> Those who have been consulted: • President’s Executive Committee – Operations  • Office of the President • General Faculties Council Academic Planning Committee Those who are actively participating: • Office of the Provost and Vice-President (Academic) – member of Annual Report advisory committee; coordination of faculty input • Government and Stakeholder Relations – member of Annual Report advisory committee • Internal Communications – member of Annual Report advisory committee • Vice-President (Research) (research components) • Facilities and Operations (capital plan component) • University Relations (community engagement components) • Financial Services (financial components) • University of Alberta International (internationalization components) • Information Services and Technology (IT components) • Office of the Registrar (enrolment-related components) • Office of the Dean of Students (student service components) Approval Route (Governance) (including meeting dates) GFC Academic Planning Committee (for discussion / information ) – May 10, 2017 Board Audit Committee – May 29, 2017 Board University Relations Committee – June 1, 2017 Board of Governors – June 23, 2017  Final Approver Board of Governors Alignment/Compliance Alignment with Guiding Documents Reports on the 2016 Comprehensive Institutional Plan Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA) Section 79 states:  “(1) Each year a board must prepare and submit to the Minister a report that includes (a) the audited financial statements for the preceding fiscal year, and (b) any other information the Minister requires.  (2) The annual report must be submitted to the Minister on or before the date specified by the Minister.” 2. GFC Academic Planning Committee Terms of Reference/3. Mandate of the Committee: “The Academic Planning Committee (APC) is GFC's senior committee dealing with academic, financial and planning issues. […] 15. a. To recommend to the Board of Governors and/or GFC on any other matter deemed by APC to be within the purview of its general responsibility.” 3. Board Audit Committee Terms of Reference 3. Mandate: “Except as provided in Section 4 hereof and in the Board's General Committee Terms of Reference, the Committee shall monitor, evaluate and make decisions on behalf of the Board with respect to all auditing, financial reporting and internal control functions relating to the University.” http://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\nhttp://www.governance.ualberta.ca/GovernanceToolkit/Toolkit.aspx\n“Other Responsibilities… (aa) the Committee shall review the performance of the University in the areas of responsibility of the Committee, against key strategic performance Page 6 initiatives and performance measure reports and results in place from time to time and report thereon to the Board.”  4. Board University Relations Committee Terms of Reference 2. Mandate: “The Committee guides efforts to ensure that the University identifies and effectively interprets strategic communication themes and key messages to targeted audiences, to enhance relationships, influence outcomes and advance the university’s interests.” 3. Scope of Duty: “a. Recommend Board approval of proposals within the Committee mandate….” and “e. Maintain oversight, at the appropriate governance level, on institutional and strategic issues within the Committee Mandate.”  Attachments (each to be numbered 1 - <>) 1. Draft University of Alberta Annual Report 2016-17 (72 pages) 2. Enrolment Table (13 pages) ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "Those who have been informed: ",
+                "• ",
+                "proposal and in what capacity) ",
+                "<For further information see ",
+                "the link posted on ",
+                "the Governance Toolkit section ",
+                "Student Participation Protocol> ",
+                "Those who have been consulted: ",
+                "• President’s Executive Committee – Operations ",
+                "• Office of the President ",
+                "• General Faculties Council Academic Planning Committee ",
+                "Those who are actively participating: ",
+                "• Office of the Provost and Vice-President (Academic) – member of ",
+                "Annual Report advisory committee; coordination of faculty input ",
+                "• Government and Stakeholder Relations – member of Annual ",
+                "Report advisory committee ",
+                "• Internal Communications – member of Annual Report advisory ",
+                "committee ",
+                "• Vice-President (Research) (research components) ",
+                "• Facilities and Operations (capital plan component) ",
+                "• University Relations (community engagement components) ",
+                "• Financial Services (financial components) ",
+                "• University of Alberta International (internationalization ",
+                "components) ",
+                "• Information Services and Technology (IT components) ",
+                "• Office of the Registrar (enrolment-related components) ",
+                "• Office of the Dean of Students (student service components) "
+            ],
             "Approval Route": [
                 "GFC Academic Planning Committee (for discussion / information ) – May",
                 "10, 2017",
@@ -43,5 +76,5 @@
             "Final Approver": " Board of Governors"
         }
     ],
-    "PDF url": "APC_Wednesday, May 10, 2017 \n_Material.pdf"
+    "url": "/static/APC/2017-05-10/Past-Meeting-Material.pdf"
 }
