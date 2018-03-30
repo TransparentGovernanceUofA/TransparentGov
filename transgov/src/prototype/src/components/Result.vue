@@ -61,10 +61,8 @@ export default{
     return {
       ElasticResult: {},
       advancedFilters: {
-        topic: null,
         committee: null,
         date: null,
-        text: null,
         people: null
       }
     }
@@ -93,6 +91,7 @@ export default{
     fetchData () {
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
+<<<<<<< HEAD
               query: {
                 multi_match: {
                   'query': this.inputField.search,
@@ -116,6 +115,26 @@ export default{
                 }
               }
             }
+=======
+        query: {
+          multi_match: {
+            'query': this.inputField.search,
+            'type': 'cross_fields',
+            'fields' : [ '_all' ],
+            'fuzziness': '2',
+            'operator': 'and',
+            }
+
+        },
+        'highlight': {
+          'fields': {
+            '*': {
+
+            },
+          }
+        }
+      }
+>>>>>>> b7d77330d42f149b3201e87d352b74d66d43a18c
 
       // using axios, get es results
       // console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
@@ -133,35 +152,27 @@ export default{
           console.log(err)
         })
     },
-
     parseQuery () {
+<<<<<<< HEAD
 
+=======
+>>>>>>> b7d77330d42f149b3201e87d352b74d66d43a18c
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
       var advancedArray = this.advanced.split(':')
       if (advancedArray[1] !== 'false') {
-        this.advancedFilters.topic = advancedArray[2]
-        if (this.advancedFilters.topic === '') {
-          this.advancedFilters.topic = null
-        }
-
-        this.advancedFilters.committee = advancedArray[4]
+        this.advancedFilters.committee = advancedArray[2]
         if (this.advancedFilters.committee === '') {
           this.advancedFilters.committee = null
         }
 
-        this.advancedFilters.date = advancedArray[6]
+        this.advancedFilters.date = advancedArray[4]
         if (this.advancedFilters.date === '') {
           this.advancedFilters.date = null
         }
 
-        this.advancedFilters.text = advancedArray[8]
-        if (this.advancedFilters.text === '') {
-          this.advancedFilters.text = null
-        }
-
-        this.advancedFilters.people = advancedArray[10]
+        this.advancedFilters.people = advancedArray[6]
         if (this.advancedFilters.people === '') {
           this.advancedFilters.people = null
         }

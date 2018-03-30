@@ -4,15 +4,18 @@
       <b-row align-v="center" align-h="center">
         <b-col cols="auto">
           <router-link to="/">
-            <img src="./../assets/logoClearGov-XS.png" id="logo"/>
+            <img src="./../assets/logoOpenGov2-3.svg" id="logo" class="m-2"/>
           </router-link>
-          
         </b-col>
         <b-col>
-          <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/>
-          <!-- <input id="input-box" v-if = "truthy" v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
-          <!-- <input id="input-box" disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
-          <!-- <input id="input-box" v-else disabled v-model="searchBoxText" v-on:keyup.enter="goToResults()"/> -->
+          <div id="input-group-keeper">
+            <b-input-group>
+              <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()" class="form-control"/>
+              <b-input-group-append>
+                <b-button variant="outline-primary" size="sm" class="topLeftSearch" id="searchButton" v-on:click="goToResults()"><b>Search</b></b-button>
+              </b-input-group-append>
+            </b-input-group>
+          </div>
         </b-col>
       </b-row>
       <b-row>
@@ -67,12 +70,6 @@ export default {
 
       let isAdvancedSearch = false
 
-      let topicStr = 'topic::'
-      if (this.topic != null) {
-        isAdvancedSearch = true
-        topicStr = 'topic:' + this.topic + ':'
-      }
-
       let committeeStr = 'committee::'
       if (this.committee != null) {
         isAdvancedSearch = true
@@ -85,12 +82,6 @@ export default {
         dateStr = 'date:' + this.date + ':'
       }
 
-      let textStr = 'text::'
-      if (this.text != null) {
-        isAdvancedSearch = true
-        textStr = 'text:' + this.text + ':'
-      }
-
       let peopleStr = 'people::'
       if (this.people != null) {
         isAdvancedSearch = true
@@ -99,7 +90,7 @@ export default {
 
       let advancedStr = 'advanced:false'
       if (isAdvancedSearch) {
-        advancedStr = 'advanced:' + topicStr + committeeStr + dateStr + textStr + peopleStr
+        advancedStr = 'advanced:' + committeeStr + dateStr + peopleStr
       }
 
       this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
@@ -108,14 +99,10 @@ export default {
       // console.log('Pill clicked')
 
       if (this.$route.name === 'Advanced Search') {
-        if (pill.type === 'topic') {
-          this.advancedForm.topic = null
-        } else if (pill.type === 'committee') {
+        if (pill.type === 'committee') {
           this.advancedForm.committee = null
         } else if (pill.type === 'date') {
           this.advancedForm.date = null
-        } else if (pill.type === 'text') {
-          this.advancedForm.text = null
         } else {
           this.advancedForm.people = null
         }
@@ -158,25 +145,17 @@ export default {
       }
     },
     loadPills: function () {
-      this.addPills('topic', this.topic)
       this.addPills('committee', this.committee)
       this.addPills('date', this.date)
-      this.addPills('text', this.text)
       this.addPills('people', this.people)
     }
   },
   computed: {
-    topic () {
-      return this.advancedForm.topic
-    },
     committee () {
       return this.advancedForm.committee
     },
     date () {
       return this.advancedForm.date
-    },
-    text () {
-      return this.advancedForm.text
     },
     people () {
       return this.advancedForm.people
@@ -192,18 +171,11 @@ export default {
     //   }
     // }
 
-    topic () {
-      // console.log('topic changed')
-      this.addPills('topic', this.topic)
-    },
     committee () {
       this.addPills('committee', this.committee)
     },
     date () {
       this.addPills('date', this.date)
-    },
-    text () {
-      this.addPills('text', this.text)
     },
     people () {
       this.addPills('people', this.people)
@@ -214,13 +186,19 @@ export default {
 </script>
 
 <style>
+#input-group-keeper{
+  /* This has a minimum width to prevent the search button from wrapping down below the search box on medium screens */
+  /* The first value is the minimum size of the search box, the second value is the size of the search button */
+  min-width: calc(200px + 65px);
+}
 #input-box{
-  width: 100%;
-  
+  width: calc(100% - 100px);
   /* These stop the input box from getting too large or small on different displays */
-  max-width: 500px; 
+  max-width: 500px;
   min-width: 200px;
-  
   height: 35px;
 }
+#logo{
+    width: 200px;
+  }
 </style>

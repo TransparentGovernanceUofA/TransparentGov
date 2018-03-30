@@ -6,15 +6,20 @@
           <b-row>
             <b-col>
               <router-link to="/">
-                <img src="./../assets/logoClearGov-M.png" id="logo"/>
+                <img src="./../assets/logoOpenGov2-3anim.svg" class="m-2"/>
               </router-link>
+            </b-col>
+          </b-row>
+          <b-row>
+            <b-col>
+              <small>Transparent and Open Governance at the University of Alberta</small>
             </b-col>
           </b-row>
 
           <b-row class="mt-2" align-h="center">
             <b-col lg=8>
               <!-- b-form-input breaks the listening for key up of enter -->
-              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" />
+              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" class="form-control"/>
               <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
             </b-col>
           </b-row>
@@ -97,5 +102,20 @@ export default {
 }
 .search{
   width: 100%;
+}
+@keyframes hideshow {
+  0% { transform: translate(0px, 0px); }
+  5% { transform: translate(-100px, 0px); }
+  80% { transform: translate(-100px, 0px); }
+  85% { transform: translate(0px, 0px); }
+  100% { transform: translate(0px, 0px); }
+} 
+
+/* The element to apply the animation to */
+
+#rect1 {
+    animation-name: hideshow;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 </style>
