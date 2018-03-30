@@ -62,7 +62,7 @@ export default {
         items.clear() // Prevents duplication of results - potential bottleneck if dynamically adding data to a large result set
         this.results.forEach(function (item, index) {
           try {
-            items.add({id: item._id, content: item._source.Title, start: item._source.Date, title: "test"})
+            items.add({id: item._id, content: item._source.Title, start: item._source.Date, title: "Click to jump to result"})
           } catch (e) {
             console.log('There was an error adding an item')
           }

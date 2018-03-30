@@ -55,7 +55,7 @@
     color: #FFF;
     font-size: 13px;
     line-height: 1.4;
-    z-index: 1;
+    z-index: 2;
 }
 
 .help-tip p:before{ /* The pointer of the tooltip */
