@@ -3,8 +3,24 @@
     <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
     <b-container fluid>
       <b-row>
-        <b-col cols=12>
+        <b-col cols="auto">
           <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
+          
+        </b-col>
+        <b-col cols="auto">
+          <div class="help-tip">
+            <p>The timeline is a way to visualize your search results by the date they occured on.<br/>
+              Each bubble shows the committee and day, and a line connects it to the precise location on the timeline at the bottom of the visualization.<br/>
+              <strong>Controls:</strong><br/>
+              [Mouse Wheel/Pinch]: Zoom <br/>
+              [Click + Drag/Swipe]: Scroll left and right. Also scroll up or down there are enough results to stack.<br/>
+              [Select an Item]: Jump immediately to the corresponding search result card below the timeline.
+            </p>
+          </div>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
           <b-collapse id="collapse1" class="mt-2">
             <timeline :results="ElasticResult"></timeline>
           </b-collapse>
