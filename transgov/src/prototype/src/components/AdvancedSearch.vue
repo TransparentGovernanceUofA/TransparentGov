@@ -125,9 +125,9 @@ export default {
       },
       committeeOptions: [
         { value: null, text: '' },
-        { value: 'ASC', text: 'ASC ' },
-        { value: 'APC', text: 'APC' },
-        { value: 'GFC', text: 'GFC' }
+        { value: 'asc', text: 'asc ' },
+        { value: 'apc', text: 'apc' },
+        { value: 'gfc', text: 'gfc' }
       ],
       dateOptions: [
         { value: null, text: '' },
@@ -137,9 +137,9 @@ export default {
       ],
       peopleOptions: [
         { value: null, text: '' },
-        { value: 'Scott Jeffrey', text: 'Scott Jeffrey' },
-        { value: 'Eleni Stroulia', text: 'Eleni Stroulia' },
-        { value: 'Meg Brolley', text: 'Meg Brolley' }
+        { value: 'scott jeffrey', text: 'scott jeffrey' },
+        { value: 'eleni stroulia', text: 'eleni stroulia' },
+        { value: 'meg brolley', text: 'meg brolley' }
       ]
     }
   }

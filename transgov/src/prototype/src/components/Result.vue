@@ -119,8 +119,16 @@ export default{
           }
       }
 
+      //   'highlight': {
+      //     'fields': {
+      //       '*': {
+      //       },
+      //     }
+      // }
+  }
 
-      }
+
+
 
       // using axios, get es results
       // console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
@@ -163,26 +171,75 @@ export default{
       }
 
       const advanced_query = {
-          "query": {
-              "more_like_this": {
-                  "fields": [
-                      "_all"
-                  ],
-                  "like_text": this.advancedFilters.committee + this.advancedFilters.date + this.advancedFilters.people,
-                  "min_term_freq": 1,
-                  //"percent_terms_to_match": 1,
-                  "min_doc_freq": 1
-              }
+        //   "query": {
+        //       "more_like_this": {
+        //           "fields": [
+        //               "_all"
+        //           ],
+        //           "like_text": this.advancedFilters.committee + this.advancedFilters.date + this.advancedFilters.people,
+        //           "min_term_freq": 1,
+        //           "percent_terms_to_match": 100,
+        //           "min_doc_freq": 0
+        //       }
+        //
+        // },
+        query: {
+                  filtered: {
+                      "query": {
+                          "match": { "Attendees": this.advancedFilters.people}
+                      },
+                    filter: {
+                      bool: {
+                        should: [{
+                          term: {
+                            'Committee': this.advancedFilters.committee
+                        }
+                        }]
+                      }
+                    }
+                  }
 
-        },
-        'highlight': {
-          'fields': {
-            '*': {
 
-            },
-          }
-      }
-      }
+                  }
+      //   'highlight': {
+      //     'fields': {
+      //       '*': {
+      //       },
+      //     }
+      // }
+  }
+        // "query":{
+        //     "filtered":{
+        //         "query":{
+        //             //"term":{"Committee":this.advancedFilters.committee},
+        //             "term":{"Date":this.advancedFilters.date},
+        //             "term":{"Attendees":this.advancedFilters.people},
+        //         },
+        //         "filter":{
+        //              "term":{"Committee":this.advancedFilters.committee},
+        //          }
+        //     }
+        // },
+      //   "query": {
+      //       "filtered" : {
+      //           "query" : {
+      //               "term" : { "Committee" : this.advancedFilters.committee }
+      //           },
+      //           "filter" : {
+      //               "and" : [
+      //                   {
+      //                       "term":{"Attendees":this.advancedFilters.people}
+      //                   },
+      //                   {
+      //                       "term":{"Date":this.advancedFilters.date}
+      //                   }
+      //               ],
+      //               "_cache" : true
+      //           }
+      //       }
+      //   }
+
+
 
       axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
         params: {
