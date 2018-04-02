@@ -1,7 +1,7 @@
 <template>
   <div class="advancedSearch">
     <top-left-search :previousInputField="inputField" :advancedForm="form"></top-left-search>
-    {{ form }}
+    <!-- {{ form }} -->
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -108,12 +108,13 @@ export default {
           this.form.committee = null
         }
 
-        this.form.date = advancedArray[4]
-        if (this.form.date === '') {
-          this.form.date = null
-        }
+        // this.form.date = advancedArray[4]
+        // if (this.form.date === '') {
+        //   this.form.date = null
+        // }
 
         this.form.people = advancedArray[6]
+        console.log("form", this.form.people)
         if (this.form.people === '') {
           this.form.people = null
         }

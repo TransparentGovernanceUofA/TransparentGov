@@ -97,7 +97,7 @@ export default {
     },
 
     pillClicked: function (pill, index) {
-      console.log('Pill clicked')
+      console.log('Pill clicked', pill.type)
       let new_arr = []
       if (this.$route.name === 'Advanced Search') {
         if (pill.type === 'committee') {
@@ -111,9 +111,11 @@ export default {
           }
           console.log("changed", new_arr)
           this.advancedForm.committee = new_arr
-        } else if (pill.type === 'date') {
-          this.advancedForm.date = null
-        } else {
+        } 
+        // else if (pill.type === 'date') {
+        //   this.advancedForm.date = null
+        // } 
+        else {
           // this.advancedForm.people = null
           console.log("people pill clicked")
           console.log(this.pills)
@@ -125,11 +127,12 @@ export default {
           console.log("changed", new_arr)
           this.advancedForm.people = new_arr
         }
+        console.log("here")
       } else if (this.$route.name === 'Result') {
         // console.log('Pill clicked from the results page')
         let query = this.$route.params.query
         let advanced = this.$route.params.advanced
-
+        console.log("back to advanced search", "query:", query, "advanced", advanced)
         this.$router.push({name: 'Advanced Search', params: { query: query, advanced: advanced }})
       }
     },
@@ -192,9 +195,21 @@ export default {
       var dumb_fuck_arr = []
       console.log("committee shit", this.committee)
       console.log("people shit", this.people)
-      this.addPills('committee', this.committee, dumb_fuck_arr)
-      // this.addPills('date', this.date)
-      this.addPills('people', this.people, dumb_fuck_arr)
+      if(typeof(this.committee) === 'string' && this.committee!= null){
+        this.addPills('committee', this.committee.split(","), dumb_fuck_arr)
+      }
+      else if(this.committee!= null){
+        this.addPills('committee', this.committee, dumb_fuck_arr)
+      }
+
+      if(typeof(this.people) === "string"){
+        console.log("frm")
+        this.addPills('people', this.people.split(","), dumb_fuck_arr)
+      }
+      else{
+        this.addPills('people', this.people, dumb_fuck_arr)
+      }
+      console.log("shii")
     }
   },
   computed: {
@@ -206,6 +221,7 @@ export default {
       return this.advancedForm.date
     },
     people () {
+      console.log("computed people")
       return this.advancedForm.people
     }
   },
@@ -230,9 +246,9 @@ export default {
       // }
       this.addPills('committee', this.committee, dumb_fuck_arr)
     },
-    date () {
-      this.addPills('date', this.date)
-    },
+    // date () {
+    //   this.addPills('date', this.date)
+    // },
     people () {
       // this.addPills('people', this.people)
       var dumb_fuck_arr = []

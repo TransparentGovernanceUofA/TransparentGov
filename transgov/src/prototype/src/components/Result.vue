@@ -1,7 +1,7 @@
 <template>
   <div class="results">
     <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
-    {{ advancedFilters }}
+    <!-- {{ advancedFilters }} -->
     <b-container fluid>
       <b-row>
         <b-col cols="auto">
@@ -150,8 +150,22 @@ export default{
       var advancedArray = this.advanced.split(':')
       console.log('advancedArray', advancedArray)
       if (advancedArray[1] !== 'false') {
-        this.advancedFilters.committee = advancedArray[2].split(",")
-        this.advancedFilters.people = advancedArray[6].split(",")
+        let split = advancedArray[2].split(",")
+        if(split[0] == ""){
+          //do nothing
+        }
+        else{
+          this.advancedFilters.committee = advancedArray[2].split(",")
+        }
+        // this.advancedFilters.committee = advancedArray[2].split(",")
+        split = advancedArray[6].split(",")
+        if(split[0] == ""){
+          //do nothing
+        }
+        else{
+          this.advancedFilters.people = advancedArray[6].split(",")
+        }
+        console.log(advancedFilters.people)
         console.log("advanced committee in result", this.advancedFilters)
         // if (this.advancedFilters.committee === '') {
         //   this.advancedFilters.committee = null
