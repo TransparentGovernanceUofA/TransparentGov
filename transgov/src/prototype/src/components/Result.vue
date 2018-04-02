@@ -1,6 +1,7 @@
 <template>
   <div class="results">
     <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
+    {{ advancedFilters }}
     <b-container fluid>
       <b-row>
         <b-col cols="auto">
@@ -78,7 +79,7 @@ export default{
       ElasticResult: {},
       advancedFilters: {
         committee: null,
-        date: null,
+        // date: null,
         people: null
       }
     }
@@ -97,7 +98,7 @@ export default{
       this.fetchData()
     },
     advanced: function () {
-      // console.log('advanced Changed')
+      console.log('advanced Changed')
       this.parseQuery()
       this.fetchData()
     }
@@ -145,23 +146,26 @@ export default{
     parseQuery () {
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
-
+      console.log("parseQuery", this.advanced)
       var advancedArray = this.advanced.split(':')
+      console.log('advancedArray', advancedArray)
       if (advancedArray[1] !== 'false') {
-        this.advancedFilters.committee = advancedArray[2]
-        if (this.advancedFilters.committee === '') {
-          this.advancedFilters.committee = null
-        }
+        this.advancedFilters.committee = advancedArray[2].split(",")
+        this.advancedFilters.people = advancedArray[6].split(",")
+        console.log("advanced committee in result", this.advancedFilters)
+        // if (this.advancedFilters.committee === '') {
+        //   this.advancedFilters.committee = null
+        // }
 
-        this.advancedFilters.date = advancedArray[4]
-        if (this.advancedFilters.date === '') {
-          this.advancedFilters.date = null
-        }
+        // this.advancedFilters.date = advancedArray[4]
+        // if (this.advancedFilters.date === '') {
+        //   this.advancedFilters.date = null
+        // }
 
-        this.advancedFilters.people = advancedArray[6]
-        if (this.advancedFilters.people === '') {
-          this.advancedFilters.people = null
-        }
+        // this.advancedFilters.people = advancedArray[6]
+        // if (this.advancedFilters.people === '') {
+        //   this.advancedFilters.people = null
+        // }
       }
       // console.log(this.advancedFilters)
       // console.log(this.inputField.search)

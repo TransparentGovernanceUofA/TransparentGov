@@ -153,8 +153,8 @@ export default {
         search: ''
       },
       form: {
-        committee: null,
-        people: null
+        committee: [],
+        people: []
       },
       committeeOptions: [
         // { value: null, text: '' }

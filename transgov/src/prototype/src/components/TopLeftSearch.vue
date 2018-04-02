@@ -95,6 +95,7 @@ export default {
 
       this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
     },
+
     pillClicked: function (pill, index) {
       console.log('Pill clicked')
       let new_arr = []
@@ -139,7 +140,7 @@ export default {
 
     addPills: function (type, elements, dumb_fuck_arr) {
 
-      console.log(this.pills.length, this.pills)
+      console.log("add pills function called", this.pills.length, this.pills)
       let i
       for (i = this.pills.length - 1; i >= 0; i--) {
         let insert = true
@@ -187,13 +188,18 @@ export default {
       }
     },
     loadPills: function () {
-      this.addPills('committee', this.committee)
-      this.addPills('date', this.date)
-      this.addPills('people', this.people)
+      console.log("load pills called")
+      var dumb_fuck_arr = []
+      console.log("committee shit", this.committee)
+      console.log("people shit", this.people)
+      this.addPills('committee', this.committee, dumb_fuck_arr)
+      // this.addPills('date', this.date)
+      this.addPills('people', this.people, dumb_fuck_arr)
     }
   },
   computed: {
     committee () {
+      console.log("computed committee")
       return this.advancedForm.committee
     },
     date () {
