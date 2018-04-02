@@ -139,22 +139,27 @@ export default {
 
     addPills: function (type, elements, dumb_fuck_arr) {
 
+      console.log(this.pills.length, this.pills)
       let i
       for (i = this.pills.length - 1; i >= 0; i--) {
         let insert = true
-        for (let j = 0; j < elements.length; j++) {
+        for (var j = 0; j < elements.length; j++) {
+          // console.log(j)
           console.log("Eelement", elements[j], "pill", this.pills[i].name, 'type', type)
           // checks if pill already exists
           if(elements[j] == this.pills[i].name && type==this.pills[i].type){
+            console.log("pill and input exist")
             insert = false
+            break
           }
-          else if(type!==this.pills[i].type){
-            insert = false
-          }
+          // else if(type!==this.pills[i].type){
+          //   insert = false
+          // }
         }
         // doesnt exist, remove it
-        if(insert){
-          console.log("remove")
+        if(insert && this.pills[i].type == type){
+
+          console.log("remove pill cause doesnt exist in input")
           console.log("to remove", this.pills[i])
           this.removePills(i)
         }
@@ -164,11 +169,13 @@ export default {
       for (i = 0; i < elements.length; i++) {
         let insert = true
         for (let j = 0; j < dumb_fuck_arr.length; j++) {
-          if(elements[i] == dumb_fuck_arr[j] && type==this.pills[i].type){
+          if(elements[i] == dumb_fuck_arr[j]){
+
             insert = false
           }
         }
         if(insert){
+          console.log("insert new pill", elements[i])
           this.pills.push({
           id: this.pills.length,
           name: elements[i],
