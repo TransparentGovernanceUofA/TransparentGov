@@ -9,7 +9,8 @@
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
               <div class="help-tip">
-                <p>List of committees at the University of Alberta.</p>
+                <p>List of committees at the University of Alberta. <br>
+                Multiple committees can be selected by pressing "Ctrl" and clicking on committees</p>
               </div>
               <b-form-group id="committee"
                           label="Committee"
@@ -20,6 +21,21 @@
                             :options="committeeOptions"
                             required
                             v-model="form.committee">
+                </b-form-select>
+              </b-form-group>
+              <div class="help-tip">
+                <p>Various members that take part in Governance discussions. <br>
+                Multiple members can be selected by pressing "Ctrl" and clicking on names</p>
+              </div>
+              <b-form-group id="people"
+                          label="People"
+                          label-for="exampleInput5">
+                <b-form-select id="exampleInput5"
+                            multiple
+                            :select-size="3"
+                            :options="peopleOptions"
+                            required
+                            v-model="form.people">
                 </b-form-select>
               </b-form-group>
               <b-form-group id="date">
@@ -36,20 +52,6 @@
                     <date-picker v-model="date_end":config="config_date_end"></date-picker>
                   </b-col>
                 </b-row>
-              </b-form-group>
-              <div class="help-tip">
-                <p>Various members that take part in Governance discussions.</p>
-              </div>
-              <b-form-group id="people"
-                          label="People"
-                          label-for="exampleInput5">
-                <b-form-select id="exampleInput5"
-                            multiple
-                            :select-size="3"
-                            :options="peopleOptions"
-                            required
-                            v-model="form.people">
-                </b-form-select>
               </b-form-group>
             </b-card>
           </b-col>

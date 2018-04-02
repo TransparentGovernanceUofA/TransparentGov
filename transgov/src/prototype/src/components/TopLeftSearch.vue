@@ -116,32 +116,49 @@ export default {
     },
     removePills: function (id) {
       this.pills.splice(id, 1)
+      console.log("in removePills", this.pills)
     },
 
-    addPills: function (type, element) {
-      // console.log('add Pills')
-      // if pill is changed to null, remove the cooresponding pill
-      if (element == null) {
-        for (let i = 0; i < this.pills.length; i++) {
-          if (this.pills[i].type === type) {
-            this.removePills(i)
+    addPills: function (type, elements, dumb_fuck_arr) {
+
+      let i
+      for (i = this.pills.length - 1; i >= 0; i--) {
+        let insert = true
+        for (let j = 0; j < elements.length; j++) {
+          console.log("Eelement", elements[j], "pill", this.pills[i].name, 'type', type)
+          // checks if pill already exists
+          if(elements[j] == this.pills[i].name && type==this.pills[i].type){
+            insert = false
+          }
+          else if(type!==this.pills[i].type){
+            insert = false
           }
         }
-      } else {
-        for (let i = 0; i < this.pills.length; i++) {
-          // remove respective pill if its value is changed but type remained the same
-          if (this.pills[i].type === type && this.pills[i].name !== element) {
-            this.removePills(i)
+        // doesnt exist, remove it
+        if(insert){
+          console.log("remove")
+          console.log("to remove", this.pills[i])
+          this.removePills(i)
+        }
+      }
+
+      // check if new pill needs to be added
+      for (i = 0; i < elements.length; i++) {
+        let insert = true
+        for (let j = 0; j < dumb_fuck_arr.length; j++) {
+          if(elements[i] == dumb_fuck_arr[j] && type==this.pills[i].type){
+            insert = false
           }
         }
-        // add pills
-        this.pills.push({
+        if(insert){
+          this.pills.push({
           id: this.pills.length,
-          name: element,
+          name: elements[i],
           type: type,
           style: 'primary',
           pillable: 'true'
         })
+        }
       }
     },
     loadPills: function () {
@@ -172,13 +189,30 @@ export default {
     // }
 
     committee () {
-      this.addPills('committee', this.committee)
+      var dumb_fuck_arr = []
+      for (let i = 0; i < this.pills.length; i++){
+        dumb_fuck_arr.push(this.pills[i].name)
+      }
+
+      // for (let i = 0; i < this.committee.length; i++){
+      //   this.addPills('committee', this.committee[i], dumb_fuck_arr)      
+      // }
+      this.addPills('committee', this.committee, dumb_fuck_arr)
     },
     date () {
       this.addPills('date', this.date)
     },
     people () {
-      this.addPills('people', this.people)
+      // this.addPills('people', this.people)
+      var dumb_fuck_arr = []
+      for (let i = 0; i < this.pills.length; i++){
+        dumb_fuck_arr.push(this.pills[i].name)
+      }
+
+      // for (let i = 0; i < this.committee.length; i++){
+      //   this.addPills('committee', this.committee[i], dumb_fuck_arr)      
+      // }
+      this.addPills('people', this.people, dumb_fuck_arr)
     }
   }
 }
