@@ -20,7 +20,7 @@
       </b-row>
       <b-row>
         <b-col v-for='(pill, index) in pills' :key='index' cols="auto">
-          <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
+          <Pill v-on:pill_clicked='pillClicked(pill, index)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
           </Pill>
         </b-col>
       </b-row>
@@ -95,16 +95,34 @@ export default {
 
       this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
     },
-    pillClicked: function (pill) {
-      // console.log('Pill clicked')
-
+    pillClicked: function (pill, index) {
+      console.log('Pill clicked')
+      let new_arr = []
       if (this.$route.name === 'Advanced Search') {
         if (pill.type === 'committee') {
-          this.advancedForm.committee = null
+          // this.advancedForm.committee = null
+          console.log("committee pill clicked")
+          console.log(this.pills)
+          for (let i = 0; i < this.pills.length; i++) {
+            if (this.pills[i].type == "committee" && index != i){
+              new_arr.push(this.pills[i].name)
+            }    
+          }
+          console.log("changed", new_arr)
+          this.advancedForm.committee = new_arr
         } else if (pill.type === 'date') {
           this.advancedForm.date = null
         } else {
-          this.advancedForm.people = null
+          // this.advancedForm.people = null
+          console.log("people pill clicked")
+          console.log(this.pills)
+          for (let i = 0; i < this.pills.length; i++) {
+            if (this.pills[i].type == "people" && index != i){
+              new_arr.push(this.pills[i].name)
+            }    
+          }
+          console.log("changed", new_arr)
+          this.advancedForm.people = new_arr
         }
       } else if (this.$route.name === 'Result') {
         // console.log('Pill clicked from the results page')
