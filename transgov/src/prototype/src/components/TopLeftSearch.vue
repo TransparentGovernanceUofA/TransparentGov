@@ -97,19 +97,17 @@ export default {
     },
 
     pillClicked: function (pill, index) {
-      console.log('Pill clicked', pill.type)
+      // console.log('Pill clicked', pill.type)
       let new_arr = []
       if (this.$route.name === 'Advanced Search') {
         if (pill.type === 'committee') {
           // this.advancedForm.committee = null
-          console.log("committee pill clicked")
-          console.log(this.pills)
+          // update advancedForm.committee with only pills that were not clicked on
           for (let i = 0; i < this.pills.length; i++) {
             if (this.pills[i].type == "committee" && index != i){
               new_arr.push(this.pills[i].name)
             }    
           }
-          console.log("changed", new_arr)
           this.advancedForm.committee = new_arr
         } 
         // else if (pill.type === 'date') {
@@ -117,18 +115,16 @@ export default {
         // } 
         else {
           // this.advancedForm.people = null
-          console.log("people pill clicked")
-          console.log(this.pills)
+          // update advancedForm.committee with only pills that were not clicked on
           for (let i = 0; i < this.pills.length; i++) {
             if (this.pills[i].type == "people" && index != i){
               new_arr.push(this.pills[i].name)
             }    
           }
-          console.log("changed", new_arr)
           this.advancedForm.people = new_arr
         }
-        console.log("here")
-      } else if (this.$route.name === 'Result') {
+      } 
+      else if (this.$route.name === 'Result') {
         // console.log('Pill clicked from the results page')
         let query = this.$route.params.query
         let advanced = this.$route.params.advanced
@@ -138,17 +134,14 @@ export default {
     },
     removePills: function (id) {
       this.pills.splice(id, 1)
-      console.log("in removePills", this.pills)
     },
 
-    addPills: function (type, elements, dumb_fuck_arr) {
-
-      console.log("add pills function called", this.pills.length, this.pills)
+    addPills: function (type, elements, original) {
+      // console.log("add pills function called", this.pills.length, this.pills)
       let i
       for (i = this.pills.length - 1; i >= 0; i--) {
         let insert = true
         for (var j = 0; j < elements.length; j++) {
-          // console.log(j)
           console.log("Eelement", elements[j], "pill", this.pills[i].name, 'type', type)
           // checks if pill already exists
           if(elements[j] == this.pills[i].name && type==this.pills[i].type){
@@ -156,15 +149,9 @@ export default {
             insert = false
             break
           }
-          // else if(type!==this.pills[i].type){
-          //   insert = false
-          // }
         }
         // doesnt exist, remove it
         if(insert && this.pills[i].type == type){
-
-          console.log("remove pill cause doesnt exist in input")
-          console.log("to remove", this.pills[i])
           this.removePills(i)
         }
       }
@@ -172,8 +159,8 @@ export default {
       // check if new pill needs to be added
       for (i = 0; i < elements.length; i++) {
         let insert = true
-        for (let j = 0; j < dumb_fuck_arr.length; j++) {
-          if(elements[i] == dumb_fuck_arr[j]){
+        for (let j = 0; j < original.length; j++) {
+          if(elements[i] == original[j]){
 
             insert = false
           }
@@ -190,26 +177,24 @@ export default {
         }
       }
     },
+
     loadPills: function () {
-      console.log("load pills called")
-      var dumb_fuck_arr = []
-      console.log("committee shit", this.committee)
-      console.log("people shit", this.people)
+      var original = []
+      // typeof===string means its coming from result, else coming from advancedSearch
       if(typeof(this.committee) === 'string' && this.committee!= null){
-        this.addPills('committee', this.committee.split(","), dumb_fuck_arr)
+        this.addPills('committee', this.committee.split(","), original)
       }
       else if(this.committee!= null){
-        this.addPills('committee', this.committee, dumb_fuck_arr)
+        this.addPills('committee', this.committee, original)
       }
 
       if(typeof(this.people) === "string"){
         console.log("frm")
-        this.addPills('people', this.people.split(","), dumb_fuck_arr)
+        this.addPills('people', this.people.split(","), original)
       }
       else{
-        this.addPills('people', this.people, dumb_fuck_arr)
+        this.addPills('people', this.people, original)
       }
-      console.log("shii")
     }
   },
   computed: {
@@ -236,30 +221,21 @@ export default {
     // }
 
     committee () {
-      var dumb_fuck_arr = []
+      var original = []
       for (let i = 0; i < this.pills.length; i++){
-        dumb_fuck_arr.push(this.pills[i].name)
+        original.push(this.pills[i].name)
       }
-
-      // for (let i = 0; i < this.committee.length; i++){
-      //   this.addPills('committee', this.committee[i], dumb_fuck_arr)      
-      // }
-      this.addPills('committee', this.committee, dumb_fuck_arr)
+      this.addPills('committee', this.committee, original)
     },
     // date () {
     //   this.addPills('date', this.date)
     // },
     people () {
-      // this.addPills('people', this.people)
-      var dumb_fuck_arr = []
+      var original = []
       for (let i = 0; i < this.pills.length; i++){
-        dumb_fuck_arr.push(this.pills[i].name)
+        original.push(this.pills[i].name)
       }
-
-      // for (let i = 0; i < this.committee.length; i++){
-      //   this.addPills('committee', this.committee[i], dumb_fuck_arr)      
-      // }
-      this.addPills('people', this.people, dumb_fuck_arr)
+      this.addPills('people', this.people, original)
     }
   }
 }
