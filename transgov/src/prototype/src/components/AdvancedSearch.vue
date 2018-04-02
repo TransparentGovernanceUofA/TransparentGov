@@ -1,6 +1,7 @@
 <template>
   <div class="advancedSearch">
     <top-left-search :previousInputField="inputField" :advancedForm="form"></top-left-search>
+    {{ form }}
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -14,6 +15,8 @@
                           label="Committee"
                           label-for="exampleInput2">
                 <b-form-select id="exampleInput2"
+                            multiple
+                            :select-size="3"
                             :options="committeeOptions"
                             required
                             v-model="form.committee">
@@ -41,6 +44,8 @@
                           label="People"
                           label-for="exampleInput5">
                 <b-form-select id="exampleInput5"
+                            multiple
+                            :select-size="3"
                             :options="peopleOptions"
                             required
                             v-model="form.people">
@@ -150,10 +155,10 @@ export default {
         people: null
       },
       committeeOptions: [
-        { value: null, text: '' }
+        // { value: null, text: '' }
       ],
       peopleOptions: [
-        { value: null, text: '' },
+        // { value: null, text: '' },
       ],
       date_start: null,
       config_date_start: {
