@@ -30,7 +30,7 @@
                       <p>Date picker, allows searching in a range of dates.</p>
                     </div>
                     <p> End: </p>
-                    <date-picker v-model="date_end" @change="change" :config="config_date_end"></date-picker>
+                    <date-picker v-model="date_end":config="config_date_end"></date-picker>
                   </b-col>
                 </b-row>
               </b-form-group>
@@ -62,6 +62,7 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
+import axios from 'axios'
 
 export default {
   props: {
@@ -81,6 +82,8 @@ export default {
   },
   created () {
     this.parseQuery()
+    this.fetchCommittee()
+    this.fetchPeople()
   },
   methods: {
     // this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
@@ -111,8 +114,29 @@ export default {
       // console.log(this.form)
       // console.log(this.inputField.search)
     },
-    change () {
-      console.log("change")
+    fetchCommittee () {
+      axios.get('http://162.246.156.217:8080/excel/committees/_search?pretty')
+        .then((resp) => {
+          const committee_resp = resp.data.hits.hits
+          for(var i = 0; i < committee_resp.length; i++) {
+            this.committeeOptions.push(committee_resp[i]._source.Committee)
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    fetchPeople () {
+      axios.get('http://162.246.156.217:8080/excel/members/_search?pretty')
+        .then((resp) => {
+          const people_resp = resp.data.hits.hits
+          for(var i = 0; i < people_resp.length; i++) {
+            this.peopleOptions.push(people_resp[i]._source['Contact Name'])
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   },
   data () {
@@ -123,26 +147,13 @@ export default {
       },
       form: {
         committee: null,
-        date: null,
         people: null
       },
       committeeOptions: [
-        { value: null, text: '' },
-        { value: '1 committee', text: '1 committee' },
-        { value: '2 committee', text: '2 committee' },
-        { value: '3 comimttee', text: '3 comimttee' }
-      ],
-      dateOptions: [
-        { value: null, text: '' },
-        { value: '1 idk', text: '1 idk' },
-        { value: '2 what', text: '2 what' },
-        { value: '3 we want for this', text: '3 we want for this' }
+        { value: null, text: '' }
       ],
       peopleOptions: [
         { value: null, text: '' },
-        { value: 'Eleni', text: 'Eleni' },
-        { value: 'Barbosa', text: 'Barbosa' },
-        { value: 'Diego', text: 'Diego' }
       ],
       date_start: null,
       config_date_start: {
@@ -166,7 +177,7 @@ export default {
 </script>
 
 <style>
-#end{
-  z-index:-1;
+#time-help{
+  left: 86.5%;
 }
 </style>
