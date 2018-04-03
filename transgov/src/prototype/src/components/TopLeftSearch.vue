@@ -20,7 +20,7 @@
       </b-row>
       <b-row>
         <b-col v-for='(pill, index) in pills' :key='index' cols="auto">
-          <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
+          <Pill v-on:pill_clicked='pillClicked(pill, index)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
           </Pill>
         </b-col>
       </b-row>
@@ -95,22 +95,40 @@ export default {
 
       this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
     },
-    pillClicked: function (pill) {
-      // console.log('Pill clicked')
 
+    pillClicked: function (pill, index) {
+      // console.log('Pill clicked', pill.type)
+      let new_arr = []
       if (this.$route.name === 'Advanced Search') {
         if (pill.type === 'committee') {
-          this.advancedForm.committee = null
-        } else if (pill.type === 'date') {
-          this.advancedForm.date = null
-        } else {
-          this.advancedForm.people = null
+          // this.advancedForm.committee = null
+          // update advancedForm.committee with only pills that were not clicked on
+          for (let i = 0; i < this.pills.length; i++) {
+            if (this.pills[i].type == "committee" && index != i){
+              new_arr.push(this.pills[i].name)
+            }    
+          }
+          this.advancedForm.committee = new_arr
+        } 
+        // else if (pill.type === 'date') {
+        //   this.advancedForm.date = null
+        // } 
+        else {
+          // this.advancedForm.people = null
+          // update advancedForm.committee with only pills that were not clicked on
+          for (let i = 0; i < this.pills.length; i++) {
+            if (this.pills[i].type == "people" && index != i){
+              new_arr.push(this.pills[i].name)
+            }    
+          }
+          this.advancedForm.people = new_arr
         }
-      } else if (this.$route.name === 'Result') {
+      } 
+      else if (this.$route.name === 'Result') {
         // console.log('Pill clicked from the results page')
         let query = this.$route.params.query
         let advanced = this.$route.params.advanced
-
+        console.log("back to advanced search", "query:", query, "advanced", advanced)
         this.$router.push({name: 'Advanced Search', params: { query: query, advanced: advanced }})
       }
     },
@@ -118,46 +136,77 @@ export default {
       this.pills.splice(id, 1)
     },
 
-    addPills: function (type, element) {
-      // console.log('add Pills')
-      // if pill is changed to null, remove the cooresponding pill
-      if (element == null) {
-        for (let i = 0; i < this.pills.length; i++) {
-          if (this.pills[i].type === type) {
-            this.removePills(i)
+    addPills: function (type, elements, original) {
+      // console.log("add pills function called", this.pills.length, this.pills)
+      let i
+      for (i = this.pills.length - 1; i >= 0; i--) {
+        let insert = true
+        for (var j = 0; j < elements.length; j++) {
+          console.log("Eelement", elements[j], "pill", this.pills[i].name, 'type', type)
+          // checks if pill already exists
+          if(elements[j] == this.pills[i].name && type==this.pills[i].type){
+            console.log("pill and input exist")
+            insert = false
+            break
           }
         }
-      } else {
-        for (let i = 0; i < this.pills.length; i++) {
-          // remove respective pill if its value is changed but type remained the same
-          if (this.pills[i].type === type && this.pills[i].name !== element) {
-            this.removePills(i)
+        // doesnt exist, remove it
+        if(insert && this.pills[i].type == type){
+          this.removePills(i)
+        }
+      }
+
+      // check if new pill needs to be added
+      for (i = 0; i < elements.length; i++) {
+        let insert = true
+        for (let j = 0; j < original.length; j++) {
+          if(elements[i] == original[j]){
+
+            insert = false
           }
         }
-        // add pills
-        this.pills.push({
+        if(insert){
+          console.log("insert new pill", elements[i])
+          this.pills.push({
           id: this.pills.length,
-          name: element,
+          name: elements[i],
           type: type,
           style: 'primary',
           pillable: 'true'
         })
+        }
       }
     },
+
     loadPills: function () {
-      this.addPills('committee', this.committee)
-      this.addPills('date', this.date)
-      this.addPills('people', this.people)
+      var original = []
+      // typeof===string means its coming from result, else coming from advancedSearch
+      if(typeof(this.committee) === 'string' && this.committee!= null){
+        this.addPills('committee', this.committee.split(","), original)
+      }
+      else if(this.committee!= null){
+        this.addPills('committee', this.committee, original)
+      }
+
+      if(typeof(this.people) === "string"){
+        console.log("frm")
+        this.addPills('people', this.people.split(","), original)
+      }
+      else{
+        this.addPills('people', this.people, original)
+      }
     }
   },
   computed: {
     committee () {
+      console.log("computed committee")
       return this.advancedForm.committee
     },
     date () {
       return this.advancedForm.date
     },
     people () {
+      console.log("computed people")
       return this.advancedForm.people
     }
   },
@@ -172,13 +221,21 @@ export default {
     // }
 
     committee () {
-      this.addPills('committee', this.committee)
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].name)
+      }
+      this.addPills('committee', this.committee, original)
     },
-    date () {
-      this.addPills('date', this.date)
-    },
+    // date () {
+    //   this.addPills('date', this.date)
+    // },
     people () {
-      this.addPills('people', this.people)
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].name)
+      }
+      this.addPills('people', this.people, original)
     }
   }
 }

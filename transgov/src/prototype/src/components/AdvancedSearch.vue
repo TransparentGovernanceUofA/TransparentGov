@@ -1,6 +1,7 @@
 <template>
   <div class="advancedSearch">
     <top-left-search :previousInputField="inputField" :advancedForm="form"></top-left-search>
+    <!-- {{ form }} -->
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -8,40 +9,49 @@
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
               <div class="help-tip">
-                <p>List of committees at the University of Alberta.</p>
+                <p>List of committees at the University of Alberta. <br>
+                Multiple committees can be selected by pressing "Ctrl" and clicking on committees</p>
               </div>
               <b-form-group id="committee"
                           label="Committee"
                           label-for="exampleInput2">
                 <b-form-select id="exampleInput2"
+                            multiple
+                            :select-size="3"
                             :options="committeeOptions"
                             required
                             v-model="form.committee">
                 </b-form-select>
               </b-form-group>
-               <div class="help-tip">
-                <p>Date picker, allows searching in a range of dates.</p>
-              </div>
-              <b-form-group id="date"
-                          label="Date"
-                          label-for="exampleInput3">
-                <b-form-select id="exampleInput3"
-                            :options="dateOptions"
-                            required
-                            v-model="form.date">
-                </b-form-select>
-              </b-form-group>
               <div class="help-tip">
-                <p>Various members that take part in Governance discussions.</p>
+                <p>Various members that take part in Governance discussions. <br>
+                Multiple members can be selected by pressing "Ctrl" and clicking on names</p>
               </div>
               <b-form-group id="people"
                           label="People"
                           label-for="exampleInput5">
                 <b-form-select id="exampleInput5"
+                            multiple
+                            :select-size="3"
                             :options="peopleOptions"
                             required
                             v-model="form.people">
                 </b-form-select>
+              </b-form-group>
+              <b-form-group id="date">
+                <b-row>
+                  <b-col>
+                    <p> Start: </p>
+                    <date-picker v-model="date_start" :config="config_date_start"></date-picker>
+                  </b-col>
+                  <b-col>
+                    <div id="time-help" class="help-tip">
+                      <p>Date picker, allows searching in a range of dates.</p>
+                    </div>
+                    <p> End: </p>
+                    <date-picker v-model="date_end":config="config_date_end"></date-picker>
+                  </b-col>
+                </b-row>
               </b-form-group>
             </b-card>
           </b-col>
@@ -75,11 +85,12 @@ export default {
     }
   },
   components: {
-    TopLeftSearch
+    TopLeftSearch,
   },
   created () {
     this.parseQuery()
-    //this.fetchData()
+    this.fetchCommittee()
+    this.fetchPeople()
   },
   methods: {
     // this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
@@ -98,18 +109,43 @@ export default {
           this.form.committee = null
         }
 
-        this.form.date = advancedArray[4]
-        if (this.form.date === '') {
-          this.form.date = null
-        }
+        // this.form.date = advancedArray[4]
+        // if (this.form.date === '') {
+        //   this.form.date = null
+        // }
 
         this.form.people = advancedArray[6]
+        console.log("form", this.form.people)
         if (this.form.people === '') {
           this.form.people = null
         }
       }
       // console.log(this.form)
       // console.log(this.inputField.search)
+    },
+    fetchCommittee () {
+      axios.get('http://162.246.156.217:8080/excel/committees/_search?pretty')
+        .then((resp) => {
+          const committee_resp = resp.data.hits.hits
+          for(var i = 0; i < committee_resp.length; i++) {
+            this.committeeOptions.push(committee_resp[i]._source.Committee)
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    fetchPeople () {
+      axios.get('http://162.246.156.217:8080/excel/members/_search?size=1200&q=*:*')
+        .then((resp) => {
+          const people_resp = resp.data.hits.hits
+          for(var i = 0; i < people_resp.length; i++) {
+            this.peopleOptions.push(people_resp[i]._source['Contact Name'])
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   },
   data () {
@@ -119,118 +155,40 @@ export default {
         search: ''
       },
       form: {
-        committee: null,
-        date: null,
-        people: null
+        committee: [],
+        people: []
       },
       committeeOptions: [
-        { value: null, text: '' },
-        { value: 'asc', text: 'asc ' },
-        { value: 'apc', text: 'apc' },
-        { value: 'gfc', text: 'gfc' }
-      ],
-      dateOptions: [
-        { value: null, text: '' },
-        { value: '1 idk', text: '1 idk' },
-        { value: '2 what', text: '2 what' },
-        { value: '3 we want for this', text: '3 we want for this' }
+        // { value: null, text: '' }
       ],
       peopleOptions: [
-        { value: null, text: '' },
-        { value: 'scott jeffrey', text: 'scott jeffrey' },
-        { value: 'eleni stroulia', text: 'eleni stroulia' },
-        { value: 'meg brolley', text: 'meg brolley' }
-      ]
+        // { value: null, text: '' },
+      ],
+      date_start: null,
+      config_date_start: {
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        showClear: true,
+        showClose: true,
+        maxDate: new Date()
+      },
+      date_end: new Date(),
+      config_date_end: {
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        showClear: true,
+        showClose: true,
+        maxDate: new Date()
+      }
     }
   }
 }
 </script>
 
 <style>
-.help-tip{
-    position: absolute;
-    /*top: 18px;*/
-    /*right: 100px;*/
-    text-align: center;
-    background-color: #BCDBEA;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    font-size: 14px;
-    line-height: 26px;
-    cursor: default;
-    left: 92.5%;
-}
 
-.help-tip:before{
-    content:'?';
-    font-weight: bold;
-    color:#fff;
-}
+#time-help{
+  left: 86.5%;
 
-.help-tip:hover p{
-    display:block;
-    transform-origin: 100% 0%;
-
-    -webkit-animation: fadeIn 0.3s ease-in-out;
-    animation: fadeIn 0.3s ease-in-out;
-
-}
-
-.help-tip p{    /* The tooltip */
-    display: none;
-    text-align: left;
-    background-color: #1E2021;
-    padding: 10px;
-    width: 300px;
-    position: absolute;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    /*right: -4px;*/
-    left: -4px;
-    color: #FFF;
-    font-size: 13px;
-    line-height: 1.4;
-    z-index: 1;
-}
-
-.help-tip p:before{ /* The pointer of the tooltip */
-    position: absolute;
-    content: '';
-    width:0;
-    height: 0;
-    border:6px solid transparent;
-    border-bottom-color:#1E2021;
-    /*right:10px;*/
-    left:10px;
-    top:-12px;
-}
-
-.help-tip p:after{ /* Prevents the tooltip from being hidden */
-    width:100%;
-    height:40px;
-    content:'';
-    position: absolute;
-    top:-40px;
-    left:0;
-}
-
-/* CSS animation */
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity:0;
-        transform: scale(0.6);
-    }
-
-    100% {
-        opacity:100%;
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeIn {
-    0% { opacity:0; }
-    100% { opacity:100%; }
 }
 </style>

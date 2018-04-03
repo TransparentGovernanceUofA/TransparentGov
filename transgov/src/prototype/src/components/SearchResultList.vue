@@ -1,7 +1,8 @@
 <template>
   <div id="search-result-list">
     <!-- This is a sub-component, the parent should declare a container for it -->
-    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult.id" class="mt-4" no-gutters>
+    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult._id" class="mt-4" no-gutters>
+      <!-- Note: the id of this row is used by the timeline component for click to focus -->
       <b-col>
         <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
         </SearchResult> -->
@@ -97,6 +98,9 @@
         -->
       </b-col>
     </b-row>
+    <div class="spacer">
+      <!-- The only purpose of this class is to give scroll space to allow the user to scroll to the very last card freely -->
+    </div>
   </div>
 </template>
 
@@ -112,24 +116,27 @@ export default {
 </script>
 
 <style>
-.clamp-3{
-  max-height: 4.5em;
-  overflow: hidden;
-}
+  .clamp-3{
+    max-height: 4.5em;
+    overflow: hidden;
+  }
 
-em{
-  font-style:normal;
-  font-weight: bold;
-  background-color: #FFFFCC;
-}
-#tabs-lvl-1>.card-header{
-  background-color: #e1e3e3;
-}
-.card-header em{
-  background-color: #686b00;
-}
-#tabs-lvl-1>.card-header>ul>li:nth-child(3)>a.active{
-  background-color: #f7f7f7;
-  border-bottom-color: #f7f7f7;
+  em{
+    font-style:normal;
+    font-weight: bold;
+    background-color: #FFFFCC;
+  }
+  #tabs-lvl-1>.card-header{
+    background-color: #e1e3e3;
+  }
+  .card-header em{
+    background-color: #686b00;
+  }
+  #tabs-lvl-1>.card-header>ul>li:nth-child(3)>a.active{
+    background-color: #f7f7f7;
+    border-bottom-color: #f7f7f7;
+  }
+  .spacer{
+    height: 99vh;
   }
 </style>

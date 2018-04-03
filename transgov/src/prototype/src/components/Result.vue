@@ -1,10 +1,27 @@
 <template>
   <div class="results">
     <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
+    <!-- {{ advancedFilters }} -->
     <b-container fluid>
       <b-row>
-        <b-col cols=12>
+        <b-col cols="auto">
           <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
+
+        </b-col>
+        <b-col cols="auto">
+          <div class="help-tip">
+            <p>The timeline is a way to visualize your search results by the date they occured on.<br/>
+              Each bubble shows the committee and day, and a line connects it to the precise location on the timeline at the bottom of the visualization.<br/>
+              <strong>Controls:</strong><br/>
+              [Mouse Wheel/Pinch]: Zoom <br/>
+              [Click + Drag/Swipe]: Scroll left and right. Also scroll up or down there are enough results to stack.<br/>
+              [Select an Item]: Jump immediately to the corresponding search result card below the timeline.
+            </p>
+          </div>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
           <b-collapse id="collapse1" class="mt-2">
             <timeline :results="ElasticResult"></timeline>
           </b-collapse>
@@ -62,7 +79,7 @@ export default{
       ElasticResult: {},
       advancedFilters: {
         committee: null,
-        date: null,
+        // date: null,
         people: null
       }
     }
@@ -81,7 +98,7 @@ export default{
       this.fetchData()
     },
     advanced: function () {
-      // console.log('advanced Changed')
+      console.log('advanced Changed')
       this.parseQuery()
       //this.fetchData()
     }
@@ -156,24 +173,42 @@ export default{
 
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
-
+      console.log("parseQuery", this.advanced)
       var advancedArray = this.advanced.split(':')
+      console.log('advancedArray', advancedArray)
       if (advancedArray[1] !== 'false') {
 
-        this.advancedFilters.committee = advancedArray[2]
-        if (this.advancedFilters.committee === '') {
-          this.advancedFilters.committee = null
-        }
+        let split = advancedArray[2].split(",")
+        if(split[0] == ""){
+          //do nothing
 
-        this.advancedFilters.date = advancedArray[4]
-        if (this.advancedFilters.date === '') {
-          this.advancedFilters.date = null
         }
+        else{
+          this.advancedFilters.committee = advancedArray[2].split(",")
+        }
+        // this.advancedFilters.committee = advancedArray[2].split(",")
+        split = advancedArray[6].split(",")
+        if(split[0] == ""){
+          //do nothing
+        }
+        else{
+          this.advancedFilters.people = advancedArray[6].split(",")
+        }
+        console.log(advancedFilters.people)
+        console.log("advanced committee in result", this.advancedFilters)
+        // if (this.advancedFilters.committee === '') {
+        //   this.advancedFilters.committee = null
+        // }
 
-        this.advancedFilters.people = advancedArray[6]
-        if (this.advancedFilters.people === '') {
-          this.advancedFilters.people = null
-        }
+        // this.advancedFilters.date = advancedArray[4]
+        // if (this.advancedFilters.date === '') {
+        //   this.advancedFilters.date = null
+        // }
+
+        // this.advancedFilters.people = advancedArray[6]
+        // if (this.advancedFilters.people === '') {
+        //   this.advancedFilters.people = null
+        // }
       }
 
       const advanced_query = {
