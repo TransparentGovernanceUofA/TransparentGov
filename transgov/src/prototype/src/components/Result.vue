@@ -95,10 +95,16 @@ export default{
           multi_match: {
             'query': this.inputField.search,
             'type': 'cross_fields',
-            'fields' : [ '_all' ],
+            'fields' : [ 'Description' ],
             'fuzziness': '2',
             'operator': 'and',
-            }
+        },
+        multi_match: {
+          'query': this.inputField.search,
+          //'type': 'cross_fields',
+          'fields' : [ 'Attendees', 'Items.Agenda Title', 'Committee' ],
+          'operator': 'and',
+      },
    //        "query": {
    //            "more_like_this": {
    //                "fields": [
