@@ -20,7 +20,7 @@
       </b-row>
       <b-row>
         <b-col v-for='(pill, index) in pills' :key='index' cols="auto">
-          <Pill v-on:pill_clicked='pillClicked(pill)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
+          <Pill v-on:pill_clicked='pillClicked(pill, index)' :text='pill.name' :pill-style='pill.style' :pillable='pill.pillable'>
           </Pill>
         </b-col>
       </b-row>
@@ -70,94 +70,159 @@ export default {
 
       let isAdvancedSearch = false
 
-      let committeeStr = 'committee::'
+      let committeeStr = 'committee:'
       if (this.committee != null) {
         isAdvancedSearch = true
-        committeeStr = 'committee:' + this.committee + ':'
+        committeeStr = 'committee:' + this.committee
       }
 
-      let dateStr = 'date::'
-      if (this.date != null) {
+      let dateStartStr = 'dateStart:'
+      if (this.date_start != null) {
         isAdvancedSearch = true
-        dateStr = 'date:' + this.date + ':'
+        dateStartStr = 'dateStart:' + this.date_start
       }
 
-      let peopleStr = 'people::'
+      let dateEndStr = 'dateEnd:'
+      if (this.date_end != null) {
+        isAdvancedSearch = true
+        dateEndStr = 'dateEnd:' + this.date_end
+      }
+
+      let peopleStr = 'people:'
       if (this.people != null) {
         isAdvancedSearch = true
-        peopleStr = 'people:' + this.people + ':'
+        peopleStr = 'people:' + this.people
       }
 
-      let advancedStr = 'advanced:false'
-      if (isAdvancedSearch) {
-        advancedStr = 'advanced:' + committeeStr + dateStr + peopleStr
-      }
 
-      this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
+      this.$router.push({name: 'Result', params: { query: search, committees: committeeStr, people: peopleStr, dateStart: dateStartStr, dateEnd: dateEndStr }})
     },
-    pillClicked: function (pill) {
-      // console.log('Pill clicked')
 
+    pillClicked: function (pill, index) {
+      // console.log('Pill clicked', pill.type)
       if (this.$route.name === 'Advanced Search') {
+        let new_arr = []
         if (pill.type === 'committee') {
-          this.advancedForm.committee = null
-        } else if (pill.type === 'date') {
-          this.advancedForm.date = null
-        } else {
-          this.advancedForm.people = null
+          // this.advancedForm.committee = null
+          // update advancedForm.committee with only pills that were not clicked on
+          for (let i = 0; i < this.pills.length; i++) {
+            if (this.pills[i].type == "committee" && index != i){
+              new_arr.push(this.pills[i].data)
+            }    
+          }
+          this.advancedForm.committee = new_arr
+        } 
+        // else if (pill.type === 'date') {
+        //   this.advancedForm.date = null
+        // } 
+        else if (pill.type === 'people') {
+          // this.advancedForm.people = null
+          // update advancedForm.committee with only pills that were not clicked on
+          for (let i = 0; i < this.pills.length; i++) {
+            if (this.pills[i].type == "people" && index != i){
+              new_arr.push(this.pills[i].data)
+            }    
+          }
+          this.advancedForm.people = new_arr
+        } else if (pill.type === 'date_start') {
+          this.advancedForm.date_start = null
+        } else if (pill.type === 'date_end') {
+          this.advancedForm.date_end = null
         }
-      } else if (this.$route.name === 'Result') {
+      } 
+      else if (this.$route.name === 'Result') {
         // console.log('Pill clicked from the results page')
         let query = this.$route.params.query
-        let advanced = this.$route.params.advanced
-
-        this.$router.push({name: 'Advanced Search', params: { query: query, advanced: advanced }})
+        let committees = this.$route.params.committees
+        let people = this.$route.params.people
+        let date_start = this.$route.params.date_start
+        let date_end = this.$route.params.date_end
+        this.$router.push({name: 'Advanced Search', params: { query: query, committees: committees, people: people, date_start: date_start, date_end: date_end }})
       }
     },
     removePills: function (id) {
       this.pills.splice(id, 1)
     },
 
-    addPills: function (type, element) {
-      // console.log('add Pills')
-      // if pill is changed to null, remove the cooresponding pill
-      if (element == null) {
-        for (let i = 0; i < this.pills.length; i++) {
-          if (this.pills[i].type === type) {
-            this.removePills(i)
+    addPills: function (type, elements, original) {
+      // console.log("add pills function called", this.pills.length, this.pills)
+      let i
+      for (i = this.pills.length - 1; i >= 0; i--) {
+        let insert = true
+        for (let j = 0; j < elements.length; j++) {
+          // console.log("Element", elements[j], "pill", this.pills[i].data, 'type', type)
+          // checks if pill already exists
+          if(elements[j] == this.pills[i].data && type==this.pills[i].type){
+            // console.log("pill and input exist")
+            insert = false
+            break
           }
         }
-      } else {
-        for (let i = 0; i < this.pills.length; i++) {
-          // remove respective pill if its value is changed but type remained the same
-          if (this.pills[i].type === type && this.pills[i].name !== element) {
-            this.removePills(i)
+        // doesnt exist, remove it
+        if(insert && this.pills[i].type == type){
+          this.removePills(i)
+        }
+      }
+
+      // check if new pill needs to be added
+      for (i = 0; i < elements.length; i++) {
+        let insert = true
+        for (let j = 0; j < original.length; j++) {
+          if(elements[i] == original[j]){
+
+            insert = false
           }
         }
-        // add pills
-        this.pills.push({
+        if(insert && elements[i] !== null){
+          // console.log("insert new pill", elements[i])
+          this.pills.push({
           id: this.pills.length,
-          name: element,
+          name: type + ': '  + elements[i],
+          data: elements[i],
           type: type,
           style: 'primary',
           pillable: 'true'
         })
+        }
       }
     },
+
     loadPills: function () {
-      this.addPills('committee', this.committee)
-      this.addPills('date', this.date)
-      this.addPills('people', this.people)
+      let original = []
+      // typeof===string means its coming from result, else coming from advancedSearch
+      if(typeof(this.committee) === 'string' && this.committee!= null){
+        this.addPills('committee', this.committee.split(","), original)
+      }
+      else if(this.committee!= null){
+        this.addPills('committee', this.committee, original)
+      }
+
+      if(typeof(this.people) === "string"){
+        console.log("frm")
+        this.addPills('people', this.people.split(","), original)
+      }
+      else{
+        this.addPills('people', this.people, original)
+      }
+
+      this.addPills('date_start', [this.date_start], original)
+
+      this.addPills('date_end', [this.date_end], original)
     }
   },
   computed: {
     committee () {
+      // console.log("computed committee")
       return this.advancedForm.committee
     },
-    date () {
-      return this.advancedForm.date
+    date_start () {
+      return this.advancedForm.date_start
+    },
+    date_end () {
+      return this.advancedForm.date_end
     },
     people () {
+      // console.log("computed people")
       return this.advancedForm.people
     }
   },
@@ -172,13 +237,37 @@ export default {
     // }
 
     committee () {
-      this.addPills('committee', this.committee)
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].data)
+      }
+      this.addPills('committee', this.committee, original)
     },
-    date () {
-      this.addPills('date', this.date)
-    },
+    // date () {
+    //   this.addPills('date', this.date)
+    // },
     people () {
-      this.addPills('people', this.people)
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].data)
+      }
+      this.addPills('people', this.people, original)
+    },
+
+    date_start () {
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].data)
+      }
+      this.addPills('date_start', [this.date_start], original)
+    },
+
+    date_end () {
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].data)
+      }
+      this.addPills('date_end', [this.date_end], original)
     }
   }
 }

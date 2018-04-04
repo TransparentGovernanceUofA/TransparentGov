@@ -26,12 +26,12 @@
 
           <b-row class="mt-2" align-h="center">
             <b-col class="mt-2 mt-lg-0" lg=4 order="2" order-lg="1">
-              <router-link :to="{name: 'Advanced Search', params: { query:'search:', advanced: 'advanced:false'}}">
+              <router-link :to="{name: 'Advanced Search', params: { query:'search:', committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}}">
                 <b-button variant="outline-primary" size="lg" class="search" id="advancedSearchButton">Advanced Guide</b-button>
               </router-link>
             </b-col>
             <b-col lg=4 order="1" order-lg="2">
-              <router-link :to="{name: 'Result', params: { query:'search:' + newSearchBoxText, advanced: 'advanced:false' }}">
+              <router-link :to="{name: 'Result', params: { query: 'search:' + newSearchBoxText, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}}">
                 <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
             </b-col>
@@ -75,7 +75,7 @@ export default {
       // console.log('-----goToResults function called------')
       // console.log(this.inputField)
       let search = this.inputField.search
-      this.$router.push({name: 'Result', params: { query: search, advanced: 'advanced:false' }})
+      this.$router.push({name: 'Result', params: { query: search, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}})
     }
   }
 }

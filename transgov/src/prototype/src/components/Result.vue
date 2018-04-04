@@ -89,7 +89,16 @@ export default{
     query: {
       type: String
     },
-    advanced: {
+    committees: {
+      type: String
+    },
+    people: {
+      type: String
+    },
+    dateStart: {
+      type: String
+    },
+    dateEnd: {
       type: String
     }
   },
@@ -104,9 +113,10 @@ export default{
     return {
       ElasticResult: {},
       advancedFilters: {
-        committee: null,
-        date: null,
-        people: null
+        committee: [],
+        people: [],
+        date_end: null,
+        date_start: null
       },
       searching: true,
       empty: true
@@ -183,23 +193,80 @@ export default{
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
-      var advancedArray = this.advanced.split(':')
-      if (advancedArray[1] !== 'false') {
-        this.advancedFilters.committee = advancedArray[2]
-        if (this.advancedFilters.committee === '') {
-          this.advancedFilters.committee = null
-        }
-
-        this.advancedFilters.date = advancedArray[4]
-        if (this.advancedFilters.date === '') {
-          this.advancedFilters.date = null
-        }
-
-        this.advancedFilters.people = advancedArray[6]
-        if (this.advancedFilters.people === '') {
-          this.advancedFilters.people = null
-        }
+      let committee = this.committees.replace('committee:', '').split(',')
+      if (committee[0] !== "") {
+        this.advancedFilters.committee = committee
+      } else {
+        this.advancedFilters.committee = []
       }
+      // console.log("parseQuery", this.advancedFilters.committee)
+
+      // console.log('|' + this.people + '|')
+      let people = this.people.replace('people:', '').split(',')
+      if (people[0] !== "") {
+        this.advancedFilters.people = people
+      } else {
+        this.advancedFilters.people = []
+      }
+      // console.log('People', people)
+      // console.log("parseQuery", this.advancedFilters.people)
+
+
+      let dateStr = this.dateStart.replace('dateStart:', '')
+      if (dateStr !== '') {
+        this.advancedFilters.date_start = dateStr
+      }
+      // console.log("parseQuery", this.advancedFilters.date_start)
+
+      dateStr = this.dateEnd.replace('dateEnd:', '')
+      if (dateStr !== '') {
+        this.advancedFilters.date_end = dateStr
+      }
+      // console.log("parseQuery", this.advancedFilters.date_end)
+
+      
+
+
+
+
+
+      // var advancedArray = this.advanced.split(':')
+      // console.log('advancedArray', advancedArray)
+      // if (advancedArray[1] !== 'false') { // if there are advanced terms
+      //   let split = advancedArray[2].split(",")
+      //   if(split[0] == ""){
+      //     //do nothing
+      //   }
+      //   else{
+      //     this.advancedFilters.committee = advancedArray[2].split(",")
+      //   }
+
+      //   let date_start = advancedArray[4]
+      //   if (date_start === "") {
+      //     this.advancedFilters.date_start = null
+      //   } else {
+      //     this.advancedFilters.date_start = new Date(date_start)
+      //   }
+
+      //   let date_end = advancedArray[6]
+      //   if (date_end === "") {
+      //     this.advancedFilters.date_end = null
+      //   } else {
+      //     this.advancedFilters.date_end = new Date(date_end)
+      //   }
+
+      //   // this.advancedFilters.committee = advancedArray[2].split(",")
+      //   split = advancedArray[8].split(",")
+      //   if(split[0] == ""){
+      //     //do nothing
+      //   }
+      //   else{
+      //     this.advancedFilters.people = advancedArray[8].split(",")
+      //   }
+      //   console.log(advancedFilters.people)
+      //   console.log("advanced committee in result", this.advancedFilters)
+        
+      // }
       // console.log(this.advancedFilters)
       // console.log(this.inputField.search)
     }
