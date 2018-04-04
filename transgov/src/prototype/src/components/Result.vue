@@ -1,9 +1,24 @@
 <template>
   <div class="results">
     <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
-    <!-- {{ advancedFilters }} -->
     <b-container fluid>
-      <b-row>
+      <b-row v-show="searching == true" id="loading_anim" align-h="center" class="mt-5 mb-5">
+        <b-col cols="auto">
+          <div class="la-ball-atom la-dark la-3x" >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </b-col>
+      </b-row>
+      <b-row v-show="searching == true" align-h="center">
+        <b-col cols="auto">
+          Asking the government...
+        </b-col>
+      </b-row>
+      
+      <b-row v-show="empty == false">
         <b-col cols="auto">
           <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
           
@@ -27,7 +42,7 @@
           </b-collapse>
         </b-col>
       </b-row>
-      <b-row>
+      <b-row class = "mt-2">
         <b-col>
           <search-result-list :test = "ElasticResult"></search-result-list>
           <!-- {{ inputField.search }} -->
@@ -42,6 +57,17 @@
         </b-col>
         -->
       </b-row>
+      <b-row align-h="center" class="mt-2">
+        <b-col v-show="searching == false && empty == false" cols="auto">
+          End of Search Results
+        </b-col>
+        <b-col v-show="searching == false && empty == true" cols="auto">
+          There are no results that matched your query
+        </b-col>
+      </b-row>
+      <div class="spacer">
+        <!-- The only purpose of this div is to give scroll space to allow the user to scroll to the very last card freely -->
+      </div>
     </b-container>
   </div>
 </template>
@@ -75,7 +101,6 @@ export default{
     dateEnd: {
       type: String
     }
-    
   },
   components: {
     SearchResultList,
@@ -92,7 +117,9 @@ export default{
         people: [],
         date_end: null,
         date_start: null
-      }
+      },
+      searching: true,
+      empty: true
     }
   },
   created () {
@@ -109,7 +136,7 @@ export default{
       this.fetchData()
     },
     advanced: function () {
-      console.log('advanced Changed')
+      // console.log('advanced Changed')
       this.parseQuery()
       this.fetchData()
     }
@@ -117,6 +144,7 @@ export default{
 
   methods: {
     fetchData () {
+      this.searching = true
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
         query: {
@@ -149,6 +177,13 @@ export default{
         .then((resp) => {
           console.log(resp)
           this.ElasticResult = resp.data.hits.hits
+          // Update the display, hide the loading animation, reveal the timeline, place an indicator at the end of the search results
+          if (this.ElasticResult.length == 0){
+            this.empty = true
+          } else {
+            this.empty = false
+          }
+          this.searching = false
         })
         .catch((err) => {
           console.log(err)
@@ -157,7 +192,6 @@ export default{
     parseQuery () {
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
-      // console.log("parseQuery", this.advanced)
 
       let committee = this.committees.replace('committee:', '').split(',')
       if (committee[0] !== "") {
@@ -242,4 +276,260 @@ export default{
 </script>
 
 <style>
+  .spacer{
+    height: 99vh;
+  }
+  /*!
+   * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+   * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+   * Licensed under MIT
+   */
+  .la-ball-atom,
+  .la-ball-atom > div {
+      position: relative;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+  }
+  .la-ball-atom {
+      display: block;
+      font-size: 0;
+      color: #fff;
+  }
+  .la-ball-atom.la-dark {
+      color: #333;
+  }
+  .la-ball-atom > div {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid currentColor;
+  }
+  .la-ball-atom {
+      width: 32px;
+      height: 32px;
+  }
+  .la-ball-atom > div:nth-child(1) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 60%;
+      height: 60%;
+      background: #00887a;
+      border-radius: 100%;
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      -webkit-animation: ball-atom-shrink 4.5s infinite linear;
+         -moz-animation: ball-atom-shrink 4.5s infinite linear;
+           -o-animation: ball-atom-shrink 4.5s infinite linear;
+              animation: ball-atom-shrink 4.5s infinite linear;
+  }
+  .la-ball-atom > div:not(:nth-child(1)) {
+      position: absolute;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: none;
+      -webkit-animation: ball-atom-zindex 3s 0s infinite steps(2, end);
+         -moz-animation: ball-atom-zindex 3s 0s infinite steps(2, end);
+           -o-animation: ball-atom-zindex 3s 0s infinite steps(2, end);
+              animation: ball-atom-zindex 3s 0s infinite steps(2, end);
+  }
+  .la-ball-atom > div:not(:nth-child(1)):before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      margin-left: -5px;
+      content: "";
+      background: currentColor;
+      border-radius: 50%;
+      opacity: .75;
+      -webkit-animation: ball-atom-position 3s 0s infinite ease, ball-atom-size 3s 0s infinite ease;
+         -moz-animation: ball-atom-position 3s 0s infinite ease, ball-atom-size 3s 0s infinite ease;
+           -o-animation: ball-atom-position 3s 0s infinite ease, ball-atom-size 3s 0s infinite ease;
+              animation: ball-atom-position 3s 0s infinite ease, ball-atom-size 3s 0s infinite ease;
+  }
+  .la-ball-atom > div:nth-child(2) {
+      -webkit-animation-delay: 1.5s;
+         -moz-animation-delay: 1.5s;
+           -o-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+  }
+  .la-ball-atom > div:nth-child(2):before {
+      -webkit-animation-delay: 0s, -2.25s;
+         -moz-animation-delay: 0s, -2.25s;
+           -o-animation-delay: 0s, -2.25s;
+              animation-delay: 0s, -2.25s;
+  }
+  .la-ball-atom > div:nth-child(3) {
+      -webkit-transform: rotate(120deg);
+         -moz-transform: rotate(120deg);
+          -ms-transform: rotate(120deg);
+           -o-transform: rotate(120deg);
+              transform: rotate(120deg);
+      -webkit-animation-delay: -.5s;
+         -moz-animation-delay: -.5s;
+           -o-animation-delay: -.5s;
+              animation-delay: -.5s;
+  }
+  .la-ball-atom > div:nth-child(3):before {
+      -webkit-animation-delay: -2s, -1.5s;
+         -moz-animation-delay: -2s, -1.5s;
+           -o-animation-delay: -2s, -1.5s;
+              animation-delay: -2s, -1.5s;
+  }
+  .la-ball-atom > div:nth-child(4) {
+      -webkit-transform: rotate(240deg);
+         -moz-transform: rotate(240deg);
+          -ms-transform: rotate(240deg);
+           -o-transform: rotate(240deg);
+              transform: rotate(240deg);
+      -webkit-animation-delay: .5s;
+         -moz-animation-delay: .5s;
+           -o-animation-delay: .5s;
+              animation-delay: .5s;
+  }
+  .la-ball-atom > div:nth-child(4):before {
+      -webkit-animation-delay: -1s, -.25s;
+         -moz-animation-delay: -1s, -.25s;
+           -o-animation-delay: -1s, -.25s;
+              animation-delay: -1s, -.25s;
+  }
+  .la-ball-atom.la-sm {
+      width: 16px;
+      height: 16px;
+  }
+  .la-ball-atom.la-sm > div:not(:nth-child(1)):before {
+      width: 4px;
+      height: 4px;
+      margin-top: -2px;
+      margin-left: -2px;
+  }
+  .la-ball-atom.la-2x {
+      width: 64px;
+      height: 64px;
+  }
+  .la-ball-atom.la-2x > div:not(:nth-child(1)):before {
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      margin-left: -10px;
+  }
+  .la-ball-atom.la-3x {
+      width: 96px;
+      height: 96px;
+  }
+  .la-ball-atom.la-3x > div:not(:nth-child(1)):before {
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;
+      margin-left: -15px;
+  }
+  /*
+   * Animations
+   */
+  @-webkit-keyframes ball-atom-position {
+      50% {
+          top: 100%;
+          left: 100%;
+      }
+  }
+  @-moz-keyframes ball-atom-position {
+      50% {
+          top: 100%;
+          left: 100%;
+      }
+  }
+  @-o-keyframes ball-atom-position {
+      50% {
+          top: 100%;
+          left: 100%;
+      }
+  }
+  @keyframes ball-atom-position {
+      50% {
+          top: 100%;
+          left: 100%;
+      }
+  }
+  @-webkit-keyframes ball-atom-size {
+      50% {
+          -webkit-transform: scale(.5, .5);
+                  transform: scale(.5, .5);
+      }
+  }
+  @-moz-keyframes ball-atom-size {
+      50% {
+          -moz-transform: scale(.5, .5);
+               transform: scale(.5, .5);
+      }
+  }
+  @-o-keyframes ball-atom-size {
+      50% {
+          -o-transform: scale(.5, .5);
+             transform: scale(.5, .5);
+      }
+  }
+  @keyframes ball-atom-size {
+      50% {
+          -webkit-transform: scale(.5, .5);
+             -moz-transform: scale(.5, .5);
+               -o-transform: scale(.5, .5);
+                  transform: scale(.5, .5);
+      }
+  }
+  @-webkit-keyframes ball-atom-zindex {
+      50% {
+          z-index: 10;
+      }
+  }
+  @-moz-keyframes ball-atom-zindex {
+      50% {
+          z-index: 10;
+      }
+  }
+  @-o-keyframes ball-atom-zindex {
+      50% {
+          z-index: 10;
+      }
+  }
+  @keyframes ball-atom-zindex {
+      50% {
+          z-index: 10;
+      }
+  }
+  @-webkit-keyframes ball-atom-shrink {
+      50% {
+          -webkit-transform: translate(-50%, -50%) scale(.8, .8);
+                  transform: translate(-50%, -50%) scale(.8, .8);
+      }
+  }
+  @-moz-keyframes ball-atom-shrink {
+      50% {
+          -moz-transform: translate(-50%, -50%) scale(.8, .8);
+               transform: translate(-50%, -50%) scale(.8, .8);
+      }
+  }
+  @-o-keyframes ball-atom-shrink {
+      50% {
+          -o-transform: translate(-50%, -50%) scale(.8, .8);
+             transform: translate(-50%, -50%) scale(.8, .8);
+      }
+  }
+  @keyframes ball-atom-shrink {
+      50% {
+          -webkit-transform: translate(-50%, -50%) scale(.8, .8);
+             -moz-transform: translate(-50%, -50%) scale(.8, .8);
+               -o-transform: translate(-50%, -50%) scale(.8, .8);
+                  transform: translate(-50%, -50%) scale(.8, .8);
+      }
+  }
 </style>
