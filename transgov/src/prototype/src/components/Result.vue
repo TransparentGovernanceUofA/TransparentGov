@@ -98,7 +98,7 @@ export default{
   created () {
     // console.log('Created----' + this.query)
     this.parseQuery()
-    this.fetchData()
+    //this.fetchData()
   },
 
   watch: {
@@ -106,7 +106,7 @@ export default{
     query: function () {
       // console.log('query Changed')
       this.parseQuery()
-      this.fetchData()
+      //this.fetchData()
     },
     advanced: function () {
       console.log('advanced Changed')
@@ -192,7 +192,7 @@ export default{
       } else {
         this.advancedFilters.committee = []
       }
-      // console.log("parseQuery", this.advancedFilters.committee)
+      console.log("Committee", committee)
 
       // console.log('|' + this.people + '|')
       let people = this.people.replace('people:', '').split(',')
@@ -201,7 +201,8 @@ export default{
       } else {
         this.advancedFilters.people = []
       }
-      console.log('People', people)
+      let peopleString = people.toString().replace(",", " ")
+      console.log('People', this.inputField.search + ' '+ peopleString)
       // console.log("parseQuery", this.advancedFilters.people)
 
 
@@ -216,7 +217,9 @@ export default{
         this.advancedFilters.date_end = dateStr
       }
       console.log("parseQuery", this.advancedFilters.date_end)
-      //console.log("person", people[0])
+      console.log("String", peopleString)
+      console.log("String", this.inputField.search)
+
 
       const advanced_query = {
   //   "query": {
@@ -231,60 +234,42 @@ export default{
   //       }
   //
   // },
-      //query: {
-                // filtered: {
-                //     "query": {
-                //         "match": { "Attendees": people[0]}
-                //     }
-                //   // filter: {
-                //   //   bool: {
-                //   //     should: [{
-                //   //       term: {
-                //   //         'Committee': committee
-                //   //     }
-                //   //     }]
-                //   //   }
-                //   // }
-                // }
+  query: {
+    multi_match: {
+      'query': this.inputField.search + ' '+ peopleString,
+      'type': 'cross_fields',
+      'fields' : [ 'Attendees^3', 'Items.Presenter^3', 'Items.Proposed By^3', 'Description'],
+      'fuzziness': '2',
+      'operator': 'or',
+  }
+//   multi_match: {
+//     'query': committee,
+//     //'type': 'cross_fields',
+//     'fields' : [ 'Committee', 'Items.Approval Route^5'],
+//     'operator': 'and',
+// },
+//        "query": {
+//            "more_like_this": {
+//                "fields": [
+//                    "_all"
+//                ],
+//                "like_text": "Transfer Credits",
+//                "min_term_freq": 1,
+//                //"percent_terms_to_match": 1,
+//                "min_doc_freq": 1
+// }
 
-            //     "query" :{
-            //             "filtered" : {
-            //                 "query" : {
-            //                     "multi_match" : {
-            //                         "query" : 'people[0]',
-            //                         "fields" : [ "Attendees",
-            //                                     "Items.Presenter",
-            //                                     "Items.Proposed By"]
-            //                     }
-            //                 }
-            //
-            //
-            //     }
-            // },
-            "query": {
-              "bool": {
-                "must": [
-,                  {
-                    "terms": {
-                      "Items.Presenter": people,
-                      //"minimum_should_match": 1
-                    }
-                },
-                  {
-                    "terms": {
-                      "Attendees": people,
-                      //"minimum_should_match": 1
-                    }
-                  },
-                ]
-              }
-            },
+  },
   'highlight': {
     'fields': {
       '*': {
+
       },
     }
 }
+
+
+
 }
   // "query":{
   //     "filtered":{
