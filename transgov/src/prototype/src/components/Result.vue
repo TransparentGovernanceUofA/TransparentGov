@@ -112,14 +112,14 @@ export default{
           multi_match: {
             'query': this.inputField.search,
             'type': 'cross_fields',
-            'fields' : [ 'Description' ],
+            'fields' : [ 'Description', 'Items.Agenda Title^3'],
             'fuzziness': '2',
             'operator': 'and',
         },
         multi_match: {
           'query': this.inputField.search,
           //'type': 'cross_fields',
-          'fields' : [ 'Attendees', 'Items.Agenda Title', 'Committee' ],
+          'fields' : [ 'Attendees', 'Committee', 'Items.Approval Route^5'],
           'operator': 'and',
       },
    //        "query": {
