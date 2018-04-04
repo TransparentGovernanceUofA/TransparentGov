@@ -107,7 +107,7 @@ export default {
           // update advancedForm.committee with only pills that were not clicked on
           for (let i = 0; i < this.pills.length; i++) {
             if (this.pills[i].type == "committee" && index != i){
-              new_arr.push(this.pills[i].name)
+              new_arr.push(this.pills[i].data)
             }    
           }
           this.advancedForm.committee = new_arr
@@ -120,7 +120,7 @@ export default {
           // update advancedForm.committee with only pills that were not clicked on
           for (let i = 0; i < this.pills.length; i++) {
             if (this.pills[i].type == "people" && index != i){
-              new_arr.push(this.pills[i].name)
+              new_arr.push(this.pills[i].data)
             }    
           }
           this.advancedForm.people = new_arr
@@ -150,9 +150,9 @@ export default {
       for (i = this.pills.length - 1; i >= 0; i--) {
         let insert = true
         for (let j = 0; j < elements.length; j++) {
-          // console.log("Element", elements[j], "pill", this.pills[i].name, 'type', type)
+          console.log("Element", elements[j], "pill", this.pills[i].data, 'type', type)
           // checks if pill already exists
-          if(elements[j] == this.pills[i].name && type==this.pills[i].type){
+          if(elements[j] == this.pills[i].data && type==this.pills[i].type){
             // console.log("pill and input exist")
             insert = false
             break
@@ -178,6 +178,7 @@ export default {
           this.pills.push({
           id: this.pills.length,
           name: type + ': '  + elements[i],
+          data: elements[i],
           type: type,
           style: 'primary',
           pillable: 'true'
@@ -238,7 +239,7 @@ export default {
     committee () {
       var original = []
       for (let i = 0; i < this.pills.length; i++){
-        original.push(this.pills[i].name)
+        original.push(this.pills[i].data)
       }
       this.addPills('committee', this.committee, original)
     },
@@ -248,7 +249,7 @@ export default {
     people () {
       var original = []
       for (let i = 0; i < this.pills.length; i++){
-        original.push(this.pills[i].name)
+        original.push(this.pills[i].data)
       }
       this.addPills('people', this.people, original)
     },
@@ -256,7 +257,7 @@ export default {
     date_start () {
       var original = []
       for (let i = 0; i < this.pills.length; i++){
-        original.push(this.pills[i].name)
+        original.push(this.pills[i].data)
       }
       this.addPills('date_start', [this.date_start], original)
     },
@@ -264,7 +265,7 @@ export default {
     date_end () {
       var original = []
       for (let i = 0; i < this.pills.length; i++){
-        original.push(this.pills[i].name)
+        original.push(this.pills[i].data)
       }
       this.addPills('date_end', [this.date_end], original)
     }
