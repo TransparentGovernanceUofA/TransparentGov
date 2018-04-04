@@ -15,8 +15,10 @@ from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from data import *
 from tika import parser
+from datetime import datetime
 
-debug = False
+debug = True
+dateFormat = ""
 
 #####################################
 ########## convert      #############
@@ -58,7 +60,7 @@ def convertJSON(filePath, jsonDict, fileName):
     discussionStarted = False
     discussionAdded = False
     motionStarted = False
-
+    afterWhiteSpace = 0
 
     pageNumber = 0
     appendString = []
@@ -73,27 +75,39 @@ def convertJSON(filePath, jsonDict, fileName):
         # Append basic meeting information found in same place everytime.
         ## TODO: Make dynamic.
 
-        if lineNumber <= 65:
-            if lineNumber == 56:
-                jsonDict["Meeting"]["committee"] = str(text).rstrip()
-                if debug: print("Committee: " + str(text).rstrip())
-            elif lineNumber == 57:
-                jsonDict["Meeting"]["title"] = text.rstrip()
-                if debug: print("Title: " + str(text).rstrip())
-            elif lineNumber == 60:
-                jsonDict["Meeting"]["date"] = text.rstrip()
-                if debug: print("Date: " + str(text).rstrip())
-            elif lineNumber == 61:
-                jsonDict["Meeting"]["location"] = text.rstrip()
-                if debug: print("Location: " + str(text).rstrip())
-            elif lineNumber == 62:
-                jsonDict["Meeting"]["time"] = text.rstrip()
-                if debug: print("Time: " + str(text).rstrip())
+        if afterWhiteSpace < 5:
+            if text == "":
+                #print("TRiggered")
+                continue
+            else:
+                afterWhiteSpace += 1
+                #print("Whitespace: (" + str(text) + ")")
+                if afterWhiteSpace == 1:
+                    jsonDict["Committee"] = str(text).rstrip()
+                    if debug: print("Committee: " + str(text).rstrip())
+                elif afterWhiteSpace == 2:
+                    jsonDict["Title"] = text.rstrip()
+                    if debug: print("Title: " + str(text).rstrip())
+                elif afterWhiteSpace == 3:
+                    jsonDict["Date"] = text.rstrip()
+                    if debug: print("Date: " + str(text).rstrip())
+                    dateFormat = jsonDict["Date"].replace(",", "")
+                    dateFormat = dateFormat.split(" ")
+                    dateFormat = dateFormat[2] + "-" + dateFormat[1] + "-" + dateFormat[3]
+                    dateFormat = datetime.strftime(datetime.strptime(dateFormat, '%d-%B-%Y'), '%Y-%m-%d')
+
+                elif afterWhiteSpace == 4:
+                    jsonDict["Location"] = text.rstrip()
+                    if debug: print("Location: " + str(text).rstrip())
+                elif afterWhiteSpace == 5:
+                    jsonDict["Time"] = text.rstrip()
+                    if debug: print("Time: " + str(text).rstrip())
 
         else: # Do these comparisons when lineNumber >= 65
 
             # Return if no more preprogrammed sections
             if subsectionNumber > len(splitStrings)-2:
+                print("Returning Dict")
                 return jsonDict
 
             # Check if the preprogrammed section is in the text
@@ -102,7 +116,7 @@ def convertJSON(filePath, jsonDict, fileName):
                 subsectionNumber = subsectionNumber + 1
                 #if debug: print("SUBSECTION NUMBER: " + str(subsectionNumber))
                 localItemNumber = 0
-
+                '''
                 if subsectionNumber > 0:
 
                     #Build additional subsections
@@ -121,6 +135,8 @@ def convertJSON(filePath, jsonDict, fileName):
 
                 else: # On the first time, just append title.
                     jsonDict["Meeting"]["subsection"][subsectionNumber]["Title"] = splitStrings[subsectionNumber]
+                    
+                '''
             else:
                 if startedBool:
 
@@ -132,7 +148,7 @@ def convertJSON(filePath, jsonDict, fileName):
                     else:
                         appendString.append(str(text).rstrip())
                         if (subsectionNumber > 0):
-                            if debug: print(str(lineNumber) + " || " + splitStrings[subsectionNumber + 1] + ":::" + str(text))
+                            if debug: print(str(lineNumber) + " || " + splitStrings[subsectionNumber + 1] + "::" + str(text))
 
                 if "Page" in text:
                     pageText = text.split("Page ")
@@ -153,31 +169,38 @@ def convertJSON(filePath, jsonDict, fileName):
                     number = number[0]
                     discussionStarted = False
 
+                    # Append Additional Item to JSON format.
+                    # TODO: HANDLE MULTIPART ITEM TITLE
+                    if debug: print("+ ITEM ("+title+") | Subsection Number: " + str(subsectionNumber) + " Item Number: " + str(itemNumber))
+                    jsonDict["Items"].append({"Item No.": "N/A",
+                                              "Agenda Title": "N/A",
+                                              "Motion": "N/A",
+                                              "Action Requested": "Approval",
+                                              "Date": "N/A",
+                                              "Committee": "N/A",
+                                              "Proposed By": "N/A",
+                                              "Presenter": "N/A",
+                                              "Description": "N/A",
+                                              "Participation": [ "N/A" ],
+                                              "Approval Route": [ "N/A"],
+                                              "Final Approver": "N/A"
+                                            })
+
                     if localItemNumber > 1:  # Append discussion text
                         #if debug: print("Subsection Number: " + str(subsectionNumber) + " Item Number: " + str(itemNumber) + " Local Item Number: " + str(localItemNumber))
                         if discussionAdded:
-                            jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber - 1]["discussion"] = textAcc
+                            jsonDict["Items"][itemNumber]["Description"] = " ".join(textAcc)
                             if debug: print("### We have appended your discussion")
                             discussionAdded = False
 
                     textAcc = []  # Reset Discussion Text
 
-                    # Append Additional Item to JSON format.
-                    # TODO: HANDLE MULTIPART ITEM TITLE
-                    if debug: print("+ ITEM ("+title+") | Subsection Number: " + str(subsectionNumber) + " Item Number: " + str(itemNumber))
-                    jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"].append({"index_in_pdf": None,
-                                                                          "separate_index": None, "item_title": None,
-                                                                          "pages_start": None,
-                                                                          "pages_end": None, "text": None,
-                                                                          "presenters": None, "motions": [
-                                                                          {"motion": None, "carried": None, "content": None}],
-                                                                          "keywords": [None, None], "discussion": None,
-                                                                          "purpose": None})
+                    jsonDict["Items"][itemNumber]["Item No."] = str(number)
+                    jsonDict["Items"][itemNumber]["Date"] = dateFormat
+                    jsonDict["Items"][itemNumber]["Committee"] = "GFC"
+                    #jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["pages_start"] = str(pageNumber)
+                    jsonDict["Items"][itemNumber]["Agenda Title"] = title
 
-
-                    jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["index_in_pdf"] = str(number)
-                    jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["pages_start"] = str(pageNumber)
-                    jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["item_title"] = title
                     #TODO: HANDLE PAGES END
                     #jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber-1]["pages_end"] = str(pageNumber)
 
@@ -186,8 +209,8 @@ def convertJSON(filePath, jsonDict, fileName):
                 if subsectionNumber == 0:
                     # Append all Attendees not on StopWord List
                     if text.rstrip() not in nonAttendance:
-                        jsonDict["Meeting"]["attendees"].append(str(text))
-                        #if debug: print("Appended Attendee: " + str(text))
+                        jsonDict["Attendees"].append(str(text))
+                        if debug: print("Appended Attendee: " + str(text))
                     else:
                         #if debug: print("Rejected; " + text)
                         pass
@@ -196,16 +219,15 @@ def convertJSON(filePath, jsonDict, fileName):
 
                 if subsectionNumber >= 1:
 
-
                     if "Presenter(s)" in text:
                         newText = text.strip("Presenter(s): ")
 
-                        jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["presenters"] = newText
+                        jsonDict["Items"][itemNumber]["Presenter"] = newText
                         if debug: print("Presenter detected and assigned: " + newText)
 
                     elif "Purpose of the Proposal:" in text:
                         newText = text.strip("Purpose of the Proposal: ")
-                        jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["Purpose"] = newText
+                        #jsonDict["Items"][itemNumber]["Purpose"] = newText
                         if debug: print("Purpose detected and assigned: " + newText)
 
                     elif "Motion:" in text:
@@ -214,16 +236,16 @@ def convertJSON(filePath, jsonDict, fileName):
                         newText = text.split(':')
                         newText = newText[1]
                         if debug: print("Motion Title: " + newText)
-                        jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["motions"][0]["motion"] = str(newText)
+                        jsonDict["Items"][itemNumber]["Motion"] = str(newText)
                         isCarried = True
 
                     elif "THAT" in text:
-                        jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["motions"][0]["content"] = text
+                        jsonDict["Items"][itemNumber]["Action Requested"] = text
                         if debug: print("Motion Content: " + text)
 
                     if isCarried == True:
                         if "CARRIED" in text:
-                            jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["motions"][0]["carried"] = True
+                            jsonDict["Items"][itemNumber]["Approval Route"].append(jsonDict["Committee"] + " CARRIED")
                             isCarried = False
                             if debug: print("Motion Carried: " + "True")
 
@@ -233,8 +255,7 @@ def convertJSON(filePath, jsonDict, fileName):
                         motionStarted = True
                         manipulatedString = text.split(":")
                         manipulatedString = manipulatedString[1]
-                        jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["motions"][0][
-                            "motion"] = manipulatedString
+                        jsonDict["Items"][itemNumber]["Motions"] = manipulatedString
 
                         if debug: print("+ MOTION (" + manipulatedString + ")")
 
@@ -243,10 +264,10 @@ def convertJSON(filePath, jsonDict, fileName):
 
                         if "CARRIED" in text:
                             if debug: print("CARRIED SUCCESS")
-                            jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["motions"][0][
-                                "carried"] = True
-                            jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][localItemNumber]["motions"][0][
-                                "content"] = motionText
+
+                            jsonDict["Items"][itemNumber]["Approval Route"].append(jsonDict["Committee"] + " CARRIED")
+                            #jsonDict["Meeting"]["subsection"][subsectionNumber]["Items"][itemNumber]["motions"][0][
+                            #    "content"] = motionText
                             motionText = []
                             motionStarted = False
 
@@ -264,6 +285,8 @@ def convertJSON(filePath, jsonDict, fileName):
                         if debug: print("Appending Line to Discussion")
                         discussionAdded = True
                         textAcc.append(text)
+
+    return jsonDict
 
 #####################################
 ##########     isPDF    #############
@@ -302,7 +325,7 @@ print("PDF Scraper Started \n\n")
 
 
 
-data = json.loads(jsonDict)
+
 
 #TODO: Get filePath from Command Arguments
 filePath = "2013" #Path to File
@@ -316,13 +339,14 @@ for file in os.listdir(filePath):
     if os.path.isfile(current):
         if isPDF(file):
 
-            print("\nScrape: " + file)
+            print("\n Scrape: " + file)
             fileName = file.split(".",1)
             fileName = fileName[0] #Get a filename without .pdf
 
             fh = open(filePath + "/" + fileName + ".txt", "w")
             output = convert(current)
 
+            data = json.loads(jsonDict3)
 
             fh.write(output)
             fh.close()  # Save text stripped PDF
@@ -330,19 +354,33 @@ for file in os.listdir(filePath):
             #print("Saved: " + filePath + "/" + fileName + ".txt")
             data = convertJSON(filePath + "/" + fileName + ".txt", data, fileName)
 
+            dateFormat = data["Date"].replace(",", "")
+            dateFormat = dateFormat.split(" ")
+            dateFormat = dateFormat[2] + "-" + dateFormat[1] + "-" + dateFormat[3]
+            dateFormat = datetime.strftime(datetime.strptime(dateFormat, '%d-%B-%Y'), '%Y-%m-%d')
 
             # Do renaming / reoganizing of files and folders based on new name. #
-            newName = handleTitle(data["Meeting"]["title"],data["Meeting"]["date"])
+            newName = handleTitle(data["Title"],data["Date"])
 
             if not os.path.exists(filePath + "/" + newName):
                 os.makedirs(filePath + "/" + newName)
 
+            if not os.path.exists(filePath + "/" + "JSON"):
+                os.makedirs(filePath + "/" + "JSON")
+
+
+            if not os.path.exists(filePath + "/static/GFC/" + dateFormat):
+                os.makedirs(filePath + "/static/GFC/" + dateFormat)
+
             os.rename(filePath + "/" + fileName + ".txt", filePath + "/" + newName + "/" + newName + ".txt")
-            os.rename(filePath + "/" + fileName + ".pdf", filePath + "/" + newName + ".pdf")
 
-            data["Meeting"]["filename"] = newName + ".pdf"
 
-            with open(filePath + "/" + newName + "/json_" + newName + '.txt', 'w') as outfile:
+            os.rename(filePath + "/" + fileName + ".pdf", filePath + "/" + "static/GFC/" + dateFormat + "/Approved-Minutes.pdf")
+
+            data["url"] = "/static/GFC/" + dateFormat + "/Approved-Minutes.pdf"
+            print("URL : " + str(data["url"]))
+
+            with open(filePath + "/" + "JSON" + "/json_GFC_" + dateFormat + '_Approved_Minuets.txt', 'w') as outfile:
                 json.dump(data, outfile, indent=4)
 
             print("JSON File for "+newName+" successfully created")

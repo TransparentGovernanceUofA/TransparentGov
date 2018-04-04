@@ -1,9 +1,10 @@
 
-jsonDict = '''
+jsonDictOld = '''
 { 
     "Meeting":
     {
         "filename":null,
+        "materialFilename":null,
         "title": null,
         "date": null,
         "committee":null,
@@ -36,6 +37,32 @@ jsonDict = '''
               }]
     }
 } '''
+
+
+jsonDict3 = '''
+{
+  "Committee": "N/A",
+  "Date": "N/A",
+  "Title": "N/A",
+  "Location": "N/A",
+  "Time": "N/A",
+  "Attendees": ["N/A"],
+  "Items": [ {
+      "Item No.": "N/A",
+      "Agenda Title": "N/A",
+      "Motion": "N/A",
+      "Action Requested": "N/A",
+      "Date": "N/A",
+      "Committee": "N/A",
+      "Proposed By": "N/A",
+      "Presenter": "N/A",
+      "Description": "N/A",
+      "Participation": [ "N/A" ],
+      "Approval Route": [ ""],
+      "Final Approver": "N/A"
+            } ],
+  "url": "N/A"
+}'''
 
 nonAttendance = ["Voting Members:", "(delegate)",
                  "Statutory Members:", "Ex-Officio:", "Appointed",
