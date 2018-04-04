@@ -1,0 +1,80 @@
+
+jsonDict = '''
+{ "Meeting": [
+    {
+    "filename":null,
+    "title": null,
+    "date": null,
+    "committee":null,
+    "time":null,
+    "location":null,
+    "attendees":null,
+    "subsection": [
+              { "Title": null,
+                "Items": [
+                   {
+                          "index_in_pdf":null,
+                          "separate_index":null,
+                          "title":null,
+                          "pages_start":null,
+                          "pages_end":null,
+                          "text":null,
+                          "presenters": [ {"name":null}],
+                          "motions": [
+                            {
+                                "motion":null,
+                                "carried":null,
+                                "content":null
+                            }],
+                          "Keywords": [{null, null}],
+                          "Discussion":null,
+                          "Purpose":null
+                    }]
+                }]
+        }]
+}
+'''
+
+
+
+    
+{
+  "title": "GFC Faculties Council",
+  "date": "2015-05-09",
+  "committee": "General Faculties Council",
+  "time": "2:00PM - 4:00PM"
+  "location": "University Hall",
+    {
+        "subsection": [
+        
+                       "Title": "Opening Session",
+        
+                    "items": [
+                        {
+                        "index_in_pdf": 1 // How to refer to this issue from within the same pdf - should match the glossary
+                      
+                        "separate_index": 2983 // How to link this issue if it appears in multiple different pdfs // is this part of our MVP?
+                      
+                        "Title": "Tuition discussion papers 2017"
+                      
+                        "pages_start": 4
+                      
+                        "pages_end": 8
+                      
+                        "Text": "continuing from the previous page we motion to......"
+                      
+                        "Presenters": [ {"name": "Joe Doe"}, {"name": "Sally Jane"}]
+                      
+                        "Motions": [ {"Motion": "That General Faculties Council approve the Agenda", "Carried": "True", "Content":"Materials before members are conained within"}])
+
+                        "Keywords": [{"Keywords", "Of", "Interest"])
+                      
+                        "Discussion": "Following an Indigneous welcome, etc")
+                      
+                        "Purpose": "continuing from the previous page we motion to......"
+                      } ]
+        }
+    }
+}
+
+ 
