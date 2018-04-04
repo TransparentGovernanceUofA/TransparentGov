@@ -1,94 +1,61 @@
 <template>
   <div class="advancedSearch">
-    <top-left-search :advancedInputField="pills"></top-left-search>
+    <top-left-search :previousInputField="inputField" :advancedForm="form"></top-left-search>
+    <!-- {{ form }} -->
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
-          <b-col cols=4>
+          <b-col md=4 order="2" order-md="1">
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
-              <b-form-group id="topic"
-                          label="Topic"
-                          label-for="exampleInput1">
-                <b-form-select id="exampleInput1"
-                            :options="topicOptions"
-                            required
-                            v-model="form.topic"
-                            @change=changedTopicInput()>
-                </b-form-select>
-              </b-form-group>
-
+              <div class="help-tip">
+                <p>List of committees at the University of Alberta. <br>
+                Multiple committees can be selected by pressing "Ctrl" and clicking on committees</p>
+              </div>
               <b-form-group id="committee"
                           label="Committee"
                           label-for="exampleInput2">
                 <b-form-select id="exampleInput2"
                             :options="committeeOptions"
                             required
-                            v-model="form.committee"
-                            @change=changedCommitteeInput()>
+                            v-model="tempCommitteeSelect">
                 </b-form-select>
               </b-form-group>
-
-              <b-form-group id="date"
-                          label="Date"
-                          label-for="exampleInput3">
-                <b-form-select id="exampleInput3"
-                            :options="dateOptions"
-                            required
-                            v-model="form.date"
-                            @change=changedDateInput()>
-                </b-form-select>
-              </b-form-group>
-
-              <b-form-group id="text"
-                          label="Text"
-                          label-for="exampleInput4">
-                <b-form-select id="exampleInput4"
-                            :options="textOptions"
-                            required
-                            v-model="form.text"
-                            @change=changedTextInput()>
-                </b-form-select>
-              </b-form-group>
-
+              <div class="help-tip">
+                <p>Various members that take part in Governance discussions. <br>
+                Multiple members can be selected by pressing "Ctrl" and clicking on names</p>
+              </div>
               <b-form-group id="people"
                           label="People"
                           label-for="exampleInput5">
                 <b-form-select id="exampleInput5"
                             :options="peopleOptions"
                             required
-                            v-model="form.people"
-                            @change=changedPeopleInput()>
+                            v-model="tempPeopleSelect">
                 </b-form-select>
+              </b-form-group>
+              <b-form-group id="date">
+                <b-row>
+                  <b-col>
+                    <p> Start: </p>
+                    <date-picker v-model="form.date_start" :config="config_date_start"></date-picker>
+                  </b-col>
+                  <b-col>
+                    <div id="time-help" class="help-tip">
+                      <p>Date picker, allows searching in a range of dates.</p>
+                    </div>
+                    <p> End: </p>
+                    <date-picker v-model="form.date_end":config="config_date_end"></date-picker>
+                  </b-col>
+                </b-row>
               </b-form-group>
             </b-card>
           </b-col>
-          <b-col cols=8>
-            <b-row>
-              <!-- The output search string -->
-              <b-col>
-                <b-card header="Query" class="mt-4 md-elevation-3">
-                  <b-form inline>
-                    <b-button disabled class="mr-2">Search Query</b-button>
-                    <!-- <b-form-input disabled></b-form-input> -->
-                    <div v-for="(pill, index) in pills" :key="index">
-                      <Pill v-on:pill_clicked="removePills(index)" :text="pill.name" :pill-style="pill.style" :pillable="pill.pillable">
-                      </Pill>
-                    </div>
-                  </b-form>
-                  <p class="card-text">Please use the options to the left to create your search. <br/>Note: This feature is not yet operational</p>
-                </b-card>
-              </b-col>
-            </b-row>
-
-            <b-row>
-              <!-- The explanation box -->
-              <b-col>
-                <b-card header="Guide" class="mt-4 md-elevation-3" >
-                  <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
-                </b-card>
-              </b-col>
-            </b-row>
+          <b-col md=8 order="1" order-md="2">
+          <!-- The explanation box -->
+            <b-card header="Guide" class="mt-4 md-elevation-3" >
+              <p class="card-text">This area will help you discover the more advanced search capabilities of the system. The "Search Options" card houses several selections of known topics, people, organizations, etc. that the system knows about. By selecting any one of these fields the "Query" box will update to include the query that will be needed to search for those specific items.</p>
+            </b-card>
           </b-col>
         </b-row>
       </b-container>
@@ -98,69 +65,98 @@
 
 <script>
 import TopLeftSearch from './TopLeftSearch.vue'
-import _ from 'lodash'
-import Pill from './Pill.vue'
+import axios from 'axios'
 
 export default {
   props: {
     inputField: {
       type: Object,
       default: () => ({})
+    },
+    query: {
+      type: String
+    },
+    committees: {
+      type: String
+    },
+    people: {
+      type: String
+    },
+    dateStart: {
+      type: String
+    },
+    dateEnd: {
+      type: String
     }
   },
   components: {
     TopLeftSearch,
-    Pill
+  },
+  created () {
+    this.parseQuery()
+    this.fetchCommittee()
+    this.fetchPeople()
   },
   methods: {
-    //this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
+    // this method does not work, beause it grabs the result to quickly, debounce needed to delay the method
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
-    changedTopicInput: _.debounce(function(){
-        this.addPills("topic", this.form.topic)
-    }, 10),
-    changedCommitteeInput: _.debounce(function(){
-        this.addPills("committee", this.form.committee)
-    }, 10),
-    changedDateInput: _.debounce(function(){
-        this.addPills("date", this.form.date)
-    }, 10),
-    changedTextInput: _.debounce(function(){
-        this.addPills("text", this.form.text)
-    }, 10),
-    changedPeopleInput: _.debounce(function(){
-        this.addPills("people", this.form.people)
-    }, 10),
+    parseQuery () {
+      let queryArray = this.query.replace('search:', '')
+      this.inputField.search = queryArray
+      // console.log("parseQuery", this.advanced)
 
-    removePills: function(id) {
-      this.pills.splice(id,1)
+      let committee = this.committees.replace('committee:', '').split(',')
+      if (committee[0] !== "") {
+        this.form.committee = committee
+      } else {
+        this.form.committee = []
+      }
+
+
+      let people = this.people.replace('people:', '').split(',')
+      if (people[0] !== "") {
+        this.form.people = people
+      } else {
+        this.form.people = []
+      }
+
+      let dateStr = this.dateStart.replace('dateStart:', '')
+      if (dateStr !== '') {
+        this.form.date_start = dateStr
+      }
+
+      dateStr = this.dateEnd.replace('dateEnd:', '')
+      if (dateStr !== '') {
+        this.form.date_end = dateStr
+      }
+      
+
     },
-    addPills:function(type, element){
-      // if pill is changed to null, remove the cooresponding pill
-      if(element == null){
-        for( var i=0; i < this.pills.length; i++){
-          if(this.pills[i].type == type){
-            this.removePills(i)
+    fetchCommittee () {
+      axios.get('http://162.246.156.217:8080/excel/committees/_search?pretty')
+        .then((resp) => {
+          const committee_resp = resp.data.hits.hits
+          for(var i = 0; i < committee_resp.length; i++) {
+            this.committeeOptions.push(committee_resp[i]._source.Committee)
           }
-        }
-      }
-      else{
-        for( var i=0; i < this.pills.length; i++){
-          // remove respective pill if its value is changed but type remained the same
-          if(this.pills[i].type == type && this.pills[i].name != element){
-            this.removePills(i)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    fetchPeople () {
+      axios.get('http://162.246.156.217:8080/excel/members/_search?pretty')
+        .then((resp) => {
+          const people_resp = resp.data.hits.hits
+          for(var i = 0; i < people_resp.length; i++) {
+            this.peopleOptions.push(people_resp[i]._source['Contact Name'])
           }
-        }
-        // add pills
-        this.pills.push({
-          id:this.pills.length,
-          name:element,
-          type: type,
-          style:'primary',
-          pillable:"true"
-        });
-      }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   },
   data () {
@@ -169,49 +165,74 @@ export default {
       advancedInputField: {
         search: ''
       },
-      pills: [],
+      tempCommitteeSelect: null,
+      tempPeopleSelect: null,
       form: {
-        topic: null,
-        committee: null,
-        date: null,
-        text: null,
-        people: null
+        committee: [],
+        people: [],
+        date_end: null,
+        date_start: null
       },
-      topicOptions: [
-        { value: null, text: '' },
-        { value: 'USRI', text: 'USRI' },
-        { value: 'Budget', text: 'Budget' },
-        { value: 'Even more stoof', text: 'Even more stoof' }
-      ],
       committeeOptions: [
-        { value: null, text: '' },
-        { value: '1 committee', text: '1 committee' },
-        { value: '2 committee', text: '2 committee' },
-        { value: '3 comimttee', text: '3 comimttee' }
-      ],
-      dateOptions: [
-        { value: null, text: '' },
-        { value: '1 idk', text: '1 idk' },
-        { value: '2 what', text: '2 what' },
-        { value: '3 we want for this', text: '3 we want for this' }
-      ],
-      textOptions: [
-        { value: null, text: '' },
-        { value: 'the', text: 'the' },
-        { value: 'texts', text: 'texts' },
-        { value: 'here', text: 'here' }
+        // { value: null, text: '' }
       ],
       peopleOptions: [
-        { value: null, text: '' },
-        { value: 'Eleni', text: 'Eleni' },
-        { value: 'Barbosa', text: 'Barbosa' },
-        { value: 'Diego', text: 'Diego' }
-      ]
+        // { value: null, text: '' },
+      ],
+      config_date_start: {
+        format: 'YYYY/MM/DD',
+        useCurrent: true,
+        showClear: true,
+        showClose: true,
+        maxDate: new Date()
+      },
+      config_date_end: {
+        format: 'YYYY/MM/DD',
+        useCurrent: true,
+        showClear: true,
+        showClose: true,
+        maxDate: new Date()
+      }              
+    }
+  },
+  watch: {
+    tempCommitteeSelect: function (val) {
+      let found = false
+      for (var i = this.form.committee.length - 1; i >= 0; i--) {
+        if (this.form.committee[i] === val) {
+          found = true
+          break
+        }
+      }
+
+      if (!found) {
+        this.form.committee.push(val)
+      }
+      
+    },
+    tempPeopleSelect: function (val) {
+      let found = false
+      for (var i = this.form.people.length - 1; i >= 0; i--) {
+        // console.log(this.form.people[i], val)
+        if (this.form.people[i] === val) {
+          // console.log('Same')
+          found = true
+          break
+        }
+      }
+
+      if (!found) {
+        this.form.people.push(val)
+      }
+
+      // console.log("___________")
     }
   }
 }
 </script>
 
 <style>
-
+#time-help{
+  left: 86.5%;
+}
 </style>

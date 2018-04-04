@@ -6,7 +6,10 @@ import store from './store/store.js'
 import VueMaterial from 'vue-material'
 import BootstrapVue from 'bootstrap-vue'
 import 'vue-material/dist/vue-material.min.css'
-import _ from 'lodash';
+import datePicker from 'vue-bootstrap-datetimepicker'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
+Vue.use(datePicker)
 Vue.use(VueMaterial)
 
 Vue.use(BootstrapVue)
