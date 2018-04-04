@@ -70,36 +70,38 @@ export default {
 
       let isAdvancedSearch = false
 
-      let committeeStr = 'committee::'
+      let committeeStr = 'committee:'
       if (this.committee != null) {
         isAdvancedSearch = true
-        committeeStr = 'committee:' + this.committee + ':'
+        committeeStr = 'committee:' + this.committee
       }
 
-      let dateStr = 'date::'
-      if (this.date != null) {
+      let dateStartStr = 'dateStart:'
+      if (this.date_start != null) {
         isAdvancedSearch = true
-        dateStr = 'date:' + this.date + ':'
+        dateStartStr = 'dateStart:' + this.date_start
       }
 
-      let peopleStr = 'people::'
+      let dateEndStr = 'dateEnd:'
+      if (this.date_end != null) {
+        isAdvancedSearch = true
+        dateEndStr = 'dateEnd:' + this.date_end
+      }
+
+      let peopleStr = 'people:'
       if (this.people != null) {
         isAdvancedSearch = true
-        peopleStr = 'people:' + this.people + ':'
+        peopleStr = 'people:' + this.people
       }
 
-      let advancedStr = 'advanced:false'
-      if (isAdvancedSearch) {
-        advancedStr = 'advanced:' + committeeStr + dateStr + peopleStr
-      }
 
-      this.$router.push({name: 'Result', params: { query: search, advanced: advancedStr }})
+      this.$router.push({name: 'Result', params: { query: search, committees: committeeStr, people: peopleStr, dateStart: dateStartStr, dateEnd: dateEndStr }})
     },
 
     pillClicked: function (pill, index) {
       // console.log('Pill clicked', pill.type)
-      let new_arr = []
       if (this.$route.name === 'Advanced Search') {
+        let new_arr = []
         if (pill.type === 'committee') {
           // this.advancedForm.committee = null
           // update advancedForm.committee with only pills that were not clicked on
@@ -113,7 +115,7 @@ export default {
         // else if (pill.type === 'date') {
         //   this.advancedForm.date = null
         // } 
-        else {
+        else if (pill.type === 'people') {
           // this.advancedForm.people = null
           // update advancedForm.committee with only pills that were not clicked on
           for (let i = 0; i < this.pills.length; i++) {
@@ -122,14 +124,20 @@ export default {
             }    
           }
           this.advancedForm.people = new_arr
+        } else if (pill.type === 'date_start') {
+          this.advancedForm.date_start = null
+        } else if (pill.type === 'date_end') {
+          this.advancedForm.date_end = null
         }
       } 
       else if (this.$route.name === 'Result') {
         // console.log('Pill clicked from the results page')
         let query = this.$route.params.query
-        let advanced = this.$route.params.advanced
-        console.log("back to advanced search", "query:", query, "advanced", advanced)
-        this.$router.push({name: 'Advanced Search', params: { query: query, advanced: advanced }})
+        let committees = this.$route.params.committees
+        let people = this.$route.params.people
+        let date_start = this.$route.params.date_start
+        let date_end = this.$route.params.date_end
+        this.$router.push({name: 'Advanced Search', params: { query: query, committees: committees, people: people, date_start: date_start, date_end: date_end }})
       }
     },
     removePills: function (id) {
@@ -141,11 +149,11 @@ export default {
       let i
       for (i = this.pills.length - 1; i >= 0; i--) {
         let insert = true
-        for (var j = 0; j < elements.length; j++) {
-          console.log("Eelement", elements[j], "pill", this.pills[i].name, 'type', type)
+        for (let j = 0; j < elements.length; j++) {
+          // console.log("Element", elements[j], "pill", this.pills[i].name, 'type', type)
           // checks if pill already exists
           if(elements[j] == this.pills[i].name && type==this.pills[i].type){
-            console.log("pill and input exist")
+            // console.log("pill and input exist")
             insert = false
             break
           }
@@ -165,11 +173,11 @@ export default {
             insert = false
           }
         }
-        if(insert){
-          console.log("insert new pill", elements[i])
+        if(insert && elements[i] !== null){
+          // console.log("insert new pill", elements[i])
           this.pills.push({
           id: this.pills.length,
-          name: elements[i],
+          name: type + ': '  + elements[i],
           type: type,
           style: 'primary',
           pillable: 'true'
@@ -179,7 +187,7 @@ export default {
     },
 
     loadPills: function () {
-      var original = []
+      let original = []
       // typeof===string means its coming from result, else coming from advancedSearch
       if(typeof(this.committee) === 'string' && this.committee!= null){
         this.addPills('committee', this.committee.split(","), original)
@@ -195,18 +203,25 @@ export default {
       else{
         this.addPills('people', this.people, original)
       }
+
+      this.addPills('date_start', [this.date_start], original)
+
+      this.addPills('date_end', [this.date_end], original)
     }
   },
   computed: {
     committee () {
-      console.log("computed committee")
+      // console.log("computed committee")
       return this.advancedForm.committee
     },
-    date () {
-      return this.advancedForm.date
+    date_start () {
+      return this.advancedForm.date_start
+    },
+    date_end () {
+      return this.advancedForm.date_end
     },
     people () {
-      console.log("computed people")
+      // console.log("computed people")
       return this.advancedForm.people
     }
   },
@@ -236,6 +251,22 @@ export default {
         original.push(this.pills[i].name)
       }
       this.addPills('people', this.people, original)
+    },
+
+    date_start () {
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].name)
+      }
+      this.addPills('date_start', [this.date_start], original)
+    },
+
+    date_end () {
+      var original = []
+      for (let i = 0; i < this.pills.length; i++){
+        original.push(this.pills[i].name)
+      }
+      this.addPills('date_end', [this.date_end], original)
     }
   }
 }
