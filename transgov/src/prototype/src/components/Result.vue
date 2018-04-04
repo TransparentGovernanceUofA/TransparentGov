@@ -2,6 +2,22 @@
   <div class="results">
     <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
     <b-container fluid>
+      <b-row v-show="searching == true" id="loading_anim" align-h="center" class="mt-5 mb-5">
+        <b-col cols="auto">
+          <div class="la-ball-atom la-dark la-3x" >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </b-col>
+      </b-row>
+      <b-row v-show="searching == true" align-h="center">
+        <b-col cols="auto">
+          Asking the government...
+        </b-col>
+      </b-row>
+      
       <b-row v-show="empty == false">
         <b-col cols="auto">
           <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
@@ -26,17 +42,7 @@
           </b-collapse>
         </b-col>
       </b-row>
-      <b-row v-show="searching == true" id="loading_anim" align-h="center">
-        <b-col cols="auto">
-          <div class="la-ball-atom la-dark la-3x m-4">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </b-col>
-      </b-row>
-      <b-row>
+      <b-row class = "mt-2">
         <b-col>
           <search-result-list :test = "ElasticResult"></search-result-list>
           <!-- {{ inputField.search }} -->
@@ -51,7 +57,7 @@
         </b-col>
         -->
       </b-row>
-      <b-row align-h="center">
+      <b-row align-h="center" class="mt-2">
         <b-col v-show="searching == false && empty == false" cols="auto">
           End of Search Results
         </b-col>
@@ -103,7 +109,7 @@ export default{
         people: null
       },
       searching: true,
-      empty: false
+      empty: true
     }
   },
   created () {
@@ -128,6 +134,7 @@ export default{
 
   methods: {
     fetchData () {
+      this.searching = true
       // basic query for es; for now searching 'exact term' over all fields
       const query = {
         query: {
@@ -163,6 +170,8 @@ export default{
           // Update the display, hide the loading animation, reveal the timeline, place an indicator at the end of the search results
           if (this.ElasticResult.length == 0){
             this.empty = true
+          } else {
+            this.empty = false
           }
           this.searching = false
         })

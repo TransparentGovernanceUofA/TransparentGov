@@ -1,7 +1,7 @@
 <template>
   <div id="search-result-list">
     <!-- This is a sub-component, the parent should declare a container for it -->
-    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult._id" class="mt-4" no-gutters>
+    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult._id" class="mb-4" no-gutters>
       <!-- Note: the id of this row is used by the timeline component for click to focus -->
       <b-col>
         <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
