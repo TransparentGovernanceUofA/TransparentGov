@@ -6,26 +6,28 @@
       <b-col>
         <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
         </SearchResult> -->
-        <b-card no-body header-tag="header" footer-tag="footer" class="md-elevation-3" 
+        <b-card no-body header-tag="header" footer-tag="footer" class="md-elevation-3"
           border-variant="dark"
           header-bg-variant="dark"
           header-text-variant="white">
-          
+
           <!-- We use a highlighted title if available, otherwise the regular title -->
-          <h6 v-if="searchresult.highlight.Title" slot="header" class="mb-0">
+          <!-- <h6 v-if="searchresult.highlight.Title" slot="header" class="mb-0">
             <span class="title" v-html="searchresult.highlight.Title[0]"></span>
             <router-link :to="{name: 'View PDF', params: { file_id:searchresult._source.url}}">
             View Original PDF
             </router-link>
-          </h6>
-          <h6 v-else slot="header" class="mb-0">
+          </h6> -->
+          <!-- <h6 v-else slot="header" class="mb-0"> -->
+          <h6 slot="header" class="mb-0">
+             <!-- <span class="title" v-html="searchresult._source.Title"></span> -->
             {{searchresult._source.Title}}
             <router-link :to="{name: 'View PDF', params: { file_id:searchresult._source.url}}">
             View Original PDF
             </router-link>
           </h6>
-          
-          
+
+
           <!-- Tabs allow the matches for a result to be shown, but then also the meta data if they want to drill down -->
           <b-tabs card id="tabs-lvl-1">
             <b-tab title="Highlights">
@@ -59,7 +61,7 @@
                 </b-tabs>
             </b-tab>
           </b-tabs>
-          
+
         </b-card>
         <!-- Upgraded version in the works
         <b-card no-body header-tag="header" footer-tag="footer" class="md-elevation-3">

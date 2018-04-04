@@ -1,13 +1,7 @@
 from django.contrib import admin
 
-from .models import Meeting, Category
+from .models import Meeting
 
 
-admin.site.register(Category)
-
-
-
-class MeetingAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ("title",)}
-
-admin.site.register(Meeting, MeetingAdmin)
+#admin.site.register(Item)
+admin.site.register(Meeting)

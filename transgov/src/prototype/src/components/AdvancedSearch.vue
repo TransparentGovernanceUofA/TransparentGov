@@ -102,6 +102,7 @@ export default {
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
+
     parseQuery () {
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
@@ -147,7 +148,7 @@ export default {
         })
     },
     fetchPeople () {
-      axios.get('http://162.246.156.217:8080/excel/members/_search?pretty')
+      axios.get('http://162.246.156.217:8080/excel/members/_search?size=1200&q=*:*')
         .then((resp) => {
           const people_resp = resp.data.hits.hits
           for(var i = 0; i < people_resp.length; i++) {
@@ -192,7 +193,7 @@ export default {
         showClear: true,
         showClose: true,
         maxDate: new Date()
-      }              
+      }
     }
   },
   watch: {
@@ -207,7 +208,9 @@ export default {
 </script>
 
 <style>
+
 #time-help{
   left: 86.5%;
+
 }
 </style>
