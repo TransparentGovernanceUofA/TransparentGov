@@ -150,7 +150,7 @@ export default {
       for (i = this.pills.length - 1; i >= 0; i--) {
         let insert = true
         for (let j = 0; j < elements.length; j++) {
-          console.log("Element", elements[j], "pill", this.pills[i].data, 'type', type)
+          // console.log("Element", elements[j], "pill", this.pills[i].data, 'type', type)
           // checks if pill already exists
           if(elements[j] == this.pills[i].data && type==this.pills[i].type){
             // console.log("pill and input exist")

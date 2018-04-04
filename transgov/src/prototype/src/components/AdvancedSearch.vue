@@ -197,10 +197,35 @@ export default {
   },
   watch: {
     tempCommitteeSelect: function (val) {
-      this.form.committee.push(val)
+      let found = false
+      for (var i = this.form.committee.length - 1; i >= 0; i--) {
+        if (this.form.committee[i] === val) {
+          found = true
+          break
+        }
+      }
+
+      if (!found) {
+        this.form.committee.push(val)
+      }
+      
     },
     tempPeopleSelect: function (val) {
-      this.form.people.push(val)
+      let found = false
+      for (var i = this.form.people.length - 1; i >= 0; i--) {
+        // console.log(this.form.people[i], val)
+        if (this.form.people[i] === val) {
+          // console.log('Same')
+          found = true
+          break
+        }
+      }
+
+      if (!found) {
+        this.form.people.push(val)
+      }
+
+      // console.log("___________")
     }
   }
 }
