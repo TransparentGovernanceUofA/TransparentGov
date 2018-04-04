@@ -63,9 +63,19 @@ export default{
     query: {
       type: String
     },
-    advanced: {
+    committees: {
+      type: String
+    },
+    people: {
+      type: String
+    },
+    dateStart: {
+      type: String
+    },
+    dateEnd: {
       type: String
     }
+
   },
   components: {
     SearchResultList,
@@ -78,9 +88,10 @@ export default{
     return {
       ElasticResult: {},
       advancedFilters: {
-        committee: null,
-        // date: null,
-        people: null
+        committee: [],
+        people: [],
+        date_end: null,
+        date_start: null
       }
     }
   },
@@ -173,128 +184,196 @@ export default{
 
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
-      console.log("parseQuery", this.advanced)
-      var advancedArray = this.advanced.split(':')
-      console.log('advancedArray', advancedArray)
-      if (advancedArray[1] !== 'false') {
+      // console.log("parseQuery", this.advanced)
 
-        let split = advancedArray[2].split(",")
-        if(split[0] == ""){
-          //do nothing
-
-        }
-        else{
-          this.advancedFilters.committee = advancedArray[2].split(",")
-        }
-        // this.advancedFilters.committee = advancedArray[2].split(",")
-        split = advancedArray[6].split(",")
-        if(split[0] == ""){
-          //do nothing
-        }
-        else{
-          this.advancedFilters.people = advancedArray[6].split(",")
-        }
-        console.log(advancedFilters.people)
-        console.log("advanced committee in result", this.advancedFilters)
-        // if (this.advancedFilters.committee === '') {
-        //   this.advancedFilters.committee = null
-        // }
-
-        // this.advancedFilters.date = advancedArray[4]
-        // if (this.advancedFilters.date === '') {
-        //   this.advancedFilters.date = null
-        // }
-
-        // this.advancedFilters.people = advancedArray[6]
-        // if (this.advancedFilters.people === '') {
-        //   this.advancedFilters.people = null
-        // }
+      let committee = this.committees.replace('committee:', '').split(',')
+      if (committee[0] !== "") {
+        this.advancedFilters.committee = committee
+      } else {
+        this.advancedFilters.committee = []
       }
+      // console.log("parseQuery", this.advancedFilters.committee)
+
+      // console.log('|' + this.people + '|')
+      let people = this.people.replace('people:', '').split(',')
+      if (people[0] !== "") {
+        this.advancedFilters.people = people
+      } else {
+        this.advancedFilters.people = []
+      }
+      console.log('People', people)
+      // console.log("parseQuery", this.advancedFilters.people)
+
+
+      let dateStr = this.dateStart.replace('dateStart:', '')
+      if (dateStr !== '') {
+        this.advancedFilters.date_start = dateStr
+      }
+      console.log("parseQuery", this.advancedFilters.date_start)
+
+      dateStr = this.dateEnd.replace('dateEnd:', '')
+      if (dateStr !== '') {
+        this.advancedFilters.date_end = dateStr
+      }
+      console.log("parseQuery", this.advancedFilters.date_end)
+      //console.log("person", people[0])
 
       const advanced_query = {
-        //   "query": {
-        //       "more_like_this": {
-        //           "fields": [
-        //               "_all"
-        //           ],
-        //           "like_text": this.advancedFilters.committee + this.advancedFilters.date + this.advancedFilters.people,
-        //           "min_term_freq": 1,
-        //           "percent_terms_to_match": 100,
-        //           "min_doc_freq": 0
-        //       }
-        //
-        // },
-        query: {
-                  filtered: {
-                      "query": {
-                          "match": { "Attendees": this.advancedFilters.people}
-                      },
-                    filter: {
-                      bool: {
-                        should: [{
-                          term: {
-                            'Committee': this.advancedFilters.committee
-                        }
-                        }]
-                      }
+  //   "query": {
+  //       "more_like_this": {
+  //           "fields": [
+  //               "_all"
+  //           ],
+  //           "like_text": this.advancedFilters.committee + this.advancedFilters.date + this.advancedFilters.people,
+  //           "min_term_freq": 1,
+  //           "percent_terms_to_match": 100,
+  //           "min_doc_freq": 0
+  //       }
+  //
+  // },
+      //query: {
+                // filtered: {
+                //     "query": {
+                //         "match": { "Attendees": people[0]}
+                //     }
+                //   // filter: {
+                //   //   bool: {
+                //   //     should: [{
+                //   //       term: {
+                //   //         'Committee': committee
+                //   //     }
+                //   //     }]
+                //   //   }
+                //   // }
+                // }
+
+            //     "query" :{
+            //             "filtered" : {
+            //                 "query" : {
+            //                     "multi_match" : {
+            //                         "query" : 'people[0]',
+            //                         "fields" : [ "Attendees",
+            //                                     "Items.Presenter",
+            //                                     "Items.Proposed By"]
+            //                     }
+            //                 }
+            //
+            //
+            //     }
+            // },
+            "query": {
+              "bool": {
+                "must": [
+,                  {
+                    "terms": {
+                      "Items.Presenter": people,
+                      //"minimum_should_match": 1
                     }
-                  }
+                },
+                  {
+                    "terms": {
+                      "Attendees": people,
+                      //"minimum_should_match": 1
+                    }
+                  },
+                ]
+              }
+            },
+  'highlight': {
+    'fields': {
+      '*': {
+      },
+    }
+}
+}
+  // "query":{
+  //     "filtered":{
+  //         "query":{
+  //             //"term":{"Committee":this.advancedFilters.committee},
+  //             "term":{"Date":this.advancedFilters.date},
+  //             "term":{"Attendees":this.advancedFilters.people},
+  //         },
+  //         "filter":{
+  //              "term":{"Committee":this.advancedFilters.committee},
+  //          }
+  //     }
+  // },
+//   "query": {
+//       "filtered" : {
+//           "query" : {
+//               "term" : { "Committee" : this.advancedFilters.committee }
+//           },
+//           "filter" : {
+//               "and" : [
+//                   {
+//                       "term":{"Attendees":this.advancedFilters.people}
+//                   },
+//                   {
+//                       "term":{"Date":this.advancedFilters.date}
+//                   }
+//               ],
+//               "_cache" : true
+//           }
+//       }
+//   }
 
 
-                  }
-      //   'highlight': {
-      //     'fields': {
-      //       '*': {
-      //       },
-      //     }
-      // }
+
+axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
+  params: {
+    source: JSON.stringify(advanced_query),
+    source_content_type: 'application/json'
   }
-        // "query":{
-        //     "filtered":{
-        //         "query":{
-        //             //"term":{"Committee":this.advancedFilters.committee},
-        //             "term":{"Date":this.advancedFilters.date},
-        //             "term":{"Attendees":this.advancedFilters.people},
-        //         },
-        //         "filter":{
-        //              "term":{"Committee":this.advancedFilters.committee},
-        //          }
-        //     }
-        // },
-      //   "query": {
-      //       "filtered" : {
-      //           "query" : {
-      //               "term" : { "Committee" : this.advancedFilters.committee }
-      //           },
-      //           "filter" : {
-      //               "and" : [
-      //                   {
-      //                       "term":{"Attendees":this.advancedFilters.people}
-      //                   },
-      //                   {
-      //                       "term":{"Date":this.advancedFilters.date}
-      //                   }
-      //               ],
-      //               "_cache" : true
-      //           }
-      //       }
+})
+.then((resp) => {
+  console.log(resp)
+  this.ElasticResult = resp.data.hits.hits
+})
+.catch((err) => {
+  console.log(err)
+})
+
+
+
+
+
+      // var advancedArray = this.advanced.split(':')
+      // console.log('advancedArray', advancedArray)
+      // if (advancedArray[1] !== 'false') { // if there are advanced terms
+      //   let split = advancedArray[2].split(",")
+      //   if(split[0] == ""){
+      //     //do nothing
+      //   }
+      //   else{
+      //     this.advancedFilters.committee = advancedArray[2].split(",")
       //   }
 
+      //   let date_start = advancedArray[4]
+      //   if (date_start === "") {
+      //     this.advancedFilters.date_start = null
+      //   } else {
+      //     this.advancedFilters.date_start = new Date(date_start)
+      //   }
 
+      //   let date_end = advancedArray[6]
+      //   if (date_end === "") {
+      //     this.advancedFilters.date_end = null
+      //   } else {
+      //     this.advancedFilters.date_end = new Date(date_end)
+      //   }
 
-      axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
-        params: {
-          source: JSON.stringify(advanced_query),
-          source_content_type: 'application/json'
-        }
-      })
-      .then((resp) => {
-        console.log(resp)
-        this.ElasticResult = resp.data.hits.hits
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+      //   // this.advancedFilters.committee = advancedArray[2].split(",")
+      //   split = advancedArray[8].split(",")
+      //   if(split[0] == ""){
+      //     //do nothing
+      //   }
+      //   else{
+      //     this.advancedFilters.people = advancedArray[8].split(",")
+      //   }
+      //   console.log(advancedFilters.people)
+      //   console.log("advanced committee in result", this.advancedFilters)
+
+      // }
       // console.log(this.advancedFilters)
       // console.log(this.inputField.search)
     }

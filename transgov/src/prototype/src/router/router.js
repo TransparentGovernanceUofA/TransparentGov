@@ -17,7 +17,7 @@ export default new VueRouter({
     },
     {
       // the result page use dynamic route matching to store the query as part of the URL
-      path: '/result/:query/:advanced',
+      path: '/result/:query/:committees/:people/:dateStart/:dateEnd',
       name: 'Result',
       component: Result,
       props: true
@@ -30,7 +30,7 @@ export default new VueRouter({
       props: true
     },
     {
-      path: '/advancedsearch/:query/:advanced',
+      path: '/advancedsearch/:query/:committees/:people/:dateStart/:dateEnd',
       name: 'Advanced Search',
       component: AdvancedSearch,
       props: true
