@@ -26,8 +26,8 @@
           </b-collapse>
         </b-col>
       </b-row>
-      <b-row v-show="searching == true" id="loading_anim">
-        <b-col>
+      <b-row v-show="searching == true" id="loading_anim" align-h="center">
+        <b-col cols="auto">
           <div class="la-ball-atom la-dark la-3x m-4">
             <div></div>
             <div></div>
@@ -51,16 +51,16 @@
         </b-col>
         -->
       </b-row>
-      <b-row>
-        <b-col v-show="searching == false && empty == false">
+      <b-row align-h="center">
+        <b-col v-show="searching == false && empty == false" cols="auto">
           End of Search Results
         </b-col>
-        <b-col v-show="searching == false && empty == true">
+        <b-col v-show="searching == false && empty == true" cols="auto">
           There are no results that matched your query
         </b-col>
       </b-row>
       <div class="spacer">
-        <!-- The only purpose of this class is to give scroll space to allow the user to scroll to the very last card freely -->
+        <!-- The only purpose of this div is to give scroll space to allow the user to scroll to the very last card freely -->
       </div>
     </b-container>
   </div>
@@ -160,7 +160,8 @@ export default{
         .then((resp) => {
           console.log(resp)
           this.ElasticResult = resp.data.hits.hits
-          if (ElasticResults.length == 0){
+          // Update the display, hide the loading animation, reveal the timeline, place an indicator at the end of the search results
+          if (this.ElasticResult.length == 0){
             this.empty = true
           }
           this.searching = false
