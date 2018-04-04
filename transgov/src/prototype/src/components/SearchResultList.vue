@@ -96,9 +96,6 @@
         -->
       </b-col>
     </b-row>
-    <div class="spacer">
-      <!-- The only purpose of this class is to give scroll space to allow the user to scroll to the very last card freely -->
-    </div>
   </div>
 </template>
 
@@ -133,8 +130,5 @@ export default {
   #tabs-lvl-1>.card-header>ul>li:nth-child(3)>a.active{
     background-color: #f7f7f7;
     border-bottom-color: #f7f7f7;
-  }
-  .spacer{
-    height: 99vh;
   }
 </style>

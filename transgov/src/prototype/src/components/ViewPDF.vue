@@ -7,9 +7,9 @@
           <!-- <p>We recieved this file ID: {{file_id}}</p> -->
           <b-card class="mt-4 md-elevation-3" no-body>
             <div slot="header">
-              <p>File Controls <input type="checkbox" v-model="show"></p>
+              <p>Show File: <input type="checkbox" v-model="show"></p>
               <p>
-                <input v-model.number="page" type="number" style="width: 5em" min="1" :max="numPages"> /{{numPages}}
+                Page: <input v-model.number="page" type="number" style="width: 5em" min="1" :max="numPages"> /{{numPages}}
               </p>
               <p>
                 <button @click="rotate += 90" class="btn btn-primary">&#x27F3;</button>
