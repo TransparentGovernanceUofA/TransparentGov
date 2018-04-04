@@ -1,6 +1,7 @@
 <template>
   <div class="advancedSearch">
     <top-left-search :previousInputField="inputField" :advancedForm="form"></top-left-search>
+    <!-- {{ form }} -->
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -8,43 +9,49 @@
             <!-- The inputs and options -->
             <b-card header="Search Options" class="mt-4 md-elevation-3">
               <div class="help-tip">
-                <p>List of committees at the University of Alberta.</p>
+                <p>List of committees at the University of Alberta. <br>
+                Multiple committees can be selected by pressing "Ctrl" and clicking on committees</p>
               </div>
               <b-form-group id="committee"
                           label="Committee"
                           label-for="exampleInput2">
                 <b-form-select id="exampleInput2"
+                            multiple
+                            :select-size="3"
                             :options="committeeOptions"
                             required
                             v-model="form.committee">
+                </b-form-select>
+              </b-form-group>
+              <div class="help-tip">
+                <p>Various members that take part in Governance discussions. <br>
+                Multiple members can be selected by pressing "Ctrl" and clicking on names</p>
+              </div>
+              <b-form-group id="people"
+                          label="People"
+                          label-for="exampleInput5">
+                <b-form-select id="exampleInput5"
+                            multiple
+                            :select-size="3"
+                            :options="peopleOptions"
+                            required
+                            v-model="form.people">
                 </b-form-select>
               </b-form-group>
               <b-form-group id="date">
                 <b-row>
                   <b-col>
                     <p> Start: </p>
-                    <date-picker v-model="date_start" :config="config_date_start"></date-picker>
+                    <date-picker v-model="form.date_start" :config="config_date_start"></date-picker>
                   </b-col>
                   <b-col>
                     <div id="time-help" class="help-tip">
                       <p>Date picker, allows searching in a range of dates.</p>
                     </div>
                     <p> End: </p>
-                    <date-picker v-model="date_end":config="config_date_end"></date-picker>
+                    <date-picker v-model="form.date_end":config="config_date_end"></date-picker>
                   </b-col>
                 </b-row>
-              </b-form-group>
-              <div class="help-tip">
-                <p>Various members that take part in Governance discussions.</p>
-              </div>
-              <b-form-group id="people"
-                          label="People"
-                          label-for="exampleInput5">
-                <b-form-select id="exampleInput5"
-                            :options="peopleOptions"
-                            required
-                            v-model="form.people">
-                </b-form-select>
               </b-form-group>
             </b-card>
           </b-col>
@@ -73,7 +80,16 @@ export default {
     query: {
       type: String
     },
-    advanced: {
+    committees: {
+      type: String
+    },
+    people: {
+      type: String
+    },
+    dateStart: {
+      type: String
+    },
+    dateEnd: {
       type: String
     }
   },
@@ -91,28 +107,36 @@ export default {
     //   console.log(this.form.topic)
     // }
     parseQuery () {
-      var queryArray = this.query.split(':')
-      this.inputField.search = queryArray[1]
+      let queryArray = this.query.replace('search:', '')
+      this.inputField.search = queryArray
+      // console.log("parseQuery", this.advanced)
 
-      var advancedArray = this.advanced.split(':')
-      if (advancedArray[1] !== 'false') {
-        this.form.committee = advancedArray[2]
-        if (this.form.committee === '') {
-          this.form.committee = null
-        }
-
-        this.form.date = advancedArray[4]
-        if (this.form.date === '') {
-          this.form.date = null
-        }
-
-        this.form.people = advancedArray[6]
-        if (this.form.people === '') {
-          this.form.people = null
-        }
+      let committee = this.committees.replace('committee:', '').split(',')
+      if (committee[0] !== "") {
+        this.form.committee = committee
+      } else {
+        this.form.committee = []
       }
-      // console.log(this.form)
-      // console.log(this.inputField.search)
+
+
+      let people = this.people.replace('people:', '').split(',')
+      if (people[0] !== "") {
+        this.form.people = people
+      } else {
+        this.form.people = []
+      }
+
+      let dateStr = this.dateStart.replace('dateStart:', '')
+      if (dateStr !== '') {
+        this.form.date_start = dateStr
+      }
+
+      dateStr = this.dateEnd.replace('dateEnd:', '')
+      if (dateStr !== '') {
+        this.form.date_end = dateStr
+      }
+      
+
     },
     fetchCommittee () {
       axios.get('http://162.246.156.217:8080/excel/committees/_search?pretty')
@@ -146,26 +170,26 @@ export default {
         search: ''
       },
       form: {
-        committee: null,
-        people: null
+        committee: [],
+        people: [],
+        date_end: null,
+        date_start: null
       },
       committeeOptions: [
-        { value: null, text: '' }
+        // { value: null, text: '' }
       ],
       peopleOptions: [
-        { value: null, text: '' },
+        // { value: null, text: '' },
       ],
-      date_start: null,
       config_date_start: {
-        format: 'DD/MM/YYYY',
+        format: 'YYYY/MM/DD',
         useCurrent: false,
         showClear: true,
         showClose: true,
         maxDate: new Date()
       },
-      date_end: new Date(),
       config_date_end: {
-        format: 'DD/MM/YYYY',
+        format: 'YYYY/MM/DD',
         useCurrent: false,
         showClear: true,
         showClose: true,
