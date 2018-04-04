@@ -181,14 +181,14 @@ export default {
       ],
       config_date_start: {
         format: 'YYYY/MM/DD',
-        useCurrent: false,
+        useCurrent: true,
         showClear: true,
         showClose: true,
         maxDate: new Date()
       },
       config_date_end: {
         format: 'YYYY/MM/DD',
-        useCurrent: false,
+        useCurrent: true,
         showClear: true,
         showClose: true,
         maxDate: new Date()
