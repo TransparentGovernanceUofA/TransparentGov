@@ -159,7 +159,9 @@ export default{
       this.inputField.search = queryArray
       // console.log("parseQuery", this.advanced)
 
+      console.log("commitee before shit", this.committees)
       let committee = this.committees.replace('committee:', '').split(',')
+      console.log("committee in result", committee)
       if (committee[0] !== "") {
         this.advancedFilters.committee = committee
       } else {

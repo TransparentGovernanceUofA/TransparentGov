@@ -1,7 +1,7 @@
 <template>
   <div class="advancedSearch">
     <top-left-search :previousInputField="inputField" :advancedForm="form"></top-left-search>
-    <!-- {{ form }} -->
+    {{ form }}
     <div id="AdvancedSearch">
       <b-container fluid >
         <b-row>
@@ -16,8 +16,6 @@
                           label="Committee"
                           label-for="exampleInput2">
                 <b-form-select id="exampleInput2"
-                            multiple
-                            :select-size="3"
                             :options="committeeOptions"
                             required
                             v-model="form.committee">
@@ -31,8 +29,6 @@
                           label="People"
                           label-for="exampleInput5">
                 <b-form-select id="exampleInput5"
-                            multiple
-                            :select-size="3"
                             :options="peopleOptions"
                             required
                             v-model="form.people">
@@ -112,8 +108,10 @@ export default {
       // console.log("parseQuery", this.advanced)
 
       let committee = this.committees.replace('committee:', '').split(',')
+      console.log("committee in advancedSearch from result", committee)
       if (committee[0] !== "") {
         this.form.committee = committee
+        // this.form.committee = "shit"
       } else {
         this.form.committee = []
       }

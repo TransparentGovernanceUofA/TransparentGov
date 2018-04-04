@@ -34,6 +34,7 @@ export default {
   data: function () {
     return {
       pills: [],
+      committee_selections: [],
       searchBoxText: '',
       inputField: {
         search: 'search:'
@@ -73,7 +74,8 @@ export default {
       let committeeStr = 'committee:'
       if (this.committee != null) {
         isAdvancedSearch = true
-        committeeStr = 'committee:' + this.committee
+        // committeeStr = 'committee:' + this.committee
+        committeeStr = 'committee:' + this.committee_selections
       }
 
       let dateStartStr = 'dateStart:'
@@ -99,7 +101,7 @@ export default {
     },
 
     pillClicked: function (pill, index) {
-      // console.log('Pill clicked', pill.type)
+      console.log('Pill clicked', pill.type)
       if (this.$route.name === 'Advanced Search') {
         let new_arr = []
         if (pill.type === 'committee') {
@@ -134,6 +136,7 @@ export default {
         // console.log('Pill clicked from the results page')
         let query = this.$route.params.query
         let committees = this.$route.params.committees
+        console.log("going back from result pill", committees)
         let people = this.$route.params.people
         let date_start = this.$route.params.date_start
         let date_end = this.$route.params.date_end
@@ -211,7 +214,8 @@ export default {
   },
   computed: {
     committee () {
-      // console.log("computed committee")
+      console.log("computed committee", this.advancedForm.committee)
+      // this.committee
       return this.advancedForm.committee
     },
     date_start () {
@@ -236,11 +240,20 @@ export default {
     // }
 
     committee () {
+      console.log("committee in watch")
       var original = []
       for (let i = 0; i < this.pills.length; i++){
         original.push(this.pills[i].name)
       }
-      this.addPills('committee', this.committee, original)
+      console.log("this.committee", this.committee)
+      if(typeof(this.committee) === "object"){
+        this.committee_selections = this.committee
+        this.addPills('committee', this.committee_selections, original)
+      }
+      else{
+        this.committee_selections.push(this.committee)
+        this.addPills('committee', this.committee_selections, original)
+      }
     },
     // date () {
     //   this.addPills('date', this.date)
