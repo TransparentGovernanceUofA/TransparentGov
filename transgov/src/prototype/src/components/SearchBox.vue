@@ -36,6 +36,11 @@
                 <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
             </b-col>
+            <!-- help button for mobile
+            <b-col lg=4 order="3" class="mt-2 mt-lg-0 hidden-md-down">
+                <b-button @click="open=true" variant="outline-primary" size="lg" class="search" id="helpButton">Help</b-button>
+            </b-col>
+            -->
             <vue-modaltor :visible="open" :bgOverlay="'1d720c'" @hide="hideModal">
               <div id="mainDiv">
                 <div id="intro">

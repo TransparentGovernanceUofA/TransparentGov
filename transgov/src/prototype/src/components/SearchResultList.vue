@@ -22,9 +22,9 @@
           <h6 slot="header" class="mb-0">
              <!-- <span class="title" v-html="searchresult._source.Title"></span> -->
             {{searchresult._source.Title}}
-            <router-link :to="{name: 'View PDF', params: { file_id:searchresult._source.url}}">
+            <a :href="searchresult._source.url">
             View Original PDF
-            </router-link>
+            </a>
           </h6>
 
 

@@ -11,12 +11,6 @@ var container = {}
 var items = {}
 var options = {}
 var timeline = {}
-
-// Temporarily using this function for demo purposes
-// Credit to: https://stackoverflow.com/questions/9035627/elegant-method-to-generate-array-of-random-dates-within-two-dates
-function randomDate (start, end) {
-  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
-}
   
 function onSelect (properties) {
   if (properties.items.length == 0){
@@ -35,7 +29,6 @@ export default {
 
     // Create a DataSet (allows two way data-binding)
     items = new vis.DataSet()
-    // items.add({content: 'wght', start: '2015-01-01', title: 'dssadsa'})
 
     // Configuration for the Timeline
     options = {
