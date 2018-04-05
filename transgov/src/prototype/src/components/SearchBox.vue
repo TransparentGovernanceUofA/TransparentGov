@@ -5,7 +5,7 @@
         <div id="user-searches" class="md-elevation-8">
           <b-row>
             <b-col>
-              <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg"></button>
+              <button class="hidden-lg-up" @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg"></button>
               <router-link to="/">
                 <img src="./../assets/logoOpenGov2-3anim.svg" class="m-2"/>
               </router-link>
@@ -35,6 +35,9 @@
               <router-link :to="{name: 'Result', params: { query: 'search:' + newSearchBoxText, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}}">
                 <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
+            </b-col>
+            <b-col lg=4 order="3" class="mt-2 mt-lg-0 hidden-md-down">
+                <b-button @click="open=true" variant="outline-primary" size="lg" class="search" id="helpButton">Help</b-button>
             </b-col>
             <vue-modaltor :visible="open" :bgOverlay="'1d720c'" @hide="hideModal">
               <div id="mainDiv">
