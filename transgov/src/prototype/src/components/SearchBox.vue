@@ -5,6 +5,7 @@
         <div id="user-searches" class="md-elevation-8">
           <b-row>
             <b-col>
+              <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg"></button>
               <router-link to="/">
                 <img src="./../assets/logoOpenGov2-3anim.svg" class="m-2"/>
               </router-link>
@@ -35,6 +36,28 @@
                 <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
               </router-link>
             </b-col>
+            <vue-modaltor :visible="open" :bgOverlay="'1d720c'" @hide="hideModal">
+              <p>ClearGov lets you search various committees Meeting Minutes, Agendas and Meeting Material documents in a fast and effective way. The basic search is an easy way to search for a specific topic in a quick and efficient way. 
+
+              Use this to prepare for a meeting or even do a deep dive into a specific topic. 
+
+              Our Advanced Search houses a more specialized feature set to narrow down results. Access “Advanced Search” by clicking “Advanced Guide” on the home page. On this page, you can enter your search term(s) and manipulate options to filter by ‘Committee’ or ‘People’. You can outline a Start Date and End Date to trim down your results.
+
+              Once you’ve hit search your results will be generated and displayed. You can sort each returned document by the Highlights (which has the highlighted text in it) or by Attendees or Items. For a further dive you can click “View Original PDF” and have the PDF served to your window. 
+
+              From here you can rotate, print and use the PDF. 
+
+              To use the timeline, first search for an item that has results. Click the Show/Hide Timeline to toggle it on or off. The timeline is a way to visualize your search results by the date they occurred on. Each bubble shoes the committee and day, and a line connects it to the precise location on the timeline at the bottom of the visualization.
+
+              You can manipulate the timeline by Zooming (using your Mouse Wheel / Pinch) and scroll left and right by clicking and dragging or swiping. 
+
+              Selecting an item on the time line jumps immediately to the corresponding search result card below the timeline.
+
+              If at any point you want to return to the homepage, click the OpenGov logo in the top left-hand corner.
+
+              If at any point you are confused, you can click the ? icon beside the feature to get help. </p>
+            </vue-modaltor>
+            <!-- <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg">modal-basic</button> -->
           </b-row>
           <!--
           <b-row>
@@ -59,6 +82,22 @@ export default {
       newSearchBoxText: '',
       inputField: {
         search: 'search:'
+      },
+      open: false,
+      props: {
+        // this is for toggle show modal 
+        // :visible:false
+        visible: {
+          type: Boolean,
+          required: false,
+          default: false
+        },
+        // this is for bgcolor overlay
+        bgOverlay:{
+          type: String,
+          required: false,
+          default: '#fff'
+        }
       }
     }
   },
@@ -76,6 +115,9 @@ export default {
       // console.log(this.inputField)
       let search = this.inputField.search
       this.$router.push({name: 'Result', params: { query: search, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}})
+    },
+    hideModal () {
+      this.open = false
     }
   }
 }
@@ -117,5 +159,14 @@ export default {
     animation-name: hideshow;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+}
+
+#helpBtn{
+  background-color: white;
+  border: none;
+  color: white;
+  float: right;
+  height: 75px;
+  width: 75px;
 }
 </style>
