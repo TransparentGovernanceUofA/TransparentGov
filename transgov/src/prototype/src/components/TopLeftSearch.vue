@@ -12,7 +12,7 @@
             <b-input-group>
               <input id="input-box" v-model="searchBoxText" v-on:keyup.enter="goToResults()" class="form-control"/>
               <b-input-group-append>
-                <b-button variant="outline-primary" size="sm" class="topLeftSearch" id="searchButton" v-on:click="goToResults()"><b>Search</b></b-button>
+                <b-button variant="outline-success" size="sm" class="topLeftSearch" id="searchButton" v-on:click="goToResults()"><b>Search</b></b-button>
               </b-input-group-append>
             </b-input-group>
           </div>

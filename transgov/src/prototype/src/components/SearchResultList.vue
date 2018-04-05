@@ -22,8 +22,8 @@
           <h6 slot="header" class="mb-0">
              <!-- <span class="title" v-html="searchresult._source.Title"></span> -->
             {{searchresult._source.Title}}
-            <a :href="searchresult._source.url">
-            View Original PDF
+            <a :href="searchresult._source.url" class="text-success">
+              PDF
             </a>
           </h6>
 

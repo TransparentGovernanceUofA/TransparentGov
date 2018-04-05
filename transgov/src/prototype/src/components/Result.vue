@@ -20,7 +20,7 @@
 
       <b-row v-show="empty == false">
         <b-col cols="auto">
-          <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
+          <b-btn v-b-toggle.collapse1 variant="success" class="mt-2">Show/Hide Timeline</b-btn>
 
         </b-col>
         <b-col cols="auto">
