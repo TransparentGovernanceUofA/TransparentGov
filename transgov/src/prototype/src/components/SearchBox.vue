@@ -20,7 +20,7 @@
           <b-row class="mt-2" align-h="center">
             <b-col lg=8>
               <!-- b-form-input breaks the listening for key up of enter -->
-              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" class="form-control"/>
+              <input v-model="newSearchBoxText" @change="newInput()" v-on:keyup.enter="goToResults()" id="input-box1" class="form-control" :placeholder='inputPrompt' />
               <!-- <b-form-input size="lg" @change="newInput()" v-model="newSearchBoxText" id="input-box1" v-on:keyup.enter="goToResults()"></b-form-input> -->
             </b-col>
           </b-row>
@@ -32,9 +32,9 @@
               </router-link>
             </b-col>
             <b-col lg=4 order="1" order-lg="2">
-              <router-link :to="{name: 'Result', params: { query: 'search:' + newSearchBoxText, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}}">
-                <b-button variant="outline-primary" size="lg" class="search" id="searchButton">Search</b-button>
-              </router-link>
+              <!-- <router-link :to="{name: 'Result', params: { query: 'search:' + newSearchBoxText, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}}"> -->
+                <b-button variant="outline-primary" size="lg" class="search" id="searchButton" v-on:click="goToResults()">Search</b-button>
+              <!-- </router-link> -->
             </b-col>
             <!-- <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg">modal-basic</button> -->
           </b-row>
@@ -107,6 +107,7 @@ export default {
       inputField: {
         search: 'search:'
       },
+      inputPrompt: '',
       open: false,
       props: {
         // this is for toggle show modal 
@@ -121,7 +122,7 @@ export default {
           type: String,
           required: false,
           default: '#fff'
-        },
+        }
         // defaultWidth:{
         //   type: String,
         //   required: false,
@@ -142,8 +143,13 @@ export default {
     goToResults () {
       // console.log('-----goToResults function called------')
       // console.log(this.inputField)
-      let search = this.inputField.search
+
+      if (this.inputField.search == 'search:') {
+        this.inputPrompt = 'Search for...'
+      } else {
+        let search = this.inputField.search
       this.$router.push({name: 'Result', params: { query: search, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}})
+      }
     },
     hideModal () {
       this.open = false

@@ -1,5 +1,5 @@
 <template>
-<div class="badge align-middle align-text-top align-text-bottom" v-bind:class="[computedStyle,computedPills]">
+<div class="badge align-middle align-text-top align-text-bottom text-lg" v-bind:class="[computedStyle,computedPills]">
   {{text}}
   <span class="clickable" v-on:click="emit">x</span>
 </div>
@@ -14,6 +14,9 @@ export default {
     },
     computedPills: function () {
       return (this.pillable === 'true') ? 'badge-pill' : ''
+    },
+    test: function () {
+      return 'test'
     }
   },
   methods: {
@@ -28,9 +31,11 @@ export default {
 .badge{
   margin-right:5px;
   margin-left:5px;
+  font-size: 90%;
 }
 
 .clickable{
   cursor:pointer;
 }
+
 </style>

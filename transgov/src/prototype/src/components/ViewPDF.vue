@@ -1,6 +1,6 @@
 <template>
   <div class="viewPDF">
-    <top-left-search :previousInputField="inputField"></top-left-search>
+    <top-left-search :previousInputField="inputField" :advancedForm="advancedFilters"></top-left-search>
     <b-container fluid>
       <b-row>
         <b-col>
@@ -59,6 +59,12 @@ export default{
       page: 1,
       numPages: 0,
       rotate: 0,
+      advancedFilters: {
+        committee: [],
+        people: [],
+        date_end: null,
+        date_start: null
+      },
     }
   },
   created () {
