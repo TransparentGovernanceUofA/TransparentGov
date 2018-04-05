@@ -16,11 +16,9 @@
                           label="Committee"
                           label-for="exampleInput2">
                 <b-form-select id="exampleInput2"
-                            multiple
-                            :select-size="3"
                             :options="committeeOptions"
                             required
-                            v-model="form.committee">
+                            v-model="tempCommitteeSelect">
                 </b-form-select>
               </b-form-group>
               <div class="help-tip">
@@ -31,11 +29,9 @@
                           label="People"
                           label-for="exampleInput5">
                 <b-form-select id="exampleInput5"
-                            multiple
-                            :select-size="3"
                             :options="peopleOptions"
                             required
-                            v-model="form.people">
+                            v-model="tempPeopleSelect">
                 </b-form-select>
               </b-form-group>
               <b-form-group id="date">
@@ -171,6 +167,8 @@ export default {
       advancedInputField: {
         search: ''
       },
+      tempCommitteeSelect: null,
+      tempPeopleSelect: null,
       form: {
         committee: [],
         people: [],
@@ -197,6 +195,39 @@ export default {
         showClose: true,
         maxDate: new Date()
       }
+    }
+  },
+  watch: {
+    tempCommitteeSelect: function (val) {
+      let found = false
+      for (var i = this.form.committee.length - 1; i >= 0; i--) {
+        if (this.form.committee[i] === val) {
+          found = true
+          break
+        }
+      }
+
+      if (!found) {
+        this.form.committee.push(val)
+      }
+
+    },
+    tempPeopleSelect: function (val) {
+      let found = false
+      for (var i = this.form.people.length - 1; i >= 0; i--) {
+        // console.log(this.form.people[i], val)
+        if (this.form.people[i] === val) {
+          // console.log('Same')
+          found = true
+          break
+        }
+      }
+
+      if (!found) {
+        this.form.people.push(val)
+      }
+
+      // console.log("___________")
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div id="search-result-list">
     <!-- This is a sub-component, the parent should declare a container for it -->
-    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult._id" class="mt-4" no-gutters>
+    <b-row v-for="(searchresult, index) in test" :key="index" v-bind:id="searchresult._id" class="mb-4" no-gutters>
       <!-- Note: the id of this row is used by the timeline component for click to focus -->
       <b-col>
         <!-- <SearchResult v-for="(searchresult, index) in test" :key="index" v-bind:searchresult="searchresult" v-bind:id="searchresult.id">
@@ -98,9 +98,6 @@
         -->
       </b-col>
     </b-row>
-    <div class="spacer">
-      <!-- The only purpose of this class is to give scroll space to allow the user to scroll to the very last card freely -->
-    </div>
   </div>
 </template>
 
@@ -135,8 +132,5 @@ export default {
   #tabs-lvl-1>.card-header>ul>li:nth-child(3)>a.active{
     background-color: #f7f7f7;
     border-bottom-color: #f7f7f7;
-  }
-  .spacer{
-    height: 99vh;
   }
 </style>

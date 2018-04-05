@@ -1,0 +1,996 @@
+{
+    "Meeting": {
+        "title": "Approved Open Session Minutes",
+        "filename": "Approved_Open_Session_Minutes_September_25_2017.pdf",
+        "subsection": [
+            {
+                "Title": "ATTENDEES",
+                "Items": [
+                    {
+                        "title": null,
+                        "pages_start": null,
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "separate_index": null,
+                        "purpose": null,
+                        "presenters": [
+                            {
+                                "name": null
+                            }
+                        ],
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "index_in_pdf": null,
+                        "text": null
+                    }
+                ]
+            },
+            {
+                "sub_Title": null,
+                "Title": "OPENING SESSION",
+                "Items": [
+                    {
+                        "item_title": null,
+                        "pages_start": null,
+                        "index_in_pdf": null,
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": [
+                            {
+                                "name": null
+                            }
+                        ],
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Approval of the Agenda",
+                        "pages_start": "2",
+                        "index_in_pdf": "1",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": " Dew/Cormack",
+                                "content": "THAT General Faculties Council approve the Agenda."
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Approval of the Minutes of June 5, 2017",
+                        "pages_start": "2",
+                        "index_in_pdf": "2",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": " Dew/Nakamura",
+                                "content": "THAT General Faculties Council approve the Minutes of June 5, 2017."
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " A. Indigenous Welcome",
+                        "pages_start": "2",
+                        "index_in_pdf": "3",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": [
+                            "Following an Indigenous welcome provided by Ms Marilyn Buffalo, the Chair welcomed special guests from the",
+                            "University of Alberta Senate and all new and returning members of GFC, including several new Deans and",
+                            "Senior Administrators.",
+                            "",
+                            "The Chair then provided a summary of the Board of Governors retreat, the status of the provincial reviews of the",
+                            "funding model and tuition review, an update on the bargaining process, a reminder of the importance of donating",
+                            "to the United Way campaign launching in October, and a summary of advocacy efforts in support of the",
+                            "recommendations within the Naylor Report.  The Chair thanked members for their participation in recent Green",
+                            "and Gold Day events, Alumni Weekend, and the Canada 150 celebration at South Campus.",
+                            "",
+                            "Following these opening remarks, members discussed the use of the term \u201cfake news\u201d within the President\u2019s",
+                            "Report.",
+                            ""
+                        ],
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " New Members of GFC",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": null,
+                        "pages_start": "2",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "David Turpi",
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": " Zwicker/Cormack",
+                                "content": [
+                                    "Motion II: Zwicker/Cormack",
+                                    "",
+                                    "MOTION II: TO RECEIVE [This motion may be proposed by any member of GFC]:",
+                                    "",
+                                    "The following ex officio member, to serve on GFC for a term of office beginning July 1, 2017 and extending for",
+                                    "the duration of the appointment:",
+                                    "",
+                                    " Chris Andersen Dean, Faculty of Native Studies",
+                                    "",
+                                    "",
+                                    "The following ex officio member, to serve on GFC for a term of office beginning September  1, 2017 and",
+                                    "extending for the duration of the appointment:",
+                                    "",
+                                    " Dennis Kunimoto Acting Dean, Faculty of Medicine and Dentistry",
+                                    "",
+                                    "The following statutory faculty member/s who has been elected/re-elected by their Faculty, to serve on GFC for",
+                                    "term of office beginning July 1, 2017 and ending June 30, 2020:",
+                                    "",
+                                    "Duncan Elliot Faculty of Engineering",
+                                    "",
+                                    "",
+                                    "",
+                                    "GFC General Faculties Council 09/25/2017",
+                                    "",
+                                    "",
+                                    "Rob McMahon Faculty of Extension",
+                                    "",
+                                    "Katherine Aitchison Faculty of Medicine and Dentistry",
+                                    "",
+                                    "Tarek El-Bialy Faculty of Medicine and Dentistry",
+                                    "",
+                                    "Vivian Mushahwar Faculty of Medicine and Dentistry",
+                                    "",
+                                    "Georg Schmolzer Faculty of Medicine and Dentistry",
+                                    "",
+                                    "Ian Winship Faculty of Medicine and Dentistry",
+                                    "",
+                                    ""
+                                ]
+                            }
+                        ],
+                        "index_in_pdf": "4",
+                        "Purpose": "To appoint, re-appoint and receive new members of General Faculties Council."
+                    }
+                ]
+            },
+            {
+                "sub_Title": null,
+                "Title": "DISCUSSION ITEMS",
+                "Items": [
+                    {
+                        "item_title": null,
+                        "pages_start": null,
+                        "index_in_pdf": null,
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": [
+                            {
+                                "name": null
+                            }
+                        ],
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " A. Goals from the Students Union (SU) 2017-2018",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": [
+                            "Following the presentations delivered by Ms Banister and Mr Soltannia on the current strategic goals of the",
+                            "Students\u2019 Union (SU) and Graduate Students\u2019 Association for 2017-2018, questions arose during the discussion",
+                            "in relation to funding advocacy as well as use of the CPI in tuition calculations.",
+                            ""
+                        ],
+                        "pages_start": "4",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Marina Banister, President, Students\u2019 Union; Babak Soltannia, President, Graduate Students\u2019",
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "index_in_pdf": "5",
+                        "Purpose": "To provide members with the strategic goals of the Students\u2019 Union (SU) and"
+                    },
+                    {
+                        "item_title": " University of Alberta Senate Strategic Plan",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": [
+                            "Chancellor Stollery provided a brief summary of the Senate Strategic Plan 2017-2021 to members, noting that",
+                            "five goals will be tackled in the coming year.  These goals are based on the themes of the Senate\u2019s role:",
+                            "Connect, Inquire, and Promote.",
+                            "",
+                            "There was no further discussion.",
+                            ""
+                        ],
+                        "pages_start": "4",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Douglas Stollery, Chancello",
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "index_in_pdf": "6",
+                        "Purpose": "To provide members with a summary of the Senate Strategic Plan 2017-2021."
+                    },
+                    {
+                        "item_title": " Budget Update",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": null,
+                        "pages_start": "4",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Steven Dew, Provost and Vice-President (Academic); Gitta Kulczycki, Vice-President (Financ",
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "index_in_pdf": "7",
+                        "Purpose": "To provide GFC with an update of the university budget."
+                    }
+                ]
+            },
+            {
+                "sub_Title": null,
+                "Title": "ACTION ITEMS",
+                "Items": [
+                    {
+                        "item_title": null,
+                        "pages_start": null,
+                        "index_in_pdf": null,
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": [
+                            {
+                                "name": null
+                            }
+                        ],
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Proposed Changes to the University of Alberta Convocation Admission",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": [
+                            "Chancellor Stollery reported that, since his initial consultation with GFC, the Chaplains\u2019 Association provided a",
+                            "range of feedback on this proposal including a perceived lack of spirituality in the language of the Convocation",
+                            "Admission.",
+                            "",
+                            "During the ensuing discussion, the Chancellor addressed a question around whether the proposed changes",
+                            "isolate people of faith.",
+                            ""
+                        ],
+                        "pages_start": "5",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Douglas Stollery, Chancello",
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": " Doucet/Banister",
+                                "content": "THAT General Faculties Council approve the proposed changes to the Convocation Admission, as set forth"
+                            }
+                        ],
+                        "index_in_pdf": "8",
+                        "Purpose": "To discuss and approve proposed changes to the University of Alberta Convocation"
+                    },
+                    {
+                        "item_title": " Proposed Increase to Required English Language Proficiency (ELP) Scores for Undergraduate Admission",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": [
+                            "Ms Collins provided members with a summary of the proposal. She noted that research conducted by Enrolment",
+                            "Management in the Office of the Registrar showed the correlation between a higher overall ELP score and",
+                            "student success in first year courses, as indicated by final GPA and/or course withdrawals. She added that the",
+                            "proposed requirements align with those of the other U15 institutions.",
+                            "",
+                            "Ms Collins, during the discussion, noted that students not admitted due to the increased requirement would still",
+                            "be able to apply to the university through the Bridging program.",
+                            ""
+                        ],
+                        "pages_start": "5",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Lisa Collins, Vice-Provost and University Registra",
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": " Collins/Cormack",
+                                "content": "THAT General Faculties Council approve:"
+                            }
+                        ],
+                        "index_in_pdf": "9",
+                        "Purpose": "To make changes to the minimum overall TOEFL score and the minimum band sc"
+                    },
+                    {
+                        "item_title": " Report of the GFC Committee on the Learning Environment (CLE) on Teaching and Learning and",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": [
+                            "Prior to the presentation on the Report, GFC Secretary and Manager of GFC Services Meg Brolley provided an",
+                            "update to members on the amended wording of the original motion to include the term \u201cnon-discriminatory\u201d, and",
+                            "that although the meeting material did not include the term, the Report did address it.",
+                            "",
+                            "Chair of the GFC Committee on the Learning Environment (CLE) Sarah Forgie provided members with a",
+                            "summary of the Report including details about the scholarly methodology of researching and compiling the data",
+                            "presented.  She noted that this project also obtained ethics approval and included consultation with Department",
+                            "Chairs at the university. Dr Forgie indicated that the CLE recommendations provided with the report were",
+                            "crafted to lay out the next steps for further action.",
+                            "",
+                            "A member expressed concern with the omission of \u201cnon-discriminatory\u201d from the wording of the motion and",
+                            "indicated that it had impacted the findings within the report, in that it does not adequately address gender bias,",
+                            "",
+                            "",
+                            "",
+                            "GFC General Faculties Council 09/25/2017",
+                            "",
+                            "",
+                            "and bias against visible minorities.  The member further noted that, because of these biases, student ratings of",
+                            "instruction should not be used in promotion and tenure decisions at the institution.",
+                            "",
+                            "Dr Nocente reported that the literature clearly reflects the value of student ratings of instruction and that student",
+                            "feedback at the post-secondary level is important. She noted that the USRI tool is not designed to be used as",
+                            "the only measure, but that Department Chairs may not have the resources to consider multifaceted evaluations.",
+                            "",
+                            "Following a motion to extend the meeting, the President vacated the Chair due to another commitment and the",
+                            "Provost assumed the role of Acting Chair.",
+                            "",
+                            "Following this, members continued to debate the relevance and prevalence of biases within the literature.",
+                            "",
+                            "Citing time constraints and with consensus from members that additional discussion was required, the Acting",
+                            "Chair suggested a motion to table this item to the next meeting of GFC.",
+                            ""
+                        ],
+                        "pages_start": "6",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Sarah Forgie, Chair, GFC Committee on the Learning Environment; Norma Nocente, Associa",
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": "  Mocquais/Nakamura",
+                                "content": "THAT General Faculties Council table the Report of the GFC Committee on the Learning Environment"
+                            }
+                        ],
+                        "index_in_pdf": "10",
+                        "Purpose": "The GFC Committee on the Learning Environment (CLE) was requested by GFC"
+                    },
+                    {
+                        "item_title": " Budget Model Principles",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": [
+                            "Dr Dew reported that the new budget model moves from the current increment-based model to one that is based",
+                            "on activities. Ms Kulczycki led members through a review of each proposed budget model principle.",
+                            "",
+                            "Members, during the ensuing discussion, sought clarification on whether Faculty-based budget data would be",
+                            "made public, how these principles recognize research, and how accountability would be achieved.",
+                            ""
+                        ],
+                        "pages_start": "7",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Steven Dew, Provost and Vice-President (Academic); Gitta Kulczycki, Vice-President (Financ",
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": " Kulczycki/Mocquais",
+                                "content": "THAT General Faculties Council recommend that the Board of Governors approve the Budget Model Principles,"
+                            }
+                        ],
+                        "index_in_pdf": "11",
+                        "Purpose": "To recommend for approval by GFC the principles that will guide and inform"
+                    },
+                    {
+                        "item_title": " Faculty of Graduate Studies and Research: Proposed Revisions to existing Supervision and Examinations",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": [
+                            "With the consent of the proposers, this item was deferred to the next meeting of GFC due to time constraints.",
+                            ""
+                        ],
+                        "pages_start": "7",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Heather Zwicker, Dean, Faculty of Graduate Studies and Research; Deborah Burshtyn, Vice-",
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "index_in_pdf": "12",
+                        "Purpose": "The revisions are intended to clarify the policies, elaborate on procedures, and"
+                    },
+                    {
+                        "item_title": " Proposed Faculty name change: Faculty of Kinesiology, Sport, and Recreation (from Faculty of Physical",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "discussion": null,
+                        "pages_start": "8",
+                        "purpose": null,
+                        "separate_index": null,
+                        "text": null,
+                        "pages_end": null,
+                        "presenters": "Kerry Mummery, Dean, Faculty of Physical Education and Recreatio",
+                        "motions": [
+                            {
+                                "carried": true,
+                                "motion": " Mocquais/Dixon",
+                                "content": "THAT General Faculties Council approve the proposed name change for the Faculty of Physical Education"
+                            }
+                        ],
+                        "index_in_pdf": "13",
+                        "Purpose": "To change the name of the Faculty of Physical Education and Recreation"
+                    }
+                ]
+            },
+            {
+                "sub_Title": null,
+                "Title": "DISCUSSION ITEMS",
+                "Items": [
+                    {
+                        "item_title": null,
+                        "pages_start": null,
+                        "index_in_pdf": null,
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": [
+                            {
+                                "name": null
+                            }
+                        ],
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Question Period",
+                        "pages_start": "8",
+                        "index_in_pdf": "14",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    }
+                ]
+            },
+            {
+                "sub_Title": null,
+                "Title": "INFORMATION REPORTS",
+                "Items": [
+                    {
+                        "item_title": null,
+                        "pages_start": null,
+                        "index_in_pdf": null,
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": [
+                            {
+                                "name": null
+                            }
+                        ],
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Report of the GFC Executive Committee (June 12, September 11, 2017)",
+                        "pages_start": "8",
+                        "index_in_pdf": "15",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": [],
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Report of the GFC Academic Planning Committee (June 14, September 13, 2017)",
+                        "pages_start": "8",
+                        "index_in_pdf": "16",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Report of the GFC Academic Standards Committee (June 15, September 21, 2017)",
+                        "pages_start": "9",
+                        "index_in_pdf": "17",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Report of the GFC Nominating Committee",
+                        "pages_start": "9",
+                        "index_in_pdf": "18",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Report of the GFC Replenishment Committee (June 26, 2017)",
+                        "pages_start": "9",
+                        "index_in_pdf": "19",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Report of the Board of Governors (June 23, 2017)",
+                        "pages_start": "9",
+                        "index_in_pdf": "20",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Information Forwarded to GFC Members Between Meetings",
+                        "pages_start": "9",
+                        "index_in_pdf": "21",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    },
+                    {
+                        "item_title": " Information Items",
+                        "pages_start": "9",
+                        "index_in_pdf": "22",
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": null,
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    }
+                ]
+            },
+            {
+                "sub_Title": null,
+                "Title": "CLOSING SESSION",
+                "Items": [
+                    {
+                        "item_title": null,
+                        "pages_start": null,
+                        "index_in_pdf": null,
+                        "keywords": [
+                            null,
+                            null
+                        ],
+                        "pages_end": null,
+                        "purpose": null,
+                        "presenters": [
+                            {
+                                "name": null
+                            }
+                        ],
+                        "discussion": null,
+                        "motions": [
+                            {
+                                "carried": null,
+                                "motion": null,
+                                "content": null
+                            }
+                        ],
+                        "separate_index": null,
+                        "text": null
+                    }
+                ]
+            }
+        ],
+        "committee": "General Faculties Council",
+        "attendees": [
+            "David Turpin, Chair",
+            "Chris Andersen",
+            "Lisa Collins",
+            "Lesley Cormack",
+            "Greta Cummings",
+            "Kathleen DeLong",
+            "Steven Dew",
+            "Walter Dixon",
+            "Joseph Doucet",
+            "Gitta Kulczycki",
+            "Pierre-Yves Mocquais",
+            "Kerry Mummery",
+            "Paul Paton",
+            "Jonathan Schaeffer",
+            "Andrew Sharman",
+            "Jacqui Tam",
+            "Jennifer Tupper",
+            "Heather Zwicker",
+            "Elected faculty:",
+            "Jason Acker",
+            "Susan Andrew",
+            "Jeff Birchall",
+            "Cary Brown",
+            "Sylvia Brown",
+            "Peter Carver",
+            "Ryan Dunch",
+            "Tarek El-Bialy",
+            "Duncan Elliott",
+            "Nadir Erbilgin",
+            "Dean Eurich",
+            "Bill Foster",
+            "Kim Frail",
+            "Murray Gingras",
+            "Lesley Harrington",
+            "Eva Lemaire",
+            "Pierre Lemelin",
+            "Mark Loewen",
+            "Lisa McDermott",
+            "Rob McMahon",
+            "Lynn McMullen",
+            "Al Meldrum",
+            "Alice Nakamura",
+            "Carla Peck",
+            "Leonard Ratzlaff",
+            "Carolyn Sale",
+            "Jorge Sousa",
+            "Eleni Stroulia",
+            "Brent Swallow",
+            "Benjamin Tucker",
+            "Dilini Vethanayagam",
+            "Akiko Watanabe",
+            "Ian Winship",
+            "Firouz Khodayari",
+            "Shane Scott",
+            "Ilya Ushakov",
+            "Solomon Amoateng",
+            "Ruben Araya",
+            "Marina Banister",
+            "Matthew Barnett",
+            "Darcy Bemister",
+            "Robert Bilak",
+            "Katherine Binhammer",
+            "Michelle Borowitz",
+            "Meijun Chen",
+            "Darren Choi",
+            "Andr\u00e9 Costopoulos",
+            "Jonah Dunch",
+            "Kyle Foster",
+            "Srosh Hassan",
+            "Connor Hastey",
+            "Palindat",
+            "Delane Howie",
+            "Maryam Kebbe",
+            "Maryse Ndilu Kiese",
+            "Monica Lillo",
+            "Steven Lin",
+            "Kyle Monda",
+            "Sean Oliver",
+            "Michael Sandare",
+            "Babak Soltannia",
+            "Andrews Tawiah",
+            "James Thibaudeau",
+            "LJ Valencia",
+            "Amanda Wakaruk",
+            "Janet Williamson",
+            "Ziyu Yang",
+            "Katherine Aitchison",
+            "Allen Berger",
+            "Stanford Blade",
+            "Abigail Bridarolli",
+            "Heather Bruce",
+            "Katy Campbell",
+            "Li-Kwong Cheah",
+            "Brandon Christensen",
+            "David Cooper",
+            "Pamela Mayne",
+            "Correia",
+            "Neal Davies",
+            "Benjamin Denga",
+            "Genna DiPinto",
+            "Shannon Erichsen",
+            "Shawn Flynn",
+            "Fraser Forbes",
+            "Adam Gaudry",
+            "Robert Haennel",
+            "Daanish Hamid",
+            "Irehobhude Iyioha",
+            "Mahmoud Kenawi",
+            "Dennis Kunimoto",
+            "Alex Kwan",
+            "Leijun Li",
+            "Wei Liu",
+            "Habba Mahal",
+            "Godfrey Man",
+            "Heather McCaw",
+            "Laurie Mereu",
+            "Roger Moore",
+            "Vivian Mushahwar",
+            "Katelynn Nguyen",
+            "Anthony Nguyen",
+            "Smit Patel",
+            "Georg Schmolzer",
+            "Marc Secanell",
+            "Carrie Smith-Prei",
+            "Kim Solez",
+            "Sarah Stahlke",
+            "Bruce Sutherland",
+            "Amy Tse",
+            "Eddie Wang",
+            "Bonnie Watt",
+            "Jonathan White",
+            "Brayden Whitlock",
+            "Erin Wright",
+            "Kue Young",
+            "Meg Brolley, GFC",
+            "Marion Haggarty-",
+            "France, University",
+            "Andrea Patrick, scribe",
+            "GFC General Faculties Council 09/25/2017"
+        ],
+        "location": "Council Chamber, 2-100 University Hall (UNH)",
+        "time": "2:00 PM - 4:00 PM",
+        "date": "Monday, September 25, 2017"
+    }
+}
