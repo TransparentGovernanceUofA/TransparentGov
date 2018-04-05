@@ -19,9 +19,8 @@ before_script:
   - psql -c "CREATE DATABASE travisdb;" -U postgres
 
 script:
-  - export SECRET_KEY=$SECRET_KEY
-  - python transgov/src/manage.py test transgov/src
-  - coverage run transgov/src/manage.py test transgov/src
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then python transgov/src/manage.py test transgov/src; fi'
+
 
 after_success:
 - codecov
