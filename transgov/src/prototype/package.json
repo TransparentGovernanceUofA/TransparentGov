@@ -11,7 +11,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "homepage":"./",
+    "homepage": "./",
     "build": "node build/build.js"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "vue": "^2.5.2",
     "vue-bootstrap-datetimepicker": "^4.1.3",
     "vue-material": "^1.0.0-beta-7",
+    "vue-modaltor": "^1.2.4",
     "vue-pdf": "^3.2.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
