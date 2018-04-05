@@ -1,2 +1,3 @@
 
-{{object.data}}
+{{object.title}}
+{{object.desciption|default:""}}
