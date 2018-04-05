@@ -17,11 +17,11 @@
           Asking the government...
         </b-col>
       </b-row>
-      
+
       <b-row v-show="empty == false">
         <b-col cols="auto">
           <b-btn v-b-toggle.collapse1 variant="primary" class="mt-2">Show/Hide Timeline</b-btn>
-          
+
         </b-col>
         <b-col cols="auto">
           <div class="help-tip">
@@ -62,7 +62,15 @@
           End of Search Results
         </b-col>
         <b-col v-show="searching == false && empty == true" cols="auto">
-          There are no results that matched your query
+          <p>No results containing all your search terms were found.<br/>
+
+          Your search: <strong>{{inputField.search}}</strong> - did not match any documents.<br/>
+          <br/>
+          <strong>Suggestions:</strong><br/>
+
+          - Make sure that all words are spelled correctly.<br/>
+          - Try different keywords.<br/>
+          - Try more general keywords.</p>
         </b-col>
       </b-row>
       <div class="spacer">
@@ -123,9 +131,8 @@ export default{
     }
   },
   created () {
-    // console.log('Created----' + this.query)
     this.parseQuery()
-    this.fetchData()
+    // this.fetchData()
   },
 
   watch: {
@@ -133,12 +140,12 @@ export default{
     query: function () {
       // console.log('query Changed')
       this.parseQuery()
-      this.fetchData()
+      // this.fetchData()
     },
     advanced: function () {
       // console.log('advanced Changed')
       this.parseQuery()
-      this.fetchData()
+      // this.fetchData()
     }
   },
 
@@ -151,22 +158,20 @@ export default{
           multi_match: {
             'query': this.inputField.search,
             'type': 'cross_fields',
-            'fields' : [ '_all' ],
+            'fields': [ 'Description', 'Items.Agenda Title^3' ],
             'fuzziness': '2',
-            'operator': 'and',
-            }
-
+            'operator': 'and'
+          }
         },
         'highlight': {
           'fields': {
             '*': {
 
-            },
+            }
           }
         }
       }
 
-      // using axios, get es results
       // console.log('http://162.246.156.217:8080/_search?q=' + this.inputField.search)
       axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/', {
         params: {
@@ -190,85 +195,118 @@ export default{
         })
     },
     parseQuery () {
+      this.searching = true
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
 
+      var committeeDict = {
+        'General Faculties Council': 'gfc',
+        'Academic Planning Committee': 'apc',
+        'Academic Standards Committee': 'asc',
+        'Committee on Learning Environment': 'cle',
+        'Campus Law Review Committee': 'clrc',
+        'Executive Committee': 'exec',
+        'Facilities Development Committee': 'fdc',
+        'Undergraduate Awards and Scholarship Committee': 'uasc'
+      }
+
+      var committeeList = []
+      var q = ''
+
       let committee = this.committees.replace('committee:', '').split(',')
-      if (committee[0] !== "") {
+      if (committee[0] !== '') {
         this.advancedFilters.committee = committee
+        for (var key in committee) {
+          let committeeName = committee[key]
+          var value = committeeDict[committeeName]
+          committeeList.push(value)
+        }
       } else {
         this.advancedFilters.committee = []
+        committeeList = ['gfc', 'apc', 'asc', 'fdc', 'exec', 'cle', 'clrc', 'uasc']
       }
-      // console.log("parseQuery", this.advancedFilters.committee)
 
-      // console.log('|' + this.people + '|')
       let people = this.people.replace('people:', '').split(',')
-      if (people[0] !== "") {
+      if (people[0] !== '') {
         this.advancedFilters.people = people
       } else {
         this.advancedFilters.people = []
       }
-      // console.log('People', people)
-      // console.log("parseQuery", this.advancedFilters.people)
-
+      let peopleString = people.toString().replace(',', ' ')
 
       let dateStr = this.dateStart.replace('dateStart:', '')
       if (dateStr !== '') {
         this.advancedFilters.date_start = dateStr
       }
-      // console.log("parseQuery", this.advancedFilters.date_start)
 
       dateStr = this.dateEnd.replace('dateEnd:', '')
       if (dateStr !== '') {
         this.advancedFilters.date_end = dateStr
       }
-      // console.log("parseQuery", this.advancedFilters.date_end)
 
-      
+      let input = this.inputField.search + ' ' + peopleString
+      if (input === ' ') {
+        q = '*'
+      } else {
+        q = this.inputField.search + ' ' + peopleString
+      }
 
+      const advancedQuery = {
 
+        'query': {
+          'filtered': {
+            'query': {
+              'query_string': {
+                'query': q,
+                'fields': [ 'Items.Agenda Title^10',
+                  'Attendees^3',
+                  'Items.Presenter^3',
+                  'Items.Proposed By^3',
+                  'Description' ]
+              }
+            },
+            'filter': {
+              'bool': {
+                'must': [
+                  { 'terms': {
+                    'Committee': committeeList }
+                  },
+                  { 'range': {
+                    'Date': {
+                      'gte': this.advancedFilters.date_start,
+                      'lte': this.advancedFilters.date_end }}
+                  }
+                ]
+              }
+            }
+          }
+        },
+        'highlight': {
+          'fields': {
+            '*': { }
+          }
+        }
+      }
 
-
-
-      // var advancedArray = this.advanced.split(':')
-      // console.log('advancedArray', advancedArray)
-      // if (advancedArray[1] !== 'false') { // if there are advanced terms
-      //   let split = advancedArray[2].split(",")
-      //   if(split[0] == ""){
-      //     //do nothing
-      //   }
-      //   else{
-      //     this.advancedFilters.committee = advancedArray[2].split(",")
-      //   }
-
-      //   let date_start = advancedArray[4]
-      //   if (date_start === "") {
-      //     this.advancedFilters.date_start = null
-      //   } else {
-      //     this.advancedFilters.date_start = new Date(date_start)
-      //   }
-
-      //   let date_end = advancedArray[6]
-      //   if (date_end === "") {
-      //     this.advancedFilters.date_end = null
-      //   } else {
-      //     this.advancedFilters.date_end = new Date(date_end)
-      //   }
-
-      //   // this.advancedFilters.committee = advancedArray[2].split(",")
-      //   split = advancedArray[8].split(",")
-      //   if(split[0] == ""){
-      //     //do nothing
-      //   }
-      //   else{
-      //     this.advancedFilters.people = advancedArray[8].split(",")
-      //   }
-      //   console.log(advancedFilters.people)
-      //   console.log("advanced committee in result", this.advancedFilters)
-        
-      // }
-      // console.log(this.advancedFilters)
-      // console.log(this.inputField.search)
+      axios.get('http://162.246.156.217:8080/meeting_minutes/modelresult/_search/?size=1000', {
+        params: {
+          source: JSON.stringify(advancedQuery),
+          source_content_type: 'application/json'
+        }
+      })
+        .then((resp) => {
+          console.log(resp)
+          this.ElasticResult = resp.data.hits.hits
+          if (this.ElasticResult.length == 0){
+            this.empty = true
+          } else {
+            this.empty = false
+          }
+          this.searching = false
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   }
 }

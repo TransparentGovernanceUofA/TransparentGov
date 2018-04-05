@@ -102,6 +102,7 @@ export default {
     // changedTopicInput () {
     //   console.log(this.form.topic)
     // }
+
     parseQuery () {
       let queryArray = this.query.replace('search:', '')
       this.inputField.search = queryArray
@@ -131,13 +132,14 @@ export default {
       if (dateStr !== '') {
         this.form.date_end = dateStr
       }
-      
+
 
     },
     fetchCommittee () {
       axios.get('http://162.246.156.217:8080/excel/committees/_search?pretty')
         .then((resp) => {
           const committee_resp = resp.data.hits.hits
+          const committee_search = resp.data.hits.hits
           for(var i = 0; i < committee_resp.length; i++) {
             this.committeeOptions.push(committee_resp[i]._source.Committee)
           }
@@ -147,7 +149,7 @@ export default {
         })
     },
     fetchPeople () {
-      axios.get('http://162.246.156.217:8080/excel/members/_search?pretty')
+      axios.get('http://162.246.156.217:8080/excel/members/_search?size=1200&q=*:*')
         .then((resp) => {
           const people_resp = resp.data.hits.hits
           for(var i = 0; i < people_resp.length; i++) {
@@ -180,19 +182,19 @@ export default {
         // { value: null, text: '' },
       ],
       config_date_start: {
-        format: 'YYYY/MM/DD',
-        useCurrent: true,
+        format: 'YYYY-MM-DD',
+        useCurrent: false,
         showClear: true,
         showClose: true,
         maxDate: new Date()
       },
       config_date_end: {
-        format: 'YYYY/MM/DD',
-        useCurrent: true,
+        format: 'YYYY-MM-DD',
+        useCurrent: false,
         showClear: true,
         showClose: true,
         maxDate: new Date()
-      }              
+      }
     }
   },
   watch: {
@@ -208,7 +210,7 @@ export default {
       if (!found) {
         this.form.committee.push(val)
       }
-      
+
     },
     tempPeopleSelect: function (val) {
       let found = false
@@ -232,7 +234,9 @@ export default {
 </script>
 
 <style>
+
 #time-help{
   left: 86.5%;
+
 }
 </style>

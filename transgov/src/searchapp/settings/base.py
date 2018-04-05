@@ -109,7 +109,7 @@ else:
         	'HOST': '199.116.235.49',
         	'PORT': '',
         'TEST': {
-            'NAME': 'test_transgov_prod',
+            'NAME': 'test_opengov',
         },
         },
     }

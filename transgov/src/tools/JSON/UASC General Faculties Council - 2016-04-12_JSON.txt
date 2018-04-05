@@ -1,0 +1,76 @@
+{
+    "Committee": "UASC",
+    "Date": "2016-04-12",
+    "Title": "UASC General Faculties Council - 2016-04-12",
+    "Location": "2-15 South Academic Building (SAB)",
+    "Time": "2:00 PM - 4:00 PM",
+    "Attendees": [
+        "Amy Tse, Chair, Academic Staff",
+        "Rebekah Adams, Member, Undergraduate Student at-large",
+        "Marc de Montigny, Member, Academic Staff",
+        "Clive Hickson, Member, Academic Staff (Cross-rep from ASC)",
+        "Fiona Halbert, Member, Team Lead, Student Financial Services, Resource",
+        "Mien Jou (Delegate), Member, Senior Development Officer, Office of Development, Resource",
+        "Amy Tse, Professor, Faculty of Medicine and Dentistry and Chair, GFC UASC",
+        "Rachel de Leon, Development Specialist (Acting), Student Financial Support",
+        "Fiona Halbert, Assistant Registrar, Student Financial Support"
+    ],
+    "Items": [
+        {
+            "Item No.": "4",
+            "Agenda Title": "New Undergraduate Awards and Bursaries for Approval (April 12, 2016) ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, new Undergraduate Awards and Bursaries, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
+            "Date": "2016-04-12",
+            "Committee": "UASC",
+            "Proposed By": "Student Financial Support ",
+            "Presenter": " Rachel De Leon, Student Financial Support Subject Approval of a new undergraduate awards and bursaries. ",
+            "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) To approve new undergraduate awards and bursaries. The Impact of the Proposal is To ensure compliance with section 26(1)(m) of the Post-Secondary Learning Act, under delegated authority of General Faculties Council (GFC), “to make rules and regulations respecting academic awards”. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval. Estimated Cost N/A Sources of Funding Donors, Faculties, Departments, Office of the Registrar and Student Financial Support Notes The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC May 13, 2002, Minute 97).  Alignment/Compliance Alignment with Guiding Documents Dare to Discover- Talented People: “1. Attract outstanding students from Alberta, Canada, and the world[.]”  […] “4. Improve access for rural, Aboriginal, and non-traditional students through partnerships with colleges and by linkages with high schools across the province and improve affordability by enhancing bursaries and scholarships.” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The PSLA (Section 26(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference (3. Mandate):  “GFC UASC has delegated authority from GFC to:       1. approve new undergraduate awards[.] […]” Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) Consultation with donors, Faculties, departments, Office of the Registrar and Student Financial Support to develop new undergraduate bursaries.  Approval Route (Governance) (including meeting dates) GFC Undergraduate Awards and Scholarship Committee, April 12, 2016 (for final approval) Final Approver GFC Undergraduate Awards and Scholarship Committee Attachments: 1.  Attachment 1: Proposed New Undergraduate Student Awards and Bursaries for Approval ",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
+            "Final Approver": "N/A"
+        },
+        {
+            "Item No.": "5",
+            "Agenda Title": "Amendments to Existing Undergraduate Awards and Bursaries for Approval (April 12, 2016) ",
+            "Motion": " THAT the GFC Undergraduate Awards and Scholarship Committee approve, under delegated authority from General Faculties Council, amendments to Existing Undergraduate Student Awards and Bursaries, as submitted by Student Financial Support and as set forth in Attachment 1, to be effective immediately. ",
+            "Action Requested": "N/A",
+            "Date": "2016-04-12",
+            "Committee": "UASC",
+            "Proposed By": "Student Financial Support ",
+            "Presenter": " Rachel De Leon, Student Financial Support Subject Approval of amendments to existing undergraduate awards and bursaries. ",
+            "Description": "Details Responsibility Office of the Registrar The Purpose of the Proposal is (please be specific) The approval of amendments to existing undergraduate awards and bursaries. The Impact of the Proposal is To ensure compliance with section 26(1)(m) of the Post-Secondary Learning Act, under the delegated authority of General Faculties Council (GFC)  “to make rules and regulations respecting academic awards”. Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date Upon final approval Estimated Cost N/A Sources of Funding Donors, Faculties, Departments, Office of the Registrar and Student Financial Support  Notes The GFC Executive Committee requested that the GFC UASC provide for information a copy of the undergraduate awards approved by GFC UASC (EXEC April 8, 2002, Minute 97).  Alignment/Compliance Alignment with Guiding Documents Dare to Discover- Talented People “1. Attract outstanding students from Alberta, Canada, and the world[.]”  […] “4. Improve access for rural, Aboriginal, and non-traditional students through partnerships with colleges and by linkages with high schools across the province and improve affordability by enhancing bursaries and scholarships.” Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act (PSLA): The Post-Secondary Learning Act (PSLA) (Section 2(1)(m)) indicates that General Faculties Council (GFC) has the authority to “make rules and regulations respecting academic awards.” 2. GFC Undergraduate Awards and Scholarship Committee (Mandate): [“GFC UASC has delegated authority from GFC to: 2. approve changes to any undergraduate student award already approved by GFC UASC] Routing (Include meeting dates) Consultative Route (parties who have seen the proposal and in what capacity) Consultation with donors, Faculties, departments, Office of the Registrar and Student Financial Support to amend existing undergraduate bursaries. Approval Route (Governance) (including meeting dates) GFC UASC, April 12, 2016 Final Approver GFC Undergraduate Awards and Scholarship Committee Attachments:  1. Attachment 1:  Proposed Amendments to Existing Undergraduate Student Awards and Bursaries ",
+            "Participation": [
+                "N/A"
+            ],
+            "Approval Route": [
+                "GFC UASC, April 12, 2016"
+            ],
+            "Final Approver": " GFC Undergraduate Awards and Scholarship Committee"
+        },
+        {
+            "Item No.": "6",
+            "Agenda Title": "Review of Terms of Reference and Delegated Authority - GFC Undergraduate Awards and Scholarship Committee (UASC) ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
+            "Date": "2016-04-12",
+            "Committee": "UASC",
+            "Proposed By": "Amy Tse, Professor, Faculty of Medicine and Dentistry, and Chair, GFC UASC ",
+            "Presenter": " Amy Tse, Professor, Faculty of Medicine and Dentistry, and Chair, GFC UASC Subject Review of terms of reference and delegated authority for  the GFC Undergraduate Awards and Scholarship Committee (UASC). ",
+            "Description": "Details Responsibility General Faculties Council The Purpose of the Proposal is (please be specific) To review the GFC Undergraduate Awards and Scholarship Committee (UASC) current delegated authority from General Faculties Council to ensure that it remains current and appropriate. To provide recommendations to General Faculties Council by way of the GFC Executive Committee on the renewal of, or revisions to, the delegated authority and any other changes to the terms of reference. The Impact of the Proposal is TBD Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date May 1, 2016 Estimated Cost N/A Sources of Funding N/A Notes At the January 25, 2016 meeting, General Faculties Council approved a motion to review the delegation of its authorities to all of its current committees, and by June 30, 2016 vote on whether to renew or revise these delegated authorities.  GFC additionally approved a motion to be guided in the review of the governance and operations of GFC by the June 2013 report “A Reflection on the State of Academic Governance at the University of Alberta”. In addition, principles of good governance include the regular review of governance processes. The current GFC delegations to standing committees have undergone incremental changes over time and have not been reviewed as a package in many years. Alignment/Compliance Alignment with Guiding Documents Compliance with Legislation, Policy and/or Procedure 1. Post-Secondary Learning Act  “Powers of general faculties council  Relevant to the Proposal (please quote legislation and include identifying section numbers) 26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university […] (3) A general faculties council may delegate any of its powers, duties and functions under this Act […] as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating GFC Undergraduate Awards and Scholarship Committee (UASC) – April 12, 2016 Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments: 1. Attachment 1 (page 1 - 2) GFC Undergraduate Awards and Scholarship Committee (UASC) Terms of Reference  2. Attachment 2 (pages 1 – 9) Overview of GFC Standing Committees ",
+            "Participation": [
+                "• Those who are actively participating: ",
+                "GFC Undergraduate Awards and Scholarship Committee (UASC) – April 12, 2016 "
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
+            "Final Approver": " N/A"
+        }
+    ],
+    "url": "/static/UASC/2016-04-12/Past-Meeting-Material.pdf"
+}
