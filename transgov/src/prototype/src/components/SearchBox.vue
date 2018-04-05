@@ -37,25 +37,44 @@
               </router-link>
             </b-col>
             <vue-modaltor :visible="open" :bgOverlay="'1d720c'" @hide="hideModal">
-              <p>ClearGov lets you search various committees Meeting Minutes, Agendas and Meeting Material documents in a fast and effective way. The basic search is an easy way to search for a specific topic in a quick and efficient way. 
+              <div id="mainDiv">
+                <div id="intro">
+                  <h1> What is OpenGov? </h1>
+                  <p> OpenGov is an initiative taken by the University of Alberta General Faculties Council (GFC) to create transparency and ease of access to information regarding it's decisions and delegations. OpenGov is a search service allowing users to query and receive results based on publicly accessible information about GFC meeting minutes, agendas and meeting material documents. 
 
-              Use this to prepare for a meeting or even do a deep dive into a specific topic. 
+                  Use OpenGov to prepare for a meeting or even to deep dive into a specific topic.</p>
+                </div>
 
-              Our Advanced Search houses a more specialized feature set to narrow down results. Access “Advanced Search” by clicking “Advanced Guide” on the home page. On this page, you can enter your search term(s) and manipulate options to filter by ‘Committee’ or ‘People’. You can outline a Start Date and End Date to trim down your results.
+                <h5> Search </h5>
+                <div id="search">
+                  <p> The basic search is an easy way to search for a specific topic in a quick and efficient way. Type what you interested in into the searh bar and hit the "Search" button and see what results appear!</p>
+                </div>
 
-              Once you’ve hit search your results will be generated and displayed. You can sort each returned document by the Highlights (which has the highlighted text in it) or by Attendees or Items. For a further dive you can click “View Original PDF” and have the PDF served to your window. 
+                <div id="advanced">
+                  <h5> Advanced Search </h5>
+                  <p>Advanced Search houses a more specialized feature set to narrow down results. Access “Advanced Search” by clicking “Advanced Guide” on the home page. On this page, you can enter your search term(s) and manipulate options to filter by "Committee" or "People". You can outline a Start Date and End Date to trim down your results.
 
-              From here you can rotate, print and use the PDF. 
+                  Once you’ve hit search your results will be generated and displayed. You can sort each returned document by the Highlights (which has the highlighted search text in it) or by Attendees or Items. For a further dive you can click “View Original PDF” and have the PDF served to your window. 
 
-              To use the timeline, first search for an item that has results. Click the Show/Hide Timeline to toggle it on or off. The timeline is a way to visualize your search results by the date they occurred on. Each bubble shoes the committee and day, and a line connects it to the precise location on the timeline at the bottom of the visualization.
+                  From here you can rotate, print and use the PDF.</p>
+                </div>
 
-              You can manipulate the timeline by Zooming (using your Mouse Wheel / Pinch) and scroll left and right by clicking and dragging or swiping. 
+                <div id="timeline">
+                  <h5> Timeline </h5>
+                  <p> To use the timeline, first search for an item that has results. Click the Show/Hide Timeline to toggle it on or off. The timeline is a way to visualize your search results by the date they occurred on. Each bubble shoes the committee and day, and a line connects it to the precise location on the timeline at the bottom of the visualization.
 
-              Selecting an item on the time line jumps immediately to the corresponding search result card below the timeline.
+                  You can manipulate the timeline by Zooming (using your Mouse Wheel / Pinch) and scroll left and right by clicking and dragging or swiping. 
 
-              If at any point you want to return to the homepage, click the OpenGov logo in the top left-hand corner.
+                  Selecting an item on the time line jumps immediately to the corresponding search result card below the timeline. </p>
+                </div>
 
-              If at any point you are confused, you can click the ? icon beside the feature to get help. </p>
+                <div id = "general">
+                  <h5> General </h5>
+                  <p>If at any point you want to return to the homepage, click the OpenGov logo in the top left-hand corner.
+
+                  If at any point you are confused, you can click the "?" icon beside the feature to get help. </p>
+                </div>
+              </div>
             </vue-modaltor>
             <!-- <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg">modal-basic</button> -->
           </b-row>
@@ -97,7 +116,12 @@ export default {
           type: String,
           required: false,
           default: '#fff'
-        }
+        },
+        // defaultWidth:{
+        //   type: String,
+        //   required: false,
+        //   default: '30%'
+        // }
       }
     }
   },
