@@ -16,9 +16,9 @@ def failed():
 # opens the browser to the local host
 # requires the frontend running on the localhost
 options = Options()
-# options.set_headless()
+options.set_headless()
 browser = webdriver.Chrome(chrome_options=options)
-browser.get('http://localhost:8080')
+browser.get('http://199.116.235.49')
 
 
 try:
@@ -44,7 +44,7 @@ time.sleep(5)
 
 # trys to find a search result
 try:
-	result = browser.find_element_by_class_name("title")
+	result = browser.find_element_by_class_name("card")
 	print ("Successfully found result")
 except Exception as e:
 	print ("Failed to find Result")
