@@ -40,6 +40,7 @@
                     </ul>
                   </ul>
                 </p>
+              <p v-if="searchresult.highlight == null">We did not find any specific lines to highlight for this search.</p> 
             </b-tab>
             <b-tab title="Attendees">
                 <p class="card-text" >
@@ -49,7 +50,18 @@
                 </p>
             </b-tab>
             <!-- CSS rules to handle the nested tabs rely on this being the 3rd tab, if you need to rearrange then change the rule -->
-            <b-tab title="Items" no-body >
+            <b-tab v-if="searchresult.highlight == null" title="Items" no-body active > <!-- select this tab if no highlights -->
+                <b-tabs card>
+                  <template v-for="item in searchresult._source.Items">
+                    <b-tab :title="'Item ' + item['Item No.']" no-body>
+                      <b-list-group flush>
+                        <b-list-group-item v-for="(val, attrib) in item"><strong>{{attrib}}</strong>: {{val}}</b-list-group-item>
+                      </b-list-group>
+                    </b-tab>
+                  </template>
+                </b-tabs>
+            </b-tab>
+            <b-tab v-else title="Items" no-body> <!-- otherwise allow first tab to take default selection -->
                 <b-tabs card>
                   <template v-for="item in searchresult._source.Items">
                     <b-tab :title="'Item ' + item['Item No.']" no-body>
