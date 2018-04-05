@@ -29,7 +29,7 @@
               Each bubble shows the committee and day, and a line connects it to the precise location on the timeline at the bottom of the visualization.<br/>
               <strong>Controls:</strong><br/>
               [Mouse Wheel/Pinch]: Zoom <br/>
-              [Click + Drag/Swipe]: Scroll left and right. Also scroll up or down there are enough results to stack.<br/>
+              [Click + Drag/Swipe]: Scroll left and right. Also scroll up or down if there are enough results to stack.<br/>
               [Select an Item]: Jump immediately to the corresponding search result card below the timeline.
             </p>
           </div>
@@ -315,7 +315,7 @@ export default{
 
 <style>
   .spacer{
-    height: 99vh;
+    height: 80vh;
   }
   /*!
    * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
