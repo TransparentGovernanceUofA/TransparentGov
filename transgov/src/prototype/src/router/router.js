@@ -34,11 +34,6 @@ export default new VueRouter({
       name: 'Advanced Search',
       component: AdvancedSearch,
       props: true
-    },
-    {
-      path: '/timeline',
-      name: 'Timeline',
-      component: Timeline
     }
   ],
   mode: 'history'

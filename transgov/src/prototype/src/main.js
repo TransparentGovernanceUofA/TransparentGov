@@ -9,6 +9,9 @@ import 'vue-material/dist/vue-material.min.css'
 import datePicker from 'vue-bootstrap-datetimepicker'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
+import VueModalTor from 'vue-modaltor'
+
+Vue.use(VueModalTor)
 Vue.use(datePicker)
 Vue.use(VueMaterial)
 
