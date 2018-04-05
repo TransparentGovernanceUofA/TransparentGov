@@ -136,13 +136,14 @@ export default {
       if (dateStr !== '') {
         this.form.date_end = dateStr
       }
-      
+
 
     },
     fetchCommittee () {
       axios.get('http://162.246.156.217:8080/excel/committees/_search?pretty')
         .then((resp) => {
           const committee_resp = resp.data.hits.hits
+          const committee_search = resp.data.hits.hits
           for(var i = 0; i < committee_resp.length; i++) {
             this.committeeOptions.push(committee_resp[i]._source.Committee)
           }
@@ -183,14 +184,14 @@ export default {
         // { value: null, text: '' },
       ],
       config_date_start: {
-        format: 'YYYY/MM/DD',
+        format: 'YYYY-MM-DD',
         useCurrent: false,
         showClear: true,
         showClose: true,
         maxDate: new Date()
       },
       config_date_end: {
-        format: 'YYYY/MM/DD',
+        format: 'YYYY-MM-DD',
         useCurrent: false,
         showClear: true,
         showClose: true,
