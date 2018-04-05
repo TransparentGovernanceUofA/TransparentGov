@@ -40,14 +40,14 @@
               <div id="mainDiv">
                 <div id="intro">
                   <h1> What is OpenGov? </h1>
-                  <p> OpenGov is an initiative taken by the University of Alberta General Faculties Council (GFC) to create transparency and ease of access to information regarding it's decisions and delegations. OpenGov is a search service allowing users to query and receive results based on publicly accessible information about GFC meeting minutes, agendas and meeting material documents. 
+                  <p> OpenGov is an initiative taken by the University of Alberta General Faculties Council (GFC) to create transparency and ease of access to information regarding its decisions and delegations. OpenGov is a search service allowing users to query and receive results based on publicly accessible information about GFC meeting minutes, agendas and meeting material documents.
 
                   Use OpenGov to prepare for a meeting or even to deep dive into a specific topic.</p>
                 </div>
 
                 <h5> Search </h5>
                 <div id="search">
-                  <p> The basic search is an easy way to search for a specific topic in a quick and efficient way. Type what you interested in into the searh bar and hit the "Search" button and see what results appear!</p>
+                  <p> The basic search is an easy way to search for a specific topic in a quick and efficient way. Type what you interested in into the search bar and hit the "Search" button and see what results appear!</p>
                 </div>
 
                 <div id="advanced">
