@@ -1,0 +1,55 @@
+{
+    "Committee": "FDC",
+    "Date": "2016-03-24",
+    "Title": "FDC General Faculties Council - 2016-03-24",
+    "Location": "2-31 South Academic Building (SAB)",
+    "Time": "1:30 PM - 4:30 PM",
+    "Attendees": [
+        "1:30 PM - 4:30 PM",
+        "Wendy Rodgers Chair, Provost and Vice-President (Academic), Deputy Provost",
+        "Elisabeth Le Vice-Chair, Academic Staff",
+        "Debbie Feisst Member, Academic Staff at-Large",
+        "Cheryl Harwardt Member, Academic Staff",
+        "Pat Jansen",
+        "(Delegate)",
+        "Member, Vice-President (Facilities and Operations)",
+        "Suzanne Poirier Member, Support Staff",
+        "Fahim Rahman Member, Students' Union Vice-President (Academic) or Delegate",
+        "Harsh Thaker Member, Graduate Students' Association Vice-President (Academic) or",
+        "Zizhao (Finn) Wang Member, Undergraduate Student Member at-large",
+        "Ben Louie Member, University Architect, Resource",
+        "Wendy Rodgers Deputy Provost and Chair, GFC Facilities Development Committee (FDC)",
+        "Pat Jansen Associate Vice-President, Planning and Project Delivery (Facilities and",
+        "Operations)"
+    ],
+    "Items": [
+        {
+            "Item No.": "4",
+            "Agenda Title": "Review of Delegated Authority - GFC Facilities Development Committee ",
+            "Motion": "N/A",
+            "Action Requested": "N/A",
+            "Date": "2016-03-24",
+            "Committee": "FDC",
+            "Proposed By": "Wendy Rodgers, Vice-Provost and Chair, GFC FDC ",
+            "Presenter": " Wendy Rodgers, Vice-Provost and Chair, GFC FDC Subject Review of delegated authority as reflected in the GFC Facilities Development Committee Terms of Reference. ",
+            "Description": "Details Responsibility General Faculties Council The Purpose of the Proposal is (please be specific) To review the GFC Facilities Development Committee current delegated authority from General Faculties Council to ensure that it remains current and appropriate. To provide recommendations to General Faculties Council by way of the GFC Executive Committee on the renewal of, or revisions to, the delegated authority. The Impact of the Proposal is TBD Replaces/Revises (eg, policies, resolutions) N/A Timeline/Implementation Date May 1, 2016 Estimated Cost N/A Sources of Funding N/A Notes At the January 25, 2016 meeting, General Faculties Council approved a motion to review the delegation of its authorities to all of its current committees, and by June 30, 2016 vote on whether to renew or revise these delegated authorities.  GFC additionally approved a motion to be guided in the review of the governance and operations of GFC by the June 2013 report “A Reflection on the State of Academic Governance at the University of Alberta”. In addition, principles of good governance include the regular review of governance processes. The current GFC delegations to Standing Committees have undergone incremental changes over time and have not been reviewed as a package in many years. The Terms of Reference reflect GFC FDC’s delegated authority to approve items on behalf of GFC and also to recommend, on behalf of GFC, directly to the Board of Governors.  GFC  Alignment/Compliance Alignment with Guiding Documents Compliance with Legislation, Policy and/or Procedure Relevant to the Proposal (please quote legislation and include identifying section numbers) 1. Post-Secondary Learning Act  “Powers of general faculties council 26(1) Subject to the authority of the board, a general faculties council is responsible for the academic affairs of the university […] (3) A general faculties council may delegate any of its powers, duties and functions under this Act […] as it sees fit and may prescribe conditions governing the exercise or performance of any delegated power, duty or function, including the power of subdelegation.” Routing (Include meeting dates) Participation: (parties who have seen the proposal and in what capacity) • Those who have been informed • Those who have been consulted • Those who are actively participating GFC Facilities Development Committee (FDC):  March 24, 2016 Approval Route (Governance) (including meeting dates) N/A Final Approver N/A Attachments: 1. Attachment 1 (page 1 - 3): GFC Facilities Development Committee Terms of Reference 2. Attachment 2 (page 1): Overview of approvals and recommendations by the GFC Facilities Development Committee, March 2015 – March 2016 3. Attachment 3 (pages 1 – 9): Overview of GFC Standing Committees ",
+            "Participation": [
+                " ",
+                "(parties who have seen the ",
+                "proposal and in what capacity) ",
+                "• Those who have been ",
+                "informed ",
+                "• Those who have been ",
+                "consulted ",
+                "• Those who are actively ",
+                "participating ",
+                "GFC Facilities Development Committee (FDC):  March 24, 2016 "
+            ],
+            "Approval Route": [
+                "N/A"
+            ],
+            "Final Approver": " N/A"
+        }
+    ],
+    "url": "/static/FDC/2016-03-24/Past-Meeting-Material.pdf"
+}

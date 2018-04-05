@@ -20,11 +20,11 @@ from .settings import MEDIA_ROOT, MEDIA_URL
 from django.conf.urls.static import static
 from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework import routers
-from main_search.api.views import MeetingSearchViewSet, MeetingSearchView
+#from main_search.api.views import MeetingSearchView
 
 router = routers.DefaultRouter()
-router.register("meeting/search", MeetingSearchView, base_name="meeting-search")
-router.register("search/query", MeetingSearchViewSet, base_name='search-query')
+#router.register("meeting/search", MeetingSearchView, base_name="meeting-search")
+#router.register("search/query", MeetingSearchViewSet, base_name='search-query')
 
 urlpatterns = [
     #url(r'^$', HomeView.as_view()),
