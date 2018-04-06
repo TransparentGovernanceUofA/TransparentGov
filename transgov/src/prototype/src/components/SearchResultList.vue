@@ -21,7 +21,7 @@
           <!-- <h6 v-else slot="header" class="mb-0"> -->
           <h6 slot="header" class="mb-0">
              <!-- <span class="title" v-html="searchresult._source.Title"></span> -->
-            {{searchresult._source.Title}}
+            {{searchresult._source.Committee}} / {{searchresult._source.Date}} / {{searchresult._source.Items.length}} Items
             <a :href="searchresult._source.url" class="text-success">
               PDF
             </a>
