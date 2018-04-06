@@ -145,4 +145,7 @@ export default {
     background-color: #f7f7f7;
     border-bottom-color: #f7f7f7;
   }
+  a{
+    color: #28a745;
+  }
 </style>

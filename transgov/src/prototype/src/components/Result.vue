@@ -23,7 +23,7 @@
           <b-btn v-b-toggle.collapse1 variant="success" class="mt-2">Show/Hide Timeline</b-btn>
 
         </b-col>
-        <b-col cols="auto">
+        <b-col cols="auto" class="p-0">
           <div class="help-tip">
             <p>The timeline is a way to visualize your search results by the date they occured on.<br/>
               Each bubble shows the committee and day, and a line connects it to the precise location on the timeline at the bottom of the visualization.<br/>

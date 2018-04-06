@@ -5,11 +5,13 @@
         <div id="user-searches" class="md-elevation-8">
           <b-row>
             <b-col>
-              <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg"></button>
               <router-link to="/">
                 <img src="./../assets/logoOpenGov2-3anim.svg" class="m-2"/>
               </router-link>
             </b-col>
+            <div style="position: relative; width: 0; height: 0">
+              <button style="position: absolute; left: -100px" @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg"></button>
+            </div>
           </b-row>
           <b-row>
             <b-col>
@@ -28,19 +30,19 @@
           <b-row class="mt-2" align-h="center">
             <b-col class="mt-2 mt-lg-0" lg=4 order="2" order-lg="1">
               <router-link :to="{name: 'Advanced Search', params: { query:'search:', committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}}">
-                <b-button variant="outline-primary" size="lg" class="search" id="advancedSearchButton">Advanced Guide</b-button>
+                <b-button variant="outline-success" size="lg" class="search" id="advancedSearchButton">Advanced Guide</b-button>
               </router-link>
             </b-col>
             <b-col lg=4 order="1" order-lg="2">
               <!-- <router-link :to="{name: 'Result', params: { query: 'search:' + newSearchBoxText, committees:'committee:', people:'people:', dateStart:'dateStart:', dateEnd: 'dateEnd:'}}"> -->
-                <b-button variant="outline-primary" size="lg" class="search" id="searchButton" v-on:click="goToResults()">Search</b-button>
+                <b-button variant="outline-success" size="lg" class="search" id="searchButton" v-on:click="goToResults()">Search</b-button>
               <!-- </router-link> -->
             </b-col>
             <!-- <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg">modal-basic</button> -->
           </b-row>
           <b-row id="helpButton" class="m-0">
             <b-col class="mt-2 p-0">
-                <b-button @click="open=true" variant="outline-primary" size="lg" class="search" >Help</b-button>
+                <b-button @click="open=true" variant="outline-success" size="lg" class="search" >Help</b-button>
             </b-col>
           </b-row>
           <vue-modaltor :visible="open" :bgOverlay="'1d720c'" @hide="hideModal">
