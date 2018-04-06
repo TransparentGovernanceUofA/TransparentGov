@@ -10,7 +10,7 @@
               </router-link>
             </b-col>
             <div style="position: relative; width: 0; height: 0">
-              <button style="position: absolute; left: -100px" @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg"></button>
+              <button @click="open=true" id="helpBtn"><img src="./../assets/manual-icon-vector.svg"></button>
             </div>
           </b-row>
           <b-row>
@@ -199,7 +199,10 @@ export default {
 }
 
 #helpBtn{
-  background-color: white;
+  background-color: transparent;
+  position: absolute;
+  left: -66px;
+  top: -24px;
   border: none;
   color: white;
   float: right;

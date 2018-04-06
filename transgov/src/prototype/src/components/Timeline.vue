@@ -69,4 +69,12 @@ export default {
 
 <style>
 @import url("https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css");
+  .vis-item{
+    color: white;
+    border-color: #009221;
+    background-color: #28a745;
+  }
+  .vis-item.vis-selected{
+    color: #343a40; 
+  }
 </style>

@@ -16,7 +16,7 @@
     /*top: 18px;*/
     /*right: 100px;*/
     text-align: center;
-    background-color: #BCDBEA;
+    background-color: #68C06A;
     border-radius: 50%;
     width: 23px;
     height: 23px;
