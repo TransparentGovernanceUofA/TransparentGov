@@ -167,7 +167,7 @@ export default {
 }
 #search-container{
   min-height: 100vh;
-  background-image: url("https://i.imgur.com/qZxEk6z.jpg");
+  background-image: url("./../assets/trianglify.png");
   background-size: cover;
 }
 #user-searches{
