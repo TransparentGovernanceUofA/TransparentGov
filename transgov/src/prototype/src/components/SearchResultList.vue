@@ -72,6 +72,21 @@
                   </template>
                 </b-tabs>
             </b-tab>
+            <b-tab title="Motions" no-body>
+                <p class="card-text" >
+                  <b-list-group flush>
+                    <b-list-group-item v-for="item in searchresult._source.Items">
+                      <strong>Item {{item['Item No.']}}</strong>: {{item.Motion}}
+                      <b-list-group v-if="item['Approval Route'][0] != 'N/A'">
+                        <b-list-group-item><strong>Approval Route</strong></b-list-group-item>
+                        <b-list-group>
+                          <b-list-group-item v-for="route in item['Approval Route']">{{route}}</b-list-group-item>
+                        </b-list-group>
+                      </b-list-group>
+                    </b-list-group-item>
+                  </b-list-group>
+                </p>
+            </b-tab>
           </b-tabs>
 
         </b-card>
