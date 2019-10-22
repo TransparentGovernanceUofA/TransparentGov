@@ -10,7 +10,7 @@ drf-haystack==1.6.1
 elasticsearch==5.0.1
 gunicorn==19.7.1
 olefile==0.44
-Pillow==5.0.0
+Pillow==6.2.0
 psycopg2==2.7.4
 pytz==2018.3
 PyJWT==1.5.3
