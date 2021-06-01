@@ -15,4 +15,4 @@ psycopg2==2.7.4
 pytz==2018.3
 PyJWT==1.5.3
 sqlparse==0.2.4
-urllib3==1.22
+urllib3==1.26.5
